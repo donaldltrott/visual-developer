@@ -1,0 +1,213 @@
+// branding
+
+//Colors
+
+$red-dark:              #841225 !default  //Primary
+$red:                   #DE2533 !default
+$red-light:             #FF5C5C !default
+
+$purple-dark:           #595194 !default  //Primary
+$purple:                #8669FF !default
+$purple-light:          #9C97FF !default
+
+$blue-dark:             #00366E !default
+$blue:                  #005CB9 !default  //Primary
+$blue-light:            #3693F8 !default
+
+$green-dark:            #1D5F11 !default
+$green:                 #46AD00 !default  //Primary
+$green-light:           #75D835 !default
+
+$orange-dark:           #E55C00 !default
+$orange:                #FF9821 !default  //Primary
+$orange-light:          #FFBB66 !default
+
+
+// Monotone
+
+$white:                 #ffffff !default  //Primary
+$off-white:             #F5F5F5 !default
+$gray-lightest:         #E9E9E9 !default
+$gray-lighter:          #D4D4D4 !default
+$gray-light:            #BCBCBC !default
+$gray:                  #868686 !default
+$gray-dark:             #575757 !default  //Primary
+$gray-darker:           #414141 !default
+$gray-darkest:          #2B2B2B !default
+$black:                 #141414 !default
+$true-black:            #000000 !default
+
+
+
+//$gray-base:              #000 !default
+//$gray-darker:            lighten($gray-base, 13.5%) !default // #222
+//$gray-dark:              lighten($gray-base, 20%) !default   // #333
+//$gray:                   lighten($gray-base, 33.5%) !default // #555
+//$gray-light:             lighten($gray-base, 46.7%) !default // #777
+//$gray-lighter:           lighten($gray-base, 93.5%) !default // #eee
+//
+//$brand-primary:         #005CB9 !default
+//$brand-success:         #46AD00 !default
+//$brand-info:            lighten($brand-primary, 25%) !default
+//$brand-warning:         #FF9821 !default
+//$brand-danger:          darken(#DE2533, 9%) !default
+//$brand-inverse:         $gray-darker !default
+
+
+// CORE
+
+$body-bg:               $off-white !default
+$text-color:            $gray-darker !default
+$cursor-disabled:       not-allowed !default
+
+$link-color:            $blue-light !default
+$link-hover-color:      darken($link-color, 15%) !default
+$link-hover-decoration: underline !default
+
+
+
+// Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Roboto", sans-serif !default
+$font-family-alt:         "Quattricento", sans-serif !default
+
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default
+$font-family-base:        $font-family-sans-serif !default
+
+$font-size-base:          1.4rem !default
+$font-size-large:         ceil(($font-size-base * 1.25)) !default // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default // ~12px
+
+$font-size-h1:            ($font-size-base * 2.6) !default // ~36px
+$font-size-h2:            ($font-size-base * 2.15) !default // ~30px
+$font-size-h3:            ($font-size-base * 1.7) !default // ~24px
+$font-size-h4:            ($font-size-base * 1.25) !default // ~18px
+$font-size-h5:            $font-size-base !default
+$font-size-h6:            ($font-size-base * 0.85) !default // ~12px
+
+$line-height-base:        1.428571429 !default // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    $font-family-alt !default
+$headings-font-weight:    500 !default
+$headings-line-height:    1.1 !default
+$headings-color:          inherit !default
+
+$headings-small-color:        $gray-light !default
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     0.6rem !default
+$padding-base-horizontal:   1.2rem !default
+
+$padding-large-vertical:    1.0rem !default
+$padding-large-horizontal:  1.6rem !default
+
+$padding-small-vertical:    0.5rem !default
+$padding-small-horizontal:  1.0rem !default
+
+$padding-xs-vertical:       0.1rem !default
+$padding-xs-horizontal:     0.5rem !default
+
+$line-height-large:         1.3333333 !default // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5 !default
+
+$border-radius-base:        0.2rem !default
+$border-radius-large:       0.4rem !default
+$border-radius-small:       0.1rem !default
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                bold !default
+$btn-link-disabled-color:        $gray-light !default
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base !default
+$btn-border-radius-large:        $border-radius-large !default
+$btn-border-radius-small:        $border-radius-small !default
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  48rem !default
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  76.8rem !default
+$screen-sm-min:              $screen-sm !default
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  99.2rem !default
+$screen-md-min:              $screen-md !default
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  120rem !default
+$screen-lg-min:              $screen-lg !default
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default
+$screen-sm-max:              ($screen-md-min - 1) !default
+$screen-md-max:              ($screen-lg-min - 1) !default
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         3rem !default
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default
+
+
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (72rem + $grid-gutter-width) !default
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default
+
+// Medium screen / desktop
+$container-desktop:            (94rem + $grid-gutter-width) !default
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default
+
+// Large screen / wide desktop
+$container-large-desktop:      (114rem + $grid-gutter-width) !default
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default

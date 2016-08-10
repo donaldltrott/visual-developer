@@ -1,0 +1,106 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container
+    @include container-fixed
+
+    @media (min-width: $screen-sm-min)
+        width: $container-sm
+
+    @media (min-width: $screen-md-min)
+        width: $container-md
+
+    @media (min-width: $screen-lg-min)
+        width: $container-lg
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid
+    @include container-fixed
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row
+    @include make-row
+
+@include make-grid-columns
+
+@include make-grid(xs)
+
+@media (min-width: $screen-sm-min)
+    @include make-grid(sm)
+
+@media (min-width: $screen-md-min)
+    @include make-grid(md)
+
+@media (min-width: $screen-lg-min)
+    @include make-grid(lg)
+
+
+/*
+ ## Flex Grid
+
+ <h4>Responsive Grid</h4>
+ <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at `col-xs-*`, `col-sm-*`, `col-md-*` & `col-lg-*` viewport widths.</p>
+
+ ```
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-4"><p>Content</p></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6"><p>Content</p></div>
+            <div class="col-xs-12 col-sm-12 col-md-6"><p>Content</p></div>
+        </div>
+    </div>
+ ```
+
+ <h4>Fluid Grid</h4>
+ <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at `col-xs-*`, `col-sm-*`, `col-md-*` & `col-lg-*` viewport widths.</p>
+
+ ```
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-11"><p>Content</p></div>
+            <div class="col-xs-1"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10"><p>Content</p></div>
+            <div class="col-xs-2"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9"><p>Content</p></div>
+            <div class="col-xs-3"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8"><p>Content</p></div>
+            <div class="col-xs-4"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-7"><p>Content</p></div>
+            <div class="col-xs-5"><p>Content</p></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6"><p>Content</p></div>
+            <div class="col-xs-6"><p>Content</p></div>
+        </div>
+    </div>
+ ```
+
+
+ */

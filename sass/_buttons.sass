@@ -9,20 +9,22 @@
 
 .btn
     display: inline-block
-    margin: .6rem
-    margin-bottom: 0
+    margin: 0.6rem 0 0 0
     font-weight: $btn-font-weight
     text-align: center
     vertical-align: middle
     touch-action: manipulation
     cursor: pointer
     background-image: none
-    border: 1px solid transparent
+    border: 0.1rem solid transparent
     // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
     white-space: nowrap
     @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base)
     user-select: none
     text-transform: uppercase
+    color: $gray
+    background-color: transparent
+    text-decoration: none
 
     &,
     &:active,
@@ -31,8 +33,14 @@
         &.focus
             @include tab-focus
 
+    &:hover,
+    &.hover
+        color: $gray-dark
+        background-color: rgba(0, 0, 0, 0.08)
+        text-decoration: none
+
     + .btn
-        margin-left: 0
+        margin-left: 0.6rem
 
 // [converter] extracted a& to a.btn
 
@@ -42,146 +50,188 @@ a.btn
     fieldset[disabled] &
         pointer-events: none
 
-// Flat buttons
+// Primary buttons
 // --------------------------------------------------
+
+.btn--primary-red
+    @include flat-button($brand-primary-red)
+
+.btn--primary-purple
+    @include flat-button($brand-primary-purple)
+
+.btn--primary-blue
+    @include flat-button($brand-primary-blue)
+
+.btn--primary-green
+    @include flat-button($brand-primary-green)
+
+.btn--primary-orange
+    @include flat-button($brand-primary-orange)
+
+.btn--primary-gray
+    @include flat-button($brand-primary-gray)
+
+// Colored buttons
+// --------------------------------------------------
+
+.btn--red-light
+    @include flat-button($red-light)
+
+.btn--red
+    @include flat-button($red)
 
 .btn--red-dark
     @include flat-button($red-dark)
 
+.btn--purple-light
+    @include flat-button($purple-light)
+
+.btn--purple
+    @include flat-button($purple)
+
 .btn--purple-dark
     @include flat-button($purple-dark)
+
+.btn--blue-light
+    @include flat-button($blue-light)
 
 .btn--blue
     @include flat-button($blue)
 
+.btn--blue-dark
+    @include flat-button($blue-dark)
+
+.btn--green-light
+    @include flat-button($green-light)
+
 .btn--green
     @include flat-button($green)
+
+.btn--green-dark
+    @include flat-button($green-dark)
+
+.btn--orange-light
+    @include flat-button($orange-light)
 
 .btn--orange
     @include flat-button($orange)
 
+.btn--orange-dark
+    @include flat-button($orange-dark)
+
+.btn--gray-light
+    @include flat-button($gray-light)
+
+.btn--gray
+    @include flat-button($gray)
+
 .btn--gray-dark
     @include flat-button($gray-dark)
 
-
-
-// Raised buttons
+// Primary buttons
 // --------------------------------------------------
 
-.btn--red-dark
-    &.raised
-        @include raised-button($red-dark, $white)
+.btn--primary-red
+    &.btn--filled
+        @include filled-button($brand-primary-red, $white)
 
-.btn--purple-dark
-    &.raised
-        @include raised-button($purple-dark, $white)
+.btn--primary-purple
+    &.btn--filled
+        @include filled-button($brand-primary-purple, $white)
 
-.btn--blue
-    &.raised
-        @include raised-button($blue, $white)
+.btn--primary-blue
+    &.btn--filled
+        @include filled-button($brand-primary-blue, $white)
 
-.btn--green
-    &.raised
-        @include raised-button($green, $white)
+.btn--primary-green
+    &.btn--filled
+        @include filled-button($brand-primary-green, $white)
 
-.btn--orange
-    &.raised
-        @include raised-button($orange, $white)
+.btn--primary-orange
+    &.btn--filled
+        @include filled-button($brand-primary-orange, $white)
 
-.btn--gray-dark
-    &.raised
-        @include raised-button($gray-dark, $white)
+.btn--primary-gray
+    &.btn--filled
+        @include filled-button($brand-primary-gray, $white)
 
-
-// Raised buttons
+// Filled Colored buttons
 // --------------------------------------------------
+.btn--red-light
+    &.btn--filled
+        @include filled-button($red-light, $white)
+
+.btn--red
+    &.btn--filled
+        @include filled-button($red, $white)
 
 .btn--red-dark
-    &.raised-filled
-        @include raised-button($white, $red-dark)
+    &.btn--filled
+        @include filled-button($red-dark, $white)
+
+.btn--purple-light
+    &.btn--filled
+        @include filled-button($purple-light, $white)
+
+.btn--purple
+    &.btn--filled
+        @include filled-button($purple, $white)
 
 .btn--purple-dark
-    &.raised-filled
-        @include raised-button($white, $purple-dark)
+    &.btn--filled
+        @include filled-button($purple-dark, $white)
+
+.btn--blue-light
+    &.btn--filled
+        @include filled-button($blue-light, $white)
 
 .btn--blue
-    &.raised-filled
-        @include raised-button($white, $blue)
+    &.btn--filled
+        @include filled-button($blue, $white)
+
+.btn--blue-dark
+    &.btn--filled
+        @include filled-button($blue-dark, $white)
+
+.btn--green-light
+    &.btn--filled
+        @include filled-button($green-light, $white)
 
 .btn--green
-    &.raised-filled
-        @include raised-button($white, $green)
+    &.btn--filled
+        @include filled-button($green, $white)
+
+.btn--green-dark
+    &.btn--filled
+        @include filled-button($green-dark, $white)
+
+.btn--orange-light
+    &.btn--filled
+        @include filled-button($orange-light, $white)
 
 .btn--orange
-    &.raised-filled
-        @include raised-button($white, $orange)
+    &.btn--filled
+        @include filled-button($orange, $white)
+
+.btn--orange-dark
+    &.btn--filled
+        @include filled-button($orange-dark, $white)
+
+.btn--gray-light
+    &.btn--filled
+        @include filled-button($gray-light, $white)
+
+.btn--gray
+    &.btn--filled
+        @include filled-button($gray, $white)
 
 .btn--gray-dark
-    &.raised-filled
-        @include raised-button($white, $gray-dark)
+    &.btn--filled
+        @include filled-button($gray-dark, $white)
 
-
-//.btn--default
-//    @include flat-button($btn-default-color)
-//
-//.btn--primary
-//    @include flat-button($btn-primary-bg)
-//
-//// Success appears as green
-//.btn--success
-//    @include flat-button($btn-success-bg)
-//
-//// Info appears as blue-green
-//.btn--info
-//    @include flat-button($btn-info-bg)
-//
-//// Warning appears as orange
-//.btn--warning
-//    @include flat-button($btn-warning-bg)
-//
-//// Danger and error appear as red
-//.btn--danger
-//    @include flat-button($btn-danger-bg)
-
-// Link buttons
-// -------------------------
-
-// Make a button look and behave like a link
-.btn--link
-    color: $link-color
-    font-weight: normal
-    border-radius: 0
-
-    &,
-    &:active,
-    &.active,
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] &
-        background-color: transparent
-        box-shadow: none
-
-    &,
-    &:hover,
-    &:focus,
-    &:active
-        border-color: transparent
-
-    &:hover,
-    &:focus
-        color: $link-hover-color
-        text-decoration: $link-hover-decoration
-        background-color: transparent
-
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] &
-        &,
-        &:active,
-        &:hover,
-        &:focus
-            color: $btn-link-disabled-color
-            text-decoration: none
+.btn--white
+    &.btn--filled
+        @include filled-button($white, $gray-dark)
 
 // Button Sizes
 // --------------------------------------------------
@@ -207,7 +257,7 @@ a.btn
 
 // Vertically space out multiple block buttons
 .btn--block + .btn--block
-    margin-top: 5px
+    margin: 0.6rem 0 0 0
 
 // Specificity overrides
 input[type="submit"],
@@ -216,63 +266,99 @@ input[type="button"]
     &.btn--block
         width: 100%
 
-
 /*
  ## Buttons
 
  <h4>Button Tags</h4>
  ```
-    <a class="btn btn--gray-dark" href="#" role="button">Link</a>
-    <button class="btn btn--gray-dark" type="submit">Button</button>
-    <input class="btn btn--gray-dark" type="button" value="Input">
-    <input class="btn btn--gray-dark" type="submit" value="Submit">
+    <a class="btn" href="#" role="button">Link</a>
+    <button class="btn" type="submit">Button</button>
+    <input class="btn" type="button" value="Input">
+    <input class="btn" type="submit" value="Submit">
  ```
 
 
- <h4>Flat Buttons (Primary)</h4>
+ <h4>Buttons (Primary)</h4>
  ```
+    <button class="btn btn--primary-gray">Primary Gray</button>
+    <button class="btn btn--primary-blue">Primary Blue</button>
+    <button class="btn btn--primary-green">Primary Green</button>
+    <button class="btn btn--primary-purple">Primary Purple</button>
+    <button class="btn btn--primary-orange">Primary Orange</button>
+    <button class="btn btn--primary-red">Primary Red</button>
+ ```
+
+ <h4>Buttons (All)</h4>
+ ```
+    <button class="btn btn--gray-light">Gray Light</button>
+    <button class="btn btn--gray">Gray</button>
     <button class="btn btn--gray-dark">Gray Dark</button>
+    <button class="btn btn--blue-light">Blue Light</button>
     <button class="btn btn--blue">Blue</button>
+    <button class="btn btn--blue-dark">Blue Dark</button>
+    <button class="btn btn--green-light">Green Light</button>
     <button class="btn btn--green">Green</button>
+    <button class="btn btn--green-dark">Green Dark</button>
+    <button class="btn btn--purple-light">Purple Light</button>
+    <button class="btn btn--purple">Purple</button>
     <button class="btn btn--purple-dark">Purple Dark</button>
+    <button class="btn btn--orange-light">Orange Light</button>
     <button class="btn btn--orange">Orange</button>
+    <button class="btn btn--orange-dark">Orange Dark</button>
+    <button class="btn btn--red-light">Red Light</button>
+    <button class="btn btn--red">Red</button>
     <button class="btn btn--red-dark">Red Dark</button>
  ```
 
- <h4>Raised Buttons (Primary)</h4>
+
+
+ <h4>Filled Buttons (Primary)</h4>
  ```
-    <button class="btn btn--gray-dark raised">Gray Dark</button>
-    <button class="btn btn--blue raised">Blue</button>
-    <button class="btn btn--green raised">Green</button>
-    <button class="btn btn--purple-dark raised">Purple Dark</button>
-    <button class="btn btn--orange raised">Orange</button>
-    <button class="btn btn--red-dark raised">Red Dark</button>
+    <button class="btn btn--primary-gray btn--filled">Primary Gray</button>
+    <button class="btn btn--primary-blue btn--filled">Primary Blue</button>
+    <button class="btn btn--primary-green btn--filled">Primary Green</button>
+    <button class="btn btn--primary-purple btn--filled">Primary Purple</button>
+    <button class="btn btn--primary-orange btn--filled">Primary Orange</button>
+    <button class="btn btn--primary-red btn--filled">Primary Red</button>
  ```
- <h4>Raised Filled Buttons (Primary)</h4>
+
+ <h4>Filled Buttons (All)</h4>
  ```
-    <button class="btn btn--gray-dark raised-filled">Gray Dark</button>
-    <button class="btn btn--blue raised-filled">Blue</button>
-    <button class="btn btn--green raised-filled">Green</button>
-    <button class="btn btn--purple-dark raised-filled">Purple Dark</button>
-    <button class="btn btn--orange raised-filled">Orange</button>
-    <button class="btn btn--red-dark raised-filled">Red Dark</button>
+    <button class="btn btn--white btn--filled">White</button>
+    <button class="btn btn--gray-light btn--filled">Gray Light</button>
+    <button class="btn btn--gray btn--filled">Gray</button>
+    <button class="btn btn--gray-dark btn--filled">Gray Dark</button>
+    <button class="btn btn--blue-light btn--filled">Blue Light</button>
+    <button class="btn btn--blue btn--filled">Blue</button>
+    <button class="btn btn--blue-dark btn--filled">Blue Dark</button>
+    <button class="btn btn--green-light btn--filled">Green Light</button>
+    <button class="btn btn--green btn--filled">Green</button>
+    <button class="btn btn--green-dark btn--filled">Green Dark</button>
+    <button class="btn btn--purple-light btn--filled">Purple Light</button>
+    <button class="btn btn--purple btn--filled">Purple</button>
+    <button class="btn btn--purple-dark btn--filled">Purple Dark</button>
+    <button class="btn btn--orange-light btn--filled">Orange Light</button>
+    <button class="btn btn--orange btn--filled">Orange</button>
+    <button class="btn btn--orange-dark btn--filled">Orange Dark</button>
+    <button class="btn btn--red-light btn--filled">Red Light</button>
+    <button class="btn btn--red btn--filled">Red</button>
+    <button class="btn btn--red-dark btn--filled">Red Dark</button>
  ```
+
+
 
  <h4>Buttons (Disabled)</h4>
  ```
-    <button class="btn btn--gray-dark disabled">Gray Dark</button>
     <button class="btn btn--blue disabled">Blue</button>
-    <button class="btn btn--green raised disabled">Green</button>
-    <button class="btn btn--purple-dark raised disabled">Purple Dark</button>
-    <button class="btn btn--orange raised-filled disabled">Orange</button>
-    <button class="btn btn--red-dark raised-filled disabled">Red Dark</button>
+    <button class="btn btn--green disabled">Green</button>
+    <button class="btn btn--orange btn--filled disabled">Orange</button>
+    <button class="btn btn--red-dark btn--filled disabled">Red Dark</button>
  ```
 
  <h4>Block Buttons</h4>
  ```
-    <button class="btn btn--purple-dark btn--block">Purple Dark</button>
-    <button class="btn btn--gray-dark raised btn--block">Gray Dark</button>
-    <button class="btn btn--blue raised-filled btn--block">Blue</button>
+    <button class="btn btn--primary-gray btn--filled btn--block">Primary Gray</button>
+    <button class="btn btn--primary-blue btn--filled btn--block">Primary Blue</button>
  ```
 
 

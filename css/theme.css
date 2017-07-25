@@ -91,6 +91,7 @@ body {
 .kalei-comments > p a,
 .kalei-comments > p a:visited {
     padding: 0;
+    color: #3693F8;
 }
 
 .kalei-comments > iframe {
@@ -201,6 +202,11 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
     border: 1px solid #ccc;
     border-top: none;
     border-radius: 0 0 3px 3px;
+}
+
+.kalei-comments > pre.stand-alone {
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 .kalei-comments > .codedemo {

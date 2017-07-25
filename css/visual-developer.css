@@ -1,6 +1,49 @@
 /*
  # Visual Developer
  */
+/*
+ ##Overview
+
+ <h3>HTML5 doctype</h3>
+
+ This visual developer makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype.
+ Include it at the beginning of all your projects.
+
+ <pre class="stand-alone"> <span class="tag">&lt;<span class="title">!DOCTYPE html</span>&gt;</span>
+ <span class="tag">&lt;<span class="title">html lang="en"</span>&gt;</span>
+ ...
+ <span class="tag">&lt;/<span class="title">html</span>&gt;</span></pre>
+
+ <h3>Mobile First</h3>
+
+ Instead of adding on optional mobile styles, they're baked right into the core. Mobile first styles can be found
+ throughout the entire library instead of in separate files.
+
+ To ensure proper rendering and touch zooming, __add the viewport meta tag__ to your `<head>`.
+
+ <pre class="stand-alone"><span class="tag">&lt;<span class="title">meta name="viewport" content="width=device-width, initial-scale=1"</span>&gt;</span></pre>
+
+ You can disable zooming capabilities on mobile devices by adding user-scalable=no to the viewport meta tag. This
+ disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native
+ application. Overall, we don't recommend this on every site, so use caution!
+
+ <pre class="stand-alone"><span class="tag">&lt;<span class="title">meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>&gt;</span></pre>
+
+ <h3>Normalize</h3>
+
+ For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>,
+ a project by <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> and
+ <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a>.
+
+ <h3>Iconography</h3>
+
+ Included into this framework is the iconic font and toolkit <a href="http://fontawesome.io" target="_blank">Font Awesome 4.7.0</a>.
+
+ <h3>Coding Practices</h3>
+
+ TBD
+
+ */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -340,7 +383,6 @@ pre {
  ```
  For example, <code>&lt;section&gt;</code> should be wrapped as inline.
  ```
-
 
  <h3>User Input</h3>
 

@@ -9,7 +9,7 @@ module.exports = function (grunt) {
                 port: 3000,
                 open: true,
                 livereload: true,
-                base: ['styleguide']
+                base: ['.']
             }
         }
     });

@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             ]
         },
         dist: {
-            src: 'styleguide/css/visual-developer.css'
+            src: 'css/visual-developer.css'
         }
     });
 };

@@ -1,0 +1,852 @@
+/*
+ # Visual Developer
+ */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 0.1rem dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 3.2rem;
+  margin: 1.2rem 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.8rem; }
+
+sub {
+  bottom: -0.4rem; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1.6rem 4rem; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1.4rem; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 0.1rem solid #c0c0c0;
+  margin: 0 0.2rem;
+  padding: 0.6rem 1rem 1.2rem; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald/Oswald-Regular.eot?") format("eot"), url("../fonts/Oswald/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald/Oswald-Regular.woff") format("woff"), url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype"), url("../fonts/Oswald/Oswald-Regular.svg#Oswald") format("svg"); }
+
+@font-face {
+  font-family: "Oswald";
+  font-style: italic;
+  src: url("../fonts/Oswald/Oswald-RegularItalic.eot?") format("eot"), url("../fonts/Oswald/Oswald-RegularItalic.woff2") format("woff2"), url("../fonts/Oswald/Oswald-RegularItalic.woff") format("woff"), url("../fonts/Oswald/Oswald-RegularItalic.ttf") format("truetype"), url("../fonts/Oswald/Oswald-RegularItalic.svg#Oswald") format("svg"); }
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: bold;
+  src: url("../fonts/Oswald/Oswald-Bold.eot?") format("eot"), url("../fonts/Oswald/Oswald-Bold.woff2") format("woff2"), url("../fonts/Oswald/Oswald-Bold.woff") format("woff"), url("../fonts/Oswald/Oswald-Bold.ttf") format("truetype"), url("../fonts/Oswald/Oswald-Bold.svg#Oswald") format("svg"); }
+
+@font-face {
+  font-family: "Oswald";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Oswald/Oswald-BoldItalic.eot?") format("eot"), url("../fonts/Oswald/Oswald-BoldItalic.woff2") format("woff2"), url("../fonts/Oswald/Oswald-BoldItalic.woff") format("woff"), url("../fonts/Oswald/Oswald-BoldItalic.ttf") format("truetype"), url("../fonts/Oswald/Oswald-BoldItalic.svg#Oswald") format("svg"); }
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans/OpenSans-Regular.eot?") format("eot"), url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Regular.svg#OpenSans") format("svg"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  src: url("../fonts/OpenSans/OpenSans-Italic.eot?") format("eot"), url("../fonts/OpenSans/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Italic.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Italic.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Italic.svg#OpenSans") format("svg"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: bold;
+  src: url("../fonts/OpenSans/OpenSans-Bold.eot?") format("eot"), url("../fonts/OpenSans/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-Bold.svg#OpenSans") format("svg"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/OpenSans/OpenSans-BoldItalic.eot?") format("eot"), url("../fonts/OpenSans/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/OpenSans/OpenSans-BoldItalic.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-BoldItalic.svg#OpenSans") format("svg"); }
+
+* {
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 62.5%; }
+
+html {
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+  line-height: 1.428571429;
+  color: #414141;
+  background-color: #F5F5F5; }
+
+p,
+li,
+td,
+input,
+button,
+label,
+select,
+textarea {
+  font-size: 1.4rem;
+  font-family: inherit;
+  line-height: inherit; }
+
+a {
+  color: #3693F8;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #086cda;
+    text-decoration: underline; }
+  a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  margin: -0.1rem;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
+
+[role="button"] {
+  cursor: pointer; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+code {
+  padding: 0.2rem 0.4rem;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 0.4rem; }
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #fff;
+  background-color: #333;
+  border-radius: 0.3rem;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  kbd kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    box-shadow: none; }
+
+pre {
+  display: block;
+  padding: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  line-height: 1.428571429;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #575757;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem; }
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0; }
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll; }
+
+/*
+ ## Code
+
+ <h3>Inline</h3>
+
+ Wrap inline snippets of code with `<code>`.
+ ```
+ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+ ```
+
+
+ <h3>User Input</h3>
+
+ Use the `<kbd>` to indicate input that is typically entered via keyboard.
+ ```
+ To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+ ```
+
+ <h3>Basic Block</h3>
+
+ Use `<pre>` for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.
+ ```
+ <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+ ```
+
+ <h3>Variables</h3>
+
+ For indicating variables use the `<var>` tag.
+ ```
+ <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+ ```
+
+ <h3>Sample Output</h3>
+
+ For indicating blocks sample output from a program use the `<samp>` tag.
+ ```
+ <samp>This text is meant to be treated as sample output from a computer program.</samp>
+ ```
+
+ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.1;
+  color: inherit; }
+  h1 small,
+  h1 .small, h2 small,
+  h2 .small, h3 small,
+  h3 .small, h4 small,
+  h4 .small, h5 small,
+  h5 .small, h6 small,
+  h6 .small,
+  .h1 small,
+  .h1 .small, .h2 small,
+  .h2 .small, .h3 small,
+  .h3 .small, .h4 small,
+  .h4 .small, .h5 small,
+  .h5 .small, .h6 small,
+  .h6 .small {
+    font-weight: normal;
+    line-height: 1;
+    color: #868686; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+  h1 small,
+  h1 .small, .h1 small,
+  .h1 .small,
+  h2 small,
+  h2 .small, .h2 small,
+  .h2 .small,
+  h3 small,
+  h3 .small, .h3 small,
+  .h3 .small {
+    font-size: 65%; }
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  h4 small,
+  h4 .small, .h4 small,
+  .h4 .small,
+  h5 small,
+  h5 .small, .h5 small,
+  .h5 .small,
+  h6 small,
+  h6 .small, .h6 small,
+  .h6 .small {
+    font-size: 75%; }
+
+h1, .h1 {
+  font-size: 3.64rem; }
+
+h2, .h2 {
+  font-size: 3.01rem; }
+
+h3, .h3 {
+  font-size: 2.38rem; }
+
+h4, .h4 {
+  font-size: 1.75rem; }
+
+h5, .h5 {
+  font-size: 1.4rem; }
+
+h6, .h6 {
+  font-size: 1.19rem; }
+
+p {
+  margin: 0 0 1rem; }
+
+.lead {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4; }
+  @media (min-width: 480px) {
+    .lead {
+      font-size: 2.1rem; } }
+
+small,
+.small {
+  font-size: 142%; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+.text-muted {
+  color: #BCBCBC; }
+
+/*
+ ##Typography
+
+ <h3>Headings</h3>
+
+ All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` classes are also available,
+ for when you want to match the font styling of a heading but still want your text to be displayed inline.
+
+ ```
+ <h1>h1. Heading (approximately 36px)</h1>
+ <h2>h2. Heading (approximately 30px)</h2>
+ <h3>h3. Heading (approximately 24px)</h3>
+ <h4>h4. Heading (approximately 18px)</h4>
+ <h5>h5. Heading (approximately 14px)</h5>
+ <h6>h6. Heading (approximately 12px)</h6>
+ ```
+
+ Create lighter, secondary text in any heading with a generic `<small>` tag or the `.small` class.
+ ```
+ <h1>h1. Heading <small>Secondary text</small></h1>
+ <h2>h2. Heading <small>Secondary text</small></h2>
+ <h3>h3. Heading <small>Secondary text</small></h3>
+ <h4>h4. Heading <small>Secondary text</small></h4>
+ <h5>h5. Heading <small>Secondary text</small></h5>
+ <h6>h6. Heading <small>Secondary text</small></h6>
+ ```
+
+
+ <h3>Body Copy</h3>
+
+ Bootstrap's global default `font-size` is 14px, with a `line-height` of 1.428. This is applied to the `<body>` and all
+ paragraphs. In addition, `<p>` (paragraphs) receive a bottom margin of half their computed line-height (10px by default).
+
+ */
+table {
+  background-color: transparent;
+  font-size: 1.4rem; }
+
+caption {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: #BCBCBC;
+  text-align: left; }
+
+th {
+  text-align: left; }
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem; }
+  .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td {
+    padding: 0.8rem;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 0.1rem solid #ddd; }
+  .table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 0.2rem solid #ddd; }
+  .table > caption + thead > tr:first-child > th,
+  .table > caption + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td {
+    border-top: 0; }
+  .table > tbody + tbody {
+    border-top: 0.2rem solid #ddd; }
+  .table .table {
+    background-color: #F5F5F5; }
+
+.table-condensed > thead > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > th,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tfoot > tr > td {
+  padding: 0.5rem; }
+
+.table-bordered {
+  border: 1px solid #ddd; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tbody > tr > td,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > tfoot > tr > td {
+    border: 0.1rem solid #ddd; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td {
+    border-bottom-width: 0.2rem; }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9; }
+
+.table-hover > tbody > tr:hover {
+  background-color: #f5f5f5; }
+
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column; }
+
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell; }
+
+.table > thead > tr > td.active,
+.table > thead > tr > th.active,
+.table > thead > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr > td.active,
+.table > tbody > tr > th.active,
+.table > tbody > tr.active > td,
+.table > tbody > tr.active > th,
+.table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active,
+.table > tfoot > tr.active > td,
+.table > tfoot > tr.active > th {
+  background-color: #f5f5f5; }
+
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+  background-color: #e8e8e8; }
+
+.table > thead > tr > td.success,
+.table > thead > tr > th.success,
+.table > thead > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr > td.success,
+.table > tbody > tr > th.success,
+.table > tbody > tr.success > td,
+.table > tbody > tr.success > th,
+.table > tfoot > tr > td.success,
+.table > tfoot > tr > th.success,
+.table > tfoot > tr.success > td,
+.table > tfoot > tr.success > th {
+  background-color: #dff0d8; }
+
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
+.table-hover > tbody > tr.success:hover > th {
+  background-color: #d0e9c6; }
+
+.table > thead > tr > td.info,
+.table > thead > tr > th.info,
+.table > thead > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr > td.info,
+.table > tbody > tr > th.info,
+.table > tbody > tr.info > td,
+.table > tbody > tr.info > th,
+.table > tfoot > tr > td.info,
+.table > tfoot > tr > th.info,
+.table > tfoot > tr.info > td,
+.table > tfoot > tr.info > th {
+  background-color: #d9edf7; }
+
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+  background-color: #c4e3f3; }
+
+.table > thead > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning,
+.table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning,
+.table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th {
+  background-color: #fcf8e3; }
+
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
+.table-hover > tbody > tr.warning:hover > th {
+  background-color: #faf2cc; }
+
+.table > thead > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr > td.danger,
+.table > tbody > tr > th.danger,
+.table > tbody > tr.danger > td,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr > td.danger,
+.table > tfoot > tr > th.danger,
+.table > tfoot > tr.danger > td,
+.table > tfoot > tr.danger > th {
+  background-color: #f2dede; }
+
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
+.table-hover > tbody > tr.danger:hover > th {
+  background-color: #ebcccc; }
+
+@media only screen and (max-width: 479px) {
+  .show-xs {
+    display: block !important; }
+  .hide-xs {
+    display: none !important; } }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .show-sm {
+    display: block !important; }
+  .hide-sm {
+    display: none !important; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .show-md {
+    display: block !important; }
+  .hide-md {
+    display: none !important; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .show-lg {
+    display: block !important; }
+  .hide-lg {
+    display: none !important; } }
+
+@media only screen and (min-width: 1200px) {
+  .show-xl {
+    display: block !important; }
+  .hide-xl {
+    display: none !important; } }
+
+/*
+ ## Responsive Utilities
+
+ <h3>Available classes</h3>
+
+ Use a single or combination of the available classes for toggling content across viewport breakpoints.
+
+ <div class="table-container">
+     <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Extra Small<span class="table-meta">0 - 479px</span></th>
+                <th>Small<span class="table-meta">480px - 767px</span></th>
+                <th>Medium<span class="table-meta">768px - 991px</span></th>
+                <th>Large<span class="table-meta">992px - 1199px</span></th>
+                <th>Extra Large<span class="table-meta">>1200px</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>.show-xs</code></td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-sm</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-md</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-lg</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-xl</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td><code>.hide-xs</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-sm</code></td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-md</code></td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-lg</code></td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-xl</code></td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+
+
+
+
+
+ */

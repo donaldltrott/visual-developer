@@ -1,0 +1,148 @@
+// ------------------------------------------------
+//  TYPOGRAPHY
+// ------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+    font-family: $headings-font-family
+    font-weight: $headings-font-weight
+    line-height: $headings-line-height
+    color: $headings-color
+
+    small,
+    .small
+        font-weight: normal
+        line-height: 1
+        color: $headings-small-color
+
+h1, .h1,
+h2, .h2,
+h3, .h3
+    margin-top: $line-height-computed
+    margin-bottom: ($line-height-computed / 2)
+
+    small,
+    .small
+        font-size: 65%
+
+h4, .h4,
+h5, .h5,
+h6, .h6
+    margin-top: ($line-height-computed / 2)
+    margin-bottom: ($line-height-computed / 2)
+
+    small,
+    .small
+        font-size: 75%
+
+h1, .h1
+    font-size: $font-size-h1
+
+h2, .h2
+    font-size: $font-size-h2
+
+h3, .h3
+    font-size: $font-size-h3
+
+h4, .h4
+    font-size: $font-size-h4
+
+h5, .h5
+    font-size: $font-size-h5
+
+h6, .h6
+    font-size: $font-size-h6
+
+// Body text
+// -------------------------
+
+p
+    margin: 0 0 ($line-height-computed / 2)
+
+.lead
+    margin-bottom: $line-height-computed
+    font-size: floor(($font-size-base * 1.15))
+    font-weight: 300
+    line-height: 1.4
+
+    @media (min-width: $screen-sm-min)
+        font-size: ($font-size-base * 1.5)
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small
+    font-size: floor((100% * $font-size-small / $font-size-base))
+
+// Alignment
+.text-left
+    text-align: left
+
+.text-right
+    text-align: right
+
+.text-center
+    text-align: center
+
+.text-justify
+    text-align: justify
+
+.text-nowrap
+    white-space: nowrap
+
+// Transformation
+.text-lowercase
+    text-transform: lowercase
+
+.text-uppercase
+    text-transform: uppercase
+
+.text-capitalize
+    text-transform: capitalize
+
+// Contextual colors
+.text-muted
+    color: $text-muted
+
+
+
+/*
+ ##Typography
+
+ <h3>Headings</h3>
+
+ All HTML headings, `<h1>` through `<h6>`, are available. `.h1` through `.h6` classes are also available,
+ for when you want to match the font styling of a heading but still want your text to be displayed inline.
+
+ ```
+ <h1>h1. Heading (approximately 36px)</h1>
+ <h2>h2. Heading (approximately 30px)</h2>
+ <h3>h3. Heading (approximately 24px)</h3>
+ <h4>h4. Heading (approximately 18px)</h4>
+ <h5>h5. Heading (approximately 14px)</h5>
+ <h6>h6. Heading (approximately 12px)</h6>
+ ```
+
+ Create lighter, secondary text in any heading with a generic `<small>` tag or the `.small` class.
+ ```
+ <h1>h1. Heading <small>Secondary text</small></h1>
+ <h2>h2. Heading <small>Secondary text</small></h2>
+ <h3>h3. Heading <small>Secondary text</small></h3>
+ <h4>h4. Heading <small>Secondary text</small></h4>
+ <h5>h5. Heading <small>Secondary text</small></h5>
+ <h6>h6. Heading <small>Secondary text</small></h6>
+ ```
+
+
+ <h3>Body Copy</h3>
+
+ Bootstrap's global default `font-size` is 14px, with a `line-height` of 1.428. This is applied to the `<body>` and all
+ paragraphs. In addition, `<p>` (paragraphs) receive a bottom margin of half their computed line-height (10px by default).
+
+ */
+

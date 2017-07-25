@@ -1,0 +1,105 @@
+//
+// Code (inline and block)
+// --------------------------------------------------
+
+
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp
+    font-family: $font-family-monospace
+
+// Inline code
+code
+    padding: 0.2rem 0.4rem
+    font-size: 90%
+    color: $code-color
+    background-color: $code-bg
+    border-radius: $border-radius-base
+
+// User input typically entered via keyboard
+kbd
+    padding: 2px 4px
+    font-size: 90%
+    color: $kbd-color
+    background-color: $kbd-bg
+    border-radius: $border-radius-small
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25)
+
+    kbd
+        padding: 0
+        font-size: 100%
+        font-weight: bold
+        box-shadow: none
+
+// Blocks of code
+pre
+    display: block
+    padding: (($line-height-computed - 1) / 2)
+    margin: 0 0 ($line-height-computed / 2)
+    font-size: ($font-size-base - 0.1rem)
+    line-height: $line-height-base
+    word-break: break-all
+    word-wrap: break-word
+    color: $pre-color
+    background-color: $pre-bg
+    border: 1px solid $pre-border-color
+    border-radius: $border-radius-base
+
+    // Account for some code outputs that place code tags in pre tags
+    code
+        padding: 0
+        font-size: inherit
+        color: inherit
+        white-space: pre-wrap
+        background-color: transparent
+        border-radius: 0
+
+// Enable scrollable blocks of code
+.pre-scrollable
+    max-height: $pre-scrollable-max-height
+    overflow-y: scroll
+
+
+/*
+ ## Code
+
+ <h3>Inline</h3>
+
+ Wrap inline snippets of code with `<code>`.
+ ```
+ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+ ```
+
+
+ <h3>User Input</h3>
+
+ Use the `<kbd>` to indicate input that is typically entered via keyboard.
+ ```
+ To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+ ```
+
+ <h3>Basic Block</h3>
+
+ Use `<pre>` for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.
+ ```
+ <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+ ```
+
+ <h3>Variables</h3>
+
+ For indicating variables use the `<var>` tag.
+ ```
+ <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+ ```
+
+ <h3>Sample Output</h3>
+
+ For indicating blocks sample output from a program use the `<samp>` tag.
+ ```
+ <samp>This text is meant to be treated as sample output from a computer program.</samp>
+ ```
+
+ */

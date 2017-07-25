@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         },
         dist: {
             files: {
-                'styleguide/css/visual-developer.css': 'sass/visual-developer.sass'
+                'css/visual-developer.css': 'sass/visual-developer.sass'
             }
         }
     });

@@ -84,14 +84,14 @@ body {
 .kalei-comments > p {
     margin: 0;
     padding: 12px;
-    color: #444;
+    /*color: #444;*/
     /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 }
 
 .kalei-comments > p a,
 .kalei-comments > p a:visited {
     padding: 0;
-    color: #3693F8;
+    /*color: #3693F8;*/
 }
 
 .kalei-comments > iframe {
@@ -382,7 +382,7 @@ body .codedemo:after {
     display: none;
 }
 .dons-subnav li {
-    padding: 0 0 0 21px;
+    padding: 2px 0 2px 21px;
     margin: 0;
     list-style: none;
     font-size: 12px;

@@ -1,0 +1,116 @@
+/*
+ ##Media Queries
+
+ <h3>Examples</h3>
+
+ We use the following media queries in our SASS files to create the key breakpoints in our grid system. Since media queries
+ do not live in the `body` of your document, they __do not__ follow the rule of `1rem` is equal to `10px`, so it is easier to
+ document the sizing in `px` rather than `rem`.
+
+ We can use media queries to target a certain breakpoint and anything __larger__ than it using these:
+
+ <div class="table-container">
+     <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Media Query</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>480px</td>
+                <td>--</td>
+                <td><code>@media screen and (min-width: $screen-sm-min) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>768px</td>
+                <td>--</td>
+                <td><code>@media screen and (min-width: $screen-md-min) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>992px</td>
+                <td>--</td>
+                <td><code>@media screen and (min-width: $screen-lg-min) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>1200px</td>
+                <td>--</td>
+                <td><code>@media screen and (min-width: $screen-xl-min) { ... }</code></td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+ We can use media queries to target a certain breakpoint and anything __smaller__ than it using these:
+
+ <div class="table-container">
+     <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Media Query</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>--</td>
+                <td>479px</td>
+                <td><code>@media screen and (max-width: $screen-xs-max) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>767px</td>
+                <td><code>@media screen and (max-width: $screen-sm-max) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>991px</td>
+                <td><code>@media screen and (max-width: $screen-md-max) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>1199px</td>
+                <td><code>@media screen and (max-width: $screen-lg-max) { ... }</code></td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+ We occasionally expand on these media queries to include a `min-width` and `max-width` to limit CSS to a narrower set of devices:
+
+ <div class="table-container">
+     <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Media Query</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>480px</td>
+                <td>767px</td>
+                <td><code>@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>768px</td>
+                <td>991px</td>
+                <td><code>@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) { ... }</code></td>
+            </tr>
+            <tr>
+                <td>992px</td>
+                <td>1199px</td>
+                <td><code>@media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max) { ... }</code></td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+
+
+
+ */

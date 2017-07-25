@@ -156,13 +156,15 @@ define([
                 //Fixed by pivanov
                 //that.compute_css
                 $(".kalei-sheet-submenu li .main-link").on('click', function (ev) {
+                    $(".kalei-sheet-submenu li").removeClass('active');
+                    $(ev.currentTarget).parent('li').addClass('active');
                     $('html, body').animate({
                         scrollTop: $(".kalei-comments h2:contains('" + $(ev.currentTarget).text() + "')").offset().top - 12
                     }, 400);
                 });
 
                 $(".dons-subnav li").on('click', function (ev) {
-                    console.log('hello')
+
                     $('html, body').animate({
                         scrollTop: $(".kalei-comments h3:contains('" + $(ev.currentTarget).text() + "')").offset().top - 12
                     }, 400);
@@ -173,11 +175,11 @@ define([
                         console.log('this', this);
                         console.log('helloooooo', $(this).find('.kalei-comments > h3').text());
                         if (that.is_on_screen($(this), 40)) {
-                            $(".kalei-sheet-submenu li").removeClass('active');
-                            $(".kalei-sheet-submenu li:contains('" + $(this).find('.kalei-comments > h2').text() + "')").addClass('active');
+                            //$(".kalei-sheet-submenu li").removeClass('active');
+                            // $(".kalei-sheet-submenu li:contains('" + $(this).find('.kalei-comments > h2').text() + "')").addClass('active');
 
-                            
-                            $(".kalei-sheet-submenu li .dons-subnav li:contains('Inline')").addClass('active');
+
+                            // $(".kalei-sheet-submenu li .dons-subnav li:contains('Inline')").addClass('active');
                         }
                     });
                 });

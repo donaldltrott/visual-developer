@@ -1,0 +1,213 @@
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol
+    margin-top: 0
+    margin-bottom: ($line-height-computed / 2)
+    ul,
+    ol
+        margin-bottom: 0
+
+// List options
+
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled
+    padding-left: 0
+    list-style: none
+
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.list-unstyled
+    @include list-unstyled
+
+// Inline turns list items into inline-block
+.list-inline
+    @include list-unstyled
+    margin-left: -$spacing-md
+
+    > li
+        display: inline-block
+        padding-left: $spacing-md
+        padding-right: $spacing-md
+
+// Description Lists
+dl
+    margin-top: 0
+    // Remove browser default
+    margin-bottom: $line-height-computed
+
+dt,
+dd
+    line-height: $line-height-base
+
+dt
+    font-weight: bold
+
+dd
+    margin-left: 0
+// Undo browser default
+
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal
+    dd
+        @include clearfix
+    // Clear the floated `dt` if an empty `dd` is present
+
+
+    @media (min-width: $dl-horizontal-breakpoint)
+        dt
+            float: left
+            width: ($dl-horizontal-offset - 2)
+            clear: left
+            text-align: right
+            @include text-overflow
+
+        dd
+            margin-left: $dl-horizontal-offset
+
+
+
+
+
+/*
+ ##Lists
+
+ <h3>Unordered List</h3>
+
+ A list of items in which the order does not explicitly matter.
+
+ ```
+ <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+        <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+        </ul>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+ </ul>
+ ```
+
+ <h3>Ordered List</h3>
+
+ A list of items in which the order does explicitly matter.
+
+ ```
+ <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+        <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+        </ul>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+ </ol>
+ ```
+
+ <h3>Unstyled List</h3>
+
+ Remove the default `list-style` and left margin on list items (immediate children only). __This only applies to immediate
+ children list items__, meaning you will need to add the class for any nested lists as well.
+
+ ```
+ <ul class="list-unstyled">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit
+        <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+        </ul>
+    </li>
+    <li>Faucibus porta lacus fringilla vel</li>
+    <li>Aenean sit amet erat nunc</li>
+    <li>Eget porttitor lorem</li>
+ </ul>
+ ```
+
+ <h3>Inline List</h3>
+
+ Place all list items on a single line with `display: inline-block;` and some light padding.
+
+ ```
+ <ul class="list-inline">
+    <li>Lorem ipsum</li>
+    <li>Consectetur adipiscing</li>
+    <li>Integer molestie</li>
+ </ul>
+ ```
+
+
+
+
+ <h3>Description List</h3>
+
+ A list of terms with their associated descriptions.
+
+ ```
+ <dl>
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+ </dl>
+ ```
+
+
+
+ <h3>Horizontal Description List</h3>
+
+ Make terms and descriptions in `<dl>` line up side-by-side. Starts off stacked like default `<dl>`s, but when the
+ navbar expands, so do these.
+
+ ```
+ <dl class="dl-horizontal">
+    <dt>Description lists</dt>
+    <dd>A description list is perfect for defining terms.</dd>
+    <dt>Euismod</dt>
+    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt>Malesuada porta</dt>
+    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+ </dl>
+ ```
+
+
+
+
+
+
+
+
+
+
+ */

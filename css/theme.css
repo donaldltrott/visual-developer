@@ -115,6 +115,14 @@ body {
     margin-top: 36px;
 }
 
+.kalei-comments > h4 {
+    margin-top: 24px;
+}
+
+.kalei-comments > h3 + h4 {
+    margin-top: 0;
+}
+
 /*.kalei-comments > ul,*/
 /*.kalei-comments > ol,*/
 /*.kalei-comments > p {*/
@@ -391,13 +399,13 @@ body .codedemo:after {
     cursor: pointer;
 }
 
-.dons-subnav li:hover {
-    border-color: #ccc;
-}
+/*.dons-subnav li:hover {*/
+    /*border-color: #ccc;*/
+/*}*/
 
-.dons-subnav li.active {
-    border-color: #3693F8;
-}
+/*.dons-subnav li.active {*/
+    /*border-color: #3693F8;*/
+/*}*/
 
 .active > ul.dons-subnav {
     display: block;

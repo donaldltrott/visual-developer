@@ -64,7 +64,7 @@ p
 
 .lead
     margin-bottom: $line-height-computed
-    font-size: floor(($font-size-base * 1.15))
+    font-size: $font-size-base * 1.15
     font-weight: 300
     line-height: 1.4
 
@@ -78,6 +78,12 @@ p
 small,
 .small
     font-size: floor((100% * $font-size-small / $font-size-base))
+
+mark,
+.mark
+    background-color: $state-warning-bg
+    padding: $spacing-xs
+
 
 // Alignment
 .text-left
@@ -141,8 +147,96 @@ small,
 
  <h3>Body Copy</h3>
 
- Bootstrap's global default `font-size` is 14px, with a `line-height` of 1.428. This is applied to the `<body>` and all
- paragraphs. In addition, `<p>` (paragraphs) receive a bottom margin of half their computed line-height (10px by default).
+ The global default `font-size` is 1.4rem (14px), with a `line-height` of 1.428. This is applied to the `<body>` and all
+ paragraphs. In addition, `<p>` (paragraphs) receive a bottom margin of half their computed line-height 1rem (10px) by default.
+
+ ```
+ <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius tempus erat, faucibus faucibus ligula
+    luctus ut. In augue dui, iaculis quis semper nec, pellentesque vitae erat.
+ </p>
+ <p>
+    Ut vitae leo a neque elementum pharetra ut quis mi. Maecenas aliquam ultrices augue vehicula malesuada. Praesent
+    elementum porttitor urna, vel interdum elit molestie et.
+ </p>
+ <p>
+    Maecenas eleifend vel arcu et lacinia. Donec quis ipsum urna. In sollicitudin neque id enim porta semper.
+    Maecenas quis massa ante. Proin vitae tellus lectus.
+ </p>
+ ```
+
+ <h3>Lead Body Copy</h3>
+
+ Make a paragraph stand out by adding `.lead`.
+
+ ```
+ <p class="lead">
+    In porta pellentesque tortor id tincidunt. Phasellus interdum finibus mauris, at consectetur ipsum aliquet at.
+ </p>
+ ```
+
+ <h3>Inline Text Elements</h3>
+
+ <h4>Marked Text</h4>
+
+ For highlighting a run of text due to its relevance in another context, use the `<mark>` tag.
+ ```
+ You can use the mark tag to <mark>highlight</mark> text.
+ ```
+
+ <h4>Deleted Text</h4>
+
+ For indicating blocks of text that have been deleted use the `<del>` tag.
+ ```
+ <del>This line of text is meant to be treated as deleted text.</del>
+ ```
+
+ <h4>Strike-Through Text</h4>
+
+ For indicating blocks of text that are no longer relevant use the `<s>` tag.
+ ```
+ <s>This line of text is meant to be treated as no longer accurate.</s>
+ ```
+
+ <h4>Inserted Text</h4>
+
+ For indicating additions to the document use the `<ins>` tag.
+ ```
+ <ins>This line of text is meant to be treated as an addition to the document.</ins>
+ ```
+
+ <h4>Underlined Text</h4>
+
+ To underline text use the `<u>` tag.
+ ```
+ <u>This line of text will render as underlined</u>
+ ```
+
+ <h4>Small</h4>
+
+ For de-emphasizing inline or blocks of text, use the `<small>` tag to set text at 85% the size of the parent. Heading
+ elements receive their own `font-size` for nested `<small>` elements.
+
+ You may alternatively use an inline element with `.small` in place of any `<small>`.
+ ```
+ <small>This line of text is meant to be treated as fine print.</small>
+ ```
+
+ <h4>Bold</h4>
+
+ For emphasizing a snippet of text with a heavier font-weight.
+ ```
+ The following snippet of text is <strong>rendered as bold text</strong>
+ ```
+
+ <h4>Italics</h4>
+
+ For emphasizing a snippet of text with italics.
+ ```
+ The following snippet of text is <em>rendered as italicized text</em>
+ ```
+
+
 
  */
 

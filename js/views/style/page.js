@@ -29,7 +29,7 @@ define([
                 var pageHeight = document.body.offsetHeight;
                 var lastEl = $(".kalei-documentation:last").height();
                 console.log(lastEl);
-                $(that.el).css({'padding-bottom': pageHeight});
+                $(that.el).css({'padding-bottom': (pageHeight / 2)});
 
                 var styleUrl, configDir, primaryStyleFile = config.css_path;
 

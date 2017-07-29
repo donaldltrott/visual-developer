@@ -14,24 +14,293 @@
         span {
             display: none;
         }
+        /*[class^="col-"], [class*=" col-"] {*/
+            /*border: 1px solid red;*/
+        /*}*/
+        .row + .row,
+        .row + .row-tight,
+        .row-tight + .row-tight,
+        .row-tight + .row{
+            margin-top: 20px;
+        }
+        .row.gutter [class^="col-"],
+        .row.gutter [class*=" col-"],
+        .row-tight.gutter [class^="col-"],
+        .row-tight.gutter [class*=" col-"]{
+            border: 1px solid lightgray;
+            border-radius: 3px;
+            padding: 8px;
+            margin-bottom: 24px;
+        }
     </style>
 
 </head>
 
 <body>
 
-<span style="font-size:1.4rem;">this is my text</span>
-<span style="font-size: 14px;" class="show-xs">0-479</span>
-<span style="font-size: 14px;" class="show-sm">480-767</span>
-<span style="font-size: 14px;" class="show-md">768-991</span>
-<span style="font-size: 14px;" class="show-lg">992-1200</span>
-<span style="font-size: 14px;" class="show-xl">1200+</span>
 
-<h2>Small Business Just Got <strong>Bigger</strong> <small>(So the say)</small></h2>
-<p>Net 30, Net 60, Net 90, Net NEVER payments are revenue decelerators -
-    slowing a small <strong>business's</strong> working capital <em>until</em> it barely works.</p>
-<p>Introducing BATON, where real-time, risk-free invoice <strong><em>payments</em></strong> are the
-    new way to do business!</p>
+<div class="container-fluid">
+
+    <span style="font-size:1.4rem;">this is my text</span>
+    <span style="font-size: 14px;" class="show-xs">0-479</span>
+    <span style="font-size: 14px;" class="show-sm">480-767</span>
+    <span style="font-size: 14px;" class="show-md">768-991</span>
+    <span style="font-size: 14px;" class="show-lg">992-1200</span>
+    <span style="font-size: 14px;" class="show-xl">1200+</span>
+
+    <div class="row">
+        <!--<div class="col-md">-->
+            <!--<h2>Small Business Just Got <strong>Bigger</strong>-->
+                <!--<small>(So the say)</small>-->
+            <!--</h2>-->
+            <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+                <!--industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and-->
+                <!--scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into-->
+                <!--electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of-->
+                <!--Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like-->
+                <!--Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash;<div class="col-xs-3">&ndash;&gt;-->
+            <!--<h2>Small Business Just Got <strong>Bigger</strong>-->
+                <!--<small>(So the say)</small>-->
+            <!--</h2>-->
+            <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+                <!--industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and-->
+                <!--scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into-->
+                <!--electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of-->
+                <!--Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like-->
+                <!--Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+
+        <!--</div>-->
+        <div class="col-xl-1">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-xl-1">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. </p>
+
+        </div>
+        <div class="col-xl-1">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Loret has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-xl-1">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a versions of Lorem Ipsum.</p>
+
+        </div>
+
+    </div>
+
+    <div class="row gutter">
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <!--<div class="col-xs-3">-->
+        <!--<h2>Small Business Just Got <strong>Bigger</strong>-->
+        <!--<small>(So the say)</small>-->
+        <!--</h2>-->
+        <!--<p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the-->
+        <!--industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and-->
+        <!--scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into-->
+        <!--electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of-->
+        <!--Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like-->
+        <!--Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+
+        <!--</div>-->
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. </p>
+
+        </div>
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Loret has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a versions of Lorem Ipsum.</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="row-tight">
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md-3">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md-3">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md-3">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+    </div>
+
+    <div class="row-tight gutter">
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md-2">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md-2">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md-2">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="col-md">
+            <h2>Small Business Just Got <strong>Bigger</strong>
+                <small>(So the say)</small>
+            </h2>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+    </div>
+
+
+</div>
 
 </body>
 </html>

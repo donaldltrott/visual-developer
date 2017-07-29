@@ -26,6 +26,7 @@ body {
     background-color: #fff;
 }
 
+
 .kalei-styleguide-menu {
     height: 100%;
     overflow-y: auto;
@@ -111,6 +112,15 @@ body {
     background: #F5F5F5;
 }
 
+.kalei-comments > h2 + p {
+    margin-top: 24px;
+}
+
+.kalei-comments > p + h3 {
+    margin-top: 24px;
+}
+
+
 .kalei-comments > h3 {
     margin-top: 36px;
 }
@@ -154,6 +164,16 @@ These styles make sure the css code block is floated to the right correctly and 
 .kalei-comments-container {
     position: relative;
     width: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .kalei-style-menu-container {
+        display: none;
+    }
+    .kalei-style-page {
+        margin-left: 0;
+    }
 }
 
 /*
@@ -205,7 +225,7 @@ When you use Markdown code blocks ```, Kalei automatically renders the code as H
 
 .kalei-comments > pre {
     position: relative;
-    margin: 0 12px;
+    margin: 0 12px 12px;
     padding: 20px;
     border: 1px solid #ccc;
     border-top: none;
@@ -310,14 +330,14 @@ body .codedemo:after {
     background-color: #444;
 }
 
-.codedemo div[class^="col-"] p,
-.codedemo div[class*=" col-"] p {
-    background: lightblue;
-    padding: 4px;
-    color: white;
-    text-align: center;
-    margin: 5px;
-}
+/*.codedemo div[class^="col-"] p,*/
+/*.codedemo div[class*=" col-"] p {*/
+    /*background: lightblue;*/
+    /*padding: 4px;*/
+    /*color: white;*/
+    /*text-align: center;*/
+    /*margin: 5px;*/
+/*}*/
 
 .kalei-styleguide-menu-stylesheets {
     margin-top: 20px;
@@ -423,5 +443,98 @@ body .codedemo:after {
 
 .kalei-sheet-submenu li.active .main-link{
     border-color: #005CB9;
+}
+
+.grid-demo + p {
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.grid-demo + p + .codedemo .row + .row {
+    margin-top: 12px;
+}
+.grid-demo + p + .codedemo .row,
+.grid-demo + p + .codedemo .row-tight {
+    border: 1px solid #ccc;
+    background: rgba(0,0,0, .075);
+}
+
+.grid-demo + p + .codedemo .row [class^="col-"],
+.grid-demo + p + .codedemo .row [class*=" col-"] {
+    outline: 1px dashed #aaa;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+}
+.grid-demo + p + .codedemo .row-tight [class^="col-"],
+.grid-demo + p + .codedemo .row-tight [class*=" col-"] {
+    outline: 1px dashed #aaa;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+}
+.grid-demo + p + .codedemo .row [class^="col-"]:before,
+.grid-demo + p + .codedemo .row [class*=" col-"]:before {
+    content: ' ';
+    position: absolute;
+    width: 12px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0,0,255, .1);
+}
+.grid-demo + p + .codedemo .row [class^="col-"]:after,
+.grid-demo + p + .codedemo .row [class*=" col-"]:after {
+    content: ' ';
+    position: absolute;
+    width: 12px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0,0,255, .1);
+}
+.grid-demo + p + .codedemo .row-tight [class^="col-"]:before,
+.grid-demo + p + .codedemo .row-tight [class*=" col-"]:before {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0,0,255, .1);
+}
+.grid-demo + p + .codedemo .row-tight [class^="col-"]:after,
+.grid-demo + p + .codedemo .row-tight [class*=" col-"]:after {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0,0,255, .1);
+}
+.grid-demo + p + .codedemo .row.gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:before {
+    content: ' ';
+    position: absolute;
+    width: 12px;
+    top: 0;
+    left: -12px;
+    height: 100%;
+    background: rgba(255,0,0, .1);
+}
+.grid-demo + p + .codedemo .row.gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:after {
+    content: ' ';
+    position: absolute;
+    width: 12px;
+    top: 0;
+    right: -12px;
+    height: 100%;
+    background: rgba(255,0,0, .1);
+}
+.show-padding {
+    background: rgba(0,0,255, .1);
+    color: #005CB9;
 }
 

@@ -74,9 +74,10 @@
     <li>Use rows to create horizontal groups of columns.</li>
     <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
     <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid
-    layouts. Less mixins can also be used for more semantic layouts.</li>
-    <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows
-    for the first and last column via negative margin on <code>.row</code>s.</li>
+    layouts. SASS mixins can also be used for more semantic layouts.</li>
+    <li>Columns create gutters (gaps between column content) via <code class="show-padding">padding</code> or <code class="show-margin">margin</code>. The default
+    class of `.row` use <code class="show-padding">padding</code> to create the gutters within the columns, and the row option `.gutters` places a <code class="show-margin">margin</code>
+    between each column. That gutter is offset in rows for the first and last column via negative margin on the <code>.row</code>.</li>
     <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined
     up with non-grid content.</li>
     <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example,
@@ -85,18 +86,17 @@
     onto a new line.</li>
     <li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override
     grid classes targeted at smaller devices. Therefore, e.g. applying any <code>.col-md-&#42;</code> class to an element
-    will not only affect its styling on medium devices but also on large devices if a <code>.col-xl-&#42;</code> class
-    is not present.</li>
+    will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-&#42;</code> or
+    <code>.col-xl-&#42;</code> class is not present.</li>
  </ul>
 
  Look to the examples for applying these principles to your code.
 
 
-
  <h3>Containers</h3>
 
  Visual Developer requires a containing element to wrap site contents and house our grid system. You may choose one of two
- containers to use in your projects. Note that, due to `padding`, `margins`, and more, neither container is nestable.
+ containers to use in your projects. Note that, due to `padding`, `margin`, and more, neither container is nestable.
 
  Use `.container` for a responsive fixed width container.
 
@@ -111,30 +111,34 @@
  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></pre>
 
 
- <h3>Rows</h3>
+ <h3>Horizontal Grid</h3>
 
- <h4>Standard Row</h4>
+ <h4>Row</h4>
 
- TBD
+ The class `.row` is the default class for setting up a horizontal grid. The `.row` class will define it's child `.col-` classes
+ to have no space between the individual columns, but has an internal <code class="show-padding">padding</code> to create gutters between the content.
  <div class="grid-demo"></div>
  ```
  <div class="row">
-    <div class="col-md">Content</div>
-    <div class="col-md">Content</div>
-    <div class="col-md">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
  </div>
  ```
 
 
  <h4>Row with Gutters</h4>
 
- TBD
+ You can choose to go a different route by adding a modifying class of `.gutters` to your `.row`. This changes the layout
+ of the child `.col-` elements to have a space between the elements using <code class="show-margin">margin</code> instead of padding. A good use case for
+ this type of row is to be able to style the `.col-` element directly to create a row of elements that are all the same
+ height no matter the height of the content.
  <div class="grid-demo"></div>
  ```
  <div class="row gutters">
-    <div class="col-md">Content</div>
-    <div class="col-md">Content</div>
-    <div class="col-md">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
  </div>
  ```
 
@@ -142,13 +146,21 @@
 
  <h4>Row Sizing</h4>
 
- TBD
+ The gutters that are casued by either <code class="show-padding">padding</code> or <code class="show-margin">margin</code> can be somewhat adjusted using a new type of row called `.row-tight`.
+ Whether using `.gutters` or the default behavior the `.row-tight` reduces the getters from the default `2.4rem` or `(24px)` to
+ `1.6rem` or `(16px)`.
  <div class="grid-demo"></div>
  ```
  <div class="row-tight">
-    <div class="col-md">Content</div>
-    <div class="col-md">Content</div>
-    <div class="col-md">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
+ </div>
+
+ <div class="row-tight gutters">
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
+    <div class="col-xs">Content</div>
  </div>
  ```
 
@@ -193,8 +205,12 @@
                 <td><code>.col-xl-</code></td>
             </tr>
             <tr>
-                <th>Gutter Width</tg>
+                <th>Gutter Width `.row`</tg>
                 <td colspan="5">`24px` or `2.4rem` (`12px` or `1.2rem` on each side of the column)</td>
+            </tr>
+            <tr>
+                <th>Gutter Width `.row-tight`</tg>
+                <td colspan="5">`16px` or `1.6rem` (`8px` or `0.8rem` on each side of the column)</td>
             </tr>
             <tr>
                 <th>Nestable</tg>
@@ -212,27 +228,159 @@
 
 
 
- <h3>Example: Stacked-to-horizontal</h3>
+ <h3>Fluid Grid</h3>
 
- Using a single set of <code>.col-md-&#42;</code> grid classes, you can create a basic grid system that starts out stacked on mobile
- devices and tablet devices in portrait (the extra small to small range) before becoming horizontal on desktop (medium) devices.
- Place grid columns in any `.row`. In the example below you can see the default structure of the columns with within a
- `.row` showing <code class="show-padding">padding</code> on the left and right of each.
+ Percent based widths allow fluid resizing of columns and rows.
  <div class="grid-demo"></div>
  ```
  <div class="row">
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
-    <div class="col-md-1">.col-md-1</div>
+    <div class="col-xs-12">12</div>
+ </div>
+ <div class="row">
+    <div class="col-xs-1">1</div>
+    <div class="col-xs-11">11</div>
+ </div>
+ <div class="row">
+    <div class="col-xs-2">2</div>
+    <div class="col-xs-10">10</div>
+ </div>
+ <div class="row">
+    <div class="col-xs-3">3</div>
+    <div class="col-xs-9">9</div>
+ </div>
+ <div class="row">
+    <div class="col-xs-4">4</div>
+    <div class="col-xs-8">8</div>
+ </div>
+ <div class="row">
+    <div class="col-xs-5">5</div>
+    <div class="col-xs-7">7</div>
+ </div>
+ <div class="row">
+    <div class="col-xs-6">6</div>
+    <div class="col-xs-6">6</div>
+ </div>
+ ```
+
+
+
+
+ <h3>Column Offsets</h3>
+
+ Move columns to the right using <code>.col-md-offset-&#42;</code> classes. These classes increase the left margin of a
+ column by <code>&#42;</code> columns. For example, `.col-md-offset-4` moves `.col-md-4` over four columns.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-md-4">No Offset</div>
+    <div class="col-md-4 col-md-offset-4">Offset 4</div>
+ </div>
+ <div class="row">
+    <div class="col-md-3 col-md-offset-3">Offset 3</div>
+    <div class="col-md-3 col-md-offset-3">Offset 3</div>
+ </div>
+ <div class="row">
+    <div class="col-md-6 col-md-offset-3">Offset 3</div>
+ </div>
+ ```
+
+
+ <h3>Auto Width</h3>
+
+ The grid will automatically figure out the width of each column if you add a <code>col-&#42;</code>. Each breakpoint has
+ its own auto class and will revert to full width on a resolution small than the breakpoint.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xl">Extra Large</div>
+    <div class="col-xl">Extra Large</div>
+ </div>
+ <div class="row">
+    <div class="col-lg">Large</div>
+    <div class="col-lg">Large</div>
+    <div class="col-lg">Large</div>
+    <div class="col-lg">Large</div>
+ </div>
+ <div class="row">
+    <div class="col-md">Medium</div>
+    <div class="col-md">Medium</div>
+    <div class="col-md">Medium</div>
+ </div>
+ <div class="row">
+    <div class="col-sm">Small</div>
+    <div class="col-sm">Small</div>
+    <div class="col-sm">Small</div>
+    <div class="col-sm">Small</div>
+    <div class="col-sm">Small</div>
+ </div>
+ <div class="row">
+    <div class="col-xs">Extra Small</div>
+ </div>
+ ```
+
+
+
+ <h3>Alignment</h3>
+
+
+ <h4>Start</h4>
+
+ TBD
+ <div class="grid-demo"></div>
+ ```
+ <div class="row start-md">
+    <div class="col-xs-4">.col-xs-4</div>
+ </div>
+ ```
+
+ <h4>Center</h4>
+
+ TBD
+ <div class="grid-demo"></div>
+ ```
+ <div class="row center-md">
+    <div class="col-xs-4">.col-xs-4</div>
+ </div>
+ ```
+
+
+ <h4>End</h4>
+
+ TBD
+ <div class="grid-demo"></div>
+ ```
+ <div class="row end-md">
+    <div class="col-xs-4">.col-xs-4</div>
+ </div>
+ ```
+
+ <h4>Example: </h4>
+
+ TBD
+ <div class="grid-demo"></div>
+ ```
+ <div class="row start-lg center-md end-xl">
+    <div class="col-xs-4">.col-xs-4</div>
+ </div>
+ ```
+
+
+
+
+ <h3>Example: Stacked-to-horizontal</h3>
+
+ Using a single set of <code>.col-md-&#42;</code> grid classes, you can create a basic grid system that starts out stacked on mobile
+ devices and tablet devices in portrait (the extra small to small range) before becoming horizontal on desktop (medium) devices,
+ place grid columns in any `.row`.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-md-2">.col-md-2</div>
+    <div class="col-md-2">.col-md-2</div>
+    <div class="col-md-2">.col-md-2</div>
+    <div class="col-md-2">.col-md-2</div>
+    <div class="col-md-2">.col-md-2</div>
+    <div class="col-md-2">.col-md-2</div>
  </div>
  <div class="row">
     <div class="col-md-8">.col-md-8</div>

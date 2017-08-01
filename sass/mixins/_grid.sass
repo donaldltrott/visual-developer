@@ -62,5 +62,26 @@
         flex-basis: 0
         max-width: 100%
 
+    &.center-#{$class}
+        -webkit-justify-content: center
+        -ms-flex-pack: center
+        -webkit-box-pack: center
+        justify-content: center
+        text-align: center
+
+    &.start-#{$class}
+        -webkit-justify-content: flex-start
+        -ms-flex-pack: start
+        -webkit-box-pack: start
+        justify-content: flex-start
+        text-align: start
+
+    &.end-#{$class}
+        -webkit-justify-content: flex-end
+        -ms-flex-pack: end
+        -webkit-box-pack: end
+        justify-content: flex-end
+        text-align: end
+
     @include loop-grid-columns($grid-columns, $class, width, $margin)
     @include loop-grid-columns($grid-columns, $class, offset, $margin)

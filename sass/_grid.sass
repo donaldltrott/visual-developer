@@ -320,81 +320,196 @@
 
 
 
+ <h3>Nested Columns</h3>
+
+ To nest your content with the default grid, add a new `.row` and set of <code>.col-sm-&#42;</code> columns within an
+ existing <code>.col-sm-&#42;</code> column. Nested rows should include a set of columns that add up to 12 or fewer
+ (it is not required that you use all 12 available columns).
+ <div class="grid-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs-7">
+        <div class="row">
+            <div class="col-xs-3">Content</div>
+            <div class="col-xs-6">Content</div>
+            <div class="col-xs-3">Content</div>
+        </div>
+    </div>
+    <div class="col-xs-5">
+        <div class="row">
+            <div class="col-xs-8">Content</div>
+            <div class="col-xs-4">Content</div>
+        </div>
+    </div>
+ </div>
+ ```
+
+
  <h3>Alignment</h3>
 
+ Add classes to align elements to the start or end of a row as well as the top, bottom, or center of a column.
 
  <h4>Start</h4>
 
- TBD
+ Align child columns to the left of the row by adding the class <code>.start-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
  <div class="row start-md">
-    <div class="col-xs-4">.col-xs-4</div>
+    <div class="col-xs-4">Start</div>
  </div>
  ```
 
  <h4>Center</h4>
 
- TBD
+ Align child columns to the center of the row by adding the class <code>.center-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
  <div class="row center-md">
-    <div class="col-xs-4">.col-xs-4</div>
+    <div class="col-xs-4">Center</div>
  </div>
  ```
 
 
  <h4>End</h4>
 
- TBD
+ Align child columns to the right of the row by adding the class <code>.end-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
  <div class="row end-md">
-    <div class="col-xs-4">.col-xs-4</div>
+    <div class="col-xs-4">End</div>
  </div>
  ```
 
- <h4>Example: </h4>
+ <h4>Example: Responsive Alignment</h4>
 
- TBD
+ Here is an example of using the modifiers in conjunction to achieve different alignment at different viewport sizes.
  <div class="grid-demo"></div>
  ```
  <div class="row start-lg center-md end-xl">
-    <div class="col-xs-4">.col-xs-4</div>
+    <div class="col-xs-4">Moving Content</div>
+ </div>
+ ```
+
+
+ <h4>Top</h4>
+
+ Align child columns to the top of the row by adding the class <code>.top-&#42;</code> to the row.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row top-md">
+    <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus justo ac lorem vestibulum,
+    vel luctus enim porttitor. Aenean iaculis nisl quis malesuada tincidunt. Maecenas cursus nunc quam</div>
+    <div class="col-xs-6">Proin sed metus sed neque</div>
+ </div>
+ ```
+
+ <h4>Middle</h4>
+
+ Align child columns to the middle of the row by adding the class <code>.middle-&#42;</code> to the row.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row middle-md">
+    <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus justo ac lorem vestibulum,
+    vel luctus enim porttitor. Aenean iaculis nisl quis malesuada tincidunt. Maecenas cursus nunc quam</div>
+    <div class="col-xs-6">Proin sed metus sed neque</div>
+ </div>
+ ```
+
+
+ <h4>Bottom</h4>
+
+ Align child columns to the bottom of the row by adding the class <code>.bottom-&#42;</code> to the row.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row bottom-md">
+    <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus justo ac lorem vestibulum,
+    vel luctus enim porttitor. Aenean iaculis nisl quis malesuada tincidunt. Maecenas cursus nunc quam</div>
+    <div class="col-xs-6">Proin sed metus sed neque</div>
+ </div>
+ ```
+
+
+ <h3>Distribution</h3>
+
+ Add classes to distribute the contents of a row or column.
+
+ <h4>Around</h4>
+
+ Adding the class <code>.around-&#42;</code> will distribute unused space equally to the right and left of each column.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row around-md">
+    <div class="col-xs-2">Content</div>
+    <div class="col-xs-2">Content</div>
+    <div class="col-xs-2">Content</div>
+ </div>
+ ```
+
+ <h4>Between</h4>
+
+ Adding the class <code>.between-&#42;</code> will distribute unused space equally in between of each the columns.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row between-md">
+    <div class="col-xs-2">Content</div>
+    <div class="col-xs-2">Content</div>
+    <div class="col-xs-2">Content</div>
  </div>
  ```
 
 
 
 
- <h3>Example: Stacked-to-horizontal</h3>
+ <h3>Reordering</h3>
 
- Using a single set of <code>.col-md-&#42;</code> grid classes, you can create a basic grid system that starts out stacked on mobile
- devices and tablet devices in portrait (the extra small to small range) before becoming horizontal on desktop (medium) devices,
- place grid columns in any `.row`.
+ Add classes to reorder columns. Some classes are more useful when added to a row, and others when added to a child column.
+
+ <h4>Reverse</h4>
+
+ The class <code>.reverse-&#42;</code>, when added to a row, will reverse the order of all child columns.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row reverse-md">
+    <div class="col-xs-2">One</div>
+    <div class="col-xs-2">Two</div>
+    <div class="col-xs-2">Three</div>
+    <div class="col-xs-2">Four</div>
+    <div class="col-xs-2">Five</div>
+    <div class="col-xs-2">Six</div>
+ </div>
+ ```
+
+
+ <h4>First</h4>
+
+ Adding the class <code>.first-&#42;</code>, when added to a column, will force that column to be rendered first in the row.
  <div class="grid-demo"></div>
  ```
  <div class="row">
-    <div class="col-md-2">.col-md-2</div>
-    <div class="col-md-2">.col-md-2</div>
-    <div class="col-md-2">.col-md-2</div>
-    <div class="col-md-2">.col-md-2</div>
-    <div class="col-md-2">.col-md-2</div>
-    <div class="col-md-2">.col-md-2</div>
- </div>
- <div class="row">
-    <div class="col-md-8">.col-md-8</div>
-    <div class="col-md-4">.col-md-4</div>
- </div>
- <div class="row">
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
-    <div class="col-md-4">.col-md-4</div>
- </div>
- <div class="row">
-    <div class="col-md-6">.col-md-6</div>
-    <div class="col-md-6">.col-md-6</div>
+    <div class="col-xs-2">One</div>
+    <div class="col-xs-2">Two</div>
+    <div class="col-xs-2">Three</div>
+    <div class="col-xs-2">Four</div>
+    <div class="col-xs-2">Five</div>
+    <div class="col-xs-2 first-md">Six</div>
  </div>
  ```
+
+
+ <h4>Last</h4>
+
+ Adding the class <code>.last-&#42;</code>, when added to a column, will force that column to be rendered first in the row.
+ <div class="grid-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs-2 last-md">One</div>
+    <div class="col-xs-2">Two</div>
+    <div class="col-xs-2">Three</div>
+    <div class="col-xs-2">Four</div>
+    <div class="col-xs-2">Five</div>
+    <div class="col-xs-2">Six</div>
+ </div>
+ ```
+
 
  */

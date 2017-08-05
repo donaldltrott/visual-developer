@@ -56,6 +56,11 @@ h5, .h5
 h6, .h6
     font-size: $font-size-h6
 
+p.header-support
+    margin-top: -$spacing-lg
+    color: $gray
+    font-size: $font-size-small
+
 // Body text
 // -------------------------
 
@@ -152,6 +157,28 @@ address
  <h6>h6. Heading <small>Secondary text</small></h6>
  ```
 
+ <h3>Heading Support Text</h3>
+
+ You can add support text to your headings by adding a class of `.header-support` to a paragraph direclty following
+ your `h1`, `h2`, or `h3` element
+ ```
+ <h1>Some Header Text</h1>
+ <p class="header-support">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+ <hr/>
+
+ <h2>Some Header Text</h2>
+ <p class="header-support">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+ <hr/>
+
+ <h3>Some Header Text</h3>
+ <p class="header-support">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
+
+ ```
 
  <h3>Body Copy</h3>
 

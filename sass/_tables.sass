@@ -10,11 +10,12 @@ table
 caption
     padding-top: $table-cell-padding
     padding-bottom: $table-cell-padding
-    color: $text-muted
+    color: $table-caption-color
     text-align: left
 
 th
     text-align: left
+    color: $table-header-color
 
 
 // Baseline styles
@@ -33,14 +34,20 @@ th
                 padding: $table-cell-padding
                 line-height: $line-height-base
                 vertical-align: top
-                border-top: 0.1rem solid $table-border-color
+                border-top: 0.1rem solid $table-body-border-color
 
 
 
     // Bottom align for column headings
     > thead > tr > th
         vertical-align: bottom
-        border-bottom: 0.2rem solid $table-border-color
+        border-bottom: 0.2rem solid $table-head-border-color
+
+    // Bottom align for column headings
+    > tfoot > tr > th,
+    > tfoot > tr > td
+        vertical-align: top
+        border-top: 0.2rem solid $table-head-border-color
 
     // Remove top border from thead by default
     > caption + thead,
@@ -55,7 +62,7 @@ th
 
     // Account for multiple tbody instances
     > tbody + tbody
-        border-top: 0.2rem solid $table-border-color
+        border-top: 0.2rem solid $table-body-border-color
 
     // Nesting
     .table
@@ -83,22 +90,22 @@ th
 //
 // Add borders all around the table and between all the columns.
 
-.table-bordered
-    border: 1px solid $table-border-color
-    > thead,
-    > tbody,
-    > tfoot
-        > tr
-            > th,
-            > td
-                border: 0.1rem solid $table-border-color
-
-
-
-    > thead > tr
-        > th,
-        > td
-            border-bottom-width: 0.2rem
+//.table-bordered
+//    border: 1px solid $table-body-border-color
+//    > thead,
+//    > tbody,
+//    > tfoot
+//        > tr
+//            > th,
+//            > td
+//                border: 0.1rem solid $table-body-border-color
+//
+//
+//
+//    > thead > tr
+//        > th,
+//        > td
+//            border-bottom-width: 0.2rem
 
 
 
@@ -159,6 +166,66 @@ table
 @include table-row-variant('danger', $state-danger-bg)
 
 
+
+// Cell modifiers
+.table
+    > thead,
+    > tbody,
+    > tfoot
+        > tr
+            > th,
+            > td
+                &.currency
+                    text-align: right
+                    position: relative
+                    padding-left: $spacing-xxl
+                    &:before
+                        content: $fa-var-dollar
+                        font-family: FontAwesome
+                        position: absolute
+                        left: $spacing-md
+                        color: $gray-light
+
+
+// data tables
+
+.table
+    > thead
+        > tr
+            > th,
+            > td
+                &.sortable
+                    color: $blue
+                    font-weight: bold
+                    cursor: pointer
+                    text-align: left
+                    position: relative
+                    padding-right: $spacing-xxl
+                    user-select: none
+                    &:after
+                        content: $fa-var-sort
+                        font-family: FontAwesome
+                        position: absolute
+                        right: $spacing-md
+                        color: $gray-lightest
+                    &:hover
+                        background: $off-white
+                        &:after
+                            color: $gray-lighter
+                    &.sort-asc
+                        color: $blue-dark
+                        background: $off-white
+                        &:after
+                            content: $fa-var-sort-asc
+                            color: $blue-dark
+                            margin-top: 0.3rem
+                    &.sort-desc
+                        color: $blue-dark
+                        background: $off-white
+                        &:after
+                            content: $fa-var-sort-desc
+                            color: $blue-dark
+                            margin-top: -0.3rem
 //// Responsive tables
 ////
 //// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
@@ -229,3 +296,182 @@ table
 //}
 //}
 //}
+
+
+
+/*
+ ##Tables
+
+ <h3>Basic Table</h3>
+
+ For basic styling—light padding and only horizontal dividers—add the base class `.table` to any `<table>`. It may seem
+ super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted
+ to isolate our custom table styles.
+
+ ```
+ <table class="table">
+    <caption>Optional table caption.</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+ </table>
+ ```
+
+
+ <h3>Striped Table</h3>
+
+ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+
+ ```
+ <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+ </table>
+ ```
+
+
+ <h3>Table Cell Modifiers</h3>
+
+ <h4>Currency</h4>
+
+ Use `.currency` on a `th` or `td` to indicate the cell is used for currency. This class will add a `$` to the
+ left of the cell and then align the text to the right.
+
+ ```
+ <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th class="text-center">Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td class="currency">300.00</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td class="currency">1,254.25</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>William</td>
+            <td>Cannon</td>
+            <td class="currency">584.79</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td class="currency">2,139.04</td>
+        </tr>
+    </tfoot>
+ </table>
+ ```
+
+
+
+ <h4>Sorting</h4>
+
+ Add a class of `.sortable` to a `th` in the `thead` to make it appear to be able to be clicked to sort the data. You can
+ add additional classes of `.sort-asc` or `.sort-desc` to indicate that a column is sorting its data ascending or
+ descending.
+ ```
+ <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th class="sortable">First Name</th>
+            <th class="sortable sort-asc">Last Name</th>
+            <th class="sortable sort-desc">Username</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>10/21/16</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>10/20/16</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>10/24/16</td>
+        </tr>
+    </tbody>
+ </table>
+ ```
+
+
+ */

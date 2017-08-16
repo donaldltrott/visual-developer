@@ -15,6 +15,8 @@ caption
 
 th
     text-align: left
+
+thead th
     color: $table-header-color
 
 
@@ -34,7 +36,7 @@ th
                 padding: $table-cell-padding
                 line-height: $line-height-base
                 vertical-align: top
-                border-top: 0.1rem solid $table-body-border-color
+                border-top: 0.1rem dashed $table-body-border-color
 
 
 
@@ -72,15 +74,15 @@ th
 
 
 // Condensed table w/ half padding
-
-.table-condensed
-    > thead,
-    > tbody,
-    > tfoot
-        > tr
-            > th,
-            > td
-                padding: $table-condensed-cell-padding
+//
+//.table-condensed
+//    > thead,
+//    > tbody,
+//    > tfoot
+//        > tr
+//            > th,
+//            > td
+//                padding: $table-condensed-cell-padding
 
 
 
@@ -159,11 +161,11 @@ table
 // inheritance to nested tables.
 
 // Generate the contextual variants
-@include table-row-variant('active', $table-bg-active)
-@include table-row-variant('success', $state-success-bg)
-@include table-row-variant('info', $state-info-bg)
-@include table-row-variant('warning', $state-warning-bg)
-@include table-row-variant('danger', $state-danger-bg)
+@include table-row-variant('active', $state-active-bg, $state-active-text)
+@include table-row-variant('success', $state-success-bg, $state-success-text)
+@include table-row-variant('info', $state-info-bg, $state-info-text)
+@include table-row-variant('warning', $state-warning-bg, $state-warning-text)
+@include table-row-variant('danger', $state-danger-bg, $state-danger-text)
 
 
 
@@ -378,6 +380,43 @@ table
         </tr>
     </tbody>
  </table>
+ ```
+
+
+ <h3>Contextual Classes</h3>
+
+ ```
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Column Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="active">
+            <th>Active</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="success">
+            <th>Success</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="info">
+            <th>Info</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="warning">
+            <th>Warning</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="danger">
+            <th>Danger</th>
+            <td>Column Content</td>
+        </tr>
+    </tbody>
+ </table>
+
  ```
 
 

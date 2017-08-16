@@ -1,4 +1,4 @@
-@mixin table-row-variant($state, $background)
+@mixin table-row-variant($state, $background, $color: inherent)
     // Exact selectors below required to override `.table-striped` and prevent
     // inheritance to nested tables.
     .table > thead > tr,
@@ -9,6 +9,7 @@
         &.#{$state} > td,
         &.#{$state} > th
             background-color: $background
+            color: $color
 
     // Hover states for `.table-hover`
     // Note: this is not available for cells or rows within `thead` or `tfoot`.

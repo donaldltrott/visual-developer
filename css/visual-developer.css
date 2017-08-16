@@ -396,21 +396,21 @@ th {
 
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
-  font-size: 2.1rem;
+  font-size: 1.862rem;
   line-height: 0.75rem;
   vertical-align: -15%; }
 
 .fa-2x {
-  font-size: 2.8rem; }
+  font-size: 2.45rem; }
 
 .fa-3x {
-  font-size: 4.2rem; }
+  font-size: 3.5rem; }
 
 .fa-4x {
-  font-size: 5.6rem; }
+  font-size: 4.55rem; }
 
 .fa-5x {
-  font-size: 7rem; }
+  font-size: 5.6rem; }
 
 .fa-fw {
   width: 1.2857142857em;
@@ -2698,7 +2698,7 @@ html {
 body {
   font-family: "OpenSans", Helvetica, Arial, sans-serif;
   line-height: 1.428571429;
-  color: #414141;
+  color: #575757;
   background-color: #F5F5F5;
   font-size: 1.4rem; }
 
@@ -5856,6 +5856,13 @@ h1, h2, h3, h4, h5, h6,
     font-weight: normal;
     line-height: 1;
     color: #868686; }
+  h1 i.fa, h2 i.fa, h3 i.fa, h4 i.fa, h5 i.fa, h6 i.fa,
+  .h1 i.fa, .h2 i.fa, .h3 i.fa, .h4 i.fa, .h5 i.fa, .h6 i.fa {
+    color: #a0a0a0;
+    font-weight: normal;
+    font-size: 85%;
+    margin-right: 0.8rem;
+    vertical-align: middle; }
 
 h1, .h1,
 h2, .h2,
@@ -5891,21 +5898,33 @@ h6, .h6 {
 
 h1, .h1 {
   font-size: 3.64rem; }
+  h1 i.fa, .h1 i.fa {
+    height: 3.64rem; }
 
 h2, .h2 {
   font-size: 3.01rem; }
+  h2 i.fa, .h2 i.fa {
+    height: 3.01rem; }
 
 h3, .h3 {
   font-size: 2.38rem; }
+  h3 i.fa, .h3 i.fa {
+    height: 2.38rem; }
 
 h4, .h4 {
   font-size: 1.75rem; }
+  h4 i.fa, .h4 i.fa {
+    height: 1.75rem; }
 
 h5, .h5 {
   font-size: 1.4rem; }
+  h5 i.fa, .h5 i.fa {
+    height: 1.4rem; }
 
 h6, .h6 {
   font-size: 1.19rem; }
+  h6 i.fa, .h6 i.fa {
+    height: 1.19rem; }
 
 p.header-support {
   margin-top: -1.2rem;
@@ -5930,7 +5949,7 @@ small,
 
 mark,
 .mark {
-  background-color: #fcf8e3;
+  background-color: #ffefdb;
   padding: 0.2rem; }
 
 .text-left {
@@ -5974,12 +5993,12 @@ address {
  for when you want to match the font styling of a heading but still want your text to be displayed inline.
 
  ```
- <h1>h1. Heading (approximately 36px)</h1>
- <h2>h2. Heading (approximately 30px)</h2>
- <h3>h3. Heading (approximately 24px)</h3>
- <h4>h4. Heading (approximately 18px)</h4>
- <h5>h5. Heading (approximately 14px)</h5>
- <h6>h6. Heading (approximately 12px)</h6>
+ <h1>h1. Heading 1 (approximately 36px)</h1>
+ <h2>h2. Heading 2 (approximately 30px)</h2>
+ <h3>h3. Heading 3 (approximately 24px)</h3>
+ <h4>h4. Sub Heading 1 (approximately 18px)</h4>
+ <h5>h5. Sub Heading 2 (approximately 14px)</h5>
+ <h6>h6. Sub Heading 3 (approximately 12px)</h6>
  ```
 
  Create lighter, secondary text in any heading with a generic `<small>` tag or the `.small` class.
@@ -5987,10 +6006,25 @@ address {
  <h1>h1. Heading <small>Secondary text</small></h1>
  <h2>h2. Heading <small>Secondary text</small></h2>
  <h3>h3. Heading <small>Secondary text</small></h3>
- <h4>h4. Heading <small>Secondary text</small></h4>
- <h5>h5. Heading <small>Secondary text</small></h5>
- <h6>h6. Heading <small>Secondary text</small></h6>
+ <h4>h4. Sub Heading 1 <small>Secondary text</small></h4>
+ <h5>h5. Sub Heading 2 <small>Secondary text</small></h5>
+ <h6>h6. Sub Heading 3 <small>Secondary text</small></h6>
  ```
+
+
+ <h3>Headings with Icon</h3>
+
+ ```
+ <h1><i class="fa fa-check-circle"></i>Header Text</h1>
+ <h2><i class="fa fa-vcard-o"></i>Header Text</h2>
+ <h3><i class="fa fa-battery-2"></i>Header Text</h3>
+ <h4><i class="fa fa-calendar"></i>Sub Header Text</h4>
+ <h5><i class="fa fa-commenting"></i>Sub Header Text</h5>
+ <h6><i class="fa fa-copyright"></i>Sub Header Text</h6>
+
+ ```
+
+
 
  <h3>Heading Support Text</h3>
 
@@ -6014,6 +6048,8 @@ address {
  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
 
  ```
+
+
 
  <h3>Body Copy</h3>
 
@@ -6442,8 +6478,10 @@ caption {
   text-align: left; }
 
 th {
-  text-align: left;
-  color: #acacac; }
+  text-align: left; }
+
+thead th {
+  color: #868686; }
 
 .table {
   width: 100%;
@@ -6458,7 +6496,7 @@ th {
     padding: 0.8rem;
     line-height: 1.428571429;
     vertical-align: top;
-    border-top: 0.1rem solid #ddd; }
+    border-top: 0.1rem dashed #ccc; }
   .table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 0.2rem solid #bbb; }
@@ -6474,23 +6512,15 @@ th {
   .table > thead:first-child > tr:first-child > td {
     border-top: 0; }
   .table > tbody + tbody {
-    border-top: 0.2rem solid #ddd; }
+    border-top: 0.2rem solid #ccc; }
   .table .table {
     background-color: #F5F5F5; }
 
-.table-condensed > thead > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > th,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > th,
-.table-condensed > tfoot > tr > td {
-  padding: 0.4rem; }
-
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f9f9f9; }
+  background-color: #F5F5F5; }
 
 .table-hover > tbody > tr:hover {
-  background-color: #f5f5f5; }
+  background-color: #E9E9E9; }
 
 table col[class*="col-"] {
   position: static;
@@ -6515,14 +6545,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.active,
 .table > tfoot > tr.active > td,
 .table > tfoot > tr.active > th {
-  background-color: #f5f5f5; }
+  background-color: #e5e4ff;
+  color: #595194; }
 
 .table-hover > tbody > tr > td.active:hover,
 .table-hover > tbody > tr > th.active:hover,
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-  background-color: #e8e8e8; }
+  background-color: #cdcaff; }
 
 .table > thead > tr > td.success,
 .table > thead > tr > th.success,
@@ -6536,14 +6567,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.success,
 .table > tfoot > tr.success > td,
 .table > tfoot > tr.success > th {
-  background-color: #dff0d8; }
+  background-color: #dbf5cb;
+  color: #1D5F11; }
 
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-  background-color: #d0e9c6; }
+  background-color: #cdf1b5; }
 
 .table > thead > tr > td.info,
 .table > thead > tr > th.info,
@@ -6557,14 +6589,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.info,
 .table > tfoot > tr.info > td,
 .table > tfoot > tr.info > th {
-  background-color: #d9edf7; }
+  background-color: #d1e8fc;
+  color: #296aa3; }
 
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: #c4e3f3; }
+  background-color: #b9dcfb; }
 
 .table > thead > tr > td.warning,
 .table > thead > tr > th.warning,
@@ -6578,14 +6611,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.warning,
 .table > tfoot > tr.warning > td,
 .table > tfoot > tr.warning > th {
-  background-color: #fcf8e3; }
+  background-color: #ffefdb;
+  color: #E55C00; }
 
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-  background-color: #faf2cc; }
+  background-color: #ffe4c2; }
 
 .table > thead > tr > td.danger,
 .table > thead > tr > th.danger,
@@ -6599,14 +6633,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.danger,
 .table > tfoot > tr.danger > td,
 .table > tfoot > tr.danger > th {
-  background-color: #f2dede; }
+  background-color: #ffe1e1;
+  color: #841225; }
 
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc; }
+  background-color: #ffc7c7; }
 
 .table > thead > tr > th.currency,
 .table > thead > tr > td.currency,
@@ -6656,21 +6691,21 @@ table th[class*="col-"] {
       color: #D4D4D4; }
   .table > thead > tr > th.sortable.sort-asc,
   .table > thead > tr > td.sortable.sort-asc {
-    color: #005081;
+    color: #296aa3;
     background: #F5F5F5; }
     .table > thead > tr > th.sortable.sort-asc:after,
     .table > thead > tr > td.sortable.sort-asc:after {
       content: "";
-      color: #005081;
+      color: #296aa3;
       margin-top: 0.3rem; }
   .table > thead > tr > th.sortable.sort-desc,
   .table > thead > tr > td.sortable.sort-desc {
-    color: #005081;
+    color: #296aa3;
     background: #F5F5F5; }
     .table > thead > tr > th.sortable.sort-desc:after,
     .table > thead > tr > td.sortable.sort-desc:after {
       content: "";
-      color: #005081;
+      color: #296aa3;
       margin-top: -0.3rem; }
 
 /*
@@ -6752,6 +6787,43 @@ table th[class*="col-"] {
         </tr>
     </tbody>
  </table>
+ ```
+
+
+ <h3>Contextual Classes</h3>
+
+ ```
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Column Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="active">
+            <th>Active</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="success">
+            <th>Success</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="info">
+            <th>Info</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="warning">
+            <th>Warning</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="danger">
+            <th>Danger</th>
+            <td>Column Content</td>
+        </tr>
+    </tbody>
+ </table>
+
  ```
 
 

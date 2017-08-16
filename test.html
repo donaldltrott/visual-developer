@@ -22,40 +22,107 @@
         .row + .row-tight,
         .row-tight + .row-tight,
         .row-tight + .row {
-            margin-top: 20px;
+            margin-top: 24px;
         }
 
-        .row.gutter [class^="col-"],
-        .row.gutter [class*=" col-"],
-        .row-tight.gutter [class^="col-"],
-        .row-tight.gutter [class*=" col-"] {
-            border: 1px solid lightgray;
+        .row.gutters [class^="col-"]:not(.no-style),
+        .row.gutters [class*=" col-"]:not(.no-style),
+        .row-tight.gutters [class^="col-"]:not(.no-style),
+        .row-tight.gutters [class*=" col-"]:not(.no-style) {
+            /*border: 1px solid lightgray;*/
             border-radius: 3px;
-            padding: 8px;
+            /*padding: 12px;*/
+        }
+
+        .row.gutters [class^="col-"]:not(.no-style),
+        .row.gutters [class*=" col-"]:not(.no-style) {
             margin-bottom: 24px;
         }
+
+        .row-tight.gutters [class^="col-"]:not(.no-style),
+        .row-tight.gutters [class*=" col-"]:not(.no-style) {
+            margin-bottom: 16px;
+        }
+
+        .some-container {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-top: 12px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, .075);
+        }
+
+        .some-container header {
+            background: #f9f9f9;
+            border-bottom: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .some-container header h2,
+        .some-container header h3 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .some-container header .header-support {
+            margin-bottom: 0;
+            margin-top: -2px;
+        }
+
+        .some-container section {
+            padding: 12px
+        }
+
     </style>
 
 </head>
 
-<body style="background: #fff;">
+<body>
 
 
 <div class="container-fluid">
 
-    <i class="fa fa-camera-retro"></i> fa <br>
-    <i class="fa fa-camera-retro fa-lg"></i> fa-lg <br>
-    <i class="fa fa-camera-retro fa-2x"></i> fa-2x <br>
-    <i class="fa fa-camera-retro fa-3x"></i> fa-3x <br>
-    <i class="fa fa-camera-retro fa-4x"></i> fa-4x <br>
-    <i class="fa fa-camera-retro fa-5x"></i> fa-5x <br>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Column Heading</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="active">
+            <th>Active</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="success">
+            <th>Success</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="info">
+            <th>Info</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="warning">
+            <th>Warning</th>
+            <td>Column Content</td>
+        </tr>
+        <tr class="danger">
+            <th>Danger</th>
+            <td>Column Content</td>
+        </tr>
+        </tbody>
+    </table>
 
-    <ul class="fa-ul">
-        <li><i class="fa-li fa fa-check-square"></i>List icons</li>
-        <li><i class="fa-li fa fa-check-square"></i>can be used</li>
-        <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
-        <li><i class="fa-li fa fa-square"></i>in lists</li>
-    </ul>
+    <!--<i class="fa fa-camera-retro"></i> fa <br>-->
+    <!--<i class="fa fa-camera-retro fa-lg"></i> fa-lg <br>-->
+    <!--<i class="fa fa-camera-retro fa-2x"></i> fa-2x <br>-->
+    <!--<i class="fa fa-camera-retro fa-3x"></i> fa-3x <br>-->
+    <!--<i class="fa fa-camera-retro fa-4x"></i> fa-4x <br>-->
+    <!--<i class="fa fa-camera-retro fa-5x"></i> fa-5x <br>-->
+
+    <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+
 
     <span style="font-size:1.4rem;">this is my text</span>
     <span style="font-size: 14px;" class="show-xs">0-479</span>
@@ -66,154 +133,612 @@
 
     <hr/>
 
-    <h2>Invoices</h2>
-    <p class="header-support">Top invoices ready to SUBMIT</p>
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Customer</th>
-            <th class="text-center">Amount</th>
-            <th>Invoice #</th>
-            <th>Invoice Date</th>
-            <th>Due Date</th>
-            <th>Fee (%)</th>
-            <th class="text-center">Fee ($)</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody id="dashTBody">
-        <tr>
-            <td><a href="#">Empire Distributors Inc</a></td>
-            <td class="currency">829.57</td>
-            <td><a href="#">BHW11131</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">30.69</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="#">Hopper's Wines & Spirits</a></td>
-            <td class="currency">3,494.88</td>
-            <td><a href="#">BHW11133</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">122.32</td>
-            <td></td>
-        </tr>
-        </tbody>
-        <tbody id="dashTBody">
-        <tr>
-            <td><a href="#">Empire Distributors Inc</a></td>
-            <td class="currency">829.57</td>
-            <td><a href="#">BHW11131</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">30.69</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="#">Hopper's Wines & Spirits</a></td>
-            <td class="currency">3,494.88</td>
-            <td><a href="#">BHW11133</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">122.32</td>
-            <td></td>
-        </tr>
-        </tbody>
-        <tfoot id="dashFoot">
-        <tr>
-            <td></td>
-            <td class="currency">15,100.10</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="currency">556.31</td>
-            <td></td>
-        </tr>
-        </tfoot>
-    </table>
+    <div class="some-container">
+        <header>
+            <!--<div class="header-icon"><i class="fa fa-address-book"></i></div>-->
+            <h3>Invoices</h3>
+            <!--<p class="header-support">Top invoices ready to SUBMIT</p>-->
+
+        </header>
+        <!--<header>-->
+        <!--<h2>Some Header Text</h2>-->
+        <!--<p class="header-support">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+        <!--</header>-->
+        <section>
+
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th class="text-center">Amount</th>
+                    <th>Invoice #</th>
+                    <th>Invoice Date</th>
+                    <th>Due Date</th>
+                    <th>Fee (%)</th>
+                    <th class="text-center">Fee ($)</th>
+                </tr>
+                </thead>
+                <tbody id="dashTBody">
+                <tr>
+                    <td><a href="#">Empire Distributors Inc</a></td>
+                    <td class="currency">829.57</td>
+                    <td><a href="#">BHW11131</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">30.69</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Hopper's Wines & Spirits</a></td>
+                    <td class="currency">3,494.88</td>
+                    <td><a href="#">BHW11133</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">122.32</td>
+                </tr>
+                </tbody>
+                <tbody id="dashTBody">
+                <tr>
+                    <td><a href="#">Empire Distributors Inc</a></td>
+                    <td class="currency">829.57</td>
+                    <td><a href="#">BHW11131</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">30.69</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Hopper's Wines & Spirits</a></td>
+                    <td class="currency">3,494.88</td>
+                    <td><a href="#">BHW11133</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">122.32</td>
+                </tr>
+                </tbody>
+                <tfoot id="dashFoot">
+                <tr>
+                    <td></td>
+                    <td class="currency">15,100.10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="currency">556.31</td>
+                </tr>
+                </tfoot>
+            </table>
+
+        </section>
+    </div>
+
+    <h2>My BATON Statictics</h2>
+
+    <div class="some-container">
+        <header>
+            <div class="row">
+                <div class="col-xs"><h3><i class="fa fa-dollar"></i>Invoices</h3></div>
+                <div class="col-xs text-right"><i class="fa fa-check-circle"></i></div>
+            </div>
+
+            <!--<p class="header-support">Top invoices ready to SUBMIT</p>-->
+        </header>
+        <!--<header>-->
+        <!--<h2>Some Header Text</h2>-->
+        <!--<p class="header-support">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+        <!--</header>-->
+        <section>
+
+
+            <table class="table table-striped">
+                <caption>
+
+                    <div class="row end-xs">
+                        <div class="col-xs">
+                            <ul class="list-inline">
+                                <li><i style="color: #005081;" class="fa fa-check"></i> Approvals (21)</li>
+                                <li><i style="color: #595194;" class="fa fa-life-saver"></i> Support Tickets (6)</li>
+                                <li><i style="color: #1D5F11;" class="fa fa-dollar"></i> Customer Payments (19)</li>
+                                <li><i style="color: #FF9821;" class="fa fa-bell"></i> Alerts (25)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </caption>
+                <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th class="text-center">Amount</th>
+                    <th>Invoice #</th>
+                    <th>Invoice Date</th>
+                    <th>Due Date</th>
+                    <th>Fee (%)</th>
+                    <th class="text-center">Fee ($)</th>
+                </tr>
+                </thead>
+                <tbody id="dashTBody">
+                <tr>
+                    <td><a href="#">Empire Distributors Inc</a></td>
+                    <td class="currency">829.57</td>
+                    <td><a href="#">BHW11131</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">30.69</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Hopper's Wines & Spirits</a></td>
+                    <td class="currency">3,494.88</td>
+                    <td><a href="#">BHW11133</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">122.32</td>
+                </tr>
+                </tbody>
+                <tbody id="dashTBody">
+                <tr>
+                    <td><a href="#">Empire Distributors Inc</a></td>
+                    <td class="currency">829.57</td>
+                    <td><a href="#">BHW11131</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">30.69</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Hopper's Wines & Spirits</a></td>
+                    <td class="currency">3,494.88</td>
+                    <td><a href="#">BHW11133</a></td>
+                    <td>10/27/2016</td>
+                    <td>12/26/2016</td>
+                    <td>3.70%</td>
+                    <td class="currency">122.32</td>
+                </tr>
+                </tbody>
+                <tfoot id="dashFoot">
+                <tr>
+                    <td></td>
+                    <td class="currency">15,100.10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="currency">556.31</td>
+                </tr>
+                </tfoot>
+            </table>
+
+        </section>
+    </div>
 
     <hr/>
 
-    <h3>Sortable Invoices <small>(styles only)</small></h3>
+    <div style="background: #fff; margin: 0 -12px; padding: 40px 12px;">
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Customer</th>
-            <th class="text-center sortable">Amount</th>
-            <th>Invoice #</th>
-            <th>Invoice Date</th>
-            <th class="sortable sort-desc">Due Date</th>
-            <th>Fee (%)</th>
-            <th class="text-center sortable">Fee ($)</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody id="dashTBody">
-        <tr>
-            <td><a href="#">Empire Distributors Inc</a></td>
-            <td class="currency">829.57</td>
-            <td><a href="#">BHW11131</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">30.69</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="#">Hopper's Wines & Spirits</a></td>
-            <td class="currency">3,494.88</td>
-            <td><a href="#">BHW11133</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">122.32</td>
-            <td></td>
-        </tr>
-        </tbody>
-        <tbody id="dashTBody">
-        <tr>
-            <td><a href="#">Empire Distributors Inc</a></td>
-            <td class="currency">829.57</td>
-            <td><a href="#">BHW11131</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">30.69</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="#">Hopper's Wines & Spirits</a></td>
-            <td class="currency">3,494.88</td>
-            <td><a href="#">BHW11133</a></td>
-            <td>10/27/2016</td>
-            <td>12/26/2016</td>
-            <td>3.70%</td>
-            <td class="currency">122.32</td>
-            <td></td>
-        </tr>
-        </tbody>
-        <tfoot id="dashFoot">
-        <tr>
-            <td></td>
-            <td class="currency">15,100.10</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="currency">556.31</td>
-            <td></td>
-        </tr>
-        </tfoot>
-    </table>
+        <h1>Wearing Too Many Hats? Let Us Wear A Few.</h1>
+
+        <p class="lead">As your accounts receivable (A/R) build, so do your costs of carrying them (time,
+            administration,
+            customer non-payment), all the while crunching your cash flow as you wait for payments to arrive.
+        </p>
+        <p class="lead">
+            It’s time for a new way to do business. It’s time to get back to running your business without the A/R
+            runaround. It’s time to pass us the baton!
+        </p>
+        <p class="lead">
+            BATON, where small businesses just got <strong>Bigger</strong>.</p>
+        <div class="row">
+            <div class="col-xs">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Roles</th>
+                        <th class="text-nowrap">Today, You</th>
+                        <th class="text-nowrap">Tomorrow, BATON</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Lender</td>
+                        <td>
+                            <ul>
+                                <li>Extending short-term credit to your customers (Net 30, 60, 90, 120 days)</li>
+                            </ul>
+                        </td>
+                        <td class="text-center" style="color: #46AD00;"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Credit Manager</td>
+                        <td>
+                            <ul>
+                                <li>Evaluating customers or prospects to determine payment terms</li>
+                            </ul>
+                        </td>
+                        <td class="text-center" style="color: #46AD00;"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Risk Manager</td>
+                        <td>
+                            <ul>
+                                <li>Monitoring your customers’ financial stability</li>
+                                <li>Working to reduce uncollectable invoices</li>
+                            </ul>
+                        </td>
+                        <td class="text-center" style="color: #46AD00;"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Accounts Receivable Manager</td>
+                        <td>
+                            <ul>
+                                <li>Sending out billing statements</li>
+                                <li>Printing and stuffing envelopes</li>
+                                <li>Opening envelopes hoping for checks</li>
+                                <li>Going to the bank to make deposits</li>
+                            </ul>
+                        </td>
+                        <td class="text-center" style="color: #46AD00;"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Collections Manager</td>
+                        <td>
+                            <ul>
+                                <li>Sending out late notices</li>
+                                <li>Making collection calls on past due accounts</li>
+                                <li>Seeking legal action on unpaid accounts</li>
+                            </ul>
+                        </td>
+                        <td class="text-center" style="color: #46AD00;"><i class="fa fa-2x fa-check"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-5 text-center">
+                <img src="http://via.placeholder.com/262x435">
+            </div>
+        </div>
+
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+
+        <h2>Sortable Invoices</h2>
+        <p class="header-support">This shows the styles used only, does not include acutaly functionality</p>
+
+        <table class="table table-striped">
+            <caption>
+                <div class="row end-xs">
+                    <div class="col-xs">
+                        <ul class="list-inline">
+                            <li><i style="color: #005081;" class="fa fa-check"></i> Approvals (21)</li>
+                            <li><i style="color: #595194;" class="fa fa-life-saver"></i> Support Tickets (6)</li>
+                            <li><i style="color: #1D5F11;" class="fa fa-dollar"></i> Customer Payments (19)</li>
+                            <li><i style="color: #FF9821;" class="fa fa-bell"></i> Alerts (25)</li>
+                        </ul>
+                    </div>
+                </div>
+            </caption>
+            <thead>
+            <tr>
+                <th class="text-center"></th>
+                <th>Customer</th>
+                <th class="text-center sortable">Amount</th>
+                <th>Invoice #</th>
+                <th>Invoice Date</th>
+                <th class="sortable sort-desc">Due Date</th>
+                <th>Fee (%)</th>
+                <th class="text-center sortable">Fee ($)</th>
+            </tr>
+            </thead>
+            <tbody id="dashTBody">
+            <tr>
+                <td class="text-center" style="width:1px; color: #595194;"><i class="fa fa-lg fa-life-saver"></i></td>
+                <td><a href="#">Empire Distributors Inc</a></td>
+                <td class="currency">829.57</td>
+                <td><a href="#">BHW11131</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">30.69</td>
+            </tr>
+            <tr>
+                <td class="text-center" style="width:1px; color:#FF9821;"><i class="fa fa-lg fa-bell"></i></td>
+                <td><a href="#">Hopper's Wines & Spirits</a></td>
+                <td class="currency">3,494.88</td>
+                <td><a href="#">BHW11133</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">122.32</td>
+            </tr>
+            </tbody>
+            <tbody id="dashTBody">
+            <tr>
+                <td class="text-center" style="width:1px; color: #1D5F11;"><i class="fa fa-lg fa-dollar"></i></td>
+                <td><a href="#">Empire Distributors Inc</a></td>
+                <td class="currency">829.57</td>
+                <td><a href="#">BHW11131</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">30.69</td>
+            </tr>
+            <tr>
+                <td class="text-center" style="width:1px; color: #005081;"><i class="fa fa-lg fa-check"></i></td>
+                <td><a href="#">Hopper's Wines & Spirits</a></td>
+                <td class="currency">3,494.88</td>
+                <td><a href="#">BHW11133</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">122.32</td>
+            </tr>
+            </tbody>
+            <tfoot id="dashFoot">
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="currency">15,100.10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="currency">556.31</td>
+            </tr>
+            </tfoot>
+        </table>
+
+        <hr/>
+
+        <h3 style="margin-top:60px;">Sortable Invoices</h3>
+        <p class="header-support">This shows the styles used only, does not include acutaly functionality</p>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Customer</th>
+                <th class="text-center sortable">Amount</th>
+                <th>Invoice #</th>
+                <th>Invoice Date</th>
+                <th class="sortable sort-desc">Due Date</th>
+                <th>Fee (%)</th>
+                <th class="text-center sortable">Fee ($)</th>
+            </tr>
+            </thead>
+            <tbody id="dashTBody">
+            <tr>
+                <td><a href="#">Empire Distributors Inc</a></td>
+                <td class="currency">829.57</td>
+                <td><a href="#">BHW11131</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">30.69</td>
+            </tr>
+            <tr>
+                <td><a href="#">Hopper's Wines & Spirits</a></td>
+                <td class="currency">3,494.88</td>
+                <td><a href="#">BHW11133</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">122.32</td>
+            </tr>
+            </tbody>
+            <tbody id="dashTBody">
+            <tr>
+                <td><a href="#">Empire Distributors Inc</a></td>
+                <td class="currency">829.57</td>
+                <td><a href="#">BHW11131</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">30.69</td>
+            </tr>
+            <tr>
+                <td><a href="#">Hopper's Wines & Spirits</a></td>
+                <td class="currency">3,494.88</td>
+                <td><a href="#">BHW11133</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">122.32</td>
+            </tr>
+            </tbody>
+            <tfoot id="dashFoot">
+            <tr>
+                <td></td>
+                <td class="currency">15,100.10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="currency">556.31</td>
+            </tr>
+            </tfoot>
+        </table>
+
+        <h3 style="margin-top:60px;">Sortable Invoices</h3>
+        <p class="header-support">This shows the styles used only, does not include acutaly functionality</p>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Customer</th>
+                <th class="text-center sortable">Amount</th>
+                <th>Invoice #</th>
+                <th>Invoice Date</th>
+                <th class="sortable sort-desc">Due Date</th>
+                <th>Fee (%)</th>
+                <th class="text-center sortable">Fee ($)</th>
+            </tr>
+            </thead>
+            <tbody id="dashTBody">
+            <tr>
+                <td><a href="#">Empire Distributors Inc</a></td>
+                <td class="currency">829.57</td>
+                <td><a href="#">BHW11131</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">30.69</td>
+            </tr>
+            <tr>
+                <td><a href="#">Hopper's Wines & Spirits</a></td>
+                <td class="currency">3,494.88</td>
+                <td><a href="#">BHW11133</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">122.32</td>
+            </tr>
+            </tbody>
+            <tbody id="dashTBody">
+            <tr>
+                <td><a href="#">Empire Distributors Inc</a></td>
+                <td class="currency">829.57</td>
+                <td><a href="#">BHW11131</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">30.69</td>
+            </tr>
+            <tr>
+                <td><a href="#">Hopper's Wines & Spirits</a></td>
+                <td class="currency">3,494.88</td>
+                <td><a href="#">BHW11133</a></td>
+                <td>10/27/2016</td>
+                <td>12/26/2016</td>
+                <td>3.70%</td>
+                <td class="currency">122.32</td>
+            </tr>
+            </tbody>
+            <tfoot id="dashFoot">
+            <tr>
+                <td></td>
+                <td class="currency">15,100.10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="currency">556.31</td>
+            </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+
+    <h2>Account Summary</h2>
+    <p class="header-support">November 2, 2016 Month-To-Date Activity</p>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Invoice Activity Summary</h3>
+        </div>
+        <div class="col-sm-6">
+            <h3>My Baton Selling Power</h3>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div class="some-container">
+        <header>
+            <h3>Open Invoice Summary</h3>
+        </header>
+        <section>
+            <div class="row-tight gutters testing">
+                <div class="col-sm-12 no-style">
+                    <div class="row-tight">
+                        <div class="col-sm-3 no-style"><h4>Open Invoices ($)</h4></div>
+                        <div class="col-sm-3 no-style"><h4>Open Invoices (#)</h4></div>
+                        <div class="col-sm-6 no-style"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 no-style">
+                    <div class="row-tight gutters">
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                        <div class="col-sm-6">
+                            inting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever
+                            since the 1500s, when an unknown printer took a ga
+                        </div>
+                        <div class="col-sm-6">
+                            intinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever
+                            since the 1500s, when an unknown printer took a gaing and typesetting industry. Lorem Ipsum
+                            has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            ga
+                        </div>
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                        <div class="col-sm-6">
+                            inting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever
+                            since the 1500s, when an unknown printer took a ga
+                        </div>
+                        <div class="col-sm-6">
+                            hello
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Understanding Open Invoices</h4>
+                    <p>Open invoices are any invoice that you, the Merchant, has received payment on, but the invoice
+                        payment
+                        from the Customer is still pending.
+                    </p>
+                    <p>
+                        Open invoices will include the Customer(s):
+                    </p>
+                    <ul>
+                        <li>Unpaid Invoices</li>
+                        <li>Disputed Invoices</li>
+                        <li>Unsettled Invoices</li>
+                    </ul>
+
+                    <p>
+                        Disputed Invoices are invoices for which BATON has been notified of a payment dispute.
+                    </p>
+                    <p>
+                        Unsettled Invoices are invoices that have been partially paid by the Customer but a balance
+                        remains.
+                    </p>
+                    <p>
+                        Note: If you have selected a date range in the CUSTOMER ACTIVITY REPORTS, the Open Invoice
+                        Activity
+                        summarized in this section reflects Open Invoices as of the last day of the date range selected.
+                    </p>
+                    <p>
+                        Details on the Open Invoices summarized in this chart can be seen in the Invoice Level Activity
+                        Detail
+                        reports section.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
 
     <div class="row">
         <!--<div class="col-md">-->

@@ -10,9 +10,9 @@ $purple-dark:           #595194 !default
 $purple:                #8669FF !default
 $purple-light:          #9C97FF !default
 
-$blue-dark:             #005081 !default
+$blue-dark:             #296aa3 !default
 $blue:                  #62abde !default
-//$blue-light:            #3693F8 !default
+$blue-light:            #afd7fa !default
 
 $green-dark:            #1D5F11 !default
 $green:                 #46AD00 !default
@@ -41,7 +41,7 @@ $true-black:            #000000 !default
 ////////////////////////////////////////////////
 
 $body-bg:               $off-white !default
-$text-color:            $gray-darker !default
+$text-color:            $gray-dark !default
 $cursor-disabled:       not-allowed !default
 
 $link-color:            $blue !default
@@ -197,34 +197,39 @@ $table-condensed-cell-padding:  $spacing-sm !default
 //** Default background color used for all tables.
 $table-bg:                      transparent !default
 //** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9 !default
+$table-bg-accent:               $off-white !default
 //** Background color used for `.table-hover`.
-$table-bg-hover:                #f5f5f5 !default
+$table-bg-hover:                $gray-lightest !default
 $table-bg-active:               $table-bg-hover !default
 
 //** Border color for table and cell borders.
-$table-body-border-color:       #ddd !default
+$table-body-border-color:       #ccc !default
 $table-head-border-color:       #bbb !default
 $table-caption-color:           $gray !default
-$table-header-color:            lighten($gray, 15%) !default
+$table-header-color:            $gray !default
 
 
 ////////////////////////////////////////////////
 //              FORM STATES
 ////////////////////////////////////////////////
 
-$state-success-text:             #3c763d !default
-$state-success-bg:               #dff0d8 !default
+$state-success-text:             $green-dark !default
+$state-success-bg:               lighten($green-light, 35%) !default
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default
 
-$state-info-text:                #31708f !default
-$state-info-bg:                  #d9edf7 !default
+$state-info-text:                $blue-dark !default
+$state-info-bg:                  lighten($blue-light, 7%) !default
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default
 
-$state-warning-text:             #8a6d3b !default
-$state-warning-bg:               #fcf8e3 !default
+$state-warning-text:             $orange-dark !default
+$state-warning-bg:               lighten($orange-light, 23%) !default
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default
 
-$state-danger-text:              #a94442 !default
-$state-danger-bg:                #f2dede !default
+$state-danger-text:              $red-dark !default
+$state-danger-bg:                lighten($red-light, 26%) !default
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default
+
+$state-active-text:              $purple-dark !default
+$state-active-bg:                lighten($purple-light, 15%) !default
+$state-active-border:            darken(adjust-hue($state-active-bg, -10), 5%) !default
+

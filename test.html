@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="css/visual-developer.css">
     <style type="text/css">
-        span {
+        span:not(.input-decorator) {
             display: none;
         }
 
@@ -49,7 +49,7 @@
             border: 1px solid #ccc;
             border-radius: 3px;
             margin-top: 12px;
-            box-shadow: 0 0 3px rgba(0, 0, 0, .075);
+            /*box-shadow: 0 0 3px rgba(0, 0, 0, .075);*/
         }
 
         .some-container header {
@@ -81,59 +81,341 @@
 <body>
 
 
+<!--<table class="table table-striped">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>Type</th>-->
+<!--<th>Column Heading</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr class="active">-->
+<!--<th>Active</th>-->
+<!--<td>Column Content</td>-->
+<!--</tr>-->
+<!--<tr class="success">-->
+<!--<th>Success</th>-->
+<!--<td>Column Content</td>-->
+<!--</tr>-->
+<!--<tr class="info">-->
+<!--<th>Info</th>-->
+<!--<td>Column Content</td>-->
+<!--</tr>-->
+<!--<tr class="warning">-->
+<!--<th>Warning</th>-->
+<!--<td>Column Content</td>-->
+<!--</tr>-->
+<!--<tr class="danger">-->
+<!--<th>Danger</th>-->
+<!--<td>Column Content</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+
+<!--<i class="fa fa-camera-retro"></i> fa <br>-->
+<!--<i class="fa fa-camera-retro fa-lg"></i> fa-lg <br>-->
+<!--<i class="fa fa-camera-retro fa-2x"></i> fa-2x <br>-->
+<!--<i class="fa fa-camera-retro fa-3x"></i> fa-3x <br>-->
+<!--<i class="fa fa-camera-retro fa-4x"></i> fa-4x <br>-->
+<!--<i class="fa fa-camera-retro fa-5x"></i> fa-5x <br>-->
+
+<i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+
+
+<span style="font-size:1.4rem;">this is my text</span>
+<span style="font-size: 14px;" class="show-xs">0-479</span>
+<span style="font-size: 14px;" class="show-sm">480-767</span>
+<span style="font-size: 14px;" class="show-md">768-991</span>
+<span style="font-size: 14px;" class="show-lg">992-1200</span>
+<span style="font-size: 14px;" class="show-xl">1200+</span>
+
+<hr/>
+
+<!--<div style="background: #fff">-->
+
+<!--<div class="checkbox-group">-->
+<!--<label>This is my checkbox group</label>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox1">-->
+<!--<label for="checkbox1">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox2">-->
+<!--<label for="checkbox2">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox1">-->
+<!--<label for="checkbox1">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox2">-->
+<!--<label for="checkbox2">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox1">-->
+<!--<label for="checkbox1">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox2">-->
+<!--<label for="checkbox2">Option two is disabled</label>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="checkbox-group checkbox-inline">-->
+<!--<label>This is my inline checkbox group</label>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox11">-->
+<!--<label for="checkbox11">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox21">-->
+<!--<label for="checkbox21">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox212">-->
+<!--<label for="checkbox212">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox11">-->
+<!--<label for="checkbox11">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox21">-->
+<!--<label for="checkbox21">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox212">-->
+<!--<label for="checkbox212">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox11">-->
+<!--<label for="checkbox11">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox21">-->
+<!--<label for="checkbox21">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox212">-->
+<!--<label for="checkbox212">Option two is disabled</label>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="checkbox-group">-->
+<!--<label>This is my inline checkbox group</label>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox119" checked disabled>-->
+<!--<label for="checkbox119">Option one is this and that&mdash;be sure to include why it's great</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox219" disabled>-->
+<!--<label for="checkbox219">Option two is disabled</label>-->
+<!--</div>-->
+<!--<div class="checkbox">-->
+<!--<input type="checkbox" value="" id="checkbox210">-->
+<!--<label for="checkbox210">Option two is disabled</label>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="radio-group">-->
+<!--<label>This is my radio group</label>-->
+
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>-->
+<!--<label for="optionsRadios1">-->
+<!--Option one is this and that&mdash;be sure to include why it's great-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
+<!--<label for="optionsRadios2">-->
+<!--Option two can be something else and selecting it will deselect option one-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">-->
+<!--<label for="optionsRadios3">-->
+<!--Option three is disabled-->
+<!--</label>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="radio-group radio-inline">-->
+<!--<label>This is my inline radio group</label>-->
+
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>-->
+<!--<label for="optionsRadios1">-->
+<!--Option one is this and that&mdash;be sure to include why it's great-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
+<!--<label for="optionsRadios2">-->
+<!--Option two can be something else and selecting it will deselect option one-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">-->
+<!--<label for="optionsRadios3">-->
+<!--Option three is disabled-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
+<!--<label for="optionsRadios2">-->
+<!--Option two can be something else and selecting it will deselect option one-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">-->
+<!--<label for="optionsRadios3">-->
+<!--Option three is disabled-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">-->
+<!--<label for="optionsRadios2">-->
+<!--Option two can be something else and selecting it will deselect option one-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">-->
+<!--<label for="optionsRadios3">-->
+<!--Option three is disabled-->
+<!--</label>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="radio-group">-->
+<!--<label>This is my disabled radio group</label>-->
+
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios165" value="option1" checked disabled>-->
+<!--<label for="optionsRadios165">-->
+<!--Option one is this and that&mdash;be sure to include why it's great-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios265" value="option2" disabled>-->
+<!--<label for="optionsRadios265">-->
+<!--Option two can be something else and selecting it will deselect option one-->
+<!--</label>-->
+<!--</div>-->
+<!--<div class="radio">-->
+<!--<input type="radio" name="optionsRadios" id="optionsRadios35" value="option3">-->
+<!--<label for="optionsRadios35">-->
+<!--Option three is disabled-->
+<!--</label>-->
+<!--</div>-->
+<!--</div>-->
+
+<div style="background: white">
+
+    <div class="container-fluid">
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+                           placeholder="Email" disabled>
+                    <div class="help-block">
+                        <div class="help-text">Help text should be explicitlyattribute. This will ensure that assistive
+                            technologies – such as screen readers – will announce this help text when the user focuses
+                            or enters the control.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                           disabled>
+                </div>
+                <div class="form-group">
+                    <label for="selectinput">Select input</label>
+                    <select multiple class="form-control" id="selectinput">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="row-tight">
+                    <div class="col-xs-5">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Phone Number</label>
+                            <div class="input-inline">
+                                <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+                                <input type="text" class="form-control" size="3">
+                                <span class="input-decorator input-decorator-right">)</span>
+                                <input type="text" class="form-control" size="3">
+                                <span class="input-decorator">-</span>
+                                <input type="text" class="form-control input-stretch">
+                                <span class="input-decorator input-text">Ext.</span>
+                                <input type="text" class="form-control" size="10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-7">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Date of Birth</label>
+                    <div class="input-inline">
+                        <input type="text" class="form-control"  placeholder="MM">
+                        <span class="input-decorator">/</span>
+                        <input type="text" class="form-control"  placeholder="DD">
+                        <span class="input-decorator">/</span>
+                        <select class="form-control">
+                            <option>1950s</option>
+                            <option>1960s</option>
+                            <option>1970s</option>
+                            <option>1980s</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="selectinput">Select input</label>
+                    <select class="form-control" id="selectinput" disabled>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </fieldset>
+            <!--<div class="form-group">-->
+            <!--<label for="exampleInputFile">File input</label>-->
+            <!--<input type="file" id="exampleInputFile">-->
+            <!--<p class="help-block">Example block-level help text here.</p>-->
+            <!--</div>-->
+            <div class="checkbox">
+                <input type="checkbox" value="" id="checkbox111" disabled>
+                <label for="checkbox111">Option one is this and that&mdash;be sure to include why it's great</label>
+            </div>
+
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
+
+
 <div class="container-fluid">
-
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>Type</th>
-            <th>Column Heading</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="active">
-            <th>Active</th>
-            <td>Column Content</td>
-        </tr>
-        <tr class="success">
-            <th>Success</th>
-            <td>Column Content</td>
-        </tr>
-        <tr class="info">
-            <th>Info</th>
-            <td>Column Content</td>
-        </tr>
-        <tr class="warning">
-            <th>Warning</th>
-            <td>Column Content</td>
-        </tr>
-        <tr class="danger">
-            <th>Danger</th>
-            <td>Column Content</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <!--<i class="fa fa-camera-retro"></i> fa <br>-->
-    <!--<i class="fa fa-camera-retro fa-lg"></i> fa-lg <br>-->
-    <!--<i class="fa fa-camera-retro fa-2x"></i> fa-2x <br>-->
-    <!--<i class="fa fa-camera-retro fa-3x"></i> fa-3x <br>-->
-    <!--<i class="fa fa-camera-retro fa-4x"></i> fa-4x <br>-->
-    <!--<i class="fa fa-camera-retro fa-5x"></i> fa-5x <br>-->
-
-    <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
-
-
-    <span style="font-size:1.4rem;">this is my text</span>
-    <span style="font-size: 14px;" class="show-xs">0-479</span>
-    <span style="font-size: 14px;" class="show-sm">480-767</span>
-    <span style="font-size: 14px;" class="show-md">768-991</span>
-    <span style="font-size: 14px;" class="show-lg">992-1200</span>
-    <span style="font-size: 14px;" class="show-xl">1200+</span>
-
-    <hr/>
-
-
     <div class="some-container">
         <header>
             <!--<div class="header-icon"><i class="fa fa-address-book"></i></div>-->
@@ -241,7 +523,8 @@
                         <div class="col-xs">
                             <ul class="list-inline">
                                 <li><i style="color: #005081;" class="fa fa-check"></i> Approvals (21)</li>
-                                <li><i style="color: #595194;" class="fa fa-life-saver"></i> Support Tickets (6)</li>
+                                <li><i style="color: #595194;" class="fa fa-life-saver"></i> Support Tickets (6)
+                                </li>
                                 <li><i style="color: #1D5F11;" class="fa fa-dollar"></i> Customer Payments (19)</li>
                                 <li><i style="color: #FF9821;" class="fa fa-bell"></i> Alerts (25)</li>
                             </ul>
@@ -435,7 +718,8 @@
             </thead>
             <tbody id="dashTBody">
             <tr>
-                <td class="text-center" style="width:1px; color: #595194;"><i class="fa fa-lg fa-life-saver"></i></td>
+                <td class="text-center" style="width:1px; color: #595194;"><i class="fa fa-lg fa-life-saver"></i>
+                </td>
                 <td><a href="#">Empire Distributors Inc</a></td>
                 <td class="currency">829.57</td>
                 <td><a href="#">BHW11131</a></td>
@@ -679,11 +963,14 @@
                             since the 1500s, when an unknown printer took a ga
                         </div>
                         <div class="col-sm-6">
-                            intinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            intinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            text
                             ever
-                            since the 1500s, when an unknown printer took a gaing and typesetting industry. Lorem Ipsum
+                            since the 1500s, when an unknown printer took a gaing and typesetting industry. Lorem
+                            Ipsum
                             has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                            took a
                             ga
                         </div>
                         <div class="col-sm-6">
@@ -704,7 +991,8 @@
                 </div>
                 <div class="col-sm-6">
                     <h4>Understanding Open Invoices</h4>
-                    <p>Open invoices are any invoice that you, the Merchant, has received payment on, but the invoice
+                    <p>Open invoices are any invoice that you, the Merchant, has received payment on, but the
+                        invoice
                         payment
                         from the Customer is still pending.
                     </p>
@@ -727,10 +1015,12 @@
                     <p>
                         Note: If you have selected a date range in the CUSTOMER ACTIVITY REPORTS, the Open Invoice
                         Activity
-                        summarized in this section reflects Open Invoices as of the last day of the date range selected.
+                        summarized in this section reflects Open Invoices as of the last day of the date range
+                        selected.
                     </p>
                     <p>
-                        Details on the Open Invoices summarized in this chart can be seen in the Invoice Level Activity
+                        Details on the Open Invoices summarized in this chart can be seen in the Invoice Level
+                        Activity
                         Detail
                         reports section.
                     </p>
@@ -771,12 +1061,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -786,7 +1079,8 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
                 scrambled it to make a type specimen book. </p>
 
         </div>
@@ -797,7 +1091,8 @@
             <p class="text-justify">Loret has survived not only five centuries, but also the leap into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -807,7 +1102,8 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
                 scrambled it to make a versions of Lorem Ipsum.</p>
 
         </div>
@@ -821,12 +1117,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -848,12 +1147,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -863,7 +1165,8 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
                 scrambled it to make a type specimen book. </p>
 
         </div>
@@ -874,7 +1177,8 @@
             <p class="text-justify">Loret has survived not only five centuries, but also the leap into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -884,7 +1188,8 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
                 scrambled it to make a versions of Lorem Ipsum.</p>
 
         </div>
@@ -899,12 +1204,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -914,12 +1222,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -929,12 +1240,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -944,12 +1258,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -962,12 +1279,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -977,12 +1297,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -992,12 +1315,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -1007,12 +1333,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>
@@ -1022,12 +1351,15 @@
             </h2>
             <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                leap
                 into
                 electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
                 release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like
                 Aldus PageMaker including versions of Lorem Ipsum.</p>
 
         </div>

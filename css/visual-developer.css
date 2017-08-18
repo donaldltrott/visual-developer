@@ -161,6 +161,9 @@
 
 
  */
+.form-control-feedback {
+  color: #575757; }
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6918,6 +6921,767 @@ table th[class*="col-"] {
     </tbody>
  </table>
  ```
+
+
+ */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0; }
+  fieldset + fieldset {
+    margin-top: 3.6rem; }
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0 0 0.4rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.75rem;
+  line-height: inherit;
+  color: #575757;
+  border: 0;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  border-bottom: 0.1rem dashed #D4D4D4; }
+
+label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: normal;
+  font-size: 1.19rem;
+  color: #575757; }
+
+input[type="search"] {
+  box-sizing: border-box; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0.4rem 0 0;
+  margin-top: 0.1rem;
+  line-height: normal; }
+
+input[type="file"] {
+  display: block; }
+
+input[type="range"] {
+  display: block;
+  width: 100%; }
+
+select[multiple],
+select[size] {
+  height: auto; }
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+output {
+  display: block;
+  padding-top: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.428571429;
+  color: #868686; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.428571429;
+  color: #868686;
+  background-color: #ffffff;
+  background-image: none;
+  border: 0.1rem solid #BCBCBC;
+  border-radius: 0.4rem;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-appearance: none; }
+  .form-control:focus {
+    border-color: #62abde;
+    outline: 0;
+    box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.075), 0 0 0.4rem rgba(98, 171, 222, 0.6); }
+  .form-control::-moz-placeholder {
+    color: #BCBCBC;
+    opacity: 1; }
+  .form-control:-ms-input-placeholder {
+    color: #BCBCBC; }
+  .form-control::-webkit-input-placeholder {
+    color: #BCBCBC; }
+  .form-control::-ms-expand {
+    border: 0;
+    background-color: transparent; }
+  .form-control[disabled], .form-control[readonly],
+  fieldset[disabled] .form-control {
+    background-color: #E9E9E9;
+    border-color: #D4D4D4;
+    opacity: 1; }
+  .form-control[disabled],
+  fieldset[disabled] .form-control {
+    cursor: not-allowed; }
+  .form-control.input-no-label {
+    margin-top: 1.9rem; }
+
+textarea.form-control {
+  height: auto;
+  resize: vertical; }
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='#62abde'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: right 1.2rem center;
+  padding-right: 3.6rem; }
+  select.form-control[disabled], select.form-control[readonly],
+  fieldset[disabled] select.form-control {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='#BCBCBC'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+    background-repeat: no-repeat;
+    background-size: auto 40%;
+    background-position: right 1.2rem center; }
+
+select[multiple] {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='transparent'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: right 1.2rem center;
+  padding-right: 0; }
+  select[multiple][disabled], select[multiple][readonly],
+  fieldset[disabled] select[multiple] {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='transparent'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+    background-repeat: no-repeat;
+    background-size: auto 40%;
+    background-position: right 1.2rem center; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+.form-group,
+.checkbox-group,
+.radio-group {
+  margin-bottom: 1.2rem; }
+
+.input-inline {
+  display: -ms-flexbox;
+  display: flex; }
+  .input-inline .form-control {
+    width: auto; }
+    .input-inline .form-control + .form-control {
+      margin-left: 0.4rem; }
+  .input-inline .input-stretch {
+    width: 100%; }
+  .input-inline .input-decorator {
+    font-size: 1.799rem;
+    padding: 0 0.8rem;
+    line-height: 3.8rem;
+    color: #868686; }
+    .input-inline .input-decorator.input-decorator-left {
+      padding-right: 0.4rem;
+      padding-left: 1.2rem; }
+    .input-inline .input-decorator.input-decorator-right {
+      padding-left: 0.4rem;
+      padding-right: 1.2rem; }
+    .input-inline .input-decorator.input-decorator-first {
+      padding-left: 0; }
+    .input-inline .input-decorator.input-decorator-last {
+      padding-right: 0; }
+    .input-inline .input-decorator.text-decorator {
+      font-size: 1.19rem; }
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem; }
+  .radio label,
+  .checkbox label {
+    min-height: 2.0000000006rem;
+    padding-left: 2rem;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 1.4rem;
+    color: #575757;
+    margin-left: 0; }
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem; }
+  .radio label,
+  .checkbox label {
+    min-height: 2.0000000006rem;
+    padding-left: 2rem;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: inline-block; }
+
+.checkbox input[type="checkbox"] + label:before {
+  content: ' ';
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border: 0.1rem solid #868686;
+  border-radius: 0.3rem;
+  position: absolute;
+  margin-left: -2rem;
+  margin-top: 0.3rem;
+  background: #ffffff; }
+
+.checkbox input[type="checkbox"]:checked + label:after {
+  font-family: FontAwesome;
+  content: "";
+  color: #62abde;
+  position: absolute;
+  top: -0.1rem;
+  left: 0.1rem; }
+
+.radio input[type="radio"] + label:before {
+  content: ' ';
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border: 1px solid #868686;
+  border-radius: 99rem;
+  position: absolute;
+  margin-left: -2rem;
+  margin-top: 0.3rem;
+  background: #ffffff; }
+
+.radio input[type="radio"]:checked + label:after {
+  content: ' ';
+  display: block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 99rem;
+  background: #62abde;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.3rem; }
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  position: absolute;
+  margin-top: 0.4rem;
+  opacity: 0; }
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -0.4rem; }
+
+.checkbox-group > label + .checkbox {
+  margin-top: 0.4rem; }
+
+.radio-group > label + .radio {
+  margin-top: 0.4rem; }
+
+.checkbox-group.checkbox-inline .checkbox {
+  display: inline-block;
+  padding-right: 2.4rem; }
+
+.radio-group.radio-inline .radio {
+  display: inline-block;
+  padding-right: 2.4rem; }
+
+.checkbox input[type="checkbox"][disabled], .checkbox input[type="checkbox"].disabled {
+  cursor: not-allowed; }
+  .checkbox input[type="checkbox"][disabled] + label, .checkbox input[type="checkbox"].disabled + label {
+    cursor: not-allowed;
+    color: #BCBCBC; }
+    .checkbox input[type="checkbox"][disabled] + label:before, .checkbox input[type="checkbox"].disabled + label:before {
+      border-color: #BCBCBC;
+      background: #E9E9E9; }
+    .checkbox input[type="checkbox"][disabled] + label:after, .checkbox input[type="checkbox"].disabled + label:after {
+      color: #BCBCBC; }
+
+.radio input[type="radio"][disabled], .radio input[type="radio"].disabled {
+  cursor: not-allowed; }
+  .radio input[type="radio"][disabled] + label, .radio input[type="radio"].disabled + label {
+    cursor: not-allowed;
+    color: #BCBCBC; }
+    .radio input[type="radio"][disabled] + label:before, .radio input[type="radio"].disabled + label:before {
+      border-color: #BCBCBC;
+      background: #E9E9E9; }
+    .radio input[type="radio"][disabled] + label:after, .radio input[type="radio"].disabled + label:after {
+      background: #BCBCBC; }
+
+.help-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+  color: #a5a5a5;
+  font-size: 1.19rem;
+  padding: 0 0.4rem; }
+  .help-block .help-text {
+    -ms-flex: 1 auto;
+        flex: 1 auto; }
+  .help-block .help-text-right {
+    text-align: right; }
+
+/*
+ ##Forms
+
+ <h3>Basic Example</h3>
+
+ Individual form controls automatically receive some global styling. All textual `<input>`, `<textarea>`,
+ and `<select>` elements with `.form-control` are set to `width: 100%;` by default. Wrap labels and controls
+ in `.form-group` for optimum spacing.
+
+ ```
+ <form>
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <div class="row-tight">
+            <div class="col-xs">
+                <div class="form-group">
+                    <label for="exampleFirstName">First Name</label>
+                    <input type="text" class="form-control" id="exampleFirstName" placeholder="Enter First Name">
+                </div>
+            </div>
+            <div class="col-xs">
+                <div class="form-group">
+                    <label for="exampleLastName">Last Name</label>
+                    <input type="text" class="form-control" id="exampleLastName" placeholder="Enter Last Name">
+                </div>
+            </div>
+        </div>
+        <div class="row-tight">
+            <div class="col-xs-9">
+                <div class="form-group">
+                    <label for="exampleAddress">Address</label>
+                    <input type="text" class="form-control" id="exampleAddress" placeholder="Enter Street Address">
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-group">
+                    <label for="exampleSuite">Suite #</label>
+                    <input type="text" class="form-control" id="exampleSuite" placeholder="Enter Suite #">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleTextarea">Tell us about you</label>
+            <textarea class="form-control" rows="5" id="exampleTextarea" placeholder="Brief life history"></textarea>
+             <div class="help-block">
+                <span class="help-text help-text-right">52/4000</span>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Information</legend>
+
+        <div class="form-group">
+            <label for="exampleEmailAddress">Email Address</label>
+            <input type="email" class="form-control" id="exampleEmailAddress" placeholder="xx@xxx.xxx">
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <div class="input-inline">
+                <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+                <input type="text" class="form-control" size="6" placeholder="xxx">
+                <span class="input-decorator input-decorator-right">)</span>
+                <input type="text" class="form-control" size="6" placeholder="xxx">
+                <span class="input-decorator">-</span>
+                <input type="text" class="form-control input-stretch" placeholder="xxxx">
+                <span class="input-decorator text-decorator">Ext.</span>
+                <input type="text" class="form-control" size="10" placeholder="xxxxxx">
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <div class="checkbox">
+                <input type="checkbox" value="" id="example-checkbox1">
+                <label for="example-checkbox1">It is okay to contact me directly.</label>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </fieldset>
+ </form>
+ ```
+
+
+
+ <h3>Supported Controls</h3>
+
+ Examples of standard form controls supported in an example form layout.
+
+ <h4>Inputs</h4>
+
+ Most common form control, text-based input fields. Includes support for all HTML5 types: `text`, `password`, `datetime`,
+ `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`.
+
+ ```
+ <input type="text" class="form-control" placeholder="Text input">
+ ```
+
+
+ <h4>Textarea</h4>
+
+ Form control which supports multiple lines of text. Change `rows` attribute as necessary.
+
+ ```
+ <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
+ ```
+
+
+
+ <h4>Checkboxes and Radios</h4>
+
+ Checkboxes are for selecting one or several options in a list, while radios are for selecting one option
+ from many.
+
+ ```
+ <div class="checkbox-group">
+    <label>This is a group of checkboxes</label>
+    <div class="checkbox">
+        <input type="checkbox" value="" id="checkbox1" checked>
+        <label for="checkbox1">Option one is this and that&mdash;be sure to include why it's great</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" value="" id="checkbox2">
+        <label for="checkbox2">Option tis almost as great as option one</label>
+    </div>
+ </div>
+
+ <div class="radio-group">
+    <label>This is a group of radio buttons</label>
+    <div class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <label for="optionsRadios1">
+            Option one is this and that&mdash;be sure to include why it's great
+        </label>
+    </div>
+    <div class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        <label for="optionsRadios2">
+            Option two can be something else and selecting it will deselect option one
+        </label>
+    </div>
+    <div class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+        <label for="optionsRadios3">
+            Option three is just one more than two
+        </label>
+    </div>
+ </div>
+ ```
+
+
+ <h4>Inline Checkboxes and Radios</h4>
+
+ Use the `.checkbox-inline` or `.radio-inline` classes on a series of `.checkbox-group` or `.radio-group` for controls
+ that appear on the same line.
+
+ ```
+ <div class="checkbox-group checkbox-inline">
+    <label>This is a group of checkboxes</label>
+    <div class="checkbox">
+        <input type="checkbox" value="" id="checkboxInline1" checked>
+        <label for="checkboxInline1">Option one</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" value="" id="checkboxInline2">
+        <label for="checkboxInline2">Option two</label>
+    </div>
+ </div>
+
+ <div class="radio-group radio-inline">
+    <label>This is a group of radio buttons</label>
+    <div class="radio">
+        <input type="radio" name="inlineOptionsRadios" id="radioInline1" value="option1" checked>
+        <label for="radioInline1">Option one</label>
+    </div>
+    <div class="radio">
+        <input type="radio" name="inlineOptionsRadios" id="radioInline2" value="option2">
+        <label for="radioInline2">Option two</label>
+    </div>
+    <div class="radio">
+        <input type="radio" name="inlineOptionsRadios" id="radioInline3" value="option3">
+        <label for="radioInline3">Option three</label>
+    </div>
+ </div>
+ ```
+
+
+ <h4>Checkboxes and Radios with no label</h4>
+
+ Should you have no text within the `<label>`, the input is positioned as you'd expect. Remember to
+ still provide some form of label  for assistive technologies (for instance, using aria-label).
+
+ ```
+ <div class="checkbox">
+    <input type="checkbox" value="" id="checkboxNoLabel1" aria-label="...">
+    <label for="checkboxNoLabel1"></label>
+ </div>
+ <div class="radio">
+    <input type="radio" name="noLabelRadio" id="optionsNoLabel1" value="option1" aria-label="...">
+    <label for="optionsNoLabel1"></label>
+ </div>
+ ```
+
+ <h4>Selects</h4>
+
+ Note that many native select menus—namely in Safari and Chrome—have rounded
+ corners that cannot be modified via border-radius properties.
+
+ ```
+ <select class="form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+ </select>
+ ```
+
+
+ <h3>Input without Label</h3>
+
+ You might want to put two inputs next to each other in a grid layout, but only have one label. To line up the
+ inputs you can add `.input-no-label` to one of them.
+ ```
+ <div class="row-tight">
+    <div class="col-xs">
+        <div class="form-group">
+            <label for="noLabelFirstName">First Name</label>
+            <input type="text" class="form-control" id="noLabelFirstName" placeholder="Enter First Name">
+        </div>
+    </div>
+    <div class="col-xs">
+        <div class="form-group">
+            <input type="text" class="form-control input-no-label" placeholder="Enter Last Name">
+        </div>
+    </div>
+ </div>
+ ```
+
+
+ <h3>Inline Inputs</h3>
+
+ <h4>Example</h4>
+
+ Inline inputs are different that add inputs next to each other in a grid layout. An input that is inline is __not__
+ set to `width: 100%` so you can add multiple inputs to a single row by adding a containing `div.input-inline`
+ inside of your `.form-group`
+ ```
+ <div class="form-group">
+    <label>Phone Number</label>
+    <div class="input-inline">
+        <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+        <input type="text" class="form-control" size="3">
+        <span class="input-decorator input-decorator-right">)</span>
+        <input type="text" class="form-control" size="3">
+        <span class="input-decorator">-</span>
+        <input type="text" class="form-control">
+        <span class="input-decorator text-decorator">Ext.</span>
+        <input type="text" class="form-control" size="10">
+    </div>
+ </div>
+
+ <hr/>
+
+ <div class="form-group">
+    <label>Date of Birth</label>
+    <div class="input-inline">
+        <input type="text" class="form-control"  placeholder="MM">
+        <span class="input-decorator">/</span>
+        <input type="text" class="form-control"  placeholder="DD">
+        <span class="input-decorator">/</span>
+        <select class="form-control input-stretch">
+            <option>1950s</option>
+            <option>1960s</option>
+            <option>1970s</option>
+            <option>1980s</option>
+        </select>
+    </div>
+ </div>
+ ```
+
+ <h4>Inline Widths</h4>
+
+ Since these inputs are not set to `width:100%;`, you need a way to regulate the width if needed. To set a specific
+ width you can use the `size` attribute.
+ ```
+ <div class="input-inline">
+    <input type="text" class="form-control" size="3">
+    <input type="text" class="form-control">
+    <input type="text" class="form-control">
+    <input type="text" class="form-control" size="10">
+ </div>
+ ```
+
+ <h4>Inline Input Decorators</h4>
+
+ Inline inputs sometimes need decorators `.input-decorators` between the inputs for such things as phone number, birth date, social
+ security number, or any other custom application. These are the available classes and functions.
+
+ <div class="table-container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Funciton</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>`.input-decorator`</td>
+                <td>An input decorator is used mainly for symbols and special characters, but is also
+                the base for using text with additional options. This class adds `padding` to the left and right
+                and also sets the `line-height` of the decorator to the height of the input.</td>
+            </tr>
+            <tr>
+                <td>`.text-decorator`</td>
+                <td>This is the modifier that need to be added to `.input-decorator` to accommodate for textual
+                 decorators. It sets the `font-size` to small and lightens up the color just a bit</td>
+            </tr>
+            <tr>
+                <td>`.input-stretch`</td>
+                <td>This modifier can be place on to any input within the `.input-inline` group. It will set
+                it's width to 100%, so that it takes up all remaining space. You can add this to multiple inputs
+                and they will split the remaining space evenly.</td>
+            </tr>
+            <tr>
+                <td>`.input-decorator-left`</td>
+                <td>This is used if placing a decorator on the left side of an input and you want it to visually
+                be closer to that input that the previous input. It reduces the `padding-right` of the decorator</td>
+            </tr>
+            <tr>
+                <td>`.input-decorator-right`</td>
+                <td>This is used if placing a decorator on the right side of an input and you want it to visually
+                be closer to that input that the next input. It reduces the `padding-left` of the decorator</td>
+            </tr>
+            <tr>
+                <td>`.input-decorator-first`</td>
+                <td>This is used if placing a decorator at the very beginning of a row. It removes the
+                `padding-left` of the decorator so that there is no white space between the beginning of the
+                row and the decorator.</td>
+            </tr>
+            <tr>
+                <td>`.input-decorator-last`</td>
+                <td>This is used if placing a decorator at the very end of a row. It removes the
+                `padding-right` of the decorator so that there is no white space between the end of the
+                row and the decorator.</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+
+
+ ```
+ <div class="input-inline">
+    <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+    <input type="text" class="form-control" size="3">
+    <span class="input-decorator input-decorator-right">)</span>
+    <input type="text" class="form-control" size="3">
+    <span class="input-decorator">-</span>
+    <input type="text" class="form-control input-stretch">
+    <span class="input-decorator text-decorator">Ext.</span>
+    <input type="text" class="form-control" size="10">
+    <span class="input-decorator text-decorator input-decorator-last">?</span>
+ </div>
+ ```
+
+
+ <h3>Help Text</h3>
+
+ Block level help text for form controls. Nesting `.help-text` within a `.help-block` allows you to place help text
+ on the left or right side of your input.
+ ```
+ <div class="form-group">
+    <label for="helpTextInput">Input with Help Text</label>
+    <input type="email" class="form-control" id="helpTextInput">
+    <div class="help-block">
+        <span class="help-text">A block of help text that breaks onto a new line and may extend beyond one line</span>
+        <span class="help-text help-text-right">More Help Text</span>
+    </div>
+ </div>
+ ```
+
+
+
+ <h3>Disabled State</h3>
+
+ Add the `disabled` boolean attribute on an input to prevent user interactions. Disabled inputs
+ appear lighter and add a not-allowed cursor.
+ ```
+ <div class="form-group">
+    <label>Inputs</label>
+    <input type="text" class="form-control" disabled>
+ </div>
+
+ <div class="form-group">
+    <label>Textarea</label>
+    <textarea rows="3" class="form-control" disabled></textarea>
+ </div>
+
+ <div class="form-group">
+    <label>Select</label>
+    <select class="form-control" disabled>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+ </div>
+
+ <div class="checkbox-group">
+    <label>This is a group of disabled checkboxes</label>
+    <div class="checkbox">
+        <input type="checkbox" value="" id="disabledCheckbox1" checked disabled>
+        <label for="disabledCheckbox1">Option one is this and that&mdash;be sure to include why it's great</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox" value="" id="disabledCheckbox2" disabled>
+        <label for="disabledCheckbox2">Option tis almost as great as option one</label>
+    </div>
+ </div>
+
+ <div class="radio-group">
+    <label>This is a group of disabled radio buttons</label>
+    <div class="radio">
+        <input type="radio" name="disabledRadios" id="disabledRadio1" value="option1" checked disabled>
+        <label for="disabledRadio1">
+            Option one is this and that&mdash;be sure to include why it's great
+        </label>
+    </div>
+    <div class="radio">
+        <input type="radio" name="disabledRadios" id="disabledRadio2" value="option2" disabled>
+        <label for="disabledRadio2">
+            Option two can be something else and selecting it will deselect option one
+        </label>
+    </div>
+ </div>
+ ```
+
+
 
 
  */

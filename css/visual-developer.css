@@ -5952,7 +5952,7 @@ small,
 
 mark,
 .mark {
-  background-color: #ffefdb;
+  background-color: #fff4e6;
   padding: 0.2rem; }
 
 .text-left {
@@ -6536,28 +6536,6 @@ table th[class*="col-"] {
   float: none;
   display: table-cell; }
 
-.table > thead > tr > td.active,
-.table > thead > tr > th.active,
-.table > thead > tr.active > td,
-.table > thead > tr.active > th,
-.table > tbody > tr > td.active,
-.table > tbody > tr > th.active,
-.table > tbody > tr.active > td,
-.table > tbody > tr.active > th,
-.table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th {
-  background-color: #e5e4ff;
-  color: #595194; }
-
-.table-hover > tbody > tr > td.active:hover,
-.table-hover > tbody > tr > th.active:hover,
-.table-hover > tbody > tr.active:hover > td,
-.table-hover > tbody > tr:hover > .active,
-.table-hover > tbody > tr.active:hover > th {
-  background-color: #cdcaff; }
-
 .table > thead > tr > td.success,
 .table > thead > tr > th.success,
 .table > thead > tr.success > td,
@@ -6570,15 +6548,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.success,
 .table > tfoot > tr.success > td,
 .table > tfoot > tr.success > th {
-  background-color: #dbf5cb;
-  color: #1D5F11; }
+  background-color: #eaf9e0;
+  color: #46AD00; }
 
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-  background-color: #cdf1b5; }
+  background-color: #dbf5cb; }
 
 .table > thead > tr > td.info,
 .table > thead > tr > th.info,
@@ -6592,15 +6570,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.info,
 .table > tfoot > tr.info > td,
 .table > tfoot > tr.info > th {
-  background-color: #d1e8fc;
-  color: #296aa3; }
+  background-color: #e4f1fd;
+  color: #62abde; }
 
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: #b9dcfb; }
+  background-color: #cce5fc; }
 
 .table > thead > tr > td.warning,
 .table > thead > tr > th.warning,
@@ -6614,15 +6592,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.warning,
 .table > tfoot > tr.warning > td,
 .table > tfoot > tr.warning > th {
-  background-color: #ffefdb;
-  color: #E55C00; }
+  background-color: #fff4e6;
+  color: #FF9821; }
 
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-  background-color: #ffe4c2; }
+  background-color: #ffe8cc; }
 
 .table > thead > tr > td.danger,
 .table > thead > tr > th.danger,
@@ -6636,15 +6614,15 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.danger,
 .table > tfoot > tr.danger > td,
 .table > tfoot > tr.danger > th {
-  background-color: #ffe1e1;
-  color: #841225; }
+  background-color: #ffebeb;
+  color: #DE2533; }
 
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ffc7c7; }
+  background-color: #ffd1d1; }
 
 .table > thead > tr > th.currency,
 .table > thead > tr > td.currency,
@@ -6804,10 +6782,6 @@ table th[class*="col-"] {
         </tr>
     </thead>
     <tbody>
-        <tr class="active">
-            <th>Active</th>
-            <td>Column Content</td>
-        </tr>
         <tr class="success">
             <th>Success</th>
             <td>Column Content</td>
@@ -7001,7 +6975,7 @@ output {
   .form-control:focus {
     border-color: #62abde;
     outline: 0;
-    box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.075), 0 0 0.4rem rgba(98, 171, 222, 0.6); }
+    box-shadow: 0 0 0.4rem rgba(98, 171, 222, 0.6); }
   .form-control::-moz-placeholder {
     color: #BCBCBC;
     opacity: 1; }
@@ -7220,6 +7194,134 @@ input[type="search"] {
     .radio input[type="radio"][disabled] + label:after, .radio input[type="radio"].disabled + label:after {
       background: #BCBCBC; }
 
+.has-success.help-block, .has-success.help-text {
+  color: #46AD00; }
+
+.has-success .form-control:not([disabled]) {
+  border-color: #80e000;
+  background-color: #eaf9e0;
+  color: #46AD00; }
+  .has-success .form-control:not([disabled]):focus {
+    border-color: #80e000;
+    outline: 0;
+    box-shadow: 0 0 0.4rem rgba(128, 224, 0, 0.6); }
+
+.has-success select.form-control:not([disabled]) {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='#46AD00'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: right 1.2rem center; }
+
+.has-success .checkbox input[type="checkbox"]:not([disabled]) + label,
+.has-success .radio input[type="radio"]:not([disabled]) + label {
+  color: #46AD00; }
+  .has-success .checkbox input[type="checkbox"]:not([disabled]) + label:before,
+  .has-success .radio input[type="radio"]:not([disabled]) + label:before {
+    border-color: #46AD00;
+    background: #eaf9e0; }
+
+.has-success .checkbox input[type="checkbox"]:not([disabled]) + label:after {
+  color: #46AD00; }
+
+.has-success .radio input[type="radio"]:not([disabled]) + label:after {
+  background: #46AD00; }
+
+.has-warning.help-block, .has-warning.help-text {
+  color: #FF9821; }
+
+.has-warning .form-control:not([disabled]) {
+  border-color: #ffad7d;
+  background-color: #fff4e6;
+  color: #FF9821; }
+  .has-warning .form-control:not([disabled]):focus {
+    border-color: #ffad7d;
+    outline: 0;
+    box-shadow: 0 0 0.4rem rgba(255, 173, 125, 0.6); }
+
+.has-warning select.form-control:not([disabled]) {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='#FF9821'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: right 1.2rem center; }
+
+.has-warning .checkbox input[type="checkbox"]:not([disabled]) + label,
+.has-warning .radio input[type="radio"]:not([disabled]) + label {
+  color: #FF9821; }
+  .has-warning .checkbox input[type="checkbox"]:not([disabled]) + label:before,
+  .has-warning .radio input[type="radio"]:not([disabled]) + label:before {
+    border-color: #FF9821;
+    background: #fff4e6; }
+
+.has-warning .checkbox input[type="checkbox"]:not([disabled]) + label:after {
+  color: #FF9821; }
+
+.has-warning .radio input[type="radio"]:not([disabled]) + label:after {
+  background: #FF9821; }
+
+.has-error.help-block, .has-error.help-text {
+  color: #DE2533; }
+
+.has-error .form-control:not([disabled]) {
+  border-color: #ea7591;
+  background-color: #ffebeb;
+  color: #DE2533; }
+  .has-error .form-control:not([disabled]):focus {
+    border-color: #ea7591;
+    outline: 0;
+    box-shadow: 0 0 0.4rem rgba(234, 117, 145, 0.6); }
+
+.has-error select.form-control:not([disabled]) {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='#DE2533'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: right 1.2rem center; }
+
+.has-error .checkbox input[type="checkbox"]:not([disabled]) + label,
+.has-error .radio input[type="radio"]:not([disabled]) + label {
+  color: #DE2533; }
+  .has-error .checkbox input[type="checkbox"]:not([disabled]) + label:before,
+  .has-error .radio input[type="radio"]:not([disabled]) + label:before {
+    border-color: #DE2533;
+    background: #ffebeb; }
+
+.has-error .checkbox input[type="checkbox"]:not([disabled]) + label:after {
+  color: #DE2533; }
+
+.has-error .radio input[type="radio"]:not([disabled]) + label:after {
+  background: #DE2533; }
+
+.has-info.help-block, .has-info.help-text {
+  color: #62abde; }
+
+.has-info .form-control:not([disabled]) {
+  border-color: #7fcce4;
+  background-color: #e4f1fd;
+  color: #62abde; }
+  .has-info .form-control:not([disabled]):focus {
+    border-color: #7fcce4;
+    outline: 0;
+    box-shadow: 0 0 0.4rem rgba(127, 204, 228, 0.6); }
+
+.has-info select.form-control:not([disabled]) {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px' fill='#62abde'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+  background-repeat: no-repeat;
+  background-size: auto 40%;
+  background-position: right 1.2rem center; }
+
+.has-info .checkbox input[type="checkbox"]:not([disabled]) + label,
+.has-info .radio input[type="radio"]:not([disabled]) + label {
+  color: #62abde; }
+  .has-info .checkbox input[type="checkbox"]:not([disabled]) + label:before,
+  .has-info .radio input[type="radio"]:not([disabled]) + label:before {
+    border-color: #62abde;
+    background: #e4f1fd; }
+
+.has-info .checkbox input[type="checkbox"]:not([disabled]) + label:after {
+  color: #62abde; }
+
+.has-info .radio input[type="radio"]:not([disabled]) + label:after {
+  background: #62abde; }
+
 .help-block {
   display: -ms-flexbox;
   display: flex;
@@ -7239,7 +7341,7 @@ input[type="search"] {
 /*
  ##Forms
 
- <h3>Basic Example</h3>
+ <h3>Form Example</h3>
 
  Individual form controls automatically receive some global styling. All textual `<input>`, `<textarea>`,
  and `<select>` elements with `.form-control` are set to `width: 100%;` by default. Wrap labels and controls
@@ -7681,8 +7783,55 @@ input[type="search"] {
  </div>
  ```
 
+ <h3>Validation States</h3>
+
+ Validation styles for error, warning, and success states on form controls.
+ To use, add `.has-info`, `.has-warning`, `.has-error`, or `.has-success` to the parent element. Any
+ `.form-control`, within that element will receive the validation styles. You can also apply these styles directly to
+ any `.help-block` or `.help-text` to show validation in your messages as well.
 
 
+ ```
+ <div class="form-group has-info">
+    <label>Input with Info</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block">
+        <span class="help-text ">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap">52/4000</span>
+    </div>
+ </div>
+
+ <div class="form-group has-success">
+    <label>Input with Success</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block">
+        <span class="help-text has-success">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap">52/4000</span>
+    </div>
+ </div>
+
+ <div class="form-group has-warning">
+    <label>Input with Warning</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block">
+        <span class="help-text">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap has-warning">52/4000</span>
+    </div>
+ </div>
+
+ <div class="form-group has-error">
+    <label>Input with Error</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block has-error">
+        <span class="help-text ">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap">52/4000</span>
+    </div>
+ </div>
+ ```
 
  */
 @media only screen and (max-width: 479px) {

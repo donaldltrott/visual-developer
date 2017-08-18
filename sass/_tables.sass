@@ -122,7 +122,7 @@ table
 // inheritance to nested tables.
 
 // Generate the contextual variants
-@include table-row-variant('active', $state-active-bg, $state-active-text)
+//@include table-row-variant('active', $state-active-bg, $state-active-text)
 @include table-row-variant('success', $state-success-bg, $state-success-text)
 @include table-row-variant('info', $state-info-bg, $state-info-text)
 @include table-row-variant('warning', $state-warning-bg, $state-warning-text)
@@ -284,10 +284,6 @@ table
         </tr>
     </thead>
     <tbody>
-        <tr class="active">
-            <th>Active</th>
-            <td>Column Content</td>
-        </tr>
         <tr class="success">
             <th>Success</th>
             <td>Column Content</td>

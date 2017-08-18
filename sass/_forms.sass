@@ -553,18 +553,23 @@ input[type="search"]
 //    height: $input-height-small;
 //    line-height: $input-height-small;
 //}
-//
-//// Feedback states
-//.has-success {
-//    @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
-//}
-//.has-warning {
-//    @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
-//}
-//.has-error {
-//    @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
-//}
-//
+
+
+
+// Feedback states
+.has-success
+    @include form-control-validation($state-success-text, $state-success-border, $state-success-bg)
+
+.has-warning
+    @include form-control-validation($state-warning-text, $state-warning-border, $state-warning-bg)
+
+.has-error
+    @include form-control-validation($state-danger-text, $state-danger-border, $state-danger-bg)
+
+.has-info
+    @include form-control-validation($state-info-text, $state-info-border, $state-info-bg)
+
+
 //// Reposition feedback icon if input has visible label above
 //.has-feedback label {
 //
@@ -764,7 +769,7 @@ input[type="search"]
 /*
  ##Forms
 
- <h3>Basic Example</h3>
+ <h3>Form Example</h3>
 
  Individual form controls automatically receive some global styling. All textual `<input>`, `<textarea>`,
  and `<select>` elements with `.form-control` are set to `width: 100%;` by default. Wrap labels and controls
@@ -1206,7 +1211,54 @@ input[type="search"]
  </div>
  ```
 
+ <h3>Validation States</h3>
+
+ Validation styles for error, warning, and success states on form controls.
+ To use, add `.has-info`, `.has-warning`, `.has-error`, or `.has-success` to the parent element. Any
+ `.form-control`, within that element will receive the validation styles. You can also apply these styles directly to
+ any `.help-block` or `.help-text` to show validation in your messages as well.
 
 
+ ```
+ <div class="form-group has-info">
+    <label>Input with Info</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block">
+        <span class="help-text ">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap">52/4000</span>
+    </div>
+ </div>
+
+ <div class="form-group has-success">
+    <label>Input with Success</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block">
+        <span class="help-text has-success">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap">52/4000</span>
+    </div>
+ </div>
+
+ <div class="form-group has-warning">
+    <label>Input with Warning</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block">
+        <span class="help-text">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap has-warning">52/4000</span>
+    </div>
+ </div>
+
+ <div class="form-group has-error">
+    <label>Input with Error</label>
+    <input type="text" value="this is my text" class="form-control" id="exampleInputEmail1"
+           placeholder="Email">
+    <div class="help-block has-error">
+        <span class="help-text ">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        <span class="help-text help-text-right text-nowrap">52/4000</span>
+    </div>
+ </div>
+ ```
 
  */

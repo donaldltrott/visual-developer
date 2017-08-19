@@ -9,18 +9,15 @@
     border-color: transparent
 
     &:focus,
-    &.focus
-        color: $color
-        background-color: rgba(0, 0, 0, 0.16)
-
+    &.focus,
     &:hover,
     &.hover
-        color: $color
-        background-color: rgba(0, 0, 0, 0.08)
+        color: darken($color, 5%)
+        background-color: rgba(0, 0, 0, 0.06)
 
     &:active,
     &.active
-        color: $color
+        color: darken($color, 5%)
         background-color: rgba(0, 0, 0, 0.16)
 
     &.disabled,
@@ -38,16 +35,13 @@
             background-color: transparent
             cursor: $cursor-disabled
 
-@mixin filled-button($bg, $color)
+@mixin filled-button($bg, $color, $border-color: $black)
     color: $color
     background-color: $bg
-    border-color: darken($bg, 12%)
+    border-color: $border-color
 
     &:focus,
-    &.focus
-        color: $color
-        background-color: darken($bg, 16%)
-
+    &.focus,
     &:hover,
     &.hover
         color: $color
@@ -73,6 +67,8 @@
             background-color: rgba(0, 0, 0, 0.04)
             cursor: $cursor-disabled
             border-color: transparent
+
+
 
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)

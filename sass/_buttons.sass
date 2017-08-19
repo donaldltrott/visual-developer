@@ -9,7 +9,6 @@
 
 .btn
     display: inline-block
-    margin: 0.6rem 0 0 0
     font-weight: $btn-font-weight
     text-align: center
     vertical-align: middle
@@ -19,11 +18,10 @@
     border: 0.1rem solid transparent
     // Reset unusual Firefox-on-Android default style see https://github.com/necolas/normalize.css/issues/214
     white-space: nowrap
-    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base)
+    @include button-size($spacing-md, $spacing-lg, $font-size-base, $line-height-base, $btn-border-radius-base)
     user-select: none
-    text-transform: uppercase
     color: $gray
-    background-color: transparent
+    background-color: $gray-lightest
     text-decoration: none
 
     &,
@@ -39,237 +37,90 @@
         background-color: rgba(0, 0, 0, 0.08)
         text-decoration: none
 
-    + .btn
-        margin-left: 0.6rem
-
-// [converter] extracted a& to a.btn
-
-
 a.btn
     &.disabled,
     fieldset[disabled] &
         pointer-events: none
 
-// Primary buttons
-// --------------------------------------------------
-
-.btn--primary-red
-    @include flat-button($brand-primary-red)
-
-.btn--primary-purple
-    @include flat-button($brand-primary-purple)
-
-.btn--primary-blue
-    @include flat-button($brand-primary-blue)
-
-.btn--primary-green
-    @include flat-button($brand-primary-green)
-
-.btn--primary-orange
-    @include flat-button($brand-primary-orange)
-
-.btn--primary-gray
-    @include flat-button($brand-primary-gray)
-
-// Colored buttons
-// --------------------------------------------------
-
-.btn--red-light
-    @include flat-button($red-light)
-
-.btn--red
-    @include flat-button($red)
-
-.btn--red-dark
-    @include flat-button($red-dark)
-
-.btn--purple-light
-    @include flat-button($purple-light)
-
-.btn--purple
-    @include flat-button($purple)
-
-.btn--purple-dark
-    @include flat-button($purple-dark)
-
-.btn--blue-light
-    @include flat-button($blue-light)
-
-.btn--blue
-    @include flat-button($blue)
-
-.btn--blue-dark
-    @include flat-button($blue-dark)
-
-.btn--green-light
-    @include flat-button($green-light)
-
-.btn--green
-    @include flat-button($green)
-
-.btn--green-dark
-    @include flat-button($green-dark)
-
-.btn--orange-light
-    @include flat-button($orange-light)
-
-.btn--orange
-    @include flat-button($orange)
-
-.btn--orange-dark
-    @include flat-button($orange-dark)
-
-.btn--gray-light
-    @include flat-button($gray-light)
-
-.btn--gray
-    @include flat-button($gray)
-
-.btn--gray-dark
-    @include flat-button($gray-dark)
-
-// Primary buttons
-// --------------------------------------------------
-
-.btn--primary-red
-    &.btn--filled
-        @include filled-button($brand-primary-red, $white)
-
-.btn--primary-purple
-    &.btn--filled
-        @include filled-button($brand-primary-purple, $white)
-
-.btn--primary-blue
-    &.btn--filled
-        @include filled-button($brand-primary-blue, $white)
-
-.btn--primary-green
-    &.btn--filled
-        @include filled-button($brand-primary-green, $white)
-
-.btn--primary-orange
-    &.btn--filled
-        @include filled-button($brand-primary-orange, $white)
-
-.btn--primary-gray
-    &.btn--filled
-        @include filled-button($brand-primary-gray, $white)
-
 // Filled Colored buttons
 // --------------------------------------------------
-.btn--red-light
-    &.btn--filled
-        @include filled-button($red-light, $white)
+.btn-red
+    @include filled-button($red, $white, darken($red, 10%))
 
-.btn--red
-    &.btn--filled
-        @include filled-button($red, $white)
+.btn-blue
+    @include filled-button($blue, $white, darken($blue, 8%))
 
-.btn--red-dark
-    &.btn--filled
-        @include filled-button($red-dark, $white)
+.btn-green
+    @include filled-button($green, $white, darken($green, 5%))
 
-.btn--purple-light
-    &.btn--filled
-        @include filled-button($purple-light, $white)
+.btn-orange
+    @include filled-button($orange, $white, darken($orange, 10%))
 
-.btn--purple
-    &.btn--filled
-        @include filled-button($purple, $white)
+.btn-white
+    @include filled-button($white, $gray-dark, $gray-light)
 
-.btn--purple-dark
-    &.btn--filled
-        @include filled-button($purple-dark, $white)
+//// Colored buttons
+//// --------------------------------------------------
 
-.btn--blue-light
-    &.btn--filled
-        @include filled-button($blue-light, $white)
+.btn-red
+    &.btn-bare
+        @include flat-button($red)
 
-.btn--blue
-    &.btn--filled
-        @include filled-button($blue, $white)
+.btn-blue
+    &.btn-bare
+        @include flat-button($blue)
 
-.btn--blue-dark
-    &.btn--filled
-        @include filled-button($blue-dark, $white)
+.btn-green
+    &.btn-bare
+        @include flat-button($green)
 
-.btn--green-light
-    &.btn--filled
-        @include filled-button($green-light, $white)
+.btn-orange
+    &.btn-bare
+        @include flat-button($orange)
 
-.btn--green
-    &.btn--filled
-        @include filled-button($green, $white)
+.btn-white
+    &.btn-bare
+        @include flat-button($gray)
 
-.btn--green-dark
-    &.btn--filled
-        @include filled-button($green-dark, $white)
-
-.btn--orange-light
-    &.btn--filled
-        @include filled-button($orange-light, $white)
-
-.btn--orange
-    &.btn--filled
-        @include filled-button($orange, $white)
-
-.btn--orange-dark
-    &.btn--filled
-        @include filled-button($orange-dark, $white)
-
-.btn--gray-light
-    &.btn--filled
-        @include filled-button($gray-light, $white)
-
-.btn--gray
-    &.btn--filled
-        @include filled-button($gray, $white)
-
-.btn--gray-dark
-    &.btn--filled
-        @include filled-button($gray-dark, $white)
-
-.btn--white
-    &.btn--filled
-        @include filled-button($white, $gray-dark)
-
-// Button Sizes
-// --------------------------------------------------
-
-.btn--lg
-    // line-height: ensure even-numbered height of button next to large input
-    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large)
-
-.btn--sm
-    // line-height: ensure proper height of button next to small input
-    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
-
-.btn--xs
-    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
-
+//// Button Sizes
+//// --------------------------------------------------
+//
+//.btn-lg
+//    // line-height: ensure even-numbered height of button next to large input
+//    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large)
+//
+//.btn-sm
+//    // line-height: ensure proper height of button next to small input
+//    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
+//
+//.btn-xs
+//    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
+//
 // Block button
 // --------------------------------------------------
 
-.btn--block
+.btn-block
     display: block
     width: 100%
     margin: 0
 
 // Vertically space out multiple block buttons
-.btn--block + .btn--block
-    margin: 0.6rem 0 0 0
+.btn-block + .btn-block
+    margin: $spacing-sm 0 0 0
 
 // Specificity overrides
 input[type="submit"],
 input[type="reset"],
 input[type="button"]
-    &.btn--block
+    &.btn-block
         width: 100%
 
 /*
  ## Buttons
 
- <h4>Button Tags</h4>
+ <h3>Button Tags</h3>
+
+ Use the button classes on an `<a>`, `<button>`, or `<input>` element.
  ```
     <a class="btn" href="#" role="button">Link</a>
     <button class="btn" type="submit">Button</button>
@@ -278,87 +129,47 @@ input[type="button"]
  ```
 
 
- <h4>Buttons (Primary)</h4>
+ <h3>Primary Button</h3>
+
+ Use any of the available button classes to quickly create a styled button.
  ```
-    <button class="btn btn--primary-gray">Primary Gray</button>
-    <button class="btn btn--primary-blue">Primary Blue</button>
-    <button class="btn btn--primary-green">Primary Green</button>
-    <button class="btn btn--primary-purple">Primary Purple</button>
-    <button class="btn btn--primary-orange">Primary Orange</button>
-    <button class="btn btn--primary-red">Primary Red</button>
+    <button class="btn btn-white">.btn-white</button>
+    <button class="btn btn-blue">.btn-blue</button>
+    <button class="btn btn-green">.btn-green</button>
+    <button class="btn btn-orange">.btn-orange</button>
+    <button class="btn btn-red">.btn-red</button>
  ```
 
- <h4>Buttons (All)</h4>
+ <h3>Bare Button</h3>
+
+ Add the class `.btn-bare` to create a styled button without borders.
  ```
-    <button class="btn btn--gray-light">Gray Light</button>
-    <button class="btn btn--gray">Gray</button>
-    <button class="btn btn--gray-dark">Gray Dark</button>
-    <button class="btn btn--blue-light">Blue Light</button>
-    <button class="btn btn--blue">Blue</button>
-    <button class="btn btn--blue-dark">Blue Dark</button>
-    <button class="btn btn--green-light">Green Light</button>
-    <button class="btn btn--green">Green</button>
-    <button class="btn btn--green-dark">Green Dark</button>
-    <button class="btn btn--purple-light">Purple Light</button>
-    <button class="btn btn--purple">Purple</button>
-    <button class="btn btn--purple-dark">Purple Dark</button>
-    <button class="btn btn--orange-light">Orange Light</button>
-    <button class="btn btn--orange">Orange</button>
-    <button class="btn btn--orange-dark">Orange Dark</button>
-    <button class="btn btn--red-light">Red Light</button>
-    <button class="btn btn--red">Red</button>
-    <button class="btn btn--red-dark">Red Dark</button>
+    <button class="btn btn-white btn-bare">.btn-white</button>
+    <button class="btn btn-blue btn-bare">.btn-blue</button>
+    <button class="btn btn-green btn-bare">.btn-green</button>
+    <button class="btn btn-orange btn-bare">.btn-orange</button>
+    <button class="btn btn-red btn-bare">.btn-red</button>
  ```
 
 
 
- <h4>Filled Buttons (Primary)</h4>
+ <h3>Disabled Button</h3>
+
+ Make `buttons` look unclickable by adding the `disabled` attribute and anchor `<a>` by
+ adding the `.disabled` class.
  ```
-    <button class="btn btn--primary-gray btn--filled">Primary Gray</button>
-    <button class="btn btn--primary-blue btn--filled">Primary Blue</button>
-    <button class="btn btn--primary-green btn--filled">Primary Green</button>
-    <button class="btn btn--primary-purple btn--filled">Primary Purple</button>
-    <button class="btn btn--primary-orange btn--filled">Primary Orange</button>
-    <button class="btn btn--primary-red btn--filled">Primary Red</button>
+    <button class="btn btn-blue" disabled>Disabled button</button>
+    <button class="btn btn-green btn-bare" disabled>Disabled bare button</button>
+    <a href="#" class="btn btn-red disabled">Disabled anchor</a>
+    <a href="#" class="btn btn-orange btn-bare disabled">Disabled bare anchor</a>
  ```
 
- <h4>Filled Buttons (All)</h4>
- ```
-    <button class="btn btn--white btn--filled">White</button>
-    <button class="btn btn--gray-light btn--filled">Gray Light</button>
-    <button class="btn btn--gray btn--filled">Gray</button>
-    <button class="btn btn--gray-dark btn--filled">Gray Dark</button>
-    <button class="btn btn--blue-light btn--filled">Blue Light</button>
-    <button class="btn btn--blue btn--filled">Blue</button>
-    <button class="btn btn--blue-dark btn--filled">Blue Dark</button>
-    <button class="btn btn--green-light btn--filled">Green Light</button>
-    <button class="btn btn--green btn--filled">Green</button>
-    <button class="btn btn--green-dark btn--filled">Green Dark</button>
-    <button class="btn btn--purple-light btn--filled">Purple Light</button>
-    <button class="btn btn--purple btn--filled">Purple</button>
-    <button class="btn btn--purple-dark btn--filled">Purple Dark</button>
-    <button class="btn btn--orange-light btn--filled">Orange Light</button>
-    <button class="btn btn--orange btn--filled">Orange</button>
-    <button class="btn btn--orange-dark btn--filled">Orange Dark</button>
-    <button class="btn btn--red-light btn--filled">Red Light</button>
-    <button class="btn btn--red btn--filled">Red</button>
-    <button class="btn btn--red-dark btn--filled">Red Dark</button>
- ```
+ <h3>Block Button</h3>
 
-
-
- <h4>Buttons (Disabled)</h4>
+ Create block level buttons—those that span the full width of a parent— by adding `.btn-block`.
  ```
-    <button class="btn btn--blue disabled">Blue</button>
-    <button class="btn btn--green disabled">Green</button>
-    <button class="btn btn--orange btn--filled disabled">Orange</button>
-    <button class="btn btn--red-dark btn--filled disabled">Red Dark</button>
- ```
-
- <h4>Block Buttons</h4>
- ```
-    <button class="btn btn--primary-gray btn--filled btn--block">Primary Gray</button>
-    <button class="btn btn--primary-blue btn--filled btn--block">Primary Blue</button>
+    <button class="btn btn-white btn-block">.btn-white .btn-block</button>
+    <button class="btn btn-blue btn-block">.btn-blue .btn-block</button>
  ```
 
 

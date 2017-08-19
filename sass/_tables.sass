@@ -19,7 +19,6 @@ th
 thead th
     color: $table-header-color
 
-
 // Baseline styles
 
 .table
@@ -37,8 +36,6 @@ thead th
                 line-height: $line-height-base
                 vertical-align: top
                 border-top: 0.1rem dashed $table-body-border-color
-
-
 
     // Bottom align for column headings
     > thead > tr > th
@@ -60,8 +57,6 @@ thead th
             > td
                 border-top: 0
 
-
-
     // Account for multiple tbody instances
     > tbody + tbody
         border-top: 0.2rem solid $table-body-border-color
@@ -69,9 +64,6 @@ thead th
     // Nesting
     .table
         background-color: $body-bg
-
-
-
 
 // Zebra-striping
 //
@@ -81,18 +73,60 @@ thead th
     > tbody > tr:nth-of-type(odd)
         background-color: $table-bg-accent
 
-
-
-
-// Hover effect
+// Bordered version
 //
-// Placed here since it has to come after the potential zebra striping
+// Add borders all around the table and between all the columns.
 
-.table-hover
-    > tbody > tr:hover
-        background-color: $table-bg-hover
+.table-bordered
+    border: 0.1rem solid $table-border-color
 
+    > thead,
+    > tfoot
+        > tr
+            > th,
+            > td
+                border: 0.1rem solid $table-border-color
 
+    // Bottom align for column headings
+    > thead > tr > th
+        vertical-align: bottom
+        border-bottom: 0.2rem solid $table-head-border-color
+
+    // Bottom align for column headings
+    > tfoot > tr > th,
+    > tfoot > tr > td
+        vertical-align: top
+        border-top: 0.2rem solid $table-head-border-color
+
+    > tbody
+        > tr
+            > th,
+            > td
+                border-left: 0.1rem dashed $table-body-border-color
+                border-right: 0.1rem dashed $table-body-border-color
+
+//> thead,
+    //> tbody,
+    //> tfoot
+    //    > tr
+    //        > th,
+    //        > td
+    //            border: 0.1rem dashed $table-border-color
+    //
+    //> thead > tr
+    //    > th,
+    //    > td
+    //        border-bottom-width: 2px
+
+//// Hover effect
+////
+//// Placed here since it has to come after the potential zebra striping
+//
+//.table-hover
+//    > tbody > tr:hover
+//        background-color: $table-bg-hover
+//
+//
 
 
 // Table cell sizing
@@ -100,7 +134,8 @@ thead th
 // Reset default table behavior
 
 table col[class*="col-"]
-    position: static // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+    position: static
+    // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
     float: none
     display: table-column
 
@@ -108,13 +143,10 @@ table
     td,
     th
         &[class*="col-"]
-            position: static // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+            position: static
+            // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
             float: none
             display: table-cell
-
-
-
-
 
 // Table backgrounds
 //
@@ -127,8 +159,6 @@ table
 @include table-row-variant('info', $state-info-bg, $state-info-text)
 @include table-row-variant('warning', $state-warning-bg, $state-warning-text)
 @include table-row-variant('danger', $state-danger-bg, $state-danger-text)
-
-
 
 // Cell modifiers
 .table
@@ -148,7 +178,6 @@ table
                         position: absolute
                         left: $spacing-md
                         color: $gray-light
-
 
 // data tables
 
@@ -189,7 +218,6 @@ table
                             content: $fa-var-sort-desc
                             color: $blue-dark
                             margin-top: -0.3rem
-
 
 /*
  ##Tables

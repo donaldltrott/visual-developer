@@ -380,8 +380,6 @@ th {
   font-weight: bold;
   src: url("../fonts/OpenSans/OpenSans-BoldItalic.eot?") format("eot"), url("../fonts/OpenSans/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/OpenSans/OpenSans-BoldItalic.ttf") format("truetype"), url("../fonts/OpenSans/OpenSans-BoldItalic.svg#OpenSans") format("svg"); }
 
-/* FONT PATH
- * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/font-awesome/fontawesome-webfont.eot?v=4.7.0");
@@ -397,7 +395,6 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* makes the font 33% larger relative to the icon container */
 .fa-lg {
   font-size: 1.862rem;
   line-height: 0.75rem;
@@ -452,7 +449,6 @@ th {
 .fa.fa-pull-right {
   margin-left: .3em; }
 
-/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right; }
 
@@ -528,8 +524,6 @@ th {
 .fa-inverse {
   color: #fff; }
 
-/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-   readers do not read off random characters that represent icons */
 .fa-glass:before {
   content: ""; }
 
@@ -6499,14 +6493,14 @@ thead th {
     padding: 0.8rem;
     line-height: 1.428571429;
     vertical-align: top;
-    border-top: 0.1rem dashed #ccc; }
+    border-top: 0.1rem dashed #c9c9c9; }
   .table > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 0.2rem solid #bbb; }
+    border-bottom: 0.2rem solid #a3a3a3; }
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
     vertical-align: top;
-    border-top: 0.2rem solid #bbb; }
+    border-top: 0.2rem solid #a3a3a3; }
   .table > caption + thead > tr:first-child > th,
   .table > caption + thead > tr:first-child > td,
   .table > colgroup + thead > tr:first-child > th,
@@ -6515,15 +6509,31 @@ thead th {
   .table > thead:first-child > tr:first-child > td {
     border-top: 0; }
   .table > tbody + tbody {
-    border-top: 0.2rem solid #ccc; }
+    border-top: 0.2rem solid #c9c9c9; }
   .table .table {
     background-color: #F5F5F5; }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #F5F5F5; }
 
-.table-hover > tbody > tr:hover {
-  background-color: #E9E9E9; }
+.table-bordered {
+  border: 0.1rem solid #BCBCBC; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > tfoot > tr > td {
+    border: 0.1rem solid #BCBCBC; }
+  .table-bordered > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 0.2rem solid #a3a3a3; }
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > tfoot > tr > td {
+    vertical-align: top;
+    border-top: 0.2rem solid #a3a3a3; }
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tbody > tr > td {
+    border-left: 0.1rem dashed #c9c9c9;
+    border-right: 0.1rem dashed #c9c9c9; }
 
 table col[class*="col-"] {
   position: static;
@@ -7043,8 +7053,11 @@ input[type="search"] {
   display: flex; }
   .input-inline .form-control {
     width: auto; }
-    .input-inline .form-control + .form-control {
-      margin-left: 0.4rem; }
+  .input-inline .form-control + .form-control,
+  .input-inline .form-control + .btn,
+  .input-inline .btn + .form-control,
+  .input-inline .btn + .btn {
+    margin-left: 0.4rem; }
   .input-inline .input-stretch {
     width: 100%; }
   .input-inline .input-decorator {
@@ -7422,7 +7435,8 @@ input[type="search"] {
 
 
     <fieldset>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-blue">Submit</button>
+        <button type="button" class="btn btn-white btn-bare">Cancel</button>
     </fieldset>
  </form>
  ```
@@ -7644,7 +7658,7 @@ input[type="search"] {
  security number, or any other custom application. These are the available classes and functions.
 
  <div class="table-container">
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Class</th>
@@ -7832,6 +7846,349 @@ input[type="search"] {
     </div>
  </div>
  ```
+
+ */
+.btn {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 0.1rem solid transparent;
+  white-space: nowrap;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.428571429;
+  border-radius: 0.4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #868686;
+  background-color: #E9E9E9;
+  text-decoration: none; }
+  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
+  .btn:hover, .btn.hover {
+    color: #575757;
+    background-color: rgba(0, 0, 0, 0.08);
+    text-decoration: none; }
+
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none; }
+
+.btn-red {
+  color: #ffffff;
+  background-color: #DE2533;
+  border-color: #b51b27; }
+  .btn-red:focus, .btn-red.focus, .btn-red:hover, .btn-red.hover {
+    color: #ffffff;
+    background-color: #be1d29; }
+  .btn-red:active, .btn-red.active {
+    color: #ffffff;
+    background-color: #9a1721; }
+  .btn-red.disabled, .btn-red.disabled.active, .btn-red.disabled.hover, .btn-red.disabled.focus, .btn-red.disabled:active, .btn-red.disabled:hover, .btn-red.disabled:focus, .btn-red.disabled.focus, .btn-red[disabled], .btn-red[disabled].active, .btn-red[disabled].hover, .btn-red[disabled].focus, .btn-red[disabled]:active, .btn-red[disabled]:hover, .btn-red[disabled]:focus, .btn-red[disabled].focus,
+  fieldset[disabled] .btn-red,
+  fieldset[disabled] .btn-red.active,
+  fieldset[disabled] .btn-red.hover,
+  fieldset[disabled] .btn-red.focus,
+  fieldset[disabled] .btn-red:active,
+  fieldset[disabled] .btn-red:hover,
+  fieldset[disabled] .btn-red:focus,
+  fieldset[disabled] .btn-red.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: not-allowed;
+    border-color: transparent; }
+
+.btn-blue {
+  color: #ffffff;
+  background-color: #62abde;
+  border-color: #4099d7; }
+  .btn-blue:focus, .btn-blue.focus, .btn-blue:hover, .btn-blue.hover {
+    color: #ffffff;
+    background-color: #4099d7; }
+  .btn-blue:active, .btn-blue.active {
+    color: #ffffff;
+    background-color: #2985c5; }
+  .btn-blue.disabled, .btn-blue.disabled.active, .btn-blue.disabled.hover, .btn-blue.disabled.focus, .btn-blue.disabled:active, .btn-blue.disabled:hover, .btn-blue.disabled:focus, .btn-blue.disabled.focus, .btn-blue[disabled], .btn-blue[disabled].active, .btn-blue[disabled].hover, .btn-blue[disabled].focus, .btn-blue[disabled]:active, .btn-blue[disabled]:hover, .btn-blue[disabled]:focus, .btn-blue[disabled].focus,
+  fieldset[disabled] .btn-blue,
+  fieldset[disabled] .btn-blue.active,
+  fieldset[disabled] .btn-blue.hover,
+  fieldset[disabled] .btn-blue.focus,
+  fieldset[disabled] .btn-blue:active,
+  fieldset[disabled] .btn-blue:hover,
+  fieldset[disabled] .btn-blue:focus,
+  fieldset[disabled] .btn-blue.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: not-allowed;
+    border-color: transparent; }
+
+.btn-green {
+  color: #ffffff;
+  background-color: #46AD00;
+  border-color: #3c9400; }
+  .btn-green:focus, .btn-green.focus, .btn-green:hover, .btn-green.hover {
+    color: #ffffff;
+    background-color: #358400; }
+  .btn-green:active, .btn-green.active {
+    color: #ffffff;
+    background-color: #255b00; }
+  .btn-green.disabled, .btn-green.disabled.active, .btn-green.disabled.hover, .btn-green.disabled.focus, .btn-green.disabled:active, .btn-green.disabled:hover, .btn-green.disabled:focus, .btn-green.disabled.focus, .btn-green[disabled], .btn-green[disabled].active, .btn-green[disabled].hover, .btn-green[disabled].focus, .btn-green[disabled]:active, .btn-green[disabled]:hover, .btn-green[disabled]:focus, .btn-green[disabled].focus,
+  fieldset[disabled] .btn-green,
+  fieldset[disabled] .btn-green.active,
+  fieldset[disabled] .btn-green.hover,
+  fieldset[disabled] .btn-green.focus,
+  fieldset[disabled] .btn-green:active,
+  fieldset[disabled] .btn-green:hover,
+  fieldset[disabled] .btn-green:focus,
+  fieldset[disabled] .btn-green.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: not-allowed;
+    border-color: transparent; }
+
+.btn-orange {
+  color: #ffffff;
+  background-color: #FF9821;
+  border-color: #ed7f00; }
+  .btn-orange:focus, .btn-orange.focus, .btn-orange:hover, .btn-orange.hover {
+    color: #ffffff;
+    background-color: #f78500; }
+  .btn-orange:active, .btn-orange.active {
+    color: #ffffff;
+    background-color: #ce6f00; }
+  .btn-orange.disabled, .btn-orange.disabled.active, .btn-orange.disabled.hover, .btn-orange.disabled.focus, .btn-orange.disabled:active, .btn-orange.disabled:hover, .btn-orange.disabled:focus, .btn-orange.disabled.focus, .btn-orange[disabled], .btn-orange[disabled].active, .btn-orange[disabled].hover, .btn-orange[disabled].focus, .btn-orange[disabled]:active, .btn-orange[disabled]:hover, .btn-orange[disabled]:focus, .btn-orange[disabled].focus,
+  fieldset[disabled] .btn-orange,
+  fieldset[disabled] .btn-orange.active,
+  fieldset[disabled] .btn-orange.hover,
+  fieldset[disabled] .btn-orange.focus,
+  fieldset[disabled] .btn-orange:active,
+  fieldset[disabled] .btn-orange:hover,
+  fieldset[disabled] .btn-orange:focus,
+  fieldset[disabled] .btn-orange.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: not-allowed;
+    border-color: transparent; }
+
+.btn-white {
+  color: #575757;
+  background-color: #ffffff;
+  border-color: #BCBCBC; }
+  .btn-white:focus, .btn-white.focus, .btn-white:hover, .btn-white.hover {
+    color: #575757;
+    background-color: #ebebeb; }
+  .btn-white:active, .btn-white.active {
+    color: #575757;
+    background-color: #d6d6d6; }
+  .btn-white.disabled, .btn-white.disabled.active, .btn-white.disabled.hover, .btn-white.disabled.focus, .btn-white.disabled:active, .btn-white.disabled:hover, .btn-white.disabled:focus, .btn-white.disabled.focus, .btn-white[disabled], .btn-white[disabled].active, .btn-white[disabled].hover, .btn-white[disabled].focus, .btn-white[disabled]:active, .btn-white[disabled]:hover, .btn-white[disabled]:focus, .btn-white[disabled].focus,
+  fieldset[disabled] .btn-white,
+  fieldset[disabled] .btn-white.active,
+  fieldset[disabled] .btn-white.hover,
+  fieldset[disabled] .btn-white.focus,
+  fieldset[disabled] .btn-white:active,
+  fieldset[disabled] .btn-white:hover,
+  fieldset[disabled] .btn-white:focus,
+  fieldset[disabled] .btn-white.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.04);
+    cursor: not-allowed;
+    border-color: transparent; }
+
+.btn-red.btn-bare {
+  color: #DE2533;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-red.btn-bare:focus, .btn-red.btn-bare.focus, .btn-red.btn-bare:hover, .btn-red.btn-bare.hover {
+    color: #cb1f2c;
+    background-color: rgba(0, 0, 0, 0.06); }
+  .btn-red.btn-bare:active, .btn-red.btn-bare.active {
+    color: #cb1f2c;
+    background-color: rgba(0, 0, 0, 0.16); }
+  .btn-red.btn-bare.disabled, .btn-red.btn-bare.disabled.active, .btn-red.btn-bare.disabled.hover, .btn-red.btn-bare.disabled.focus, .btn-red.btn-bare.disabled:active, .btn-red.btn-bare.disabled:hover, .btn-red.btn-bare.disabled:focus, .btn-red.btn-bare.disabled.focus, .btn-red.btn-bare[disabled], .btn-red.btn-bare[disabled].active, .btn-red.btn-bare[disabled].hover, .btn-red.btn-bare[disabled].focus, .btn-red.btn-bare[disabled]:active, .btn-red.btn-bare[disabled]:hover, .btn-red.btn-bare[disabled]:focus, .btn-red.btn-bare[disabled].focus,
+  fieldset[disabled] .btn-red.btn-bare,
+  fieldset[disabled] .btn-red.btn-bare.active,
+  fieldset[disabled] .btn-red.btn-bare.hover,
+  fieldset[disabled] .btn-red.btn-bare.focus,
+  fieldset[disabled] .btn-red.btn-bare:active,
+  fieldset[disabled] .btn-red.btn-bare:hover,
+  fieldset[disabled] .btn-red.btn-bare:focus,
+  fieldset[disabled] .btn-red.btn-bare.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    cursor: not-allowed; }
+
+.btn-blue.btn-bare {
+  color: #62abde;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-blue.btn-bare:focus, .btn-blue.btn-bare.focus, .btn-blue.btn-bare:hover, .btn-blue.btn-bare.hover {
+    color: #4da0da;
+    background-color: rgba(0, 0, 0, 0.06); }
+  .btn-blue.btn-bare:active, .btn-blue.btn-bare.active {
+    color: #4da0da;
+    background-color: rgba(0, 0, 0, 0.16); }
+  .btn-blue.btn-bare.disabled, .btn-blue.btn-bare.disabled.active, .btn-blue.btn-bare.disabled.hover, .btn-blue.btn-bare.disabled.focus, .btn-blue.btn-bare.disabled:active, .btn-blue.btn-bare.disabled:hover, .btn-blue.btn-bare.disabled:focus, .btn-blue.btn-bare.disabled.focus, .btn-blue.btn-bare[disabled], .btn-blue.btn-bare[disabled].active, .btn-blue.btn-bare[disabled].hover, .btn-blue.btn-bare[disabled].focus, .btn-blue.btn-bare[disabled]:active, .btn-blue.btn-bare[disabled]:hover, .btn-blue.btn-bare[disabled]:focus, .btn-blue.btn-bare[disabled].focus,
+  fieldset[disabled] .btn-blue.btn-bare,
+  fieldset[disabled] .btn-blue.btn-bare.active,
+  fieldset[disabled] .btn-blue.btn-bare.hover,
+  fieldset[disabled] .btn-blue.btn-bare.focus,
+  fieldset[disabled] .btn-blue.btn-bare:active,
+  fieldset[disabled] .btn-blue.btn-bare:hover,
+  fieldset[disabled] .btn-blue.btn-bare:focus,
+  fieldset[disabled] .btn-blue.btn-bare.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    cursor: not-allowed; }
+
+.btn-green.btn-bare {
+  color: #46AD00;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-green.btn-bare:focus, .btn-green.btn-bare.focus, .btn-green.btn-bare:hover, .btn-green.btn-bare.hover {
+    color: #3c9400;
+    background-color: rgba(0, 0, 0, 0.06); }
+  .btn-green.btn-bare:active, .btn-green.btn-bare.active {
+    color: #3c9400;
+    background-color: rgba(0, 0, 0, 0.16); }
+  .btn-green.btn-bare.disabled, .btn-green.btn-bare.disabled.active, .btn-green.btn-bare.disabled.hover, .btn-green.btn-bare.disabled.focus, .btn-green.btn-bare.disabled:active, .btn-green.btn-bare.disabled:hover, .btn-green.btn-bare.disabled:focus, .btn-green.btn-bare.disabled.focus, .btn-green.btn-bare[disabled], .btn-green.btn-bare[disabled].active, .btn-green.btn-bare[disabled].hover, .btn-green.btn-bare[disabled].focus, .btn-green.btn-bare[disabled]:active, .btn-green.btn-bare[disabled]:hover, .btn-green.btn-bare[disabled]:focus, .btn-green.btn-bare[disabled].focus,
+  fieldset[disabled] .btn-green.btn-bare,
+  fieldset[disabled] .btn-green.btn-bare.active,
+  fieldset[disabled] .btn-green.btn-bare.hover,
+  fieldset[disabled] .btn-green.btn-bare.focus,
+  fieldset[disabled] .btn-green.btn-bare:active,
+  fieldset[disabled] .btn-green.btn-bare:hover,
+  fieldset[disabled] .btn-green.btn-bare:focus,
+  fieldset[disabled] .btn-green.btn-bare.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    cursor: not-allowed; }
+
+.btn-orange.btn-bare {
+  color: #FF9821;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-orange.btn-bare:focus, .btn-orange.btn-bare.focus, .btn-orange.btn-bare:hover, .btn-orange.btn-bare.hover {
+    color: #ff8c08;
+    background-color: rgba(0, 0, 0, 0.06); }
+  .btn-orange.btn-bare:active, .btn-orange.btn-bare.active {
+    color: #ff8c08;
+    background-color: rgba(0, 0, 0, 0.16); }
+  .btn-orange.btn-bare.disabled, .btn-orange.btn-bare.disabled.active, .btn-orange.btn-bare.disabled.hover, .btn-orange.btn-bare.disabled.focus, .btn-orange.btn-bare.disabled:active, .btn-orange.btn-bare.disabled:hover, .btn-orange.btn-bare.disabled:focus, .btn-orange.btn-bare.disabled.focus, .btn-orange.btn-bare[disabled], .btn-orange.btn-bare[disabled].active, .btn-orange.btn-bare[disabled].hover, .btn-orange.btn-bare[disabled].focus, .btn-orange.btn-bare[disabled]:active, .btn-orange.btn-bare[disabled]:hover, .btn-orange.btn-bare[disabled]:focus, .btn-orange.btn-bare[disabled].focus,
+  fieldset[disabled] .btn-orange.btn-bare,
+  fieldset[disabled] .btn-orange.btn-bare.active,
+  fieldset[disabled] .btn-orange.btn-bare.hover,
+  fieldset[disabled] .btn-orange.btn-bare.focus,
+  fieldset[disabled] .btn-orange.btn-bare:active,
+  fieldset[disabled] .btn-orange.btn-bare:hover,
+  fieldset[disabled] .btn-orange.btn-bare:focus,
+  fieldset[disabled] .btn-orange.btn-bare.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    cursor: not-allowed; }
+
+.btn-white.btn-bare {
+  color: #868686;
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-white.btn-bare:focus, .btn-white.btn-bare.focus, .btn-white.btn-bare:hover, .btn-white.btn-bare.hover {
+    color: #797979;
+    background-color: rgba(0, 0, 0, 0.06); }
+  .btn-white.btn-bare:active, .btn-white.btn-bare.active {
+    color: #797979;
+    background-color: rgba(0, 0, 0, 0.16); }
+  .btn-white.btn-bare.disabled, .btn-white.btn-bare.disabled.active, .btn-white.btn-bare.disabled.hover, .btn-white.btn-bare.disabled.focus, .btn-white.btn-bare.disabled:active, .btn-white.btn-bare.disabled:hover, .btn-white.btn-bare.disabled:focus, .btn-white.btn-bare.disabled.focus, .btn-white.btn-bare[disabled], .btn-white.btn-bare[disabled].active, .btn-white.btn-bare[disabled].hover, .btn-white.btn-bare[disabled].focus, .btn-white.btn-bare[disabled]:active, .btn-white.btn-bare[disabled]:hover, .btn-white.btn-bare[disabled]:focus, .btn-white.btn-bare[disabled].focus,
+  fieldset[disabled] .btn-white.btn-bare,
+  fieldset[disabled] .btn-white.btn-bare.active,
+  fieldset[disabled] .btn-white.btn-bare.hover,
+  fieldset[disabled] .btn-white.btn-bare.focus,
+  fieldset[disabled] .btn-white.btn-bare:active,
+  fieldset[disabled] .btn-white.btn-bare:hover,
+  fieldset[disabled] .btn-white.btn-bare:focus,
+  fieldset[disabled] .btn-white.btn-bare.focus {
+    color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    cursor: not-allowed; }
+
+.btn-block {
+  display: block;
+  width: 100%;
+  margin: 0; }
+
+.btn-block + .btn-block {
+  margin: 0.4rem 0 0 0; }
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%; }
+
+/*
+ ## Buttons
+
+ <h3>Button Tags</h3>
+
+ Use the button classes on an `<a>`, `<button>`, or `<input>` element.
+ ```
+    <a class="btn" href="#" role="button">Link</a>
+    <button class="btn" type="submit">Button</button>
+    <input class="btn" type="button" value="Input">
+    <input class="btn" type="submit" value="Submit">
+ ```
+
+
+ <h3>Primary Button</h3>
+
+ Use any of the available button classes to quickly create a styled button.
+ ```
+    <button class="btn btn-white">.btn-white</button>
+    <button class="btn btn-blue">.btn-blue</button>
+    <button class="btn btn-green">.btn-green</button>
+    <button class="btn btn-orange">.btn-orange</button>
+    <button class="btn btn-red">.btn-red</button>
+ ```
+
+ <h3>Bare Button</h3>
+
+ Add the class `.btn-bare` to create a styled button without borders.
+ ```
+    <button class="btn btn-white btn-bare">.btn-white</button>
+    <button class="btn btn-blue btn-bare">.btn-blue</button>
+    <button class="btn btn-green btn-bare">.btn-green</button>
+    <button class="btn btn-orange btn-bare">.btn-orange</button>
+    <button class="btn btn-red btn-bare">.btn-red</button>
+ ```
+
+
+
+ <h3>Disabled Button</h3>
+
+ Make `buttons` look unclickable by adding the `disabled` attribute and anchor `<a>` by
+ adding the `.disabled` class.
+ ```
+    <button class="btn btn-blue" disabled>Disabled button</button>
+    <button class="btn btn-green btn-bare" disabled>Disabled bare button</button>
+    <a href="#" class="btn btn-red disabled">Disabled anchor</a>
+    <a href="#" class="btn btn-orange btn-bare disabled">Disabled bare anchor</a>
+ ```
+
+ <h3>Block Button</h3>
+
+ Create block level buttons—those that span the full width of a parent— by adding `.btn-block`.
+ ```
+    <button class="btn btn-white btn-block">.btn-white .btn-block</button>
+    <button class="btn btn-blue btn-block">.btn-blue .btn-block</button>
+ ```
+
+
 
  */
 @media only screen and (max-width: 479px) {

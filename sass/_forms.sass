@@ -156,9 +156,6 @@ output
     &.input-no-label
         margin-top: 1.9rem
 
-
-
-
 //// [converter] extracted textarea& to textarea.form-control
 //}
 //
@@ -198,8 +195,6 @@ select[multiple]
 //
 input[type="search"]
     -webkit-appearance: none
-
-
 
 // Special styles for iOS temporal inputs
 //
@@ -246,8 +241,13 @@ input[type="search"]
     display: flex
     .form-control
         width: auto
-        + .form-control
+
+    .form-control,
+    .btn
+        + .form-control,
+        + .btn
             margin-left: $spacing-sm
+
     .input-stretch
         width: 100%
 
@@ -268,7 +268,6 @@ input[type="search"]
             padding-right: 0
         &.text-decorator
             font-size: $font-size-small
-
 
 // Checkboxes and radios
 //
@@ -383,7 +382,6 @@ input[type="search"]
         + .radio
             margin-top: $spacing-sm
 
-
 .checkbox-group
     &.checkbox-inline
         .checkbox
@@ -427,8 +425,6 @@ input[type="search"]
                     background: $gray-lightest
                 &:after
                     background: $gray-light
-
-
 
 //
 //// Static form control text
@@ -569,7 +565,6 @@ input[type="search"]
 .has-info
     @include form-control-validation($state-info-text, $state-info-border, $state-info-bg)
 
-
 //// Reposition feedback icon if input has visible label above
 //.has-feedback label {
 //
@@ -592,7 +587,8 @@ input[type="search"]
     flex-flow: row nowrap
     margin-top: $spacing-xs
     margin-bottom: $spacing-lg
-    color: lighten($gray, 12%) // lighten the text some for contrast
+    color: lighten($gray, 12%)
+    // lighten the text some for contrast
     font-size: $font-size-small
     padding: 0 $spacing-sm
 
@@ -601,10 +597,6 @@ input[type="search"]
 
     .help-text-right
         text-align: right
-
-
-
-
 
 //// Inline forms
 ////
@@ -850,7 +842,8 @@ input[type="search"]
 
 
     <fieldset>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-blue">Submit</button>
+        <button type="button" class="btn btn-white btn-bare">Cancel</button>
     </fieldset>
  </form>
  ```
@@ -1072,7 +1065,7 @@ input[type="search"]
  security number, or any other custom application. These are the available classes and functions.
 
  <div class="table-container">
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Class</th>

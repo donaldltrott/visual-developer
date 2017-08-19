@@ -5,10 +5,10 @@
 $red-dark:              #841225 !default
 $red:                   #DE2533 !default
 $red-light:             #FF5C5C !default
-
-$purple-dark:           #595194 !default
-$purple:                #8669FF !default
-$purple-light:          #9C97FF !default
+//
+//$purple-dark:           #595194 !default
+//$purple:                #8669FF !default
+//$purple-light:          #9C97FF !default
 
 $blue-dark:             #296aa3 !default
 $blue:                  #62abde !default
@@ -203,8 +203,9 @@ $table-bg-hover:                $gray-lightest !default
 $table-bg-active:               $table-bg-hover !default
 
 //** Border color for table and cell borders.
-$table-body-border-color:       #ccc !default
-$table-head-border-color:       #bbb !default
+$table-border-color:            $gray-light !default
+$table-body-border-color:       lighten($gray-light, 5%) !default
+$table-head-border-color:       darken($gray-light, 10%) !default
 $table-caption-color:           $gray !default
 $table-header-color:            $gray !default
 
@@ -286,3 +287,41 @@ $state-danger-border:            lighten(adjust-hue($state-danger-text, -10), 18
 //$state-active-bg:                lighten($purple-light, 15%) !default
 //$state-active-border:            darken(adjust-hue($state-active-bg, -10), 5%) !default
 
+
+
+////////////////////////////////////////////////
+//              BUTTONS
+////////////////////////////////////////////////
+
+$btn-font-weight:                normal !default
+
+$btn-default-color:              #333 !default
+$btn-default-bg:                 #fff !default
+$btn-default-border:             #ccc !default
+
+//$btn-primary-color:              #fff !default
+//$btn-primary-bg:                 $brand-primary !default
+//$btn-primary-border:             darken($btn-primary-bg, 5%) !default
+//
+//$btn-success-color:              #fff !default
+//$btn-success-bg:                 $brand-success !default
+//$btn-success-border:             darken($btn-success-bg, 5%) !default
+//
+//$btn-info-color:                 #fff !default
+//$btn-info-bg:                    $brand-info !default
+//$btn-info-border:                darken($btn-info-bg, 5%) !default
+//
+//$btn-warning-color:              #fff !default
+//$btn-warning-bg:                 $brand-warning !default
+//$btn-warning-border:             darken($btn-warning-bg, 5%) !default
+//
+//$btn-danger-color:               #fff !default
+//$btn-danger-bg:                  $brand-danger !default
+//$btn-danger-border:              darken($btn-danger-bg, 5%) !default
+
+$btn-link-disabled-color:        $gray-light !default
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base !default
+$btn-border-radius-large:        $border-radius-large !default
+$btn-border-radius-small:        $border-radius-small !default

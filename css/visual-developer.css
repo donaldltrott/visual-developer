@@ -7878,6 +7878,8 @@ input[type="search"] {
     color: #575757;
     background-color: rgba(0, 0, 0, 0.08);
     text-decoration: none; }
+  .btn i {
+    margin-right: 0.8rem; }
 
 a.btn.disabled,
 fieldset[disabled] a.btn {
@@ -8118,6 +8120,12 @@ fieldset[disabled] a.btn {
     background-color: transparent;
     cursor: not-allowed; }
 
+.btn-icon i {
+  margin-right: 0; }
+
+.btn-fw {
+  min-width: 12rem; }
+
 .btn-block {
   display: block;
   width: 100%;
@@ -8167,6 +8175,26 @@ input[type="button"].btn-block {
     <button class="btn btn-red btn-bare">.btn-red</button>
  ```
 
+ <h3>Button with Icon</h3>
+
+ Add any icon in front of your text and the button will automatically space it out for you.
+ ```
+    <button class="btn btn-blue"><i class="fa fa-save"></i>Save</button>
+    <button class="btn btn-red"><i class="fa fa-trash-o"></i>Remove</button>
+    <button class="btn btn-green btn-bare"><i class="fa fa-check"></i>Submit</button>
+    <button class="btn btn-orange btn-bare"><i class="fa fa-download"></i>Download</button>
+ ```
+
+ <h3>Icon Button</h3>
+
+ Use a button with just an icon by itself without text, just add the class `.btn-icon` to remove the margin on
+ the right of the icon.
+ ```
+    <button class="btn btn-blue btn-icon"><i class="fa fa-save"></i></button>
+    <button class="btn btn-red btn-icon"><i class="fa fa-trash-o"></i></button>
+    <button class="btn btn-green btn-bare btn-icon"><i class="fa fa-check"></i></button>
+    <button class="btn btn-orange btn-bare btn-icon"><i class="fa fa-download"></i></button>
+ ```
 
 
  <h3>Disabled Button</h3>
@@ -8188,7 +8216,13 @@ input[type="button"].btn-block {
     <button class="btn btn-blue btn-block">.btn-blue .btn-block</button>
  ```
 
+ <h3>Fixed Width Button</h3>
 
+ Create a fixed with button witht he class `.btn-fw`, this will set the button's minimun width.
+ ```
+    <button class="btn btn-green btn-fw">Go</button>
+    <button class="btn btn-blue btn-fw">Yes</button>
+ ```
 
  */
 @media only screen and (max-width: 479px) {

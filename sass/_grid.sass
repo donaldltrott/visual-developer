@@ -351,20 +351,20 @@
 
  <h4>Start</h4>
 
- Align child columns to the left of the row by adding the class <code>.start-&#42;</code> to the row.
+ Align child columns to the left of the row by adding the class <code>.is-start-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
- <div class="row start-md">
+ <div class="row is-start-md">
     <div class="col-xs-4">Start</div>
  </div>
  ```
 
  <h4>Center</h4>
 
- Align child columns to the center of the row by adding the class <code>.center-&#42;</code> to the row.
+ Align child columns to the center of the row by adding the class <code>.is-center-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
- <div class="row center-md">
+ <div class="row is-center-md">
     <div class="col-xs-4">Center</div>
  </div>
  ```
@@ -372,10 +372,10 @@
 
  <h4>End</h4>
 
- Align child columns to the right of the row by adding the class <code>.end-&#42;</code> to the row.
+ Align child columns to the right of the row by adding the class <code>.is-end-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
- <div class="row end-md">
+ <div class="row is-end-md">
     <div class="col-xs-4">End</div>
  </div>
  ```
@@ -385,7 +385,7 @@
  Here is an example of using the modifiers in conjunction to achieve different alignment at different viewport sizes.
  <div class="grid-demo"></div>
  ```
- <div class="row start-lg center-md end-xl">
+ <div class="row is-start-lg is-center-md is-end-xl">
     <div class="col-xs-4">Moving Content</div>
  </div>
  ```
@@ -393,10 +393,10 @@
 
  <h4>Top</h4>
 
- Align child columns to the top of the row by adding the class <code>.top-&#42;</code> to the row.
+ Align child columns to the top of the row by adding the class <code>.is-top-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
- <div class="row top-md">
+ <div class="row is-top-md">
     <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus justo ac lorem vestibulum,
     vel luctus enim porttitor. Aenean iaculis nisl quis malesuada tincidunt. Maecenas cursus nunc quam</div>
     <div class="col-xs-6">Proin sed metus sed neque</div>
@@ -405,10 +405,10 @@
 
  <h4>Middle</h4>
 
- Align child columns to the middle of the row by adding the class <code>.middle-&#42;</code> to the row.
+ Align child columns to the middle of the row by adding the class <code>.is-middle-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
- <div class="row middle-md">
+ <div class="row is-middle-md">
     <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus justo ac lorem vestibulum,
     vel luctus enim porttitor. Aenean iaculis nisl quis malesuada tincidunt. Maecenas cursus nunc quam</div>
     <div class="col-xs-6">Proin sed metus sed neque</div>
@@ -418,10 +418,10 @@
 
  <h4>Bottom</h4>
 
- Align child columns to the bottom of the row by adding the class <code>.bottom-&#42;</code> to the row.
+ Align child columns to the bottom of the row by adding the class <code>.is-bottom-&#42;</code> to the row.
  <div class="grid-demo"></div>
  ```
- <div class="row bottom-md">
+ <div class="row is-bottom-md">
     <div class="col-xs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus justo ac lorem vestibulum,
     vel luctus enim porttitor. Aenean iaculis nisl quis malesuada tincidunt. Maecenas cursus nunc quam</div>
     <div class="col-xs-6">Proin sed metus sed neque</div>
@@ -435,10 +435,10 @@
 
  <h4>Around</h4>
 
- Adding the class <code>.around-&#42;</code> will distribute unused space equally to the right and left of each column.
+ Adding the class <code>.is-around-&#42;</code> will distribute unused space equally to the right and left of each column.
  <div class="grid-demo"></div>
  ```
- <div class="row around-md">
+ <div class="row is-around-md">
     <div class="col-xs-2">Content</div>
     <div class="col-xs-2">Content</div>
     <div class="col-xs-2">Content</div>
@@ -447,10 +447,10 @@
 
  <h4>Between</h4>
 
- Adding the class <code>.between-&#42;</code> will distribute unused space equally in between of each the columns.
+ Adding the class <code>.is-between-&#42;</code> will distribute unused space equally in between of each the columns.
  <div class="grid-demo"></div>
  ```
- <div class="row between-md">
+ <div class="row is-between-md">
     <div class="col-xs-2">Content</div>
     <div class="col-xs-2">Content</div>
     <div class="col-xs-2">Content</div>
@@ -466,10 +466,10 @@
 
  <h4>Reverse</h4>
 
- The class <code>.reverse-&#42;</code>, when added to a row, will reverse the order of all child columns.
+ The class <code>.is-reverse-&#42;</code>, when added to a row, will reverse the order of all child columns.
  <div class="grid-demo"></div>
  ```
- <div class="row reverse-md">
+ <div class="row is-reverse-md">
     <div class="col-xs-2">One</div>
     <div class="col-xs-2">Two</div>
     <div class="col-xs-2">Three</div>
@@ -482,7 +482,7 @@
 
  <h4>First</h4>
 
- Adding the class <code>.first-&#42;</code>, when added to a column, will force that column to be rendered first in the row.
+ Adding the class <code>.is-first-&#42;</code>, when added to a column, will force that column to be rendered first in the row.
  <div class="grid-demo"></div>
  ```
  <div class="row">
@@ -491,18 +491,18 @@
     <div class="col-xs-2">Three</div>
     <div class="col-xs-2">Four</div>
     <div class="col-xs-2">Five</div>
-    <div class="col-xs-2 first-md">Six</div>
+    <div class="col-xs-2 is-first-md">Six</div>
  </div>
  ```
 
 
  <h4>Last</h4>
 
- Adding the class <code>.last-&#42;</code>, when added to a column, will force that column to be rendered first in the row.
+ Adding the class <code>.is-last-&#42;</code>, when added to a column, will force that column to be rendered first in the row.
  <div class="grid-demo"></div>
  ```
  <div class="row">
-    <div class="col-xs-2 last-md">One</div>
+    <div class="col-xs-2 is-last-md">One</div>
     <div class="col-xs-2">Two</div>
     <div class="col-xs-2">Three</div>
     <div class="col-xs-2">Four</div>

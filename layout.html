@@ -1,0 +1,538 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/visual-developer.css">
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            border-top: 4px solid #296aa3;
+        }
+
+        .page-wrapper {
+            display: flex;
+            height: 100%;
+        }
+
+        .nav-wrappper {
+            width: 28.8rem;
+            background: #62abde;
+            height: 100%;
+            /*border-bottom: 4px solid #141414;*/
+        }
+
+        .content-wrappper {
+            width: 100%;
+        }
+
+        .logo-container {
+            background: #fff;
+            padding: 1.2rem;
+            border-right: 0.1rem solid #BCBCBC;
+            height: 60px;
+            border-bottom: 0.1rem solid #62abde;
+        }
+
+        /*.logo-container img {*/
+            /*width: 80%;*/
+        /*}*/
+
+        .logo-container p {
+            padding: 0;
+            margin: 0;
+            font-size: 11px;
+            color: #868686;
+        }
+
+        .main-nav ul {
+            margin: 1.6rem 0 0;
+            padding: 1.2rem 0 0;
+            font-family: 'Oswald';
+            font-size: 14px;
+        }
+
+        .main-nav ul li {
+            list-style: none;
+        }
+
+        .main-nav ul li.menu-title {
+            color: #afd7fa;
+            font-size: 12px;
+            padding: 0.4rem 1.2rem;
+            font-weight: normal;
+            font-family: 'OpenSans';
+        }
+
+        .main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 1.2rem 1.6rem;
+            text-transform: uppercase;
+
+            font-weight: normal;
+            border-left: 4px solid transparent;
+
+        }
+
+        .main-nav ul li a i {
+            margin-right: 1.2rem;
+        }
+
+        .main-nav ul li.active a {
+            color: #2B2B2B;
+            background: #F5F5F5;
+            border-left-color: #296aa3;
+        }
+
+        .main-nav ul li:not(.active) a:hover {
+            background: #afd7fa;
+            color: #2B2B2B;
+        }
+
+        .main-nav ul li a:hover i {
+            color: #296aa3;
+        }
+
+        .main-nav ul li.active a i {
+            color: #296aa3;
+        }
+
+        .title-bar {
+            height: 60px;
+            border-bottom: 1px solid #D4D4D4;
+            padding: 0 1.2rem;
+            background: #fff;
+            display: flex;
+        }
+
+        .title-bar h3 {
+            margin: 0;
+            padding: 0;
+            line-height: 60px;
+            width: 100%;
+        }
+
+        .title-bar .user-profile {
+            border-left: 1px solid #d4d4d4;
+            border-right: 1px solid #d4d4d4;
+            padding: 0 1.2rem;
+            cursor: pointer;
+        }
+
+        .title-bar .user-profile.open {
+            background: #e9e9e9;
+        }
+
+        .title-bar .user-profile-img {
+            padding: 0 1.2rem;
+        }
+
+        .title-bar .user-info {
+            display: flex;
+            height: 60px;
+            align-items: center;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .some-container {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 12px;
+
+            /*box-shadow: 0 0 3px rgba(0, 0, 0, .075);*/
+        }
+
+        .some-container header {
+            background: #f9f9f9;
+            border-bottom: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .some-container header h2,
+        .some-container header h3 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .some-container header .header-support {
+            margin-bottom: 0;
+            margin-top: -2px;
+        }
+
+        .some-container section {
+            padding: 12px;
+        }
+
+        .content-toolbar {
+            /*background: #fff;*/
+            /*border-bottom: 1px solid #d4d4d4;*/
+            /*margin-bottom: 1.2rem;*/
+            /*height: 35px;*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+    <div class="nav-wrappper">
+        <section class="logo-container">
+            <img src="http://via.placeholder.com/216x36">
+        </section>
+        <nav class="main-nav">
+            <ul>
+                <li class="menu-title">Main</li>
+                <li><a href="#"><i class="fa fa-home"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fa fa-commenting-o"></i>Message Center</a></li>
+                <li><a href="#"><i class="fa fa-vcard-o"></i>Customers</a></li>
+                <li><a href="#"><i class="fa fa-calculator"></i>Invoices</a></li>
+                <li><a href="#"><i class="fa fa-credit-card"></i>Payments</a></li>
+                <li><a href="#"><i class="fa fa-bar-chart"></i>Reports</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-divider"></div>
+
+        <nav class="main-nav">
+            <ul>
+                <li class="menu-title">Secondary</li>
+                <li><a href="#"><i class="fa fa-desktop"></i>Resources</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>Customer Services</a></li>
+                <li><a href="#"><i class="fa fa-info"></i>FAQs</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="content-wrappper">
+        <header class="title-bar">
+            <h3>Profile/Settings</h3>
+
+            <div class="dropdown user-profile">
+
+                <section class="user-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                         aria-expanded="true">
+                    <div class="user-name">
+                        <h4 class="text-nowrap">Orleans Marketing Distillery</h4>
+                        <p class="header-support text-nowrap">Account: 4568 7852 3232 1452</p>
+                    </div>
+                    <div class="user-profile-img">
+                        <img src="http://via.placeholder.com/36x36">
+                    </div>
+
+                    <span><i class="fa fa-caret-down"></i></span>
+
+                </section>
+                <ul class="dropdown-menu is-right has-caret" aria-labelledby="dropdownMenu1">
+                    <li><a href="#"><i class="fa fa-user-circle-o"></i>Profile</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="content-toolbar">
+            <div class="tabs is-bordered is-justified">
+                <ul>
+                    <li class="is-active">
+                        <a href="#">
+                            <span>01 Business Profile</span>
+                            <span><i class="fa fa-exclamation" style="color:#DE2533"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>02 Personal Profile</span>
+                            <span><i class="fa fa-warning" style="color:#FF9821"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="#">03 General Settings</a></li>
+                    <li><a href="#">04 My Payments</a></li>
+                    <li><a href="#">05 My Account</a></li>
+                    <li><a href="#">06 User Setup</a></li>
+                    <li><a href="#">07 Data Sync</a></li>
+                    <li><a href="#">08 Alerts</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container-fluid">
+            <div class="row-tight">
+                <div class="col-xs">
+
+                    <h3>We would like to know your business better...</h3
+                    >
+
+                    <div class="some-container">
+                        <section>
+
+
+                            <form>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend>Business Names</legend>
+                                            <div class="form-group">
+                                                <label for="legalBusinessName">Legal Business Name</label>
+                                                <input type="text" class="form-control" id="legalBusinessName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="doingBusinessAs">Doing Business As (DBA)</label>
+                                                <input type="text" class="form-control" id="doingBusinessAs">
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>Business Address</legend>
+                                            <div class="form-group">
+                                                <label for="businessAddress1">Business Address (Line 1)</label>
+                                                <input type="text" class="form-control" id="businessAddress1">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="businessAddress2">Business Address (Line 2)</label>
+                                                <input type="text" class="form-control" id="businessAddress2">
+                                            </div>
+                                            <div class="row-tight">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="businessCity">City</label>
+                                                        <input type="text" class="form-control" id="businessCity">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="businessState">State</label>
+                                                        <select id="businessState" class="form-control">
+                                                            <option>--Select--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="businessZip">Zip</label>
+                                                        <input type="text" class="form-control" id="businessZip">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>Phone Number</legend>
+                                            <div class="form-group">
+                                                <label>Business Phone Number</label>
+                                                <div class="input-inline">
+                                                    <span
+                                                        class="input-decorator input-decorator-left input-decorator-first">(</span>
+                                                    <input type="text" class="form-control" size="6" placeholder="xxx">
+                                                    <span class="input-decorator input-decorator-right">)</span>
+                                                    <input type="text" class="form-control" size="6" placeholder="xxx">
+                                                    <span class="input-decorator">-</span>
+                                                    <input type="text" class="form-control input-stretch"
+                                                           placeholder="xxxx">
+                                                    <span class="input-decorator text-decorator">Ext.</span>
+                                                    <input type="text" class="form-control" size="10"
+                                                           placeholder="xxxxxx">
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>Business Demographics</legend>
+                                            <div class="form-group">
+                                                <label for="companyStructure">Company Structure</label>
+                                                <select id="companyStructure" class="form-control">
+                                                    <option>--Select--</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="row-tight">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="stateOrganized">State Organized</label>
+                                                        <select id="stateOrganized" class="form-control">
+                                                            <option>--Select--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="numberOfEmployeed">Number of Employees</label>
+                                                        <input type="number" class="form-control"
+                                                               id="numberOfEmployeed">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Date Business Established</label>
+                                                <div class="input-inline">
+                                                    <input type="text" class="form-control" placeholder="Month">
+                                                    <span class="input-decorator">/</span>
+                                                    <input type="text" class="form-control input-stretch"
+                                                           placeholder="Year">
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend>Industry</legend>
+                                            <div class="form-group">
+                                                <label for="industryBusinessCategory">Industry/Business
+                                                    Category</label>
+                                                <select id="industryBusinessCategory" class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="a1">Agriculture, Forestry, Fishing and Hunting
+                                                    </option>
+                                                    <option value="a2">Mining, Quarrying, and Oil and Gas Extraction
+                                                    </option>
+                                                    <option value="a3">Utilities</option>
+                                                    <option value="a4">Construction</option>
+                                                    <option value="a5">Manufacturing</option>
+                                                    <option value="a6">Wholesale Trade</option>
+                                                    <option value="a7">Retail Trade</option>
+                                                    <option value="a8">Transportation and Warehousing</option>
+                                                    <option value="a9">Information</option>
+                                                    <option value="a10">Finance and Insurance</option>
+                                                    <option value="a11">Real Estate and Rental and Leasing</option>
+                                                    <option value="a12">Professional, Scientific, and Technical
+                                                        Services
+                                                    </option>
+                                                    <option value="a13">Management of Companies and Enterprises
+                                                    </option>
+                                                    <option value="a14">Administrative and Support and Waste
+                                                        Management
+                                                        and Remediation Services
+                                                    </option>
+                                                    <option value="a15">Educational Services</option>
+                                                    <option value="a16">Health Care and Social Assistance</option>
+                                                    <option value="a17">Arts, Entertainment, and Recreation</option>
+                                                    <option value="a18">Accommodation and Food Services</option>
+                                                    <option value="a19">Other Services (except Public
+                                                        Administration)
+                                                    </option>
+                                                    <option value="a20">Public Administration</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="businessType">Business Type</label>
+                                                <select id="businessType" class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="n1">Legal Services</option>
+                                                    <option value="n2">Accounting, Tax Preparation, Bookkeeping, and
+                                                        Payroll Services
+                                                    </option>
+                                                    <option value="n3">Architectural, Engineering, and Related
+                                                        Services
+                                                    </option>
+                                                    <option value="n4">Specialized Design Services</option>
+                                                    <option value="n5">Computer Systems Design and Related Services
+                                                    </option>
+                                                    <option value="n6">Management, Scientific, and Technical
+                                                        Consulting
+                                                        Services
+                                                    </option>
+                                                    <option value="n7">Scientific Research and Development Services
+                                                    </option>
+                                                    <option value="n8">Advertising, Public Relations, and Related
+                                                        Services
+                                                    </option>
+                                                    <option value="n9">Other Professional, Scientific, and Technical
+                                                        Services
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="businessSubtype">Business Subtype</label>
+                                                <select id="businessSubtype" class="form-control">
+                                                    <option>--Select--</option>
+                                                    <option>Advertising Agencies</option>
+                                                    <option>Public Relations Agencies</option>
+                                                    <option>Media Buying Agencies</option>
+                                                    <option>Media Representatives</option>
+                                                    <option>Outdoor Advertising</option>
+                                                    <option>Direct Mail Advertising</option>
+                                                    <option>Advertising Material Distribution Services</option>
+                                                    <option>Other Services Related to Advertising</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>Website Address</legend>
+                                            <div class="form-group">
+                                                <label for="businessWebsiteAddress">Business Website Address</label>
+                                                <input type="text" id="businessWebsiteAddress" class="form-control">
+                                            </div>
+
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>General Description</legend>
+                                            <div class="form-group">
+                                                <label for="generalBusinessDescription">General Business
+                                                    Description</label>
+                                                <textarea rows="8" id="generalBusinessDescription"
+                                                          class="form-control"></textarea>
+                                            </div>
+
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>Business Logo</legend>
+                                            <div class="form-group">
+                                                <label for="businessWebsiteAddress">Business Website Address</label>
+                                                <input type="text" id="businessWebsiteAddress" class="form-control">
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+                        </section>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

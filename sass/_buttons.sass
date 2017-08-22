@@ -38,7 +38,12 @@
         text-decoration: none
 
     i
-        margin-right: $spacing-md
+        margin-right: $spacing-lg
+
+    &.icon-right
+        i
+            margin-right: 0
+            margin-left: $spacing-lg
 
 a.btn
     &.disabled,
@@ -104,6 +109,7 @@ a.btn
     i
         margin-right: 0
 
+
 .btn-fw
     min-width: 12rem
 
@@ -165,12 +171,13 @@ input[type="button"]
 
  <h3>Button with Icon</h3>
 
- Add any icon in front of your text and the button will automatically space it out for you.
+ Add any icon in front of your text and the button will automatically space it out for you. If you
+ want to add an icon after your text add the class `.icon-right`.
  ```
     <button class="btn btn-blue"><i class="fa fa-save"></i>Save</button>
     <button class="btn btn-red"><i class="fa fa-trash-o"></i>Remove</button>
-    <button class="btn btn-green btn-bare"><i class="fa fa-check"></i>Submit</button>
-    <button class="btn btn-orange btn-bare"><i class="fa fa-download"></i>Download</button>
+    <button class="btn btn-green icon-right">Submit<i class="fa fa-check"></i></button>
+    <button class="btn btn-orange icon-right">Download<i class="fa fa-download"></i></button>
  ```
 
  <h3>Icon Button</h3>

@@ -15,16 +15,16 @@
 
 @mixin make-grid-columns($gutter-padding:$grid-gutter-width,$gutter-margin:0)
     $i: 1
-    $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}"
+    $list: ".col-xs-#{$i}, > .col-sm-#{$i}, > .col-md-#{$i}, > .col-lg-#{$i}, > .col-xl-#{$i}"
     @for $i from (1 + 1) through $grid-columns
-        $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}"
+        $list: "#{$list}, > .col-xs-#{$i}, > .col-sm-#{$i}, > .col-md-#{$i}, > .col-lg-#{$i}, > .col-xl-#{$i}"
 
-    #{$list},
-    .col-xs,
-    .col-sm,
-    .col-md,
-    .col-lg,
-    .col-xl
+    > #{$list},
+    > .col-xs,
+    > .col-sm,
+    > .col-md,
+    > .col-lg,
+    > .col-xl
         flex: 0 0 auto
         // Prevent columns from collapsing when empty
         min-height: 0.01rem
@@ -57,7 +57,7 @@
 
 // Create grid for specific class
 @mixin make-grid($class, $margin: 0rem)
-    .col-#{$class}
+    > .col-#{$class}
         flex-grow: 1
         -ms-flex-preferred-size: 0
         flex-basis: 0

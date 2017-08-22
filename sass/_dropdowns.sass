@@ -1,0 +1,403 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+// The dropdown wrapper (div)
+.dropup,
+.dropdown
+    position: relative
+    display: inline-block
+
+// Prevent the focus on the dropdown toggle when closing dropdowns
+.dropdown-toggle:focus
+    outline: 0
+
+// The dropdown menu (ul)
+.dropdown-menu
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: $zindex-dropdown
+    display: none
+    // none by default, but block on "open" of the menu
+    float: left
+    min-width: 20rem
+    padding: $spacing-sm 0
+    margin: $spacing-xs 0 0
+    list-style: none
+    font-size: $font-size-base
+    text-align: left
+    background-color: $dropdown-bg
+    border: 0.1rem solid $dropdown-border
+    border-radius: $border-radius-small
+    box-shadow: 0 $spacing-md $spacing-lg rgba(0, 0, 0, .175)
+    background-clip: padding-box
+
+    &.has-caret
+        &:before,
+        &:after
+            content: ' '
+            position: absolute
+            width: 0
+            height: 0
+            left: $caret-width-base
+            border-right: $caret-width-base solid transparent
+            border-left: $caret-width-base solid transparent
+        &:before
+            top: -$caret-width-base
+            border-bottom: $caret-width-base solid lighten($gray, 10%)
+        &:after
+            top: -$caret-width-base + 0.1rem
+            border-bottom: $caret-width-base solid $white
+
+
+    // Aligns the dropdown menu to right
+    //
+    // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
+    &.is-right
+        right: 0
+        left: auto
+        &.has-caret
+            &:before,
+            &:after
+                right: $caret-width-base
+                left: auto
+
+    // Dividers (basically an hr) within the dropdown
+    .divider
+        @include nav-divider($dropdown-divider-bg)
+        border-top: none
+        + li:not(.divider)
+            border-top: none
+
+    // Links within the dropdown menu
+
+    > li
+
+        border-top: 1px dashed $gray-lighter
+        > a
+            display: block
+            padding: $spacing-md $spacing-xl
+            clear: both
+            font-weight: normal
+            line-height: $line-height-base
+            color: $dropdown-link-color
+            white-space: nowrap
+
+            i
+                margin-right: $spacing-lg
+
+        &:first-child
+            border-top: none
+
+// prevent links from randomly breaking onto new lines
+
+
+
+// Hover/Focus state
+.dropdown-menu > li > a
+    &:hover,
+    &:focus
+        text-decoration: none
+        color: $dropdown-link-hover-color
+        background-color: $dropdown-link-hover-bg
+
+// Active state
+.dropdown-menu > .active
+    border-top-color: transparent
+    + li
+        border-top-color: transparent
+.dropdown-menu > .active > a
+    &,
+    &:hover,
+    &:focus
+        color: $dropdown-link-active-color
+        text-decoration: none
+        outline: 0
+        background-color: $dropdown-link-active-bg
+
+
+// Disabled state
+//
+// Gray out text and ensure the hover/focus state remains gray
+
+.dropdown-menu > .disabled > a
+    &,
+    &:hover,
+    &:focus
+        color: $dropdown-link-disabled-color
+        pointer-events: none
+
+    // Nuke hover/focus effects
+    &:hover,
+    &:focus
+        text-decoration: none
+        background-color: transparent
+        background-image: none
+        // Remove CSS gradient
+        @include reset-filter
+        cursor: $cursor-disabled
+
+
+
+
+@mixin open-button-default($bg)
+    background-color: darken($bg, 16%)
+
+@mixin open-button-bare($color)
+    color: darken($color, 5%)
+    background-color: rgba(0, 0, 0, 0.16)
+
+// Open state for the dropdown
+.open
+    // Show the menu
+    > .dropdown-menu
+        display: block
+
+    // Remove the outline when :focus is triggered
+    > a
+        outline: 0
+
+    > .btn-blue
+        @include open-button-default($blue)
+        &.btn-bare
+            @include open-button-bare($blue)
+
+    > .btn-white
+        @include open-button-default($white)
+        &.btn-bare
+            @include open-button-bare($gray)
+
+    > .btn-green
+        @include open-button-default($green)
+        &.btn-bare
+            @include open-button-bare($green)
+
+    > .btn-orange
+        @include open-button-default($orange)
+        &.btn-bare
+            @include open-button-bare($orange)
+
+    > .btn-red
+        @include open-button-default($red)
+        &.btn-bare
+            @include open-button-bare($red)
+
+
+
+//
+//
+//// Dropdown section headers
+//.dropdown-header
+//    display: block
+//    padding: 3px 20px
+//    font-size: $font-size-small
+//    line-height: $line-height-base
+//    color: $dropdown-header-color
+//    white-space: nowrap
+//// as with > li > a
+//
+//
+//// Backdrop to catch body clicks on mobile, etc.
+//.dropdown-backdrop
+//    position: fixed
+//    left: 0
+//    right: 0
+//    bottom: 0
+//    top: 0
+//    z-index: ($zindex-dropdown - 10)
+//
+//// Right aligned dropdowns
+//.pull-right > .dropdown-menu
+//    right: 0
+//    left: auto
+//
+//// Allow for dropdowns to go bottom up (aka, dropup-menu)
+////
+//// Just add .dropup after the standard .dropdown class and you're set, bro.
+//// TODO: abstract this so that the navbar fixed styles are not placed here?
+//
+//.dropup,
+//.navbar-fixed-bottom .dropdown
+//    // Reverse the caret
+//    .caret
+//        border-top: 0
+//        border-bottom: $caret-width-base dashed
+//        border-bottom: $caret-width-base solid
+//        // IE8
+//        content: ""
+//
+//    // Different positioning for bottom up menu
+//    .dropdown-menu
+//        top: auto
+//        bottom: 100%
+//        margin-bottom: 2px
+//
+//// Component alignment
+////
+//// Reiterate per navbar.less and the modified component alignment there.
+//
+//@media (min-width: $grid-float-breakpoint)
+//    .navbar-right
+//        .dropdown-menu
+//            right: 0
+//                left: auto
+//
+//        // Necessary for overrides of the default right aligned menu.
+//        // Will remove come v4 in all likelihood.
+//        .dropdown-menu-left
+//            left: 0
+//            right: auto
+
+
+
+/*
+
+ ##Dropdowns
+
+ Toggleable, contextual menu for displaying lists of links.
+
+ <h3>Basic Dropdown</h3>
+
+ Wrap the dropdown's trigger and the dropdown menu within `.dropdown`, or another element that
+ declares `position: relative;`. Then add the menu's HTML. By default, a dropdown menu is
+ automatically positioned 100% from the top and along the left side of its
+ parent. Add `.is-right` to a `.dropdown-menu` to right align the dropdown menu.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-white icon-right dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-xs text-right">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-blue icon-right dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu is-right" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+ </div>
+
+ ```
+
+
+ <h3>Dropdown with Caret</h3>
+
+ Add the class `.has-caret` to the `.dropdown-menu` to add a graphical caret pointing to the source of the click.
+ The caret moves from left to right depending on the alignment chosen for the menu.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-white icon-right dropdown-toggle" type="button" >
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu has-caret">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-xs text-right">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-blue icon-right dropdown-toggle" type="button">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu is-right has-caret">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+ </div>
+
+ ```
+
+ <h3>Active and Disabled Links</h3>
+
+ To show the selected link add `.active` to the `li` of the selected option. To disable any links add the `.disabled`
+ class to the appropriate `li`.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-white icon-right dropdown-toggle" type="button" >
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-xs text-right">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-blue icon-right dropdown-toggle" type="button">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu is-right">
+                <li class="disabled"><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+ </div>
+ ```
+
+ */

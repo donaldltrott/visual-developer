@@ -2784,12 +2784,12 @@ hr {
       flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .row .col-xs-1, .row .col-sm-1, .row .col-md-1, .row .col-lg-1, .row .col-xl-1, .row .col-xs-2, .row .col-sm-2, .row .col-md-2, .row .col-lg-2, .row .col-xl-2, .row .col-xs-3, .row .col-sm-3, .row .col-md-3, .row .col-lg-3, .row .col-xl-3, .row .col-xs-4, .row .col-sm-4, .row .col-md-4, .row .col-lg-4, .row .col-xl-4, .row .col-xs-5, .row .col-sm-5, .row .col-md-5, .row .col-lg-5, .row .col-xl-5, .row .col-xs-6, .row .col-sm-6, .row .col-md-6, .row .col-lg-6, .row .col-xl-6, .row .col-xs-7, .row .col-sm-7, .row .col-md-7, .row .col-lg-7, .row .col-xl-7, .row .col-xs-8, .row .col-sm-8, .row .col-md-8, .row .col-lg-8, .row .col-xl-8, .row .col-xs-9, .row .col-sm-9, .row .col-md-9, .row .col-lg-9, .row .col-xl-9, .row .col-xs-10, .row .col-sm-10, .row .col-md-10, .row .col-lg-10, .row .col-xl-10, .row .col-xs-11, .row .col-sm-11, .row .col-md-11, .row .col-lg-11, .row .col-xl-11, .row .col-xs-12, .row .col-sm-12, .row .col-md-12, .row .col-lg-12, .row .col-xl-12,
-  .row .col-xs,
-  .row .col-sm,
-  .row .col-md,
-  .row .col-lg,
-  .row .col-xl {
+  .row > .col-xs-1, .row > .col-sm-1, .row > .col-md-1, .row > .col-lg-1, .row > .col-xl-1, .row > .col-xs-2, .row > .col-sm-2, .row > .col-md-2, .row > .col-lg-2, .row > .col-xl-2, .row > .col-xs-3, .row > .col-sm-3, .row > .col-md-3, .row > .col-lg-3, .row > .col-xl-3, .row > .col-xs-4, .row > .col-sm-4, .row > .col-md-4, .row > .col-lg-4, .row > .col-xl-4, .row > .col-xs-5, .row > .col-sm-5, .row > .col-md-5, .row > .col-lg-5, .row > .col-xl-5, .row > .col-xs-6, .row > .col-sm-6, .row > .col-md-6, .row > .col-lg-6, .row > .col-xl-6, .row > .col-xs-7, .row > .col-sm-7, .row > .col-md-7, .row > .col-lg-7, .row > .col-xl-7, .row > .col-xs-8, .row > .col-sm-8, .row > .col-md-8, .row > .col-lg-8, .row > .col-xl-8, .row > .col-xs-9, .row > .col-sm-9, .row > .col-md-9, .row > .col-lg-9, .row > .col-xl-9, .row > .col-xs-10, .row > .col-sm-10, .row > .col-md-10, .row > .col-lg-10, .row > .col-xl-10, .row > .col-xs-11, .row > .col-sm-11, .row > .col-md-11, .row > .col-lg-11, .row > .col-xl-11, .row > .col-xs-12, .row > .col-sm-12, .row > .col-md-12, .row > .col-lg-12, .row > .col-xl-12,
+  .row > .col-xs,
+  .row > .col-sm,
+  .row > .col-md,
+  .row > .col-lg,
+  .row > .col-xl {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     min-height: 0.01rem;
@@ -2799,7 +2799,7 @@ hr {
     margin-right: 0rem;
     max-width: calc(100% - 0rem);
     width: calc(100% - 0rem); }
-  .row .col-xs {
+  .row > .col-xs {
     -ms-flex-positive: 1;
         flex-grow: 1;
     -ms-flex-preferred-size: 0;
@@ -2925,7 +2925,7 @@ hr {
   .row .col-xs-offset-12 {
     margin-left: 100%; }
   @media (min-width: 480px) {
-    .row .col-sm {
+    .row > .col-sm {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3051,7 +3051,7 @@ hr {
     .row .col-sm-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 768px) {
-    .row .col-md {
+    .row > .col-md {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3177,7 +3177,7 @@ hr {
     .row .col-md-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 992px) {
-    .row .col-lg {
+    .row > .col-lg {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3303,7 +3303,7 @@ hr {
     .row .col-lg-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 1200px) {
-    .row .col-xl {
+    .row > .col-xl {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3428,12 +3428,12 @@ hr {
       margin-left: 91.6666666667%; }
     .row .col-xl-offset-12 {
       margin-left: 100%; } }
-  .row.gutters .col-xs-1, .row.gutters .col-sm-1, .row.gutters .col-md-1, .row.gutters .col-lg-1, .row.gutters .col-xl-1, .row.gutters .col-xs-2, .row.gutters .col-sm-2, .row.gutters .col-md-2, .row.gutters .col-lg-2, .row.gutters .col-xl-2, .row.gutters .col-xs-3, .row.gutters .col-sm-3, .row.gutters .col-md-3, .row.gutters .col-lg-3, .row.gutters .col-xl-3, .row.gutters .col-xs-4, .row.gutters .col-sm-4, .row.gutters .col-md-4, .row.gutters .col-lg-4, .row.gutters .col-xl-4, .row.gutters .col-xs-5, .row.gutters .col-sm-5, .row.gutters .col-md-5, .row.gutters .col-lg-5, .row.gutters .col-xl-5, .row.gutters .col-xs-6, .row.gutters .col-sm-6, .row.gutters .col-md-6, .row.gutters .col-lg-6, .row.gutters .col-xl-6, .row.gutters .col-xs-7, .row.gutters .col-sm-7, .row.gutters .col-md-7, .row.gutters .col-lg-7, .row.gutters .col-xl-7, .row.gutters .col-xs-8, .row.gutters .col-sm-8, .row.gutters .col-md-8, .row.gutters .col-lg-8, .row.gutters .col-xl-8, .row.gutters .col-xs-9, .row.gutters .col-sm-9, .row.gutters .col-md-9, .row.gutters .col-lg-9, .row.gutters .col-xl-9, .row.gutters .col-xs-10, .row.gutters .col-sm-10, .row.gutters .col-md-10, .row.gutters .col-lg-10, .row.gutters .col-xl-10, .row.gutters .col-xs-11, .row.gutters .col-sm-11, .row.gutters .col-md-11, .row.gutters .col-lg-11, .row.gutters .col-xl-11, .row.gutters .col-xs-12, .row.gutters .col-sm-12, .row.gutters .col-md-12, .row.gutters .col-lg-12, .row.gutters .col-xl-12,
-  .row.gutters .col-xs,
-  .row.gutters .col-sm,
-  .row.gutters .col-md,
-  .row.gutters .col-lg,
-  .row.gutters .col-xl {
+  .row.gutters > .col-xs-1, .row.gutters > .col-sm-1, .row.gutters > .col-md-1, .row.gutters > .col-lg-1, .row.gutters > .col-xl-1, .row.gutters > .col-xs-2, .row.gutters > .col-sm-2, .row.gutters > .col-md-2, .row.gutters > .col-lg-2, .row.gutters > .col-xl-2, .row.gutters > .col-xs-3, .row.gutters > .col-sm-3, .row.gutters > .col-md-3, .row.gutters > .col-lg-3, .row.gutters > .col-xl-3, .row.gutters > .col-xs-4, .row.gutters > .col-sm-4, .row.gutters > .col-md-4, .row.gutters > .col-lg-4, .row.gutters > .col-xl-4, .row.gutters > .col-xs-5, .row.gutters > .col-sm-5, .row.gutters > .col-md-5, .row.gutters > .col-lg-5, .row.gutters > .col-xl-5, .row.gutters > .col-xs-6, .row.gutters > .col-sm-6, .row.gutters > .col-md-6, .row.gutters > .col-lg-6, .row.gutters > .col-xl-6, .row.gutters > .col-xs-7, .row.gutters > .col-sm-7, .row.gutters > .col-md-7, .row.gutters > .col-lg-7, .row.gutters > .col-xl-7, .row.gutters > .col-xs-8, .row.gutters > .col-sm-8, .row.gutters > .col-md-8, .row.gutters > .col-lg-8, .row.gutters > .col-xl-8, .row.gutters > .col-xs-9, .row.gutters > .col-sm-9, .row.gutters > .col-md-9, .row.gutters > .col-lg-9, .row.gutters > .col-xl-9, .row.gutters > .col-xs-10, .row.gutters > .col-sm-10, .row.gutters > .col-md-10, .row.gutters > .col-lg-10, .row.gutters > .col-xl-10, .row.gutters > .col-xs-11, .row.gutters > .col-sm-11, .row.gutters > .col-md-11, .row.gutters > .col-lg-11, .row.gutters > .col-xl-11, .row.gutters > .col-xs-12, .row.gutters > .col-sm-12, .row.gutters > .col-md-12, .row.gutters > .col-lg-12, .row.gutters > .col-xl-12,
+  .row.gutters > .col-xs,
+  .row.gutters > .col-sm,
+  .row.gutters > .col-md,
+  .row.gutters > .col-lg,
+  .row.gutters > .col-xl {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     min-height: 0.01rem;
@@ -3443,7 +3443,7 @@ hr {
     margin-right: 1.2rem;
     max-width: calc(100% - 2.4rem);
     width: calc(100% - 2.4rem); }
-  .row.gutters .col-xs {
+  .row.gutters > .col-xs {
     -ms-flex-positive: 1;
         flex-grow: 1;
     -ms-flex-preferred-size: 0;
@@ -3569,7 +3569,7 @@ hr {
   .row.gutters .col-xs-offset-12 {
     margin-left: 100%; }
   @media (min-width: 480px) {
-    .row.gutters .col-sm {
+    .row.gutters > .col-sm {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3695,7 +3695,7 @@ hr {
     .row.gutters .col-sm-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 768px) {
-    .row.gutters .col-md {
+    .row.gutters > .col-md {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3821,7 +3821,7 @@ hr {
     .row.gutters .col-md-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 992px) {
-    .row.gutters .col-lg {
+    .row.gutters > .col-lg {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -3947,7 +3947,7 @@ hr {
     .row.gutters .col-lg-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 1200px) {
-    .row.gutters .col-xl {
+    .row.gutters > .col-xl {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -4084,12 +4084,12 @@ hr {
       flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-  .row-tight .col-xs-1, .row-tight .col-sm-1, .row-tight .col-md-1, .row-tight .col-lg-1, .row-tight .col-xl-1, .row-tight .col-xs-2, .row-tight .col-sm-2, .row-tight .col-md-2, .row-tight .col-lg-2, .row-tight .col-xl-2, .row-tight .col-xs-3, .row-tight .col-sm-3, .row-tight .col-md-3, .row-tight .col-lg-3, .row-tight .col-xl-3, .row-tight .col-xs-4, .row-tight .col-sm-4, .row-tight .col-md-4, .row-tight .col-lg-4, .row-tight .col-xl-4, .row-tight .col-xs-5, .row-tight .col-sm-5, .row-tight .col-md-5, .row-tight .col-lg-5, .row-tight .col-xl-5, .row-tight .col-xs-6, .row-tight .col-sm-6, .row-tight .col-md-6, .row-tight .col-lg-6, .row-tight .col-xl-6, .row-tight .col-xs-7, .row-tight .col-sm-7, .row-tight .col-md-7, .row-tight .col-lg-7, .row-tight .col-xl-7, .row-tight .col-xs-8, .row-tight .col-sm-8, .row-tight .col-md-8, .row-tight .col-lg-8, .row-tight .col-xl-8, .row-tight .col-xs-9, .row-tight .col-sm-9, .row-tight .col-md-9, .row-tight .col-lg-9, .row-tight .col-xl-9, .row-tight .col-xs-10, .row-tight .col-sm-10, .row-tight .col-md-10, .row-tight .col-lg-10, .row-tight .col-xl-10, .row-tight .col-xs-11, .row-tight .col-sm-11, .row-tight .col-md-11, .row-tight .col-lg-11, .row-tight .col-xl-11, .row-tight .col-xs-12, .row-tight .col-sm-12, .row-tight .col-md-12, .row-tight .col-lg-12, .row-tight .col-xl-12,
-  .row-tight .col-xs,
-  .row-tight .col-sm,
-  .row-tight .col-md,
-  .row-tight .col-lg,
-  .row-tight .col-xl {
+  .row-tight > .col-xs-1, .row-tight > .col-sm-1, .row-tight > .col-md-1, .row-tight > .col-lg-1, .row-tight > .col-xl-1, .row-tight > .col-xs-2, .row-tight > .col-sm-2, .row-tight > .col-md-2, .row-tight > .col-lg-2, .row-tight > .col-xl-2, .row-tight > .col-xs-3, .row-tight > .col-sm-3, .row-tight > .col-md-3, .row-tight > .col-lg-3, .row-tight > .col-xl-3, .row-tight > .col-xs-4, .row-tight > .col-sm-4, .row-tight > .col-md-4, .row-tight > .col-lg-4, .row-tight > .col-xl-4, .row-tight > .col-xs-5, .row-tight > .col-sm-5, .row-tight > .col-md-5, .row-tight > .col-lg-5, .row-tight > .col-xl-5, .row-tight > .col-xs-6, .row-tight > .col-sm-6, .row-tight > .col-md-6, .row-tight > .col-lg-6, .row-tight > .col-xl-6, .row-tight > .col-xs-7, .row-tight > .col-sm-7, .row-tight > .col-md-7, .row-tight > .col-lg-7, .row-tight > .col-xl-7, .row-tight > .col-xs-8, .row-tight > .col-sm-8, .row-tight > .col-md-8, .row-tight > .col-lg-8, .row-tight > .col-xl-8, .row-tight > .col-xs-9, .row-tight > .col-sm-9, .row-tight > .col-md-9, .row-tight > .col-lg-9, .row-tight > .col-xl-9, .row-tight > .col-xs-10, .row-tight > .col-sm-10, .row-tight > .col-md-10, .row-tight > .col-lg-10, .row-tight > .col-xl-10, .row-tight > .col-xs-11, .row-tight > .col-sm-11, .row-tight > .col-md-11, .row-tight > .col-lg-11, .row-tight > .col-xl-11, .row-tight > .col-xs-12, .row-tight > .col-sm-12, .row-tight > .col-md-12, .row-tight > .col-lg-12, .row-tight > .col-xl-12,
+  .row-tight > .col-xs,
+  .row-tight > .col-sm,
+  .row-tight > .col-md,
+  .row-tight > .col-lg,
+  .row-tight > .col-xl {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     min-height: 0.01rem;
@@ -4099,7 +4099,7 @@ hr {
     margin-right: 0rem;
     max-width: calc(100% - 0rem);
     width: calc(100% - 0rem); }
-  .row-tight .col-xs {
+  .row-tight > .col-xs {
     -ms-flex-positive: 1;
         flex-grow: 1;
     -ms-flex-preferred-size: 0;
@@ -4225,7 +4225,7 @@ hr {
   .row-tight .col-xs-offset-12 {
     margin-left: 100%; }
   @media (min-width: 480px) {
-    .row-tight .col-sm {
+    .row-tight > .col-sm {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -4351,7 +4351,7 @@ hr {
     .row-tight .col-sm-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 768px) {
-    .row-tight .col-md {
+    .row-tight > .col-md {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -4477,7 +4477,7 @@ hr {
     .row-tight .col-md-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 992px) {
-    .row-tight .col-lg {
+    .row-tight > .col-lg {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -4603,7 +4603,7 @@ hr {
     .row-tight .col-lg-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 1200px) {
-    .row-tight .col-xl {
+    .row-tight > .col-xl {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -4728,12 +4728,12 @@ hr {
       margin-left: 91.6666666667%; }
     .row-tight .col-xl-offset-12 {
       margin-left: 100%; } }
-  .row-tight.gutters .col-xs-1, .row-tight.gutters .col-sm-1, .row-tight.gutters .col-md-1, .row-tight.gutters .col-lg-1, .row-tight.gutters .col-xl-1, .row-tight.gutters .col-xs-2, .row-tight.gutters .col-sm-2, .row-tight.gutters .col-md-2, .row-tight.gutters .col-lg-2, .row-tight.gutters .col-xl-2, .row-tight.gutters .col-xs-3, .row-tight.gutters .col-sm-3, .row-tight.gutters .col-md-3, .row-tight.gutters .col-lg-3, .row-tight.gutters .col-xl-3, .row-tight.gutters .col-xs-4, .row-tight.gutters .col-sm-4, .row-tight.gutters .col-md-4, .row-tight.gutters .col-lg-4, .row-tight.gutters .col-xl-4, .row-tight.gutters .col-xs-5, .row-tight.gutters .col-sm-5, .row-tight.gutters .col-md-5, .row-tight.gutters .col-lg-5, .row-tight.gutters .col-xl-5, .row-tight.gutters .col-xs-6, .row-tight.gutters .col-sm-6, .row-tight.gutters .col-md-6, .row-tight.gutters .col-lg-6, .row-tight.gutters .col-xl-6, .row-tight.gutters .col-xs-7, .row-tight.gutters .col-sm-7, .row-tight.gutters .col-md-7, .row-tight.gutters .col-lg-7, .row-tight.gutters .col-xl-7, .row-tight.gutters .col-xs-8, .row-tight.gutters .col-sm-8, .row-tight.gutters .col-md-8, .row-tight.gutters .col-lg-8, .row-tight.gutters .col-xl-8, .row-tight.gutters .col-xs-9, .row-tight.gutters .col-sm-9, .row-tight.gutters .col-md-9, .row-tight.gutters .col-lg-9, .row-tight.gutters .col-xl-9, .row-tight.gutters .col-xs-10, .row-tight.gutters .col-sm-10, .row-tight.gutters .col-md-10, .row-tight.gutters .col-lg-10, .row-tight.gutters .col-xl-10, .row-tight.gutters .col-xs-11, .row-tight.gutters .col-sm-11, .row-tight.gutters .col-md-11, .row-tight.gutters .col-lg-11, .row-tight.gutters .col-xl-11, .row-tight.gutters .col-xs-12, .row-tight.gutters .col-sm-12, .row-tight.gutters .col-md-12, .row-tight.gutters .col-lg-12, .row-tight.gutters .col-xl-12,
-  .row-tight.gutters .col-xs,
-  .row-tight.gutters .col-sm,
-  .row-tight.gutters .col-md,
-  .row-tight.gutters .col-lg,
-  .row-tight.gutters .col-xl {
+  .row-tight.gutters > .col-xs-1, .row-tight.gutters > .col-sm-1, .row-tight.gutters > .col-md-1, .row-tight.gutters > .col-lg-1, .row-tight.gutters > .col-xl-1, .row-tight.gutters > .col-xs-2, .row-tight.gutters > .col-sm-2, .row-tight.gutters > .col-md-2, .row-tight.gutters > .col-lg-2, .row-tight.gutters > .col-xl-2, .row-tight.gutters > .col-xs-3, .row-tight.gutters > .col-sm-3, .row-tight.gutters > .col-md-3, .row-tight.gutters > .col-lg-3, .row-tight.gutters > .col-xl-3, .row-tight.gutters > .col-xs-4, .row-tight.gutters > .col-sm-4, .row-tight.gutters > .col-md-4, .row-tight.gutters > .col-lg-4, .row-tight.gutters > .col-xl-4, .row-tight.gutters > .col-xs-5, .row-tight.gutters > .col-sm-5, .row-tight.gutters > .col-md-5, .row-tight.gutters > .col-lg-5, .row-tight.gutters > .col-xl-5, .row-tight.gutters > .col-xs-6, .row-tight.gutters > .col-sm-6, .row-tight.gutters > .col-md-6, .row-tight.gutters > .col-lg-6, .row-tight.gutters > .col-xl-6, .row-tight.gutters > .col-xs-7, .row-tight.gutters > .col-sm-7, .row-tight.gutters > .col-md-7, .row-tight.gutters > .col-lg-7, .row-tight.gutters > .col-xl-7, .row-tight.gutters > .col-xs-8, .row-tight.gutters > .col-sm-8, .row-tight.gutters > .col-md-8, .row-tight.gutters > .col-lg-8, .row-tight.gutters > .col-xl-8, .row-tight.gutters > .col-xs-9, .row-tight.gutters > .col-sm-9, .row-tight.gutters > .col-md-9, .row-tight.gutters > .col-lg-9, .row-tight.gutters > .col-xl-9, .row-tight.gutters > .col-xs-10, .row-tight.gutters > .col-sm-10, .row-tight.gutters > .col-md-10, .row-tight.gutters > .col-lg-10, .row-tight.gutters > .col-xl-10, .row-tight.gutters > .col-xs-11, .row-tight.gutters > .col-sm-11, .row-tight.gutters > .col-md-11, .row-tight.gutters > .col-lg-11, .row-tight.gutters > .col-xl-11, .row-tight.gutters > .col-xs-12, .row-tight.gutters > .col-sm-12, .row-tight.gutters > .col-md-12, .row-tight.gutters > .col-lg-12, .row-tight.gutters > .col-xl-12,
+  .row-tight.gutters > .col-xs,
+  .row-tight.gutters > .col-sm,
+  .row-tight.gutters > .col-md,
+  .row-tight.gutters > .col-lg,
+  .row-tight.gutters > .col-xl {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     min-height: 0.01rem;
@@ -4743,7 +4743,7 @@ hr {
     margin-right: 0.6rem;
     max-width: calc(100% - 1.2rem);
     width: calc(100% - 1.2rem); }
-  .row-tight.gutters .col-xs {
+  .row-tight.gutters > .col-xs {
     -ms-flex-positive: 1;
         flex-grow: 1;
     -ms-flex-preferred-size: 0;
@@ -4869,7 +4869,7 @@ hr {
   .row-tight.gutters .col-xs-offset-12 {
     margin-left: 100%; }
   @media (min-width: 480px) {
-    .row-tight.gutters .col-sm {
+    .row-tight.gutters > .col-sm {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -4995,7 +4995,7 @@ hr {
     .row-tight.gutters .col-sm-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 768px) {
-    .row-tight.gutters .col-md {
+    .row-tight.gutters > .col-md {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -5121,7 +5121,7 @@ hr {
     .row-tight.gutters .col-md-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 992px) {
-    .row-tight.gutters .col-lg {
+    .row-tight.gutters > .col-lg {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -5247,7 +5247,7 @@ hr {
     .row-tight.gutters .col-lg-offset-12 {
       margin-left: 100%; } }
   @media (min-width: 1200px) {
-    .row-tight.gutters .col-xl {
+    .row-tight.gutters > .col-xl {
       -ms-flex-positive: 1;
           flex-grow: 1;
       -ms-flex-preferred-size: 0;
@@ -6193,14 +6193,14 @@ code {
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;
-  border-radius: 0.4rem; }
+  border-radius: 0.2rem; }
 
 kbd {
   padding: 2px 4px;
   font-size: 90%;
   color: #fff;
   background-color: #333;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
   kbd kbd {
     padding: 0;
@@ -6219,7 +6219,7 @@ pre {
   color: #575757;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  border-radius: 0.4rem; }
+  border-radius: 0.2rem; }
   pre code {
     padding: 0;
     font-size: inherit;
@@ -6979,7 +6979,7 @@ output {
   background-color: #ffffff;
   background-image: none;
   border: 0.1rem solid #BCBCBC;
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -webkit-appearance: none; }
   .form-control:focus {
@@ -7124,7 +7124,7 @@ input[type="search"] {
   height: 1.3rem;
   width: 1.3rem;
   border: 0.1rem solid #868686;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   position: absolute;
   margin-left: -2rem;
   margin-top: 0.3rem;
@@ -7862,7 +7862,7 @@ input[type="search"] {
   padding: 0.8rem 1.2rem;
   font-size: 1.4rem;
   line-height: 1.428571429;
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -7879,7 +7879,10 @@ input[type="search"] {
     background-color: rgba(0, 0, 0, 0.08);
     text-decoration: none; }
   .btn i {
-    margin-right: 0.8rem; }
+    margin-right: 1.2rem; }
+  .btn.icon-right i {
+    margin-right: 0;
+    margin-left: 1.2rem; }
 
 a.btn.disabled,
 fieldset[disabled] a.btn {
@@ -8177,12 +8180,13 @@ input[type="button"].btn-block {
 
  <h3>Button with Icon</h3>
 
- Add any icon in front of your text and the button will automatically space it out for you.
+ Add any icon in front of your text and the button will automatically space it out for you. If you
+ want to add an icon after your text add the class `.icon-right`.
  ```
     <button class="btn btn-blue"><i class="fa fa-save"></i>Save</button>
     <button class="btn btn-red"><i class="fa fa-trash-o"></i>Remove</button>
-    <button class="btn btn-green btn-bare"><i class="fa fa-check"></i>Submit</button>
-    <button class="btn btn-orange btn-bare"><i class="fa fa-download"></i>Download</button>
+    <button class="btn btn-green icon-right">Submit<i class="fa fa-check"></i></button>
+    <button class="btn btn-orange icon-right">Download<i class="fa fa-download"></i></button>
  ```
 
  <h3>Icon Button</h3>
@@ -8365,5 +8369,463 @@ input[type="button"].btn-block {
 
 
 
+
+ */
+.dropup,
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-toggle:focus {
+  outline: 0; }
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 20rem;
+  padding: 0.4rem 0;
+  margin: 0.2rem 0 0;
+  list-style: none;
+  font-size: 1.4rem;
+  text-align: left;
+  background-color: #ffffff;
+  border: 0.1rem solid #BCBCBC;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.175);
+  background-clip: padding-box; }
+  .dropdown-menu.has-caret:before, .dropdown-menu.has-caret:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0.8rem;
+    border-right: 0.8rem solid transparent;
+    border-left: 0.8rem solid transparent; }
+  .dropdown-menu.has-caret:before {
+    top: -0.8rem;
+    border-bottom: 0.8rem solid #a0a0a0; }
+  .dropdown-menu.has-caret:after {
+    top: -0.7rem;
+    border-bottom: 0.8rem solid #ffffff; }
+  .dropdown-menu.is-right {
+    right: 0;
+    left: auto; }
+    .dropdown-menu.is-right.has-caret:before, .dropdown-menu.is-right.has-caret:after {
+      right: 0.8rem;
+      left: auto; }
+  .dropdown-menu .divider {
+    height: 0.2rem;
+    margin: 0.4rem 0;
+    overflow: hidden;
+    background-color: #D4D4D4;
+    border-top: none; }
+    .dropdown-menu .divider + li:not(.divider) {
+      border-top: none; }
+  .dropdown-menu > li {
+    border-top: 1px dashed #D4D4D4; }
+    .dropdown-menu > li > a {
+      display: block;
+      padding: 0.8rem 1.6rem;
+      clear: both;
+      font-weight: normal;
+      line-height: 1.428571429;
+      color: #575757;
+      white-space: nowrap; }
+      .dropdown-menu > li > a i {
+        margin-right: 1.2rem; }
+    .dropdown-menu > li:first-child {
+      border-top: none; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #4a4a4a;
+  background-color: #E9E9E9; }
+
+.dropdown-menu > .active {
+  border-top-color: transparent; }
+  .dropdown-menu > .active + li {
+    border-top-color: transparent; }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #62abde; }
+
+.dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  color: #BCBCBC;
+  pointer-events: none; }
+
+.dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  cursor: not-allowed; }
+
+.open > .dropdown-menu {
+  display: block; }
+
+.open > a {
+  outline: 0; }
+
+.open > .btn-blue {
+  background-color: #2985c5; }
+  .open > .btn-blue.btn-bare {
+    color: #4da0da;
+    background-color: rgba(0, 0, 0, 0.16); }
+
+.open > .btn-white {
+  background-color: #d6d6d6; }
+  .open > .btn-white.btn-bare {
+    color: #797979;
+    background-color: rgba(0, 0, 0, 0.16); }
+
+.open > .btn-green {
+  background-color: #255b00; }
+  .open > .btn-green.btn-bare {
+    color: #3c9400;
+    background-color: rgba(0, 0, 0, 0.16); }
+
+.open > .btn-orange {
+  background-color: #ce6f00; }
+  .open > .btn-orange.btn-bare {
+    color: #ff8c08;
+    background-color: rgba(0, 0, 0, 0.16); }
+
+.open > .btn-red {
+  background-color: #9a1721; }
+  .open > .btn-red.btn-bare {
+    color: #cb1f2c;
+    background-color: rgba(0, 0, 0, 0.16); }
+
+/*
+
+ ##Dropdowns
+
+ Toggleable, contextual menu for displaying lists of links.
+
+ <h3>Basic Dropdown</h3>
+
+ Wrap the dropdown's trigger and the dropdown menu within `.dropdown`, or another element that
+ declares `position: relative;`. Then add the menu's HTML. By default, a dropdown menu is
+ automatically positioned 100% from the top and along the left side of its
+ parent. Add `.is-right` to a `.dropdown-menu` to right align the dropdown menu.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-white icon-right dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-xs text-right">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-blue icon-right dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu is-right" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+ </div>
+
+ ```
+
+
+ <h3>Dropdown with Caret</h3>
+
+ Add the class `.has-caret` to the `.dropdown-menu` to add a graphical caret pointing to the source of the click.
+ The caret moves from left to right depending on the alignment chosen for the menu.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-white icon-right dropdown-toggle" type="button" >
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu has-caret">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-xs text-right">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-blue icon-right dropdown-toggle" type="button">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu is-right has-caret">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+ </div>
+
+ ```
+
+ <h3>Active and Disabled Links</h3>
+
+ To show the selected link add `.active` to the `li` of the selected option. To disable any links add the `.disabled`
+ class to the appropriate `li`.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="row">
+    <div class="col-xs">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-white icon-right dropdown-toggle" type="button" >
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="active"><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-xs text-right">
+
+
+        <div class="dropdown open">
+            <button class="btn btn-blue icon-right dropdown-toggle" type="button">
+                Dropdown<i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu is-right">
+                <li class="disabled"><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+ </div>
+ ```
+
+ */
+.tabs {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  background: #ffffff;
+  border-bottom: 0.1rem solid #D4D4D4;
+  margin-bottom: 1.2rem; }
+  .tabs ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding: 0 1.2rem;
+    margin: 0; }
+    .tabs ul > li {
+      list-style: none; }
+      .tabs ul > li > a {
+        display: block;
+        padding: 0.8rem 1.2rem 0.6rem;
+        margin-bottom: -0.1rem;
+        border-bottom: 0.2rem solid transparent;
+        font-family: "Oswald", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+        color: #868686;
+        cursor: pointer; }
+        .tabs ul > li > a span + span {
+          margin-left: 1.2rem; }
+        .tabs ul > li > a:hover {
+          color: #4a4a4a;
+          border-bottom-color: #afafaf; }
+      .tabs ul > li.is-active a {
+        color: #62abde;
+        border-bottom-color: #62abde; }
+  .tabs.is-bordered li {
+    border-left: 0.1rem dashed #BCBCBC; }
+  .tabs.is-bordered li:last-child {
+    border-right: 0.1rem dashed #BCBCBC; }
+  .tabs.is-centered {
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
+  .tabs.is-right {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: end; }
+  .tabs.is-justified li {
+    -ms-flex: 1;
+        flex: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+
+/*
+
+ ##Tabs
+
+ Simple responsive horizontal navigation __tabs__, with different styles
+
+ <h3>Basic Tab Structure</h3>
+
+ Tabs only require a `.tabs` container and a `<ul>` list. The __default__ tabs style has a single border at the bottom.
+ ```
+ <div class="tabs">
+    <ul>
+        <li class="is-active">
+            <a href="#">Profile</a>
+        </li>
+        <li>
+            <a href="#">Settings</a>
+        </li>
+        <li>
+            <a href="#">Payments</a>
+        </li>
+        <li>
+            <a href="#">Account Information</a>
+        </li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Tab Alignment</h3>
+
+ To align the tabs list, use the `.is-centered` or `.is-right` modifier on the `.tabs` container:
+ ```
+ <div class="tabs is-centered">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+ ```
+ <div class="tabs is-right">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Bordered Tab</h3>
+
+ To add dividing borders, use the class `.is-bordered` on the `.tabs` container:
+ ```
+ <div class="tabs is-bordered">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Tab with Icon</h3>
+
+ Adding icons to tabs is very easy and simple, just wrap the tab's text and the icon in a '<span>'. This will
+ keep the setup very generic, whether the icon comes first or last.
+ ```
+ <div class="tabs">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li>
+            <a href="#">
+                <span><i class="fa fa-cog"></i></span>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Payments</span>
+                <span><i class="fa fa-dollar"></i></span>
+            </a>
+        </li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Justified Tab</h3>
+
+ If you want the tabs to take up the whole width available, use `.is-justified`.
+ ```
+ <div class="tabs is-justified is-bordered">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li>
+            <a href="#">
+                <span><i class="fa fa-cog"></i></span>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Payments</span>
+                <span><i class="fa fa-dollar"></i></span>
+            </a>
+        </li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
 
  */

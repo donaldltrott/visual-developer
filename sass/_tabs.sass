@@ -1,0 +1,181 @@
+.tabs
+    display: flex
+    font-size: $font-size-base
+    background: $white
+    border-bottom: 0.1rem solid $gray-lighter
+    margin-bottom: $spacing-lg
+    ul
+        display: flex
+        flex-grow: 1
+        flex-shrink: 0
+        padding: 0 $spacing-lg
+        margin: 0
+        > li
+            list-style: none
+            > a
+                display: block
+                padding: $spacing-md $spacing-lg ($spacing-sm + $spacing-xs)
+                margin-bottom: -0.1rem
+                border-bottom: $spacing-xs solid transparent
+                font-family: "Oswald", Helvetica, Arial, sans-serif
+                text-decoration: none
+                color: $gray
+                cursor: pointer
+
+                span + span
+                    margin-left: $spacing-lg
+
+                &:hover
+                    color: darken($gray-dark, 5%)
+                    border-bottom-color: darken($gray-light, 5%)
+            &.is-active
+                a
+                    color: $blue
+                    border-bottom-color: $blue
+
+    &.is-bordered
+        li
+            border-left: 0.1rem dashed $gray-light
+        li:last-child
+            border-right: 0.1rem dashed $gray-light
+
+    &.is-centered
+        -webkit-justify-content: center
+        -ms-flex-pack: center
+        -webkit-box-pack: center
+        justify-content: center
+        text-align: center
+    &.is-right
+        -webkit-justify-content: flex-end
+        -ms-flex-pack: end
+        -webkit-box-pack: end
+        justify-content: flex-end
+        text-align: end
+
+    &.is-justified
+        li
+            flex: 1
+            flex-grow: 1
+            flex-shrink: 0
+
+/*
+
+ ##Tabs
+
+ Simple responsive horizontal navigation __tabs__, with different styles
+
+ <h3>Basic Tab Structure</h3>
+
+ Tabs only require a `.tabs` container and a `<ul>` list. The __default__ tabs style has a single border at the bottom.
+ ```
+ <div class="tabs">
+    <ul>
+        <li class="is-active">
+            <a href="#">Profile</a>
+        </li>
+        <li>
+            <a href="#">Settings</a>
+        </li>
+        <li>
+            <a href="#">Payments</a>
+        </li>
+        <li>
+            <a href="#">Account Information</a>
+        </li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Tab Alignment</h3>
+
+ To align the tabs list, use the `.is-centered` or `.is-right` modifier on the `.tabs` container:
+ ```
+ <div class="tabs is-centered">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+ ```
+ <div class="tabs is-right">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Bordered Tab</h3>
+
+ To add dividing borders, use the class `.is-bordered` on the `.tabs` container:
+ ```
+ <div class="tabs is-bordered">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Tab with Icon</h3>
+
+ Adding icons to tabs is very easy and simple, just wrap the tab's text and the icon in a '<span>'. This will
+ keep the setup very generic, whether the icon comes first or last.
+ ```
+ <div class="tabs">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li>
+            <a href="#">
+                <span><i class="fa fa-cog"></i></span>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Payments</span>
+                <span><i class="fa fa-dollar"></i></span>
+            </a>
+        </li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+
+ <h3>Justified Tab</h3>
+
+ If you want the tabs to take up the whole width available, use `.is-justified`.
+ ```
+ <div class="tabs is-justified is-bordered">
+    <ul>
+        <li class="is-active"><a href="#">Profile</a></li>
+        <li>
+            <a href="#">
+                <span><i class="fa fa-cog"></i></span>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Payments</span>
+                <span><i class="fa fa-dollar"></i></span>
+            </a>
+        </li>
+        <li><a href="#">Account Information</a></li>
+    </ul>
+ </div>
+ ```
+
+ */

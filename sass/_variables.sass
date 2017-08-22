@@ -5,10 +5,6 @@
 $red-dark:              #841225 !default
 $red:                   #DE2533 !default
 $red-light:             #FF5C5C !default
-//
-//$purple-dark:           #595194 !default
-//$purple:                #8669FF !default
-//$purple-light:          #9C97FF !default
 
 $blue-dark:             #296aa3 !default
 $blue:                  #62abde !default
@@ -117,9 +113,9 @@ $screen-md:             768px //(76.8rem * ($font-size-number / 100))
 $screen-lg:             992px //(99.2rem * ($font-size-number / 100))
 $screen-xl:             1200px //(120rem * ($font-size-number / 100))
 
-$border-radius-base:        0.4rem !default
+$border-radius-base:        0.2rem !default
 $border-radius-large:       0.6rem !default
-$border-radius-small:       0.3rem !default
+$border-radius-small:       0.2rem !default
 
 
 ////////////////////////////////////////////////
@@ -295,33 +291,54 @@ $state-danger-border:            lighten(adjust-hue($state-danger-text, -10), 18
 
 $btn-font-weight:                normal !default
 
-$btn-default-color:              #333 !default
-$btn-default-bg:                 #fff !default
-$btn-default-border:             #ccc !default
-
-//$btn-primary-color:              #fff !default
-//$btn-primary-bg:                 $brand-primary !default
-//$btn-primary-border:             darken($btn-primary-bg, 5%) !default
-//
-//$btn-success-color:              #fff !default
-//$btn-success-bg:                 $brand-success !default
-//$btn-success-border:             darken($btn-success-bg, 5%) !default
-//
-//$btn-info-color:                 #fff !default
-//$btn-info-bg:                    $brand-info !default
-//$btn-info-border:                darken($btn-info-bg, 5%) !default
-//
-//$btn-warning-color:              #fff !default
-//$btn-warning-bg:                 $brand-warning !default
-//$btn-warning-border:             darken($btn-warning-bg, 5%) !default
-//
-//$btn-danger-color:               #fff !default
-//$btn-danger-bg:                  $brand-danger !default
-//$btn-danger-border:              darken($btn-danger-bg, 5%) !default
-
-$btn-link-disabled-color:        $gray-light !default
-
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-base:         $border-radius-base !default
 $btn-border-radius-large:        $border-radius-large !default
 $btn-border-radius-small:        $border-radius-small !default
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex-navbar:            1000 !default
+$zindex-dropdown:          1000 !default
+$zindex-popover:           1060 !default
+$zindex-tooltip:           1070 !default
+$zindex-navbar-fixed:      1030 !default
+$zindex-modal-background:  1040 !default
+$zindex-modal:             1050 !default
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    $white !default
+//** Dropdown menu `border-color`.
+$dropdown-border:                $gray-light !default
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            $gray-lighter !default
+
+//** Dropdown link text color.
+$dropdown-link-color:            $gray-dark !default
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      darken($gray-dark, 5%) !default
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         $gray-lightest !default
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $white !default
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $blue !default
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $gray-light !default
+
+//** Text color for headers within dropdown menus.
+$dropdown-header-color:          $gray-light !default
+
+$caret-width-base:               $spacing-md !default

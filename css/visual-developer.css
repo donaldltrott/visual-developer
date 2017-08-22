@@ -5835,7 +5835,13 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Oswald", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.1;
-  color: inherit; }
+  color: inherit;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-pack: end;
+  -ms-flex-align: end;
+      align-items: flex-end; }
   h1 small,
   h1 .small, h2 small,
   h2 .small, h3 small,
@@ -5857,9 +5863,7 @@ h1, h2, h3, h4, h5, h6,
   .h1 i.fa, .h2 i.fa, .h3 i.fa, .h4 i.fa, .h5 i.fa, .h6 i.fa {
     color: #a0a0a0;
     font-weight: normal;
-    font-size: 85%;
-    margin-right: 0.8rem;
-    vertical-align: middle; }
+    font-size: 85%; }
 
 h1, .h1,
 h2, .h2,
@@ -5876,6 +5880,10 @@ h3, .h3 {
   h3 .small, .h3 small,
   .h3 .small {
     font-size: 65%; }
+  h1 span + span, .h1 span + span,
+  h2 span + span, .h2 span + span,
+  h3 span + span, .h3 span + span {
+    margin-left: 1.2rem; }
 
 h4, .h4,
 h5, .h5,
@@ -5892,6 +5900,10 @@ h6, .h6 {
   h6 .small, .h6 small,
   .h6 .small {
     font-size: 75%; }
+  h4 span + span, .h4 span + span,
+  h5 span + span, .h5 span + span,
+  h6 span + span, .h6 span + span {
+    margin-left: 0.8rem; }
 
 h1, .h1 {
   font-size: 3.64rem; }
@@ -6011,13 +6023,33 @@ address {
 
  <h3>Headings with Icon</h3>
 
+ When adding an icon to a header wrap both the icon and the header's text in a `<span>` to get the
+ appropriate spacing. It does not matter if the icon is in front or after the text.
  ```
- <h1><i class="fa fa-check-circle"></i>Header Text</h1>
- <h2><i class="fa fa-vcard-o"></i>Header Text</h2>
- <h3><i class="fa fa-battery-2"></i>Header Text</h3>
- <h4><i class="fa fa-calendar"></i>Sub Header Text</h4>
- <h5><i class="fa fa-commenting"></i>Sub Header Text</h5>
- <h6><i class="fa fa-copyright"></i>Sub Header Text</h6>
+ <h1>
+     <span><i class="fa fa-check-circle"></i></span>
+     <span>Header Text</span>
+ </h1>
+ <h2>
+     <span>Header Text</span>
+     <span><i class="fa fa-vcard-o"></i></span>
+ </h2>
+ <h3>
+    <span><i class="fa fa-battery-2"></i></span>
+    <span>Header Text</span>
+ </h3>
+ <h4>
+    <span><i class="fa fa-calendar"></i></span>
+    <span>Sub Header Text</span>
+ </h4>
+ <h5>
+    <span>Sub Header Text</span>
+    <span><i class="fa fa-commenting"></i></span>
+ </h5>
+ <h6>
+    <span><i class="fa fa-copyright"></i></span>
+    <span>Sub Header Text</span>
+ </h6>
 
  ```
 

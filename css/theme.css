@@ -464,15 +464,15 @@ body .codedemo:after {
     border: 1px solid #ccc;
 }
 
-.grid-demo + p + .codedemo .row.gutters,
-.grid-demo + p + .codedemo .row-tight.gutters {
+.grid-demo + p + .codedemo .row.has-gutters,
+.grid-demo + p + .codedemo .row-tight.has-gutters {
     background: rgba(0, 0, 0, .1);
 }
 
-.grid-demo + p + .codedemo .row:not(.gutters) [class^="col-"],
-.grid-demo + p + .codedemo .row:not(.gutters) [class*=" col-"],
-.grid-demo + p + .codedemo .row-tight:not(.gutters) [class^="col-"],
-.grid-demo + p + .codedemo .row-tight:not(.gutters) [class*=" col-"] {
+.grid-demo + p + .codedemo .row:not(.has-gutters) [class^="col-"],
+.grid-demo + p + .codedemo .row:not(.has-gutters) [class*=" col-"],
+.grid-demo + p + .codedemo .row-tight:not(.has-gutters) [class^="col-"],
+.grid-demo + p + .codedemo .row-tight:not(.has-gutters) [class*=" col-"] {
     background: rgba(0, 0, 0, .1);
 }
 
@@ -500,10 +500,10 @@ body .codedemo:after {
 .grid-demo + p + .codedemo .row [class*=" col-"]:before,
 .grid-demo + p + .codedemo .row-tight [class^="col-"]:before,
 .grid-demo + p + .codedemo .row-tight [class*=" col-"]:before,
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:before {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:before,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -512,15 +512,15 @@ body .codedemo:after {
 
 .grid-demo + p + .codedemo .row [class^="col-"]:before,
 .grid-demo + p + .codedemo .row [class*=" col-"]:before,
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:before {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:before {
     width: 12px;
 }
 
 .grid-demo + p + .codedemo .row-tight [class^="col-"]:before,
 .grid-demo + p + .codedemo .row-tight [class*=" col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:before {
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:before {
     width: 6px;
 }
 
@@ -532,20 +532,20 @@ body .codedemo:after {
     background: rgba(0, 0, 255, .1);
 }
 
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:before {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:before,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:before {
     background: rgba(255, 165, 0, .2);
 }
 
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:before {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:before {
     left: -12px;
 }
 
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:before,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:before {
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:before,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:before {
     left: -6px;
 }
 
@@ -553,10 +553,10 @@ body .codedemo:after {
 .grid-demo + p + .codedemo .row [class*=" col-"]:after,
 .grid-demo + p + .codedemo .row-tight [class^="col-"]:after,
 .grid-demo + p + .codedemo .row-tight [class*=" col-"]:after,
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:after {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:after,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:after {
     content: ' ';
     position: absolute;
     top: 0;
@@ -565,15 +565,15 @@ body .codedemo:after {
 
 .grid-demo + p + .codedemo .row [class^="col-"]:after,
 .grid-demo + p + .codedemo .row [class*=" col-"]:after,
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:after {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:after {
     width: 12px;
 }
 
 .grid-demo + p + .codedemo .row-tight [class^="col-"]:after,
 .grid-demo + p + .codedemo .row-tight [class*=" col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:after {
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:after {
     width: 6px;
 }
 
@@ -585,20 +585,20 @@ body .codedemo:after {
     background: rgba(0, 0, 255, .1);
 }
 
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:after {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:after,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:after {
     background: rgba(255, 165, 0, .2);
 }
 
-.grid-demo + p + .codedemo .row.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row.gutters [class*=" col-"]:after {
+.grid-demo + p + .codedemo .row.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row.has-gutters [class*=" col-"]:after {
     right: -12px;
 }
 
-.grid-demo + p + .codedemo .row-tight.gutters [class^="col-"]:after,
-.grid-demo + p + .codedemo .row-tight.gutters [class*=" col-"]:after {
+.grid-demo + p + .codedemo .row-tight.has-gutters [class^="col-"]:after,
+.grid-demo + p + .codedemo .row-tight.has-gutters [class*=" col-"]:after {
     right: -6px;
 }
 

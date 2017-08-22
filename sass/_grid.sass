@@ -47,13 +47,13 @@
     @include make-row
     @include grid-steps
 
-    &.gutters
+    &.has-gutters
         @include grid-steps(0, $grid-gutter-width)
 
 .row-tight
     @include make-row($grid-gutter-width-md)
     @include grid-steps($grid-gutter-width-md)
-    &.gutters
+    &.has-gutters
         @include grid-steps(0, $grid-gutter-width-md)
 
 /*
@@ -76,7 +76,7 @@
     <li>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid
     layouts. SASS mixins can also be used for more semantic layouts.</li>
     <li>Columns create gutters (gaps between column content) via <code class="show-padding">padding</code> or <code class="show-margin">margin</code>. The default
-    class of `.row` use <code class="show-padding">padding</code> to create the gutters within the columns, and the row option `.gutters` places a <code class="show-margin">margin</code>
+    class of `.row` use <code class="show-padding">padding</code> to create the gutters within the columns, and the row option `.has-gutters` places a <code class="show-margin">margin</code>
     between each column. That gutter is offset in rows for the first and last column via negative margin on the <code>.row</code>.</li>
     <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined
     up with non-grid content.</li>
@@ -129,13 +129,13 @@
 
  <h4>Row with Gutters</h4>
 
- You can choose to go a different route by adding a modifying class of `.gutters` to your `.row`. This changes the layout
+ You can choose to go a different route by adding a modifying class of `.has-gutters` to your `.row`. This changes the layout
  of the child `.col-` elements to have a space between the elements using <code class="show-margin">margin</code> instead of padding. A good use case for
  this type of row is to be able to style the `.col-` element directly to create a row of elements that are all the same
  height no matter the height of the content.
  <div class="grid-demo"></div>
  ```
- <div class="row gutters">
+ <div class="row has-gutters">
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
@@ -147,7 +147,7 @@
  <h4>Row Sizing</h4>
 
  The gutters that are casued by either <code class="show-padding">padding</code> or <code class="show-margin">margin</code> can be somewhat adjusted using a new type of row called `.row-tight`.
- Whether using `.gutters` or the default behavior the `.row-tight` reduces the getters from the default `2.4rem` or `(24px)` to
+ Whether using `.has-gutters` or the default behavior the `.row-tight` reduces the getters from the default `2.4rem` or `(24px)` to
  `1.6rem` or `(16px)`.
  <div class="grid-demo"></div>
  ```
@@ -157,7 +157,7 @@
     <div class="col-xs">Content</div>
  </div>
 
- <div class="row-tight gutters">
+ <div class="row-tight has-gutters">
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>

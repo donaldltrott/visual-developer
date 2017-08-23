@@ -85,7 +85,6 @@
             top: -$caret-width-base + 0.1rem
             border-bottom: $caret-width-base solid $white
 
-
     // Aligns the dropdown menu to right
     //
     // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
@@ -97,8 +96,6 @@
             &:after
                 right: $caret-width-base
                 left: auto
-
-
 
     // Dividers (basically an hr) within the dropdown
     .divider
@@ -121,8 +118,8 @@
             color: $dropdown-link-color
             white-space: nowrap
 
-            i
-                margin-right: $spacing-lg
+            span + span
+                margin-left: $spacing-md
 
         &:first-child
             border-top: none
@@ -144,6 +141,7 @@
     border-top-color: transparent
     + li
         border-top-color: transparent
+
 .dropdown-menu > li.is-active > a
     &,
     &:hover,
@@ -152,7 +150,6 @@
         text-decoration: none
         outline: 0
         background-color: $dropdown-link-active-bg
-
 
 // Disabled state
 //
@@ -393,6 +390,34 @@
 
 
     </div>
+ </div>
+ ```
+
+ <h3>Dropdown with Icon</h3>
+
+ You can add an icon before or after you text and the spacing will be done automatically if you wrap both of
+ them in a `<span>.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="dropdown is-open">
+    <button class="btn is-white is-dropdown-toggle" type="button" >
+        <span>Dropdown</span>
+        <span><i class="fa fa-caret-down"></i></span>
+    </button>
+    <ul class="dropdown-menu has-caret">
+        <li>
+            <a href="#">
+                <span><i class="fa fa-user-circle-o"></i></span>
+                <span>Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Sign Out</span>
+                <span><i class="fa fa-sign-out"></i></span>
+            </a>
+        </li>
+    </ul>
  </div>
  ```
 

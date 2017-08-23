@@ -7910,7 +7910,7 @@ input[type="search"] {
     background-color: rgba(0, 0, 0, 0.08);
     text-decoration: none; }
   .btn span + span {
-    margin-left: 1.2rem; }
+    margin-left: 0.8rem; }
   .btn.is-min-width {
     min-width: 12rem; }
   .btn.is-block {
@@ -8213,11 +8213,11 @@ fieldset[disabled] a.btn {
         <span><i class="fa fa-trash-o"></i></span>
         <span>Remove</span>
     </button>
-    <button class="btn is-green">
+    <button class="btn is-green is-bare">
         <span>Submit</span>
         <span><i class="fa fa-check"></i></span>
     </button>
-    <button class="btn is-orange">
+    <button class="btn is-orange is-bare">
         <span>Download</span>
         <span><i class="fa fa-download"></i></span>
     </button>
@@ -8511,8 +8511,8 @@ fieldset[disabled] a.btn {
       line-height: 1.428571429;
       color: #575757;
       white-space: nowrap; }
-      .dropdown-menu > li > a i {
-        margin-right: 1.2rem; }
+      .dropdown-menu > li > a span + span {
+        margin-left: 0.8rem; }
     .dropdown-menu > li:first-child {
       border-top: none; }
 
@@ -8698,6 +8698,34 @@ fieldset[disabled] a.btn {
  </div>
  ```
 
+ <h3>Dropdown with Icon</h3>
+
+ You can add an icon before or after you text and the spacing will be done automatically if you wrap both of
+ them in a `<span>.
+ <div class="dropdown-demo"></div>
+ ```
+ <div class="dropdown is-open">
+    <button class="btn is-white is-dropdown-toggle" type="button" >
+        <span>Dropdown</span>
+        <span><i class="fa fa-caret-down"></i></span>
+    </button>
+    <ul class="dropdown-menu has-caret">
+        <li>
+            <a href="#">
+                <span><i class="fa fa-user-circle-o"></i></span>
+                <span>Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>Sign Out</span>
+                <span><i class="fa fa-sign-out"></i></span>
+            </a>
+        </li>
+    </ul>
+ </div>
+ ```
+
  */
 .tabs {
   display: -ms-flexbox;
@@ -8727,7 +8755,7 @@ fieldset[disabled] a.btn {
         color: #868686;
         cursor: pointer; }
         .tabs ul > li > a span + span {
-          margin-left: 1.2rem; }
+          margin-left: 0.8rem; }
         .tabs ul > li > a:hover {
           color: #4a4a4a;
           border-bottom-color: #afafaf; }

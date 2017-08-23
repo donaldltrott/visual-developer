@@ -46,7 +46,7 @@
         }
 
         /*.logo-container img {*/
-            /*width: 80%;*/
+        /*width: 80%;*/
         /*}*/
 
         .logo-container p {
@@ -229,9 +229,9 @@
         <header class="title-bar">
             <h3>Profile/Settings</h3>
 
-            <div class="dropdown user-profile">
+            <div class="dropdown user-profile is-open">
 
-                <section class="user-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                <section class="user-info is-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                          aria-expanded="true">
                     <div class="user-name">
                         <h4 class="text-nowrap">Orleans Marketing Distillery</h4>
@@ -245,8 +245,18 @@
 
                 </section>
                 <ul class="dropdown-menu is-right has-caret" aria-labelledby="dropdownMenu1">
-                    <li><a href="#"><i class="fa fa-user-circle-o"></i>Profile</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-user-circle-o"></i></span>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa fa-sign-out"></i></span>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </header>

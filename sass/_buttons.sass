@@ -37,13 +37,31 @@
         background-color: rgba(0, 0, 0, 0.08)
         text-decoration: none
 
-    i
-        margin-right: $spacing-lg
+    span + span
+        margin-left: $spacing-lg
 
-    &.icon-right
-        i
-            margin-right: 0
-            margin-left: $spacing-lg
+
+    &.is-min-width
+        min-width: 12rem
+
+
+    // Block button
+    // --------------------------------------------------
+
+    &.is-block
+        display: block
+        width: 100%
+        margin: 0
+
+        + .btn.is-block
+            margin: $spacing-sm 0 0 0
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+    &.btn.is-block
+        width: 100%
 
 a.btn
     &.is-disabled,
@@ -52,86 +70,59 @@ a.btn
 
 // Filled Colored buttons
 // --------------------------------------------------
-.btn-red
+.is-red
     @include filled-button($red, $white, darken($red, 10%))
 
-.btn-blue
+.is-blue
     @include filled-button($blue, $white, darken($blue, 8%))
 
-.btn-green
+.is-green
     @include filled-button($green, $white, darken($green, 5%))
 
-.btn-orange
+.is-orange
     @include filled-button($orange, $white, darken($orange, 10%))
 
-.btn-white
+.is-white
     @include filled-button($white, $gray-dark, $gray-light)
 
 //// Colored buttons
 //// --------------------------------------------------
 
-.btn-red
-    &.btn-bare
+.is-red
+    &.is-bare
         @include flat-button($red)
 
-.btn-blue
-    &.btn-bare
+.is-blue
+    &.is-bare
         @include flat-button($blue)
 
-.btn-green
-    &.btn-bare
+.is-green
+    &.is-bare
         @include flat-button($green)
 
-.btn-orange
-    &.btn-bare
+.is-orange
+    &.is-bare
         @include flat-button($orange)
 
-.btn-white
-    &.btn-bare
+.is-white
+    &.is-bare
         @include flat-button($gray)
 
 //// Button Sizes
 //// --------------------------------------------------
 //
-//.btn-lg
+//.is-lg
 //    // line-height: ensure even-numbered height of button next to large input
 //    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large)
 //
-//.btn-sm
+//.is-sm
 //    // line-height: ensure proper height of button next to small input
 //    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
 //
-//.btn-xs
+//.is-xs
 //    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small)
 //
 
-.btn-icon
-    i
-        margin-right: 0
-
-
-.btn-fw
-    min-width: 12rem
-
-
-// Block button
-// --------------------------------------------------
-
-.btn-block
-    display: block
-    width: 100%
-    margin: 0
-
-// Vertically space out multiple block buttons
-.btn-block + .btn-block
-    margin: $spacing-sm 0 0 0
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"]
-    &.btn-block
-        width: 100%
 
 /*
  ## Buttons
@@ -151,44 +142,55 @@ input[type="button"]
 
  Use any of the available button classes to quickly create a styled button.
  ```
-    <button class="btn btn-white">.btn-white</button>
-    <button class="btn btn-blue">.btn-blue</button>
-    <button class="btn btn-green">.btn-green</button>
-    <button class="btn btn-orange">.btn-orange</button>
-    <button class="btn btn-red">.btn-red</button>
+    <button class="btn is-white">.is-white</button>
+    <button class="btn is-blue">.is-blue</button>
+    <button class="btn is-green">.is-green</button>
+    <button class="btn is-orange">.is-orange</button>
+    <button class="btn is-red">.is-red</button>
  ```
 
  <h3>Bare Button</h3>
 
- Add the class `.btn-bare` to create a styled button without borders.
+ Add the class `.is-bare` to create a styled button without borders.
  ```
-    <button class="btn btn-white btn-bare">.btn-white</button>
-    <button class="btn btn-blue btn-bare">.btn-blue</button>
-    <button class="btn btn-green btn-bare">.btn-green</button>
-    <button class="btn btn-orange btn-bare">.btn-orange</button>
-    <button class="btn btn-red btn-bare">.btn-red</button>
+    <button class="btn is-white is-bare">.is-white</button>
+    <button class="btn is-blue is-bare">.is-blue</button>
+    <button class="btn is-green is-bare">.is-green</button>
+    <button class="btn is-orange is-bare">.is-orange</button>
+    <button class="btn is-red is-bare">.is-red</button>
  ```
 
  <h3>Button with Icon</h3>
 
- Add any icon in front of your text and the button will automatically space it out for you. If you
- want to add an icon after your text add the class `.icon-right`.
+ Add any icon in front or after your text and the button will automatically space it out for you. Just
+ wrap the icon and the text in seperate `<span>`.
  ```
-    <button class="btn btn-blue"><i class="fa fa-save"></i>Save</button>
-    <button class="btn btn-red"><i class="fa fa-trash-o"></i>Remove</button>
-    <button class="btn btn-green icon-right">Submit<i class="fa fa-check"></i></button>
-    <button class="btn btn-orange icon-right">Download<i class="fa fa-download"></i></button>
+    <button class="btn is-blue">
+        <span><i class="fa fa-save"></i></span>
+        <span>Save</span>
+    </button>
+    <button class="btn is-red">
+        <span><i class="fa fa-trash-o"></i></span>
+        <span>Remove</span>
+    </button>
+    <button class="btn is-green">
+        <span>Submit</span>
+        <span><i class="fa fa-check"></i></span>
+    </button>
+    <button class="btn is-orange">
+        <span>Download</span>
+        <span><i class="fa fa-download"></i></span>
+    </button>
  ```
 
  <h3>Icon Button</h3>
 
- Use a button with just an icon by itself without text, just add the class `.btn-icon` to remove the margin on
- the right of the icon.
+ Use a button with just an icon by itself without text.
  ```
-    <button class="btn btn-blue btn-icon"><i class="fa fa-save"></i></button>
-    <button class="btn btn-red btn-icon"><i class="fa fa-trash-o"></i></button>
-    <button class="btn btn-green btn-bare btn-icon"><i class="fa fa-check"></i></button>
-    <button class="btn btn-orange btn-bare btn-icon"><i class="fa fa-download"></i></button>
+    <button class="btn is-blue"><i class="fa fa-save"></i></button>
+    <button class="btn is-red"><i class="fa fa-trash-o"></i></button>
+    <button class="btn is-green is-bare"><i class="fa fa-check"></i></button>
+    <button class="btn is-orange is-bare"><i class="fa fa-download"></i></button>
  ```
 
 
@@ -197,26 +199,28 @@ input[type="button"]
  Make `buttons` look unclickable by adding the `disabled` attribute and anchor `<a>` by
  adding the `.is-disabled` class.
  ```
-    <button class="btn btn-blue" disabled>Disabled button</button>
-    <button class="btn btn-green btn-bare" disabled>Disabled bare button</button>
-    <a href="#" class="btn btn-red is-disabled">Disabled anchor</a>
-    <a href="#" class="btn btn-orange btn-bare is-disabled">Disabled bare anchor</a>
+    <button class="btn is-blue" disabled>Disabled button</button>
+    <button class="btn is-green is-bare" disabled>Disabled bare button</button>
+    <a href="#" class="btn is-red is-disabled">Disabled anchor</a>
+    <a href="#" class="btn is-orange is-bare is-disabled">Disabled bare anchor</a>
  ```
 
  <h3>Block Button</h3>
 
- Create block level buttons—those that span the full width of a parent— by adding `.btn-block`.
+ Create block level buttons—those that span the full width of a parent— by adding `.is-block`.
  ```
-    <button class="btn btn-white btn-block">.btn-white .btn-block</button>
-    <button class="btn btn-blue btn-block">.btn-blue .btn-block</button>
+    <button class="btn is-white is-block">.is-white .is-block</button>
+    <button class="btn is-blue is-block">.is-blue .is-block</button>
  ```
 
- <h3>Fixed Width Button</h3>
+ <h3>Minimum Width Button</h3>
 
- Create a fixed with button witht he class `.btn-fw`, this will set the button's minimun width.
+ Create a minimum with button with the class `.is-min-width`. This only sets the minimum width so that
+ buttons longer than the min width will not be effected.
  ```
-    <button class="btn btn-green btn-fw">Go</button>
-    <button class="btn btn-blue btn-fw">Yes</button>
+    <button class="btn is-green is-min-width">Go</button>
+    <button class="btn is-blue is-min-width">Yes</button>
+    <button class="btn is-white is-min-width">Longer than the min width</button>
  ```
 
  */

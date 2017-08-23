@@ -7466,8 +7466,8 @@ input[type="search"] {
 
 
     <fieldset>
-        <button type="submit" class="btn btn-blue">Submit</button>
-        <button type="button" class="btn btn-white btn-bare">Cancel</button>
+        <button type="submit" class="btn is-blue">Submit</button>
+        <button type="button" class="btn is-white is-bare">Cancel</button>
     </fieldset>
  </form>
  ```
@@ -7909,269 +7909,260 @@ input[type="search"] {
     color: #575757;
     background-color: rgba(0, 0, 0, 0.08);
     text-decoration: none; }
-  .btn i {
-    margin-right: 1.2rem; }
-  .btn.icon-right i {
-    margin-right: 0;
+  .btn span + span {
     margin-left: 1.2rem; }
+  .btn.is-min-width {
+    min-width: 12rem; }
+  .btn.is-block {
+    display: block;
+    width: 100%;
+    margin: 0; }
+    .btn.is-block + .btn.is-block {
+      margin: 0.4rem 0 0 0; }
+
+input[type="submit"].btn.is-block,
+input[type="reset"].btn.is-block,
+input[type="button"].btn.is-block {
+  width: 100%; }
 
 a.btn.is-disabled,
 fieldset[disabled] a.btn {
   pointer-events: none; }
 
-.btn-red {
+.is-red {
   color: #ffffff;
   background-color: #DE2533;
   border-color: #b51b27; }
-  .btn-red:focus, .btn-red.focus, .btn-red:hover, .btn-red.hover {
+  .is-red:focus, .is-red.focus, .is-red:hover, .is-red.hover {
     color: #ffffff;
     background-color: #be1d29; }
-  .btn-red:active, .btn-red.active {
+  .is-red:active, .is-red.active {
     color: #ffffff;
     background-color: #9a1721; }
-  .btn-red.is-disabled, .btn-red.is-disabled.active, .btn-red.is-disabled.hover, .btn-red.is-disabled.focus, .btn-red.is-disabled:active, .btn-red.is-disabled:hover, .btn-red.is-disabled:focus, .btn-red.is-disabled.focus, .btn-red[disabled], .btn-red[disabled].active, .btn-red[disabled].hover, .btn-red[disabled].focus, .btn-red[disabled]:active, .btn-red[disabled]:hover, .btn-red[disabled]:focus, .btn-red[disabled].focus,
-  fieldset[disabled] .btn-red,
-  fieldset[disabled] .btn-red.active,
-  fieldset[disabled] .btn-red.hover,
-  fieldset[disabled] .btn-red.focus,
-  fieldset[disabled] .btn-red:active,
-  fieldset[disabled] .btn-red:hover,
-  fieldset[disabled] .btn-red:focus,
-  fieldset[disabled] .btn-red.focus {
+  .is-red.is-disabled, .is-red.is-disabled.active, .is-red.is-disabled.hover, .is-red.is-disabled.focus, .is-red.is-disabled:active, .is-red.is-disabled:hover, .is-red.is-disabled:focus, .is-red.is-disabled.focus, .is-red[disabled], .is-red[disabled].active, .is-red[disabled].hover, .is-red[disabled].focus, .is-red[disabled]:active, .is-red[disabled]:hover, .is-red[disabled]:focus, .is-red[disabled].focus,
+  fieldset[disabled] .is-red,
+  fieldset[disabled] .is-red.active,
+  fieldset[disabled] .is-red.hover,
+  fieldset[disabled] .is-red.focus,
+  fieldset[disabled] .is-red:active,
+  fieldset[disabled] .is-red:hover,
+  fieldset[disabled] .is-red:focus,
+  fieldset[disabled] .is-red.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
     border-color: transparent; }
 
-.btn-blue {
+.is-blue {
   color: #ffffff;
   background-color: #62abde;
   border-color: #4099d7; }
-  .btn-blue:focus, .btn-blue.focus, .btn-blue:hover, .btn-blue.hover {
+  .is-blue:focus, .is-blue.focus, .is-blue:hover, .is-blue.hover {
     color: #ffffff;
     background-color: #4099d7; }
-  .btn-blue:active, .btn-blue.active {
+  .is-blue:active, .is-blue.active {
     color: #ffffff;
     background-color: #2985c5; }
-  .btn-blue.is-disabled, .btn-blue.is-disabled.active, .btn-blue.is-disabled.hover, .btn-blue.is-disabled.focus, .btn-blue.is-disabled:active, .btn-blue.is-disabled:hover, .btn-blue.is-disabled:focus, .btn-blue.is-disabled.focus, .btn-blue[disabled], .btn-blue[disabled].active, .btn-blue[disabled].hover, .btn-blue[disabled].focus, .btn-blue[disabled]:active, .btn-blue[disabled]:hover, .btn-blue[disabled]:focus, .btn-blue[disabled].focus,
-  fieldset[disabled] .btn-blue,
-  fieldset[disabled] .btn-blue.active,
-  fieldset[disabled] .btn-blue.hover,
-  fieldset[disabled] .btn-blue.focus,
-  fieldset[disabled] .btn-blue:active,
-  fieldset[disabled] .btn-blue:hover,
-  fieldset[disabled] .btn-blue:focus,
-  fieldset[disabled] .btn-blue.focus {
+  .is-blue.is-disabled, .is-blue.is-disabled.active, .is-blue.is-disabled.hover, .is-blue.is-disabled.focus, .is-blue.is-disabled:active, .is-blue.is-disabled:hover, .is-blue.is-disabled:focus, .is-blue.is-disabled.focus, .is-blue[disabled], .is-blue[disabled].active, .is-blue[disabled].hover, .is-blue[disabled].focus, .is-blue[disabled]:active, .is-blue[disabled]:hover, .is-blue[disabled]:focus, .is-blue[disabled].focus,
+  fieldset[disabled] .is-blue,
+  fieldset[disabled] .is-blue.active,
+  fieldset[disabled] .is-blue.hover,
+  fieldset[disabled] .is-blue.focus,
+  fieldset[disabled] .is-blue:active,
+  fieldset[disabled] .is-blue:hover,
+  fieldset[disabled] .is-blue:focus,
+  fieldset[disabled] .is-blue.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
     border-color: transparent; }
 
-.btn-green {
+.is-green {
   color: #ffffff;
   background-color: #46AD00;
   border-color: #3c9400; }
-  .btn-green:focus, .btn-green.focus, .btn-green:hover, .btn-green.hover {
+  .is-green:focus, .is-green.focus, .is-green:hover, .is-green.hover {
     color: #ffffff;
     background-color: #358400; }
-  .btn-green:active, .btn-green.active {
+  .is-green:active, .is-green.active {
     color: #ffffff;
     background-color: #255b00; }
-  .btn-green.is-disabled, .btn-green.is-disabled.active, .btn-green.is-disabled.hover, .btn-green.is-disabled.focus, .btn-green.is-disabled:active, .btn-green.is-disabled:hover, .btn-green.is-disabled:focus, .btn-green.is-disabled.focus, .btn-green[disabled], .btn-green[disabled].active, .btn-green[disabled].hover, .btn-green[disabled].focus, .btn-green[disabled]:active, .btn-green[disabled]:hover, .btn-green[disabled]:focus, .btn-green[disabled].focus,
-  fieldset[disabled] .btn-green,
-  fieldset[disabled] .btn-green.active,
-  fieldset[disabled] .btn-green.hover,
-  fieldset[disabled] .btn-green.focus,
-  fieldset[disabled] .btn-green:active,
-  fieldset[disabled] .btn-green:hover,
-  fieldset[disabled] .btn-green:focus,
-  fieldset[disabled] .btn-green.focus {
+  .is-green.is-disabled, .is-green.is-disabled.active, .is-green.is-disabled.hover, .is-green.is-disabled.focus, .is-green.is-disabled:active, .is-green.is-disabled:hover, .is-green.is-disabled:focus, .is-green.is-disabled.focus, .is-green[disabled], .is-green[disabled].active, .is-green[disabled].hover, .is-green[disabled].focus, .is-green[disabled]:active, .is-green[disabled]:hover, .is-green[disabled]:focus, .is-green[disabled].focus,
+  fieldset[disabled] .is-green,
+  fieldset[disabled] .is-green.active,
+  fieldset[disabled] .is-green.hover,
+  fieldset[disabled] .is-green.focus,
+  fieldset[disabled] .is-green:active,
+  fieldset[disabled] .is-green:hover,
+  fieldset[disabled] .is-green:focus,
+  fieldset[disabled] .is-green.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
     border-color: transparent; }
 
-.btn-orange {
+.is-orange {
   color: #ffffff;
   background-color: #FF9821;
   border-color: #ed7f00; }
-  .btn-orange:focus, .btn-orange.focus, .btn-orange:hover, .btn-orange.hover {
+  .is-orange:focus, .is-orange.focus, .is-orange:hover, .is-orange.hover {
     color: #ffffff;
     background-color: #f78500; }
-  .btn-orange:active, .btn-orange.active {
+  .is-orange:active, .is-orange.active {
     color: #ffffff;
     background-color: #ce6f00; }
-  .btn-orange.is-disabled, .btn-orange.is-disabled.active, .btn-orange.is-disabled.hover, .btn-orange.is-disabled.focus, .btn-orange.is-disabled:active, .btn-orange.is-disabled:hover, .btn-orange.is-disabled:focus, .btn-orange.is-disabled.focus, .btn-orange[disabled], .btn-orange[disabled].active, .btn-orange[disabled].hover, .btn-orange[disabled].focus, .btn-orange[disabled]:active, .btn-orange[disabled]:hover, .btn-orange[disabled]:focus, .btn-orange[disabled].focus,
-  fieldset[disabled] .btn-orange,
-  fieldset[disabled] .btn-orange.active,
-  fieldset[disabled] .btn-orange.hover,
-  fieldset[disabled] .btn-orange.focus,
-  fieldset[disabled] .btn-orange:active,
-  fieldset[disabled] .btn-orange:hover,
-  fieldset[disabled] .btn-orange:focus,
-  fieldset[disabled] .btn-orange.focus {
+  .is-orange.is-disabled, .is-orange.is-disabled.active, .is-orange.is-disabled.hover, .is-orange.is-disabled.focus, .is-orange.is-disabled:active, .is-orange.is-disabled:hover, .is-orange.is-disabled:focus, .is-orange.is-disabled.focus, .is-orange[disabled], .is-orange[disabled].active, .is-orange[disabled].hover, .is-orange[disabled].focus, .is-orange[disabled]:active, .is-orange[disabled]:hover, .is-orange[disabled]:focus, .is-orange[disabled].focus,
+  fieldset[disabled] .is-orange,
+  fieldset[disabled] .is-orange.active,
+  fieldset[disabled] .is-orange.hover,
+  fieldset[disabled] .is-orange.focus,
+  fieldset[disabled] .is-orange:active,
+  fieldset[disabled] .is-orange:hover,
+  fieldset[disabled] .is-orange:focus,
+  fieldset[disabled] .is-orange.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
     border-color: transparent; }
 
-.btn-white {
+.is-white {
   color: #575757;
   background-color: #ffffff;
   border-color: #BCBCBC; }
-  .btn-white:focus, .btn-white.focus, .btn-white:hover, .btn-white.hover {
+  .is-white:focus, .is-white.focus, .is-white:hover, .is-white.hover {
     color: #575757;
     background-color: #ebebeb; }
-  .btn-white:active, .btn-white.active {
+  .is-white:active, .is-white.active {
     color: #575757;
     background-color: #d6d6d6; }
-  .btn-white.is-disabled, .btn-white.is-disabled.active, .btn-white.is-disabled.hover, .btn-white.is-disabled.focus, .btn-white.is-disabled:active, .btn-white.is-disabled:hover, .btn-white.is-disabled:focus, .btn-white.is-disabled.focus, .btn-white[disabled], .btn-white[disabled].active, .btn-white[disabled].hover, .btn-white[disabled].focus, .btn-white[disabled]:active, .btn-white[disabled]:hover, .btn-white[disabled]:focus, .btn-white[disabled].focus,
-  fieldset[disabled] .btn-white,
-  fieldset[disabled] .btn-white.active,
-  fieldset[disabled] .btn-white.hover,
-  fieldset[disabled] .btn-white.focus,
-  fieldset[disabled] .btn-white:active,
-  fieldset[disabled] .btn-white:hover,
-  fieldset[disabled] .btn-white:focus,
-  fieldset[disabled] .btn-white.focus {
+  .is-white.is-disabled, .is-white.is-disabled.active, .is-white.is-disabled.hover, .is-white.is-disabled.focus, .is-white.is-disabled:active, .is-white.is-disabled:hover, .is-white.is-disabled:focus, .is-white.is-disabled.focus, .is-white[disabled], .is-white[disabled].active, .is-white[disabled].hover, .is-white[disabled].focus, .is-white[disabled]:active, .is-white[disabled]:hover, .is-white[disabled]:focus, .is-white[disabled].focus,
+  fieldset[disabled] .is-white,
+  fieldset[disabled] .is-white.active,
+  fieldset[disabled] .is-white.hover,
+  fieldset[disabled] .is-white.focus,
+  fieldset[disabled] .is-white:active,
+  fieldset[disabled] .is-white:hover,
+  fieldset[disabled] .is-white:focus,
+  fieldset[disabled] .is-white.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
     border-color: transparent; }
 
-.btn-red.btn-bare {
+.is-red.is-bare {
   color: #DE2533;
   background-color: transparent;
   border-color: transparent; }
-  .btn-red.btn-bare:focus, .btn-red.btn-bare.focus, .btn-red.btn-bare:hover, .btn-red.btn-bare.hover {
+  .is-red.is-bare:focus, .is-red.is-bare.focus, .is-red.is-bare:hover, .is-red.is-bare.hover {
     color: #cb1f2c;
     background-color: rgba(0, 0, 0, 0.06); }
-  .btn-red.btn-bare:active, .btn-red.btn-bare.active {
+  .is-red.is-bare:active, .is-red.is-bare.active {
     color: #cb1f2c;
     background-color: rgba(0, 0, 0, 0.16); }
-  .btn-red.btn-bare.is-disabled, .btn-red.btn-bare.is-disabled.active, .btn-red.btn-bare.is-disabled.hover, .btn-red.btn-bare.is-disabled.focus, .btn-red.btn-bare.is-disabled:active, .btn-red.btn-bare.is-disabled:hover, .btn-red.btn-bare.is-disabled:focus, .btn-red.btn-bare.is-disabled.focus, .btn-red.btn-bare[disabled], .btn-red.btn-bare[disabled].active, .btn-red.btn-bare[disabled].hover, .btn-red.btn-bare[disabled].focus, .btn-red.btn-bare[disabled]:active, .btn-red.btn-bare[disabled]:hover, .btn-red.btn-bare[disabled]:focus, .btn-red.btn-bare[disabled].focus,
-  fieldset[disabled] .btn-red.btn-bare,
-  fieldset[disabled] .btn-red.btn-bare.active,
-  fieldset[disabled] .btn-red.btn-bare.hover,
-  fieldset[disabled] .btn-red.btn-bare.focus,
-  fieldset[disabled] .btn-red.btn-bare:active,
-  fieldset[disabled] .btn-red.btn-bare:hover,
-  fieldset[disabled] .btn-red.btn-bare:focus,
-  fieldset[disabled] .btn-red.btn-bare.focus {
+  .is-red.is-bare.is-disabled, .is-red.is-bare.is-disabled.active, .is-red.is-bare.is-disabled.hover, .is-red.is-bare.is-disabled.focus, .is-red.is-bare.is-disabled:active, .is-red.is-bare.is-disabled:hover, .is-red.is-bare.is-disabled:focus, .is-red.is-bare.is-disabled.focus, .is-red.is-bare[disabled], .is-red.is-bare[disabled].active, .is-red.is-bare[disabled].hover, .is-red.is-bare[disabled].focus, .is-red.is-bare[disabled]:active, .is-red.is-bare[disabled]:hover, .is-red.is-bare[disabled]:focus, .is-red.is-bare[disabled].focus,
+  fieldset[disabled] .is-red.is-bare,
+  fieldset[disabled] .is-red.is-bare.active,
+  fieldset[disabled] .is-red.is-bare.hover,
+  fieldset[disabled] .is-red.is-bare.focus,
+  fieldset[disabled] .is-red.is-bare:active,
+  fieldset[disabled] .is-red.is-bare:hover,
+  fieldset[disabled] .is-red.is-bare:focus,
+  fieldset[disabled] .is-red.is-bare.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
 
-.btn-blue.btn-bare {
+.is-blue.is-bare {
   color: #62abde;
   background-color: transparent;
   border-color: transparent; }
-  .btn-blue.btn-bare:focus, .btn-blue.btn-bare.focus, .btn-blue.btn-bare:hover, .btn-blue.btn-bare.hover {
+  .is-blue.is-bare:focus, .is-blue.is-bare.focus, .is-blue.is-bare:hover, .is-blue.is-bare.hover {
     color: #4da0da;
     background-color: rgba(0, 0, 0, 0.06); }
-  .btn-blue.btn-bare:active, .btn-blue.btn-bare.active {
+  .is-blue.is-bare:active, .is-blue.is-bare.active {
     color: #4da0da;
     background-color: rgba(0, 0, 0, 0.16); }
-  .btn-blue.btn-bare.is-disabled, .btn-blue.btn-bare.is-disabled.active, .btn-blue.btn-bare.is-disabled.hover, .btn-blue.btn-bare.is-disabled.focus, .btn-blue.btn-bare.is-disabled:active, .btn-blue.btn-bare.is-disabled:hover, .btn-blue.btn-bare.is-disabled:focus, .btn-blue.btn-bare.is-disabled.focus, .btn-blue.btn-bare[disabled], .btn-blue.btn-bare[disabled].active, .btn-blue.btn-bare[disabled].hover, .btn-blue.btn-bare[disabled].focus, .btn-blue.btn-bare[disabled]:active, .btn-blue.btn-bare[disabled]:hover, .btn-blue.btn-bare[disabled]:focus, .btn-blue.btn-bare[disabled].focus,
-  fieldset[disabled] .btn-blue.btn-bare,
-  fieldset[disabled] .btn-blue.btn-bare.active,
-  fieldset[disabled] .btn-blue.btn-bare.hover,
-  fieldset[disabled] .btn-blue.btn-bare.focus,
-  fieldset[disabled] .btn-blue.btn-bare:active,
-  fieldset[disabled] .btn-blue.btn-bare:hover,
-  fieldset[disabled] .btn-blue.btn-bare:focus,
-  fieldset[disabled] .btn-blue.btn-bare.focus {
+  .is-blue.is-bare.is-disabled, .is-blue.is-bare.is-disabled.active, .is-blue.is-bare.is-disabled.hover, .is-blue.is-bare.is-disabled.focus, .is-blue.is-bare.is-disabled:active, .is-blue.is-bare.is-disabled:hover, .is-blue.is-bare.is-disabled:focus, .is-blue.is-bare.is-disabled.focus, .is-blue.is-bare[disabled], .is-blue.is-bare[disabled].active, .is-blue.is-bare[disabled].hover, .is-blue.is-bare[disabled].focus, .is-blue.is-bare[disabled]:active, .is-blue.is-bare[disabled]:hover, .is-blue.is-bare[disabled]:focus, .is-blue.is-bare[disabled].focus,
+  fieldset[disabled] .is-blue.is-bare,
+  fieldset[disabled] .is-blue.is-bare.active,
+  fieldset[disabled] .is-blue.is-bare.hover,
+  fieldset[disabled] .is-blue.is-bare.focus,
+  fieldset[disabled] .is-blue.is-bare:active,
+  fieldset[disabled] .is-blue.is-bare:hover,
+  fieldset[disabled] .is-blue.is-bare:focus,
+  fieldset[disabled] .is-blue.is-bare.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
 
-.btn-green.btn-bare {
+.is-green.is-bare {
   color: #46AD00;
   background-color: transparent;
   border-color: transparent; }
-  .btn-green.btn-bare:focus, .btn-green.btn-bare.focus, .btn-green.btn-bare:hover, .btn-green.btn-bare.hover {
+  .is-green.is-bare:focus, .is-green.is-bare.focus, .is-green.is-bare:hover, .is-green.is-bare.hover {
     color: #3c9400;
     background-color: rgba(0, 0, 0, 0.06); }
-  .btn-green.btn-bare:active, .btn-green.btn-bare.active {
+  .is-green.is-bare:active, .is-green.is-bare.active {
     color: #3c9400;
     background-color: rgba(0, 0, 0, 0.16); }
-  .btn-green.btn-bare.is-disabled, .btn-green.btn-bare.is-disabled.active, .btn-green.btn-bare.is-disabled.hover, .btn-green.btn-bare.is-disabled.focus, .btn-green.btn-bare.is-disabled:active, .btn-green.btn-bare.is-disabled:hover, .btn-green.btn-bare.is-disabled:focus, .btn-green.btn-bare.is-disabled.focus, .btn-green.btn-bare[disabled], .btn-green.btn-bare[disabled].active, .btn-green.btn-bare[disabled].hover, .btn-green.btn-bare[disabled].focus, .btn-green.btn-bare[disabled]:active, .btn-green.btn-bare[disabled]:hover, .btn-green.btn-bare[disabled]:focus, .btn-green.btn-bare[disabled].focus,
-  fieldset[disabled] .btn-green.btn-bare,
-  fieldset[disabled] .btn-green.btn-bare.active,
-  fieldset[disabled] .btn-green.btn-bare.hover,
-  fieldset[disabled] .btn-green.btn-bare.focus,
-  fieldset[disabled] .btn-green.btn-bare:active,
-  fieldset[disabled] .btn-green.btn-bare:hover,
-  fieldset[disabled] .btn-green.btn-bare:focus,
-  fieldset[disabled] .btn-green.btn-bare.focus {
+  .is-green.is-bare.is-disabled, .is-green.is-bare.is-disabled.active, .is-green.is-bare.is-disabled.hover, .is-green.is-bare.is-disabled.focus, .is-green.is-bare.is-disabled:active, .is-green.is-bare.is-disabled:hover, .is-green.is-bare.is-disabled:focus, .is-green.is-bare.is-disabled.focus, .is-green.is-bare[disabled], .is-green.is-bare[disabled].active, .is-green.is-bare[disabled].hover, .is-green.is-bare[disabled].focus, .is-green.is-bare[disabled]:active, .is-green.is-bare[disabled]:hover, .is-green.is-bare[disabled]:focus, .is-green.is-bare[disabled].focus,
+  fieldset[disabled] .is-green.is-bare,
+  fieldset[disabled] .is-green.is-bare.active,
+  fieldset[disabled] .is-green.is-bare.hover,
+  fieldset[disabled] .is-green.is-bare.focus,
+  fieldset[disabled] .is-green.is-bare:active,
+  fieldset[disabled] .is-green.is-bare:hover,
+  fieldset[disabled] .is-green.is-bare:focus,
+  fieldset[disabled] .is-green.is-bare.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
 
-.btn-orange.btn-bare {
+.is-orange.is-bare {
   color: #FF9821;
   background-color: transparent;
   border-color: transparent; }
-  .btn-orange.btn-bare:focus, .btn-orange.btn-bare.focus, .btn-orange.btn-bare:hover, .btn-orange.btn-bare.hover {
+  .is-orange.is-bare:focus, .is-orange.is-bare.focus, .is-orange.is-bare:hover, .is-orange.is-bare.hover {
     color: #ff8c08;
     background-color: rgba(0, 0, 0, 0.06); }
-  .btn-orange.btn-bare:active, .btn-orange.btn-bare.active {
+  .is-orange.is-bare:active, .is-orange.is-bare.active {
     color: #ff8c08;
     background-color: rgba(0, 0, 0, 0.16); }
-  .btn-orange.btn-bare.is-disabled, .btn-orange.btn-bare.is-disabled.active, .btn-orange.btn-bare.is-disabled.hover, .btn-orange.btn-bare.is-disabled.focus, .btn-orange.btn-bare.is-disabled:active, .btn-orange.btn-bare.is-disabled:hover, .btn-orange.btn-bare.is-disabled:focus, .btn-orange.btn-bare.is-disabled.focus, .btn-orange.btn-bare[disabled], .btn-orange.btn-bare[disabled].active, .btn-orange.btn-bare[disabled].hover, .btn-orange.btn-bare[disabled].focus, .btn-orange.btn-bare[disabled]:active, .btn-orange.btn-bare[disabled]:hover, .btn-orange.btn-bare[disabled]:focus, .btn-orange.btn-bare[disabled].focus,
-  fieldset[disabled] .btn-orange.btn-bare,
-  fieldset[disabled] .btn-orange.btn-bare.active,
-  fieldset[disabled] .btn-orange.btn-bare.hover,
-  fieldset[disabled] .btn-orange.btn-bare.focus,
-  fieldset[disabled] .btn-orange.btn-bare:active,
-  fieldset[disabled] .btn-orange.btn-bare:hover,
-  fieldset[disabled] .btn-orange.btn-bare:focus,
-  fieldset[disabled] .btn-orange.btn-bare.focus {
+  .is-orange.is-bare.is-disabled, .is-orange.is-bare.is-disabled.active, .is-orange.is-bare.is-disabled.hover, .is-orange.is-bare.is-disabled.focus, .is-orange.is-bare.is-disabled:active, .is-orange.is-bare.is-disabled:hover, .is-orange.is-bare.is-disabled:focus, .is-orange.is-bare.is-disabled.focus, .is-orange.is-bare[disabled], .is-orange.is-bare[disabled].active, .is-orange.is-bare[disabled].hover, .is-orange.is-bare[disabled].focus, .is-orange.is-bare[disabled]:active, .is-orange.is-bare[disabled]:hover, .is-orange.is-bare[disabled]:focus, .is-orange.is-bare[disabled].focus,
+  fieldset[disabled] .is-orange.is-bare,
+  fieldset[disabled] .is-orange.is-bare.active,
+  fieldset[disabled] .is-orange.is-bare.hover,
+  fieldset[disabled] .is-orange.is-bare.focus,
+  fieldset[disabled] .is-orange.is-bare:active,
+  fieldset[disabled] .is-orange.is-bare:hover,
+  fieldset[disabled] .is-orange.is-bare:focus,
+  fieldset[disabled] .is-orange.is-bare.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
 
-.btn-white.btn-bare {
+.is-white.is-bare {
   color: #868686;
   background-color: transparent;
   border-color: transparent; }
-  .btn-white.btn-bare:focus, .btn-white.btn-bare.focus, .btn-white.btn-bare:hover, .btn-white.btn-bare.hover {
+  .is-white.is-bare:focus, .is-white.is-bare.focus, .is-white.is-bare:hover, .is-white.is-bare.hover {
     color: #797979;
     background-color: rgba(0, 0, 0, 0.06); }
-  .btn-white.btn-bare:active, .btn-white.btn-bare.active {
+  .is-white.is-bare:active, .is-white.is-bare.active {
     color: #797979;
     background-color: rgba(0, 0, 0, 0.16); }
-  .btn-white.btn-bare.is-disabled, .btn-white.btn-bare.is-disabled.active, .btn-white.btn-bare.is-disabled.hover, .btn-white.btn-bare.is-disabled.focus, .btn-white.btn-bare.is-disabled:active, .btn-white.btn-bare.is-disabled:hover, .btn-white.btn-bare.is-disabled:focus, .btn-white.btn-bare.is-disabled.focus, .btn-white.btn-bare[disabled], .btn-white.btn-bare[disabled].active, .btn-white.btn-bare[disabled].hover, .btn-white.btn-bare[disabled].focus, .btn-white.btn-bare[disabled]:active, .btn-white.btn-bare[disabled]:hover, .btn-white.btn-bare[disabled]:focus, .btn-white.btn-bare[disabled].focus,
-  fieldset[disabled] .btn-white.btn-bare,
-  fieldset[disabled] .btn-white.btn-bare.active,
-  fieldset[disabled] .btn-white.btn-bare.hover,
-  fieldset[disabled] .btn-white.btn-bare.focus,
-  fieldset[disabled] .btn-white.btn-bare:active,
-  fieldset[disabled] .btn-white.btn-bare:hover,
-  fieldset[disabled] .btn-white.btn-bare:focus,
-  fieldset[disabled] .btn-white.btn-bare.focus {
+  .is-white.is-bare.is-disabled, .is-white.is-bare.is-disabled.active, .is-white.is-bare.is-disabled.hover, .is-white.is-bare.is-disabled.focus, .is-white.is-bare.is-disabled:active, .is-white.is-bare.is-disabled:hover, .is-white.is-bare.is-disabled:focus, .is-white.is-bare.is-disabled.focus, .is-white.is-bare[disabled], .is-white.is-bare[disabled].active, .is-white.is-bare[disabled].hover, .is-white.is-bare[disabled].focus, .is-white.is-bare[disabled]:active, .is-white.is-bare[disabled]:hover, .is-white.is-bare[disabled]:focus, .is-white.is-bare[disabled].focus,
+  fieldset[disabled] .is-white.is-bare,
+  fieldset[disabled] .is-white.is-bare.active,
+  fieldset[disabled] .is-white.is-bare.hover,
+  fieldset[disabled] .is-white.is-bare.focus,
+  fieldset[disabled] .is-white.is-bare:active,
+  fieldset[disabled] .is-white.is-bare:hover,
+  fieldset[disabled] .is-white.is-bare:focus,
+  fieldset[disabled] .is-white.is-bare.focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
-
-.btn-icon i {
-  margin-right: 0; }
-
-.btn-fw {
-  min-width: 12rem; }
-
-.btn-block {
-  display: block;
-  width: 100%;
-  margin: 0; }
-
-.btn-block + .btn-block {
-  margin: 0.4rem 0 0 0; }
-
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-  width: 100%; }
 
 /*
  ## Buttons
@@ -8191,44 +8182,55 @@ input[type="button"].btn-block {
 
  Use any of the available button classes to quickly create a styled button.
  ```
-    <button class="btn btn-white">.btn-white</button>
-    <button class="btn btn-blue">.btn-blue</button>
-    <button class="btn btn-green">.btn-green</button>
-    <button class="btn btn-orange">.btn-orange</button>
-    <button class="btn btn-red">.btn-red</button>
+    <button class="btn is-white">.is-white</button>
+    <button class="btn is-blue">.is-blue</button>
+    <button class="btn is-green">.is-green</button>
+    <button class="btn is-orange">.is-orange</button>
+    <button class="btn is-red">.is-red</button>
  ```
 
  <h3>Bare Button</h3>
 
- Add the class `.btn-bare` to create a styled button without borders.
+ Add the class `.is-bare` to create a styled button without borders.
  ```
-    <button class="btn btn-white btn-bare">.btn-white</button>
-    <button class="btn btn-blue btn-bare">.btn-blue</button>
-    <button class="btn btn-green btn-bare">.btn-green</button>
-    <button class="btn btn-orange btn-bare">.btn-orange</button>
-    <button class="btn btn-red btn-bare">.btn-red</button>
+    <button class="btn is-white is-bare">.is-white</button>
+    <button class="btn is-blue is-bare">.is-blue</button>
+    <button class="btn is-green is-bare">.is-green</button>
+    <button class="btn is-orange is-bare">.is-orange</button>
+    <button class="btn is-red is-bare">.is-red</button>
  ```
 
  <h3>Button with Icon</h3>
 
- Add any icon in front of your text and the button will automatically space it out for you. If you
- want to add an icon after your text add the class `.icon-right`.
+ Add any icon in front or after your text and the button will automatically space it out for you. Just
+ wrap the icon and the text in seperate `<span>`.
  ```
-    <button class="btn btn-blue"><i class="fa fa-save"></i>Save</button>
-    <button class="btn btn-red"><i class="fa fa-trash-o"></i>Remove</button>
-    <button class="btn btn-green icon-right">Submit<i class="fa fa-check"></i></button>
-    <button class="btn btn-orange icon-right">Download<i class="fa fa-download"></i></button>
+    <button class="btn is-blue">
+        <span><i class="fa fa-save"></i></span>
+        <span>Save</span>
+    </button>
+    <button class="btn is-red">
+        <span><i class="fa fa-trash-o"></i></span>
+        <span>Remove</span>
+    </button>
+    <button class="btn is-green">
+        <span>Submit</span>
+        <span><i class="fa fa-check"></i></span>
+    </button>
+    <button class="btn is-orange">
+        <span>Download</span>
+        <span><i class="fa fa-download"></i></span>
+    </button>
  ```
 
  <h3>Icon Button</h3>
 
- Use a button with just an icon by itself without text, just add the class `.btn-icon` to remove the margin on
- the right of the icon.
+ Use a button with just an icon by itself without text.
  ```
-    <button class="btn btn-blue btn-icon"><i class="fa fa-save"></i></button>
-    <button class="btn btn-red btn-icon"><i class="fa fa-trash-o"></i></button>
-    <button class="btn btn-green btn-bare btn-icon"><i class="fa fa-check"></i></button>
-    <button class="btn btn-orange btn-bare btn-icon"><i class="fa fa-download"></i></button>
+    <button class="btn is-blue"><i class="fa fa-save"></i></button>
+    <button class="btn is-red"><i class="fa fa-trash-o"></i></button>
+    <button class="btn is-green is-bare"><i class="fa fa-check"></i></button>
+    <button class="btn is-orange is-bare"><i class="fa fa-download"></i></button>
  ```
 
 
@@ -8237,26 +8239,28 @@ input[type="button"].btn-block {
  Make `buttons` look unclickable by adding the `disabled` attribute and anchor `<a>` by
  adding the `.is-disabled` class.
  ```
-    <button class="btn btn-blue" disabled>Disabled button</button>
-    <button class="btn btn-green btn-bare" disabled>Disabled bare button</button>
-    <a href="#" class="btn btn-red is-disabled">Disabled anchor</a>
-    <a href="#" class="btn btn-orange btn-bare is-disabled">Disabled bare anchor</a>
+    <button class="btn is-blue" disabled>Disabled button</button>
+    <button class="btn is-green is-bare" disabled>Disabled bare button</button>
+    <a href="#" class="btn is-red is-disabled">Disabled anchor</a>
+    <a href="#" class="btn is-orange is-bare is-disabled">Disabled bare anchor</a>
  ```
 
  <h3>Block Button</h3>
 
- Create block level buttons—those that span the full width of a parent— by adding `.btn-block`.
+ Create block level buttons—those that span the full width of a parent— by adding `.is-block`.
  ```
-    <button class="btn btn-white btn-block">.btn-white .btn-block</button>
-    <button class="btn btn-blue btn-block">.btn-blue .btn-block</button>
+    <button class="btn is-white is-block">.is-white .is-block</button>
+    <button class="btn is-blue is-block">.is-blue .is-block</button>
  ```
 
- <h3>Fixed Width Button</h3>
+ <h3>Minimum Width Button</h3>
 
- Create a fixed with button witht he class `.btn-fw`, this will set the button's minimun width.
+ Create a minimum with button with the class `.is-min-width`. This only sets the minimum width so that
+ buttons longer than the min width will not be effected.
  ```
-    <button class="btn btn-green btn-fw">Go</button>
-    <button class="btn btn-blue btn-fw">Yes</button>
+    <button class="btn is-green is-min-width">Go</button>
+    <button class="btn is-blue is-min-width">Yes</button>
+    <button class="btn is-white is-min-width">Longer than the min width</button>
  ```
 
  */
@@ -8406,8 +8410,49 @@ input[type="button"].btn-block {
 .dropdown {
   position: relative;
   display: inline-block; }
+  .dropup.is-open > .dropdown-menu,
+  .dropdown.is-open > .dropdown-menu {
+    display: block; }
+  .dropup.is-open > a,
+  .dropdown.is-open > a {
+    outline: 0; }
+  .dropup.is-open > .is-blue,
+  .dropdown.is-open > .is-blue {
+    background-color: #2985c5; }
+    .dropup.is-open > .is-blue.is-bare,
+    .dropdown.is-open > .is-blue.is-bare {
+      color: #4da0da;
+      background-color: rgba(0, 0, 0, 0.16); }
+  .dropup.is-open > .is-white,
+  .dropdown.is-open > .is-white {
+    background-color: #d6d6d6; }
+    .dropup.is-open > .is-white.is-bare,
+    .dropdown.is-open > .is-white.is-bare {
+      color: #797979;
+      background-color: rgba(0, 0, 0, 0.16); }
+  .dropup.is-open > .is-green,
+  .dropdown.is-open > .is-green {
+    background-color: #255b00; }
+    .dropup.is-open > .is-green.is-bare,
+    .dropdown.is-open > .is-green.is-bare {
+      color: #3c9400;
+      background-color: rgba(0, 0, 0, 0.16); }
+  .dropup.is-open > .is-orange,
+  .dropdown.is-open > .is-orange {
+    background-color: #ce6f00; }
+    .dropup.is-open > .is-orange.is-bare,
+    .dropdown.is-open > .is-orange.is-bare {
+      color: #ff8c08;
+      background-color: rgba(0, 0, 0, 0.16); }
+  .dropup.is-open > .is-red,
+  .dropdown.is-open > .is-red {
+    background-color: #9a1721; }
+    .dropup.is-open > .is-red.is-bare,
+    .dropdown.is-open > .is-red.is-bare {
+      color: #cb1f2c;
+      background-color: rgba(0, 0, 0, 0.16); }
 
-.dropdown-toggle:focus {
+.is-dropdown-toggle:focus {
   outline: 0; }
 
 .dropdown-menu {
@@ -8476,12 +8521,12 @@ input[type="button"].btn-block {
   color: #4a4a4a;
   background-color: #E9E9E9; }
 
-.dropdown-menu > .active {
+.dropdown-menu > li.is-active {
   border-top-color: transparent; }
-  .dropdown-menu > .active + li {
+  .dropdown-menu > li.is-active + li {
     border-top-color: transparent; }
 
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+.dropdown-menu > li.is-active > a, .dropdown-menu > li.is-active > a:hover, .dropdown-menu > li.is-active > a:focus {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
@@ -8497,42 +8542,6 @@ input[type="button"].btn-block {
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   cursor: not-allowed; }
-
-.open > .dropdown-menu {
-  display: block; }
-
-.open > a {
-  outline: 0; }
-
-.open > .btn-blue {
-  background-color: #2985c5; }
-  .open > .btn-blue.btn-bare {
-    color: #4da0da;
-    background-color: rgba(0, 0, 0, 0.16); }
-
-.open > .btn-white {
-  background-color: #d6d6d6; }
-  .open > .btn-white.btn-bare {
-    color: #797979;
-    background-color: rgba(0, 0, 0, 0.16); }
-
-.open > .btn-green {
-  background-color: #255b00; }
-  .open > .btn-green.btn-bare {
-    color: #3c9400;
-    background-color: rgba(0, 0, 0, 0.16); }
-
-.open > .btn-orange {
-  background-color: #ce6f00; }
-  .open > .btn-orange.btn-bare {
-    color: #ff8c08;
-    background-color: rgba(0, 0, 0, 0.16); }
-
-.open > .btn-red {
-  background-color: #9a1721; }
-  .open > .btn-red.btn-bare {
-    color: #cb1f2c;
-    background-color: rgba(0, 0, 0, 0.16); }
 
 /*
 
@@ -8552,9 +8561,10 @@ input[type="button"].btn-block {
     <div class="col-xs">
 
 
-        <div class="dropdown open">
-            <button class="btn btn-white icon-right dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown<i class="fa fa-caret-down"></i>
+        <div class="dropdown is-open">
+            <button class="btn is-white is-dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span>Dropdown</span>
+                <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li><a href="#">Action</a></li>
@@ -8570,9 +8580,10 @@ input[type="button"].btn-block {
     <div class="col-xs text-right">
 
 
-        <div class="dropdown open">
-            <button class="btn btn-blue icon-right dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown<i class="fa fa-caret-down"></i>
+        <div class="dropdown is-open">
+            <button class="btn is-blue is-dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span>Dropdown</span>
+                <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right" aria-labelledby="dropdownMenu2">
                 <li><a href="#">Action</a></li>
@@ -8600,9 +8611,10 @@ input[type="button"].btn-block {
     <div class="col-xs">
 
 
-        <div class="dropdown open">
-            <button class="btn btn-white icon-right dropdown-toggle" type="button" >
-                Dropdown<i class="fa fa-caret-down"></i>
+        <div class="dropdown is-open">
+            <button class="btn is-white is-dropdown-toggle" type="button" >
+                <span>Dropdown</span>
+                <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu has-caret">
                 <li><a href="#">Action</a></li>
@@ -8618,9 +8630,10 @@ input[type="button"].btn-block {
     <div class="col-xs text-right">
 
 
-        <div class="dropdown open">
-            <button class="btn btn-blue icon-right dropdown-toggle" type="button">
-                Dropdown<i class="fa fa-caret-down"></i>
+        <div class="dropdown is-open">
+            <button class="btn is-blue is-dropdown-toggle" type="button">
+                <span>Dropdown</span>
+                <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right has-caret">
                 <li><a href="#">Action</a></li>
@@ -8639,7 +8652,7 @@ input[type="button"].btn-block {
 
  <h3>Active and Disabled Links</h3>
 
- To show the selected link add `.active` to the `li` of the selected option. To disable any links add the `.is-disabled`
+ To show the selected link add `.is-active` to the `li` of the selected option. To disable any links add the `.is-disabled`
  class to the appropriate `li`.
  <div class="dropdown-demo"></div>
  ```
@@ -8647,12 +8660,13 @@ input[type="button"].btn-block {
     <div class="col-xs">
 
 
-        <div class="dropdown open">
-            <button class="btn btn-white icon-right dropdown-toggle" type="button" >
-                Dropdown<i class="fa fa-caret-down"></i>
+        <div class="dropdown is-open">
+            <button class="btn is-white is-dropdown-toggle" type="button" >
+                <span>Dropdown</span>
+                <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu">
-                <li class="active"><a href="#">Action</a></li>
+                <li class="is-active"><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li role="separator" class="divider"></li>
@@ -8665,9 +8679,10 @@ input[type="button"].btn-block {
     <div class="col-xs text-right">
 
 
-        <div class="dropdown open">
-            <button class="btn btn-blue icon-right dropdown-toggle" type="button">
-                Dropdown<i class="fa fa-caret-down"></i>
+        <div class="dropdown is-open">
+            <button class="btn is-blue is-dropdown-toggle" type="button">
+                <span>Dropdown</span>
+                <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right">
                 <li class="is-disabled"><a href="#">Action</a></li>

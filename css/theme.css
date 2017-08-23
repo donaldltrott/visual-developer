@@ -654,3 +654,7 @@ body .codedemo:after {
 .dropdown-demo + p + .codedemo {
     height: 260px;
 }
+
+.codedemo .btn:not(.is-dropdown-toggle) {
+    margin-bottom: 4px;
+}

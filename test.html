@@ -19,16 +19,16 @@
         /*border: 1px solid red;*/
         /*}*/
         .row + .row,
-        .row + .row-tight,
-        .row-tight + .row-tight,
-        .row-tight + .row {
+        .row + .row.is-tight,
+        .row.is-tight + .row.is-tight,
+        .row.is-tight + .row {
             margin-top: 24px;
         }
 
         .row.has-gutters [class^="col-"]:not(.no-style),
         .row.has-gutters [class*=" col-"]:not(.no-style),
-        .row-tight.has-gutters [class^="col-"]:not(.no-style),
-        .row-tight.has-gutters [class*=" col-"]:not(.no-style) {
+        .row.is-tight.has-gutters [class^="col-"]:not(.no-style),
+        .row.is-tight.has-gutters [class*=" col-"]:not(.no-style) {
             /*border: 1px solid lightgray;*/
             border-radius: 3px;
             /*padding: 12px;*/
@@ -39,8 +39,8 @@
             margin-bottom: 24px;
         }
 
-        .row-tight.has-gutters [class^="col-"]:not(.no-style),
-        .row-tight.has-gutters [class*=" col-"]:not(.no-style) {
+        .row.is-tight.has-gutters [class^="col-"]:not(.no-style),
+        .row.is-tight.has-gutters [class*=" col-"]:not(.no-style) {
             margin-bottom: 16px;
         }
 
@@ -390,7 +390,7 @@
             </fieldset>
             <fieldset>
                 <legend>Personal Information</legend>
-                <div class="row-tight">
+                <div class="row is-tight">
                     <div class="col-xs-5">
                         <div class="form-group ">
                             <label for="exampleInputEmail1">Phone Number</label>
@@ -984,16 +984,16 @@
             <h3>Open Invoice Summary</h3>
         </header>
         <section>
-            <div class="row-tight has-gutters testing">
+            <div class="row is-tight has-gutters testing">
                 <div class="col-sm-12 no-style">
-                    <div class="row-tight">
+                    <div class="row is-tight">
                         <div class="col-sm-3 no-style"><h4>Open Invoices ($)</h4></div>
                         <div class="col-sm-3 no-style"><h4>Open Invoices (#)</h4></div>
                         <div class="col-sm-6 no-style"></div>
                     </div>
                 </div>
                 <div class="col-sm-6 no-style">
-                    <div class="row-tight has-gutters">
+                    <div class="row is-tight has-gutters">
                         <div class="col-sm-6">
                             hello
                         </div>
@@ -1246,7 +1246,7 @@
     </div>
 
 
-    <div class="row-tight">
+    <div class="row is-tight">
         <div class="col-md">
             <h2>Small Business Just Got <strong>Bigger</strong>
                 <small>(So the say)</small>
@@ -1321,7 +1321,7 @@
         </div>
     </div>
 
-    <div class="row-tight gutter">
+    <div class="row is-tight gutter">
         <div class="col-md">
             <h2>Small Business Just Got <strong>Bigger</strong>
                 <small>(So the say)</small>

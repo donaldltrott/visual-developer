@@ -50,11 +50,11 @@
     &.has-gutters
         @include grid-steps(0, $grid-gutter-width)
 
-.row-tight
-    @include make-row($grid-gutter-width-md)
-    @include grid-steps($grid-gutter-width-md)
-    &.has-gutters
-        @include grid-steps(0, $grid-gutter-width-md)
+    &.is-tight
+        @include make-row($grid-gutter-width-md)
+        @include grid-steps($grid-gutter-width-md)
+        &.has-gutters
+            @include grid-steps(0, $grid-gutter-width-md)
 
 /*
  ## Grid System
@@ -146,18 +146,19 @@
 
  <h4>Row Sizing</h4>
 
- The gutters that are casued by either <code class="show-padding">padding</code> or <code class="show-margin">margin</code> can be somewhat adjusted using a new type of row called `.row-tight`.
- Whether using `.has-gutters` or the default behavior the `.row-tight` reduces the getters from the default `2.4rem` or `(24px)` to
- `1.6rem` or `(16px)`.
+ The gutters that are casued by either <code class="show-padding">padding</code> or
+ <code class="show-margin">margin</code> can be somewhat adjusted using a new row modifier `.is-tight`.
+ Whether using `.has-gutters` or the default behavior the `.is-tight` reduces the gutters from the
+ default `2.4rem` or `(24px)` to `1.6rem` or `(16px)`.
  <div class="grid-demo"></div>
  ```
- <div class="row-tight">
+ <div class="row is-tight">
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
  </div>
 
- <div class="row-tight has-gutters">
+ <div class="row is-tight has-gutters">
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
     <div class="col-xs">Content</div>
@@ -209,7 +210,7 @@
                 <td colspan="5">`24px` or `2.4rem` (`12px` or `1.2rem` on each side of the column)</td>
             </tr>
             <tr>
-                <th>Gutter Width `.row-tight`</tg>
+                <th>Gutter Width `.row.is-tight`</tg>
                 <td colspan="5">`16px` or `1.6rem` (`8px` or `0.8rem` on each side of the column)</td>
             </tr>
             <tr>

@@ -65,45 +65,42 @@ thead th
     .table
         background-color: $body-bg
 
-// Zebra-striping
-//
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+    // Zebra-striping
+    &.is-striped
+        > tbody > tr:nth-of-type(odd)
+            background-color: $table-bg-accent
 
-.table-striped
-    > tbody > tr:nth-of-type(odd)
-        background-color: $table-bg-accent
+    // Bordered version
+    //
+    // Add borders all around the table and between all the columns.
 
-// Bordered version
-//
-// Add borders all around the table and between all the columns.
+    &.is-bordered
+        border: 0.1rem solid $table-border-color
 
-.table-bordered
-    border: 0.1rem solid $table-border-color
+        > thead,
+        > tfoot
+            > tr
+                > th,
+                > td
+                    border: 0.1rem solid $table-border-color
 
-    > thead,
-    > tfoot
-        > tr
-            > th,
-            > td
-                border: 0.1rem solid $table-border-color
+        // Bottom align for column headings
+        > thead > tr > th
+            vertical-align: bottom
+            border-bottom: 0.2rem solid $table-head-border-color
 
-    // Bottom align for column headings
-    > thead > tr > th
-        vertical-align: bottom
-        border-bottom: 0.2rem solid $table-head-border-color
+        // Bottom align for column headings
+        > tfoot > tr > th,
+        > tfoot > tr > td
+            vertical-align: top
+            border-top: 0.2rem solid $table-head-border-color
 
-    // Bottom align for column headings
-    > tfoot > tr > th,
-    > tfoot > tr > td
-        vertical-align: top
-        border-top: 0.2rem solid $table-head-border-color
-
-    > tbody
-        > tr
-            > th,
-            > td
-                border-left: 0.1rem dashed $table-body-border-color
-                border-right: 0.1rem dashed $table-body-border-color
+        > tbody
+            > tr
+                > th,
+                > td
+                    border-left: 0.1rem dashed $table-body-border-color
+                    border-right: 0.1rem dashed $table-body-border-color
 
 //> thead,
     //> tbody,
@@ -150,7 +147,7 @@ table
 
 // Table backgrounds
 //
-// Exact selectors below required to override `.table-striped` and prevent
+// Exact selectors below required to override `.is-striped` and prevent
 // inheritance to nested tables.
 
 // Generate the contextual variants
@@ -265,10 +262,10 @@ table
 
  <h3>Striped Table</h3>
 
- Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+ Use `.is-striped` to add zebra-striping to any table row within the `<tbody>`.
 
  ```
- <table class="table table-striped">
+ <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -304,7 +301,7 @@ table
  <h3>Contextual Classes</h3>
 
  ```
-  <table class="table table-striped">
+  <table class="table is-striped">
     <thead>
         <tr>
             <th>Type</th>
@@ -342,7 +339,7 @@ table
  left of the cell and then align the text to the right.
 
  ```
- <table class="table table-striped">
+ <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -390,7 +387,7 @@ table
  add additional classes of `.sort-asc` or `.sort-desc` to indicate that a column is sorting its data ascending or
  descending.
  ```
- <table class="table table-striped">
+ <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>

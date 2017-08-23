@@ -57,7 +57,7 @@
  We can use media queries to target a certain breakpoint and anything __larger__ than it using these:
 
  <div class="table-container">
-     <table class="table table-bordered table-striped">
+     <table class="table is-bordered is-striped">
         <thead>
             <tr>
                 <th>Min</th>
@@ -93,7 +93,7 @@
  We can use media queries to target a certain breakpoint and anything __smaller__ than it using these:
 
  <div class="table-container">
-     <table class="table table-bordered table-striped">
+     <table class="table is-bordered is-striped">
         <thead>
             <tr>
                 <th>Min</th>
@@ -129,7 +129,7 @@
  We occasionally expand on these media queries to include a `min-width` and `max-width` to limit CSS to a narrower set of devices:
 
  <div class="table-container">
-     <table class="table table-bordered table-striped">
+     <table class="table is-bordered is-striped">
         <thead>
             <tr>
                 <th>Min</th>
@@ -5488,7 +5488,7 @@ hr {
  See how aspects of the grid system work across multiple devices with a handy table.
 
  <div class="table-container">
-     <table class="table table-bordered table-striped">
+     <table class="table is-bordered is-striped">
         <thead>
             <tr>
                 <th></th>
@@ -5943,13 +5943,13 @@ p.header-support {
 p {
   margin: 0 0 1.0000000003rem; }
 
-.lead {
+.is-lead {
   margin-bottom: 2.0000000006rem;
   font-size: 1.61rem;
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 480px) {
-    .lead {
+    .is-lead {
       font-size: 2.1rem; } }
 
 small,
@@ -5976,13 +5976,13 @@ mark,
 .text-nowrap {
   white-space: nowrap; }
 
-.text-lowercase {
+.is-lowercase {
   text-transform: lowercase; }
 
-.text-uppercase {
+.is-uppercase {
   text-transform: uppercase; }
 
-.text-capitalize {
+.is-capitalized {
   text-transform: capitalize; }
 
 .text-muted {
@@ -6102,10 +6102,10 @@ address {
 
  <h3>Lead Body Copy</h3>
 
- Make a paragraph stand out by adding `.lead`.
+ Make a paragraph stand out by adding `.is-lead`.
 
  ```
- <p class="lead">
+ <p class="is-lead">
     In porta pellentesque tortor id tincidunt. Phasellus interdum finibus mauris, at consectetur ipsum aliquet at.
  </p>
  ```
@@ -6189,9 +6189,9 @@ address {
  Transform text in components with text capitalization classes.
 
  ```
- <p class="text-lowercase">Lowercased text</p>
- <p class="text-uppercase">Uppercased text</p>
- <p class="text-capitalize">Capitalized text</p>
+ <p class="is-lowercase">Lowercased text</p>
+ <p class="is-uppercase">Uppercased text</p>
+ <p class="is-capitalized">Capitalized text</p>
  ```
 
  <h3>Addresses</h3>
@@ -6544,28 +6544,26 @@ thead th {
     border-top: 0.2rem solid #c9c9c9; }
   .table .table {
     background-color: #F5F5F5; }
-
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #F5F5F5; }
-
-.table-bordered {
-  border: 0.1rem solid #BCBCBC; }
-  .table-bordered > thead > tr > th,
-  .table-bordered > thead > tr > td,
-  .table-bordered > tfoot > tr > th,
-  .table-bordered > tfoot > tr > td {
+  .table.is-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #F5F5F5; }
+  .table.is-bordered {
     border: 0.1rem solid #BCBCBC; }
-  .table-bordered > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: 0.2rem solid #a3a3a3; }
-  .table-bordered > tfoot > tr > th,
-  .table-bordered > tfoot > tr > td {
-    vertical-align: top;
-    border-top: 0.2rem solid #a3a3a3; }
-  .table-bordered > tbody > tr > th,
-  .table-bordered > tbody > tr > td {
-    border-left: 0.1rem dashed #c9c9c9;
-    border-right: 0.1rem dashed #c9c9c9; }
+    .table.is-bordered > thead > tr > th,
+    .table.is-bordered > thead > tr > td,
+    .table.is-bordered > tfoot > tr > th,
+    .table.is-bordered > tfoot > tr > td {
+      border: 0.1rem solid #BCBCBC; }
+    .table.is-bordered > thead > tr > th {
+      vertical-align: bottom;
+      border-bottom: 0.2rem solid #a3a3a3; }
+    .table.is-bordered > tfoot > tr > th,
+    .table.is-bordered > tfoot > tr > td {
+      vertical-align: top;
+      border-top: 0.2rem solid #a3a3a3; }
+    .table.is-bordered > tbody > tr > th,
+    .table.is-bordered > tbody > tr > td {
+      border-left: 0.1rem dashed #c9c9c9;
+      border-right: 0.1rem dashed #c9c9c9; }
 
 table col[class*="col-"] {
   position: static;
@@ -6777,10 +6775,10 @@ table th[class*="col-"] {
 
  <h3>Striped Table</h3>
 
- Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+ Use `.is-striped` to add zebra-striping to any table row within the `<tbody>`.
 
  ```
- <table class="table table-striped">
+ <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -6816,7 +6814,7 @@ table th[class*="col-"] {
  <h3>Contextual Classes</h3>
 
  ```
-  <table class="table table-striped">
+  <table class="table is-striped">
     <thead>
         <tr>
             <th>Type</th>
@@ -6854,7 +6852,7 @@ table th[class*="col-"] {
  left of the cell and then align the text to the right.
 
  ```
- <table class="table table-striped">
+ <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -6902,7 +6900,7 @@ table th[class*="col-"] {
  add additional classes of `.sort-asc` or `.sort-desc` to indicate that a column is sorting its data ascending or
  descending.
  ```
- <table class="table table-striped">
+ <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
@@ -7690,7 +7688,7 @@ input[type="search"] {
  security number, or any other custom application. These are the available classes and functions.
 
  <div class="table-container">
-    <table class="table table-striped table-bordered">
+    <table class="table is-striped is-bordered">
         <thead>
             <tr>
                 <th>Class</th>
@@ -8299,7 +8297,7 @@ input[type="button"].btn-block {
  Use a single or combination of the available classes for toggling content across viewport breakpoints.
 
  <div class="table-container">
-     <table class="table table-bordered table-striped">
+     <table class="table is-bordered is-striped">
         <thead>
             <tr>
                 <th></th>

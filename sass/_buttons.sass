@@ -46,7 +46,7 @@
             margin-left: $spacing-lg
 
 a.btn
-    &.disabled,
+    &.is-disabled,
     fieldset[disabled] &
         pointer-events: none
 
@@ -195,12 +195,12 @@ input[type="button"]
  <h3>Disabled Button</h3>
 
  Make `buttons` look unclickable by adding the `disabled` attribute and anchor `<a>` by
- adding the `.disabled` class.
+ adding the `.is-disabled` class.
  ```
     <button class="btn btn-blue" disabled>Disabled button</button>
     <button class="btn btn-green btn-bare" disabled>Disabled bare button</button>
-    <a href="#" class="btn btn-red disabled">Disabled anchor</a>
-    <a href="#" class="btn btn-orange btn-bare disabled">Disabled bare anchor</a>
+    <a href="#" class="btn btn-red is-disabled">Disabled anchor</a>
+    <a href="#" class="btn btn-orange btn-bare is-disabled">Disabled bare anchor</a>
  ```
 
  <h3>Block Button</h3>

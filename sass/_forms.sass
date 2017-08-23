@@ -153,7 +153,7 @@ output
     fieldset[disabled] &
         cursor: $cursor-disabled
 
-    &.input-no-label
+    &.has-no-label
         margin-top: 1.9rem
 
 //// [converter] extracted textarea& to textarea.form-control
@@ -248,25 +248,25 @@ input[type="search"]
         + .btn
             margin-left: $spacing-sm
 
-    .input-stretch
-        width: 100%
+        &.is-stretched
+            width: 100%
 
     .input-decorator
         font-size: $font-size-large
         padding: 0 $spacing-md
         line-height: $font-size-base + ($spacing-lg * 2)
         color: $gray
-        &.input-decorator-left
+        &.is-decorator-left
             padding-right: $spacing-sm
             padding-left: $spacing-lg
-        &.input-decorator-right
+        &.is-decorator-right
             padding-left: $spacing-sm
             padding-right: $spacing-lg
-        &.input-decorator-first
+        &.is-decorator-first
             padding-left: 0
-        &.input-decorator-last
+        &.is-decorator-last
             padding-right: 0
-        &.text-decorator
+        &.is-decorator-text
             font-size: $font-size-small
 
 // Checkboxes and radios
@@ -401,7 +401,7 @@ input[type="search"]
 .checkbox
     input[type="checkbox"]
         &[disabled],
-        &.disabled
+        &.is-disabled
             cursor: $cursor-disabled
             + label
                 cursor: $cursor-disabled
@@ -415,7 +415,7 @@ input[type="search"]
 .radio
     input[type="radio"]
         &[disabled],
-        &.disabled
+        &.is-disabled
             cursor: $cursor-disabled
             + label
                 cursor: $cursor-disabled
@@ -595,8 +595,8 @@ input[type="search"]
     .help-text
         flex: 1 auto
 
-    .help-text-right
-        text-align: right
+        &.is-right
+            text-align: right
 
 //// Inline forms
 ////
@@ -804,7 +804,7 @@ input[type="search"]
             <label for="exampleTextarea">Tell us about you</label>
             <textarea class="form-control" rows="5" id="exampleTextarea" placeholder="Brief life history"></textarea>
              <div class="help-block">
-                <span class="help-text help-text-right">52/4000</span>
+                <span class="help-text is-right">52/4000</span>
             </div>
         </div>
 
@@ -821,13 +821,13 @@ input[type="search"]
         <div class="form-group">
             <label>Phone Number</label>
             <div class="input-inline">
-                <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+                <span class="input-decorator is-decorator-left is-decorator-first">(</span>
                 <input type="text" class="form-control" size="6" placeholder="xxx">
-                <span class="input-decorator input-decorator-right">)</span>
+                <span class="input-decorator is-decorator-right">)</span>
                 <input type="text" class="form-control" size="6" placeholder="xxx">
                 <span class="input-decorator">-</span>
-                <input type="text" class="form-control input-stretch" placeholder="xxxx">
-                <span class="input-decorator text-decorator">Ext.</span>
+                <input type="text" class="form-control is-stretched" placeholder="xxxx">
+                <span class="input-decorator is-decorator-text">Ext.</span>
                 <input type="text" class="form-control" size="10" placeholder="xxxxxx">
             </div>
         </div>
@@ -987,7 +987,7 @@ input[type="search"]
  <h3>Input without Label</h3>
 
  You might want to put two inputs next to each other in a grid layout, but only have one label. To line up the
- inputs you can add `.input-no-label` to one of them.
+ inputs you can add `.has-no-label` to one of them.
  ```
  <div class="row is-tight">
     <div class="col-xs">
@@ -998,7 +998,7 @@ input[type="search"]
     </div>
     <div class="col-xs">
         <div class="form-group">
-            <input type="text" class="form-control input-no-label" placeholder="Enter Last Name">
+            <input type="text" class="form-control has-no-label" placeholder="Enter Last Name">
         </div>
     </div>
  </div>
@@ -1016,13 +1016,13 @@ input[type="search"]
  <div class="form-group">
     <label>Phone Number</label>
     <div class="input-inline">
-        <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+        <span class="input-decorator is-decorator-left is-decorator-first">(</span>
         <input type="text" class="form-control" size="3">
-        <span class="input-decorator input-decorator-right">)</span>
+        <span class="input-decorator is-decorator-right">)</span>
         <input type="text" class="form-control" size="3">
         <span class="input-decorator">-</span>
         <input type="text" class="form-control">
-        <span class="input-decorator text-decorator">Ext.</span>
+        <span class="input-decorator is-decorator-text">Ext.</span>
         <input type="text" class="form-control" size="10">
     </div>
  </div>
@@ -1036,7 +1036,7 @@ input[type="search"]
         <span class="input-decorator">/</span>
         <input type="text" class="form-control"  placeholder="DD">
         <span class="input-decorator">/</span>
-        <select class="form-control input-stretch">
+        <select class="form-control is-stretched">
             <option>1950s</option>
             <option>1960s</option>
             <option>1970s</option>
@@ -1080,34 +1080,34 @@ input[type="search"]
                 and also sets the `line-height` of the decorator to the height of the input.</td>
             </tr>
             <tr>
-                <td>`.text-decorator`</td>
+                <td>`.is-decorator-text`</td>
                 <td>This is the modifier that need to be added to `.input-decorator` to accommodate for textual
                  decorators. It sets the `font-size` to small and lightens up the color just a bit</td>
             </tr>
             <tr>
-                <td>`.input-stretch`</td>
+                <td>`.is-stretched`</td>
                 <td>This modifier can be place on to any input within the `.input-inline` group. It will set
                 it's width to 100%, so that it takes up all remaining space. You can add this to multiple inputs
                 and they will split the remaining space evenly.</td>
             </tr>
             <tr>
-                <td>`.input-decorator-left`</td>
+                <td>`.is-decorator-left`</td>
                 <td>This is used if placing a decorator on the left side of an input and you want it to visually
                 be closer to that input that the previous input. It reduces the `padding-right` of the decorator</td>
             </tr>
             <tr>
-                <td>`.input-decorator-right`</td>
+                <td>`.is-decorator-right`</td>
                 <td>This is used if placing a decorator on the right side of an input and you want it to visually
                 be closer to that input that the next input. It reduces the `padding-left` of the decorator</td>
             </tr>
             <tr>
-                <td>`.input-decorator-first`</td>
+                <td>`.is-decorator-first`</td>
                 <td>This is used if placing a decorator at the very beginning of a row. It removes the
                 `padding-left` of the decorator so that there is no white space between the beginning of the
                 row and the decorator.</td>
             </tr>
             <tr>
-                <td>`.input-decorator-last`</td>
+                <td>`.is-decorator-last`</td>
                 <td>This is used if placing a decorator at the very end of a row. It removes the
                 `padding-right` of the decorator so that there is no white space between the end of the
                 row and the decorator.</td>
@@ -1119,15 +1119,15 @@ input[type="search"]
 
  ```
  <div class="input-inline">
-    <span class="input-decorator input-decorator-left input-decorator-first">(</span>
+    <span class="input-decorator is-decorator-left is-decorator-first">(</span>
     <input type="text" class="form-control" size="3">
-    <span class="input-decorator input-decorator-right">)</span>
+    <span class="input-decorator is-decorator-right">)</span>
     <input type="text" class="form-control" size="3">
     <span class="input-decorator">-</span>
-    <input type="text" class="form-control input-stretch">
-    <span class="input-decorator text-decorator">Ext.</span>
+    <input type="text" class="form-control is-stretched">
+    <span class="input-decorator is-decorator-text">Ext.</span>
     <input type="text" class="form-control" size="10">
-    <span class="input-decorator text-decorator input-decorator-last">?</span>
+    <span class="input-decorator is-decorator-text is-decorator-last">?</span>
  </div>
  ```
 
@@ -1142,7 +1142,7 @@ input[type="search"]
     <input type="email" class="form-control" id="helpTextInput">
     <div class="help-block">
         <span class="help-text">A block of help text that breaks onto a new line and may extend beyond one line</span>
-        <span class="help-text help-text-right">More Help Text</span>
+        <span class="help-text is-right">More Help Text</span>
     </div>
  </div>
  ```
@@ -1219,7 +1219,7 @@ input[type="search"]
            placeholder="Email">
     <div class="help-block">
         <span class="help-text ">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-        <span class="help-text help-text-right text-nowrap">52/4000</span>
+        <span class="help-text is-right text-nowrap">52/4000</span>
     </div>
  </div>
 
@@ -1229,7 +1229,7 @@ input[type="search"]
            placeholder="Email">
     <div class="help-block">
         <span class="help-text has-success">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-        <span class="help-text help-text-right text-nowrap">52/4000</span>
+        <span class="help-text is-right text-nowrap">52/4000</span>
     </div>
  </div>
 
@@ -1239,7 +1239,7 @@ input[type="search"]
            placeholder="Email">
     <div class="help-block">
         <span class="help-text">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-        <span class="help-text help-text-right text-nowrap has-warning">52/4000</span>
+        <span class="help-text is-right text-nowrap has-warning">52/4000</span>
     </div>
  </div>
 
@@ -1249,7 +1249,7 @@ input[type="search"]
            placeholder="Email">
     <div class="help-block has-error">
         <span class="help-text ">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-        <span class="help-text help-text-right text-nowrap">52/4000</span>
+        <span class="help-text is-right text-nowrap">52/4000</span>
     </div>
  </div>
  ```

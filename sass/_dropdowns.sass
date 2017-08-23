@@ -121,7 +121,7 @@
 //
 // Gray out text and ensure the hover/focus state remains gray
 
-.dropdown-menu > .disabled > a
+.dropdown-menu > .is-disabled > a
     &,
     &:hover,
     &:focus
@@ -356,7 +356,7 @@
 
  <h3>Active and Disabled Links</h3>
 
- To show the selected link add `.active` to the `li` of the selected option. To disable any links add the `.disabled`
+ To show the selected link add `.active` to the `li` of the selected option. To disable any links add the `.is-disabled`
  class to the appropriate `li`.
  <div class="dropdown-demo"></div>
  ```
@@ -387,7 +387,7 @@
                 Dropdown<i class="fa fa-caret-down"></i>
             </button>
             <ul class="dropdown-menu is-right">
-                <li class="disabled"><a href="#">Action</a></li>
+                <li class="is-disabled"><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li role="separator" class="divider"></li>

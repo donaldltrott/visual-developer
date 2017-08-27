@@ -8,8 +8,8 @@ table
     font-size: $font-size-base
 
 caption
-    padding-top: $table-cell-padding
-    padding-bottom: $table-cell-padding
+    padding-top: $table-cell-padding-vertical
+    padding-bottom: $table-cell-padding-vertical
     color: $table-caption-color
     text-align: left
 
@@ -32,7 +32,7 @@ thead th
         > tr
             > th,
             > td
-                padding: $table-cell-padding
+                padding: $table-cell-padding-vertical $table-cell-padding-horizontal
                 line-height: $line-height-base
                 vertical-align: top
                 border-top: 0.1rem dashed $table-body-border-color
@@ -165,7 +165,7 @@ table
         > tr
             > th,
             > td
-                &.currency
+                &.is-currency
                     text-align: right
                     position: relative
                     padding-left: $spacing-xxl
@@ -175,6 +175,9 @@ table
                         position: absolute
                         left: $spacing-md
                         color: $gray-light
+                &.is-actions
+                    padding: 0
+
 
 // data tables
 
@@ -183,7 +186,7 @@ table
         > tr
             > th,
             > td
-                &.sortable
+                &.is-sortable
                     color: $blue
                     font-weight: bold
                     cursor: pointer
@@ -201,14 +204,14 @@ table
                         background: $off-white
                         &:after
                             color: $gray-lighter
-                    &.sort-asc
+                    &.is-asc
                         color: $blue-dark
                         background: $off-white
                         &:after
                             content: $fa-var-sort-asc
                             color: $blue-dark
                             margin-top: 0.3rem
-                    &.sort-desc
+                    &.is-desc
                         color: $blue-dark
                         background: $off-white
                         &:after
@@ -335,7 +338,7 @@ table
 
  <h4>Currency</h4>
 
- Use `.currency` on a `th` or `td` to indicate the cell is used for currency. This class will add a `$` to the
+ Use `.is-currency` on a `th` or `td` to indicate the cell is used for currency. This class will add a `$` to the
  left of the cell and then align the text to the right.
 
  ```
@@ -353,19 +356,7 @@ table
             <th scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
-            <td class="currency">300.00</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td class="currency">1,254.25</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>William</td>
-            <td>Cannon</td>
-            <td class="currency">584.79</td>
+            <td class="is-currency">300.00</td>
         </tr>
     </tbody>
     <tfoot>
@@ -373,7 +364,7 @@ table
             <th scope="row"></th>
             <td></td>
             <td></td>
-            <td class="currency">2,139.04</td>
+            <td class="is-currency">2,139.04</td>
         </tr>
     </tfoot>
  </table>
@@ -383,17 +374,17 @@ table
 
  <h4>Sorting</h4>
 
- Add a class of `.sortable` to a `th` in the `thead` to make it appear to be able to be clicked to sort the data. You can
- add additional classes of `.sort-asc` or `.sort-desc` to indicate that a column is sorting its data ascending or
+ Add a class of `.is-sortable` to a `th` in the `thead` to make it appear to be able to be clicked to sort the data. You can
+ add additional classes of `.is-asc` or `.is-desc` to indicate that a column is sorting its data ascending or
  descending.
  ```
  <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
-            <th class="sortable">First Name</th>
-            <th class="sortable sort-asc">Last Name</th>
-            <th class="sortable sort-desc">Username</th>
+            <th class="is-sortable">First Name</th>
+            <th class="is-sortable is-asc">Last Name</th>
+            <th class="is-sortable is-desc">Username</th>
             <th>Date</th>
         </tr>
     </thead>
@@ -405,23 +396,43 @@ table
             <td>@mdo</td>
             <td>10/21/16</td>
         </tr>
+    </tbody>
+ </table>
+ ```
+
+ <h4>Action Buttons</h4>
+
+ Many times you will need a set of action buttons for a specific row of a table, add the class `.is-actions` to the cell to
+ remove the cell's padding to allow for the extra padding casued by a button.
+ ```
+ <table class="table is-striped">
+    <caption>Optional table caption.</caption>
+    <thead>
         <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>10/20/16</td>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th class="text-right">Actions</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>10/24/16</td>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td class="is-actions">
+                <div class="btn-group is-right">
+                    <button class="btn is-blue is-bare"><i class="fa fa-pencil"></i></button>
+                    <button class="btn is-red is-bare"><i class="fa fa-trash-o"></i></button>
+                </div>
+            </td>
         </tr>
     </tbody>
  </table>
  ```
+
 
 
  */

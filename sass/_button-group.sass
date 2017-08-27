@@ -1,0 +1,182 @@
+//
+// Button groups
+// --------------------------------------------------
+
+// Make the div behave like a button
+.btn-group
+    position: relative
+    display: flex
+
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn + .dropdown,
+    .btn-group + .btn,
+    .btn-group + .btn-group,
+    .btn-group + .dropdown,
+    .dropdown + .btn,
+    .dropdown + .btn-group,
+    .dropdown + .dropdown
+        margin-left: -1px
+
+    > .btn
+        position: relative
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active,
+        &.is-active
+            z-index: 2
+
+        &:not(:first-child):not(:last-child)
+            border-radius: 0
+
+
+
+        &:last-child:not(:first-child)
+            @include border-left-radius(0)
+
+
+    > .dropdown
+        &:not(:first-child):not(:last-child)
+            > .is-dropdown-toggle
+                border-radius: 0
+
+        &:first-child
+            margin-left: 0
+            &:not(:last-child)
+                > .is-dropdown-toggle
+                    @include border-right-radius(0)
+
+        &:last-child:not(:first-child)
+            > .is-dropdown-toggle
+                @include border-left-radius(0)
+
+    &.is-justified
+        flex-grow: 1
+        flex-shrink: 0
+        > .btn
+            flex: 1
+            flex-grow: 1
+            flex-shrink: 0
+        > .dropdown
+            display: flex
+            flex: 1
+            flex-grow: 1
+            flex-shrink: 0
+            > .is-dropdown-toggle
+                flex: 1
+                flex-grow: 1
+                flex-shrink: 0
+
+    &.is-centered
+        -webkit-justify-content: center
+        -ms-flex-pack: center
+        -webkit-box-pack: center
+        justify-content: center
+        text-align: center
+
+    &.is-right
+        -webkit-justify-content: flex-end
+        -ms-flex-pack: end
+        -webkit-box-pack: end
+        justify-content: flex-end
+        text-align: end
+
+//// Optional: Group multiple button groups together for a toolbar
+//.btn-toolbar {
+//    margin-left: -5px; // Offset the first child's margin
+//    @include clearfix;
+//
+//    .btn,
+//    .btn-group,
+//    .input-group {
+//        float: left;
+//}
+//    > .btn,
+//    > .btn-group,
+//    > .input-group {
+//        margin-left: 5px;
+//}
+//}
+//
+
+/*
+ ##Button Group
+
+ Group a series of buttons together on a single line with the button group.
+
+ <h3>Basic Button Group</h3>
+
+ Wrap a series of buttons with `.btn` in `.btn-group`.
+ ```
+ <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+ ```
+
+ <h3>Groups with Dropdowns</h3>
+
+ Add dropdowns to your group without a problem
+ ```
+ <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+    <div class="dropdown">
+        <button class="btn is-white is-dropdown-toggle" type="button">
+            <span>Dropdown</span>
+            <span><i class="fa fa-caret-down"></i></span>
+        </button>
+        <ul class="dropdown-menu has-caret is-right">
+            <li class="active"><a href="#">Action</a></li>
+        </ul>
+    </div>
+ </div>
+ ```
+
+
+ <h3>Button Group Alignment</h3>
+
+ Align button groups by using `.is-centered` and `.is-right`.
+ ```
+ <div class="btn-group is-centered">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+
+ <hr/>
+
+ <div class="btn-group is-right">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+ ```
+
+ 
+
+ <h3>Justified Groups</h3>
+
+ Make a group of buttons or anchors stretch at equal sizes to span the entire width of its parent.
+ ```
+ <div class="btn-group is-justified">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+
+ <hr/>
+
+ <div class="btn-group is-justified">
+    <a href="#" class="btn is-white">Left</a>
+    <a href="#" class="btn is-white">Middle</a>
+    <a href="#" class="btn is-white">Right</a>
+ </div>
+ ```
+
+
+
+ */

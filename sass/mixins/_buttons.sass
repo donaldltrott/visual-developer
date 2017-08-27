@@ -9,14 +9,14 @@
     border-color: transparent
 
     &:focus,
-    &.focus,
+    &.is-focus,
     &:hover,
-    &.hover
+    &.is-hover
         color: darken($color, 5%)
         background-color: rgba(0, 0, 0, 0.06)
 
     &:active,
-    &.active
+    &.is-active
         color: darken($color, 5%)
         background-color: rgba(0, 0, 0, 0.16)
 
@@ -24,13 +24,13 @@
     &[disabled],
     fieldset[disabled] &
         &,
-        &.active,
-        &.hover,
-        &.focus,
+        &.is-active,
+        &.is-hover,
+        &.is-focus,
         &:active,
         &:hover,
         &:focus,
-        &.focus
+        &.is-focus
             color: rgba(0, 0, 0, 0.20)
             background-color: transparent
             cursor: $cursor-disabled
@@ -41,14 +41,14 @@
     border-color: $border-color
 
     &:focus,
-    &.focus,
+    &.is-focus,
     &:hover,
-    &.hover
+    &.is-hover
         color: $color
         background-color: darken($bg, 8%)
 
     &:active,
-    &.active
+    &.is-active
         color: $color
         background-color: darken($bg, 16%)
 
@@ -56,13 +56,13 @@
     &[disabled],
     fieldset[disabled] &
         &,
-        &.active,
-        &.hover,
-        &.focus,
+        &.is-active,
+        &.is-hover,
+        &.is-focus,
         &:active,
         &:hover,
         &:focus,
-        &.focus
+        &.is-focus
             color: rgba(0, 0, 0, 0.20)
             background-color: rgba(0, 0, 0, 0.04)
             cursor: $cursor-disabled

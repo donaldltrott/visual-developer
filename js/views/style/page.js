@@ -158,7 +158,10 @@ define([
                 $(".kalei-sheet-submenu li .main-link").on('click', function (ev) {
                     $(".dons-subnav li").removeClass('active');
                     $('html, body').animate({
-                        scrollTop: $(".kalei-comments h2:contains('" + $(ev.currentTarget).text() + "')").offset().top - 12
+                        // scrollTop: $(".kalei-comments h2:contains('" + $(ev.currentTarget).text() + "')").offset().top - 12
+                        scrollTop: $(".kalei-comments h2").filter(function(){
+                            return $(this).text() === $(ev.currentTarget).text();
+                        }).offset().top - 12
                     }, 400);
                 });
 
@@ -166,20 +169,21 @@ define([
                     $(".dons-subnav li").removeClass('active');
                     $(ev.currentTarget).addClass('active');
                     $('html, body').animate({
-                        scrollTop: $(".kalei-comments h3:contains('" + $(ev.currentTarget).text() + "')").offset().top - 12
+                        // scrollTop: $(".kalei-comments h3:contains('" + $(ev.currentTarget).text() + "')").offset().top - 12
+                        scrollTop: $(".kalei-comments h3").filter(function(){
+                            return $(this).text() === $(ev.currentTarget).text();
+                        }).offset().top - 12
                     }, 400);
                 });
 
                 $(window).scroll(function () {
                     $(".kalei-documentation").each(function () {
-                        console.log('this', this);
-                        console.log('helloooooo', $(this).find('.kalei-comments > h3').text());
                         if (that.is_on_screen($(this), 40)) {
                             $(".kalei-sheet-submenu > ul > li").removeClass('active');
-                            $(".kalei-sheet-submenu li:contains('" + $(this).find('.kalei-comments > h2').text() + "')").addClass('active');
-
-
-                            // $(".kalei-sheet-submenu li .dons-subnav li:contains('Inline')").addClass('active');
+                            var checkThisText = $(this).find('.kalei-comments > h2').text();
+                            $(".kalei-sheet-submenu li > .main-link").filter(function(){
+                                return $(this).text() === checkThisText;
+                            }).parent().addClass('active');
                         }
                     });
                 });

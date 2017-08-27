@@ -6522,7 +6522,7 @@ thead th {
   .table > tbody > tr > td,
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
-    padding: 0.8rem;
+    padding: 0.8rem 1.2rem;
     line-height: 1.428571429;
     vertical-align: top;
     border-top: 0.1rem dashed #c9c9c9; }
@@ -6664,29 +6664,37 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.danger:hover > th {
   background-color: #ffd1d1; }
 
-.table > thead > tr > th.currency,
-.table > thead > tr > td.currency,
-.table > tbody > tr > th.currency,
-.table > tbody > tr > td.currency,
-.table > tfoot > tr > th.currency,
-.table > tfoot > tr > td.currency {
+.table > thead > tr > th.is-currency,
+.table > thead > tr > td.is-currency,
+.table > tbody > tr > th.is-currency,
+.table > tbody > tr > td.is-currency,
+.table > tfoot > tr > th.is-currency,
+.table > tfoot > tr > td.is-currency {
   text-align: right;
   position: relative;
   padding-left: 2.4rem; }
-  .table > thead > tr > th.currency:before,
-  .table > thead > tr > td.currency:before,
-  .table > tbody > tr > th.currency:before,
-  .table > tbody > tr > td.currency:before,
-  .table > tfoot > tr > th.currency:before,
-  .table > tfoot > tr > td.currency:before {
+  .table > thead > tr > th.is-currency:before,
+  .table > thead > tr > td.is-currency:before,
+  .table > tbody > tr > th.is-currency:before,
+  .table > tbody > tr > td.is-currency:before,
+  .table > tfoot > tr > th.is-currency:before,
+  .table > tfoot > tr > td.is-currency:before {
     content: "";
     font-family: FontAwesome;
     position: absolute;
     left: 0.8rem;
     color: #BCBCBC; }
 
-.table > thead > tr > th.sortable,
-.table > thead > tr > td.sortable {
+.table > thead > tr > th.is-actions,
+.table > thead > tr > td.is-actions,
+.table > tbody > tr > th.is-actions,
+.table > tbody > tr > td.is-actions,
+.table > tfoot > tr > th.is-actions,
+.table > tfoot > tr > td.is-actions {
+  padding: 0; }
+
+.table > thead > tr > th.is-sortable,
+.table > thead > tr > td.is-sortable {
   color: #62abde;
   font-weight: bold;
   cursor: pointer;
@@ -6697,34 +6705,34 @@ table th[class*="col-"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .table > thead > tr > th.sortable:after,
-  .table > thead > tr > td.sortable:after {
+  .table > thead > tr > th.is-sortable:after,
+  .table > thead > tr > td.is-sortable:after {
     content: "";
     font-family: FontAwesome;
     position: absolute;
     right: 0.8rem;
     color: #E9E9E9; }
-  .table > thead > tr > th.sortable:hover,
-  .table > thead > tr > td.sortable:hover {
+  .table > thead > tr > th.is-sortable:hover,
+  .table > thead > tr > td.is-sortable:hover {
     background: #F5F5F5; }
-    .table > thead > tr > th.sortable:hover:after,
-    .table > thead > tr > td.sortable:hover:after {
+    .table > thead > tr > th.is-sortable:hover:after,
+    .table > thead > tr > td.is-sortable:hover:after {
       color: #D4D4D4; }
-  .table > thead > tr > th.sortable.sort-asc,
-  .table > thead > tr > td.sortable.sort-asc {
+  .table > thead > tr > th.is-sortable.is-asc,
+  .table > thead > tr > td.is-sortable.is-asc {
     color: #296aa3;
     background: #F5F5F5; }
-    .table > thead > tr > th.sortable.sort-asc:after,
-    .table > thead > tr > td.sortable.sort-asc:after {
+    .table > thead > tr > th.is-sortable.is-asc:after,
+    .table > thead > tr > td.is-sortable.is-asc:after {
       content: "";
       color: #296aa3;
       margin-top: 0.3rem; }
-  .table > thead > tr > th.sortable.sort-desc,
-  .table > thead > tr > td.sortable.sort-desc {
+  .table > thead > tr > th.is-sortable.is-desc,
+  .table > thead > tr > td.is-sortable.is-desc {
     color: #296aa3;
     background: #F5F5F5; }
-    .table > thead > tr > th.sortable.sort-desc:after,
-    .table > thead > tr > td.sortable.sort-desc:after {
+    .table > thead > tr > th.is-sortable.is-desc:after,
+    .table > thead > tr > td.is-sortable.is-desc:after {
       content: "";
       color: #296aa3;
       margin-top: -0.3rem; }
@@ -6848,7 +6856,7 @@ table th[class*="col-"] {
 
  <h4>Currency</h4>
 
- Use `.currency` on a `th` or `td` to indicate the cell is used for currency. This class will add a `$` to the
+ Use `.is-currency` on a `th` or `td` to indicate the cell is used for currency. This class will add a `$` to the
  left of the cell and then align the text to the right.
 
  ```
@@ -6866,19 +6874,7 @@ table th[class*="col-"] {
             <th scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
-            <td class="currency">300.00</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td class="currency">1,254.25</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>William</td>
-            <td>Cannon</td>
-            <td class="currency">584.79</td>
+            <td class="is-currency">300.00</td>
         </tr>
     </tbody>
     <tfoot>
@@ -6886,7 +6882,7 @@ table th[class*="col-"] {
             <th scope="row"></th>
             <td></td>
             <td></td>
-            <td class="currency">2,139.04</td>
+            <td class="is-currency">2,139.04</td>
         </tr>
     </tfoot>
  </table>
@@ -6896,17 +6892,17 @@ table th[class*="col-"] {
 
  <h4>Sorting</h4>
 
- Add a class of `.sortable` to a `th` in the `thead` to make it appear to be able to be clicked to sort the data. You can
- add additional classes of `.sort-asc` or `.sort-desc` to indicate that a column is sorting its data ascending or
+ Add a class of `.is-sortable` to a `th` in the `thead` to make it appear to be able to be clicked to sort the data. You can
+ add additional classes of `.is-asc` or `.is-desc` to indicate that a column is sorting its data ascending or
  descending.
  ```
  <table class="table is-striped">
     <thead>
         <tr>
             <th>#</th>
-            <th class="sortable">First Name</th>
-            <th class="sortable sort-asc">Last Name</th>
-            <th class="sortable sort-desc">Username</th>
+            <th class="is-sortable">First Name</th>
+            <th class="is-sortable is-asc">Last Name</th>
+            <th class="is-sortable is-desc">Username</th>
             <th>Date</th>
         </tr>
     </thead>
@@ -6918,23 +6914,43 @@ table th[class*="col-"] {
             <td>@mdo</td>
             <td>10/21/16</td>
         </tr>
+    </tbody>
+ </table>
+ ```
+
+ <h4>Action Buttons</h4>
+
+ Many times you will need a set of action buttons for a specific row of a table, add the class `.is-actions` to the cell to
+ remove the cell's padding to allow for the extra padding casued by a button.
+ ```
+ <table class="table is-striped">
+    <caption>Optional table caption.</caption>
+    <thead>
         <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>10/20/16</td>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th class="text-right">Actions</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>10/24/16</td>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td class="is-actions">
+                <div class="btn-group is-right">
+                    <button class="btn is-blue is-bare"><i class="fa fa-pencil"></i></button>
+                    <button class="btn is-red is-bare"><i class="fa fa-trash-o"></i></button>
+                </div>
+            </td>
         </tr>
     </tbody>
  </table>
  ```
+
 
 
  */
@@ -7901,11 +7917,11 @@ input[type="search"] {
   color: #868686;
   background-color: #E9E9E9;
   text-decoration: none; }
-  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  .btn:focus, .btn.is-focus, .btn:active:focus, .btn:active.is-focus, .btn.is-active:focus, .btn.is-active.is-focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, .btn.hover {
+  .btn:hover, .btn.is-hover {
     color: #575757;
     background-color: rgba(0, 0, 0, 0.08);
     text-decoration: none; }
@@ -7933,21 +7949,21 @@ fieldset[disabled] a.btn {
   color: #ffffff;
   background-color: #DE2533;
   border-color: #b51b27; }
-  .is-red:focus, .is-red.focus, .is-red:hover, .is-red.hover {
+  .is-red:focus, .is-red.is-focus, .is-red:hover, .is-red.is-hover {
     color: #ffffff;
     background-color: #be1d29; }
-  .is-red:active, .is-red.active {
+  .is-red:active, .is-red.is-active {
     color: #ffffff;
     background-color: #9a1721; }
-  .is-red.is-disabled, .is-red.is-disabled.active, .is-red.is-disabled.hover, .is-red.is-disabled.focus, .is-red.is-disabled:active, .is-red.is-disabled:hover, .is-red.is-disabled:focus, .is-red.is-disabled.focus, .is-red[disabled], .is-red[disabled].active, .is-red[disabled].hover, .is-red[disabled].focus, .is-red[disabled]:active, .is-red[disabled]:hover, .is-red[disabled]:focus, .is-red[disabled].focus,
+  .is-red.is-disabled, .is-red.is-disabled.is-active, .is-red.is-disabled.is-hover, .is-red.is-disabled.is-focus, .is-red.is-disabled:active, .is-red.is-disabled:hover, .is-red.is-disabled:focus, .is-red.is-disabled.is-focus, .is-red[disabled], .is-red[disabled].is-active, .is-red[disabled].is-hover, .is-red[disabled].is-focus, .is-red[disabled]:active, .is-red[disabled]:hover, .is-red[disabled]:focus, .is-red[disabled].is-focus,
   fieldset[disabled] .is-red,
-  fieldset[disabled] .is-red.active,
-  fieldset[disabled] .is-red.hover,
-  fieldset[disabled] .is-red.focus,
+  fieldset[disabled] .is-red.is-active,
+  fieldset[disabled] .is-red.is-hover,
+  fieldset[disabled] .is-red.is-focus,
   fieldset[disabled] .is-red:active,
   fieldset[disabled] .is-red:hover,
   fieldset[disabled] .is-red:focus,
-  fieldset[disabled] .is-red.focus {
+  fieldset[disabled] .is-red.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
@@ -7957,21 +7973,21 @@ fieldset[disabled] a.btn {
   color: #ffffff;
   background-color: #62abde;
   border-color: #4099d7; }
-  .is-blue:focus, .is-blue.focus, .is-blue:hover, .is-blue.hover {
+  .is-blue:focus, .is-blue.is-focus, .is-blue:hover, .is-blue.is-hover {
     color: #ffffff;
     background-color: #4099d7; }
-  .is-blue:active, .is-blue.active {
+  .is-blue:active, .is-blue.is-active {
     color: #ffffff;
     background-color: #2985c5; }
-  .is-blue.is-disabled, .is-blue.is-disabled.active, .is-blue.is-disabled.hover, .is-blue.is-disabled.focus, .is-blue.is-disabled:active, .is-blue.is-disabled:hover, .is-blue.is-disabled:focus, .is-blue.is-disabled.focus, .is-blue[disabled], .is-blue[disabled].active, .is-blue[disabled].hover, .is-blue[disabled].focus, .is-blue[disabled]:active, .is-blue[disabled]:hover, .is-blue[disabled]:focus, .is-blue[disabled].focus,
+  .is-blue.is-disabled, .is-blue.is-disabled.is-active, .is-blue.is-disabled.is-hover, .is-blue.is-disabled.is-focus, .is-blue.is-disabled:active, .is-blue.is-disabled:hover, .is-blue.is-disabled:focus, .is-blue.is-disabled.is-focus, .is-blue[disabled], .is-blue[disabled].is-active, .is-blue[disabled].is-hover, .is-blue[disabled].is-focus, .is-blue[disabled]:active, .is-blue[disabled]:hover, .is-blue[disabled]:focus, .is-blue[disabled].is-focus,
   fieldset[disabled] .is-blue,
-  fieldset[disabled] .is-blue.active,
-  fieldset[disabled] .is-blue.hover,
-  fieldset[disabled] .is-blue.focus,
+  fieldset[disabled] .is-blue.is-active,
+  fieldset[disabled] .is-blue.is-hover,
+  fieldset[disabled] .is-blue.is-focus,
   fieldset[disabled] .is-blue:active,
   fieldset[disabled] .is-blue:hover,
   fieldset[disabled] .is-blue:focus,
-  fieldset[disabled] .is-blue.focus {
+  fieldset[disabled] .is-blue.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
@@ -7981,21 +7997,21 @@ fieldset[disabled] a.btn {
   color: #ffffff;
   background-color: #46AD00;
   border-color: #3c9400; }
-  .is-green:focus, .is-green.focus, .is-green:hover, .is-green.hover {
+  .is-green:focus, .is-green.is-focus, .is-green:hover, .is-green.is-hover {
     color: #ffffff;
     background-color: #358400; }
-  .is-green:active, .is-green.active {
+  .is-green:active, .is-green.is-active {
     color: #ffffff;
     background-color: #255b00; }
-  .is-green.is-disabled, .is-green.is-disabled.active, .is-green.is-disabled.hover, .is-green.is-disabled.focus, .is-green.is-disabled:active, .is-green.is-disabled:hover, .is-green.is-disabled:focus, .is-green.is-disabled.focus, .is-green[disabled], .is-green[disabled].active, .is-green[disabled].hover, .is-green[disabled].focus, .is-green[disabled]:active, .is-green[disabled]:hover, .is-green[disabled]:focus, .is-green[disabled].focus,
+  .is-green.is-disabled, .is-green.is-disabled.is-active, .is-green.is-disabled.is-hover, .is-green.is-disabled.is-focus, .is-green.is-disabled:active, .is-green.is-disabled:hover, .is-green.is-disabled:focus, .is-green.is-disabled.is-focus, .is-green[disabled], .is-green[disabled].is-active, .is-green[disabled].is-hover, .is-green[disabled].is-focus, .is-green[disabled]:active, .is-green[disabled]:hover, .is-green[disabled]:focus, .is-green[disabled].is-focus,
   fieldset[disabled] .is-green,
-  fieldset[disabled] .is-green.active,
-  fieldset[disabled] .is-green.hover,
-  fieldset[disabled] .is-green.focus,
+  fieldset[disabled] .is-green.is-active,
+  fieldset[disabled] .is-green.is-hover,
+  fieldset[disabled] .is-green.is-focus,
   fieldset[disabled] .is-green:active,
   fieldset[disabled] .is-green:hover,
   fieldset[disabled] .is-green:focus,
-  fieldset[disabled] .is-green.focus {
+  fieldset[disabled] .is-green.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
@@ -8005,21 +8021,21 @@ fieldset[disabled] a.btn {
   color: #ffffff;
   background-color: #FF9821;
   border-color: #ed7f00; }
-  .is-orange:focus, .is-orange.focus, .is-orange:hover, .is-orange.hover {
+  .is-orange:focus, .is-orange.is-focus, .is-orange:hover, .is-orange.is-hover {
     color: #ffffff;
     background-color: #f78500; }
-  .is-orange:active, .is-orange.active {
+  .is-orange:active, .is-orange.is-active {
     color: #ffffff;
     background-color: #ce6f00; }
-  .is-orange.is-disabled, .is-orange.is-disabled.active, .is-orange.is-disabled.hover, .is-orange.is-disabled.focus, .is-orange.is-disabled:active, .is-orange.is-disabled:hover, .is-orange.is-disabled:focus, .is-orange.is-disabled.focus, .is-orange[disabled], .is-orange[disabled].active, .is-orange[disabled].hover, .is-orange[disabled].focus, .is-orange[disabled]:active, .is-orange[disabled]:hover, .is-orange[disabled]:focus, .is-orange[disabled].focus,
+  .is-orange.is-disabled, .is-orange.is-disabled.is-active, .is-orange.is-disabled.is-hover, .is-orange.is-disabled.is-focus, .is-orange.is-disabled:active, .is-orange.is-disabled:hover, .is-orange.is-disabled:focus, .is-orange.is-disabled.is-focus, .is-orange[disabled], .is-orange[disabled].is-active, .is-orange[disabled].is-hover, .is-orange[disabled].is-focus, .is-orange[disabled]:active, .is-orange[disabled]:hover, .is-orange[disabled]:focus, .is-orange[disabled].is-focus,
   fieldset[disabled] .is-orange,
-  fieldset[disabled] .is-orange.active,
-  fieldset[disabled] .is-orange.hover,
-  fieldset[disabled] .is-orange.focus,
+  fieldset[disabled] .is-orange.is-active,
+  fieldset[disabled] .is-orange.is-hover,
+  fieldset[disabled] .is-orange.is-focus,
   fieldset[disabled] .is-orange:active,
   fieldset[disabled] .is-orange:hover,
   fieldset[disabled] .is-orange:focus,
-  fieldset[disabled] .is-orange.focus {
+  fieldset[disabled] .is-orange.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
@@ -8029,21 +8045,21 @@ fieldset[disabled] a.btn {
   color: #575757;
   background-color: #ffffff;
   border-color: #BCBCBC; }
-  .is-white:focus, .is-white.focus, .is-white:hover, .is-white.hover {
+  .is-white:focus, .is-white.is-focus, .is-white:hover, .is-white.is-hover {
     color: #575757;
     background-color: #ebebeb; }
-  .is-white:active, .is-white.active {
+  .is-white:active, .is-white.is-active {
     color: #575757;
     background-color: #d6d6d6; }
-  .is-white.is-disabled, .is-white.is-disabled.active, .is-white.is-disabled.hover, .is-white.is-disabled.focus, .is-white.is-disabled:active, .is-white.is-disabled:hover, .is-white.is-disabled:focus, .is-white.is-disabled.focus, .is-white[disabled], .is-white[disabled].active, .is-white[disabled].hover, .is-white[disabled].focus, .is-white[disabled]:active, .is-white[disabled]:hover, .is-white[disabled]:focus, .is-white[disabled].focus,
+  .is-white.is-disabled, .is-white.is-disabled.is-active, .is-white.is-disabled.is-hover, .is-white.is-disabled.is-focus, .is-white.is-disabled:active, .is-white.is-disabled:hover, .is-white.is-disabled:focus, .is-white.is-disabled.is-focus, .is-white[disabled], .is-white[disabled].is-active, .is-white[disabled].is-hover, .is-white[disabled].is-focus, .is-white[disabled]:active, .is-white[disabled]:hover, .is-white[disabled]:focus, .is-white[disabled].is-focus,
   fieldset[disabled] .is-white,
-  fieldset[disabled] .is-white.active,
-  fieldset[disabled] .is-white.hover,
-  fieldset[disabled] .is-white.focus,
+  fieldset[disabled] .is-white.is-active,
+  fieldset[disabled] .is-white.is-hover,
+  fieldset[disabled] .is-white.is-focus,
   fieldset[disabled] .is-white:active,
   fieldset[disabled] .is-white:hover,
   fieldset[disabled] .is-white:focus,
-  fieldset[disabled] .is-white.focus {
+  fieldset[disabled] .is-white.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.04);
     cursor: not-allowed;
@@ -8053,21 +8069,21 @@ fieldset[disabled] a.btn {
   color: #DE2533;
   background-color: transparent;
   border-color: transparent; }
-  .is-red.is-bare:focus, .is-red.is-bare.focus, .is-red.is-bare:hover, .is-red.is-bare.hover {
+  .is-red.is-bare:focus, .is-red.is-bare.is-focus, .is-red.is-bare:hover, .is-red.is-bare.is-hover {
     color: #cb1f2c;
     background-color: rgba(0, 0, 0, 0.06); }
-  .is-red.is-bare:active, .is-red.is-bare.active {
+  .is-red.is-bare:active, .is-red.is-bare.is-active {
     color: #cb1f2c;
     background-color: rgba(0, 0, 0, 0.16); }
-  .is-red.is-bare.is-disabled, .is-red.is-bare.is-disabled.active, .is-red.is-bare.is-disabled.hover, .is-red.is-bare.is-disabled.focus, .is-red.is-bare.is-disabled:active, .is-red.is-bare.is-disabled:hover, .is-red.is-bare.is-disabled:focus, .is-red.is-bare.is-disabled.focus, .is-red.is-bare[disabled], .is-red.is-bare[disabled].active, .is-red.is-bare[disabled].hover, .is-red.is-bare[disabled].focus, .is-red.is-bare[disabled]:active, .is-red.is-bare[disabled]:hover, .is-red.is-bare[disabled]:focus, .is-red.is-bare[disabled].focus,
+  .is-red.is-bare.is-disabled, .is-red.is-bare.is-disabled.is-active, .is-red.is-bare.is-disabled.is-hover, .is-red.is-bare.is-disabled.is-focus, .is-red.is-bare.is-disabled:active, .is-red.is-bare.is-disabled:hover, .is-red.is-bare.is-disabled:focus, .is-red.is-bare.is-disabled.is-focus, .is-red.is-bare[disabled], .is-red.is-bare[disabled].is-active, .is-red.is-bare[disabled].is-hover, .is-red.is-bare[disabled].is-focus, .is-red.is-bare[disabled]:active, .is-red.is-bare[disabled]:hover, .is-red.is-bare[disabled]:focus, .is-red.is-bare[disabled].is-focus,
   fieldset[disabled] .is-red.is-bare,
-  fieldset[disabled] .is-red.is-bare.active,
-  fieldset[disabled] .is-red.is-bare.hover,
-  fieldset[disabled] .is-red.is-bare.focus,
+  fieldset[disabled] .is-red.is-bare.is-active,
+  fieldset[disabled] .is-red.is-bare.is-hover,
+  fieldset[disabled] .is-red.is-bare.is-focus,
   fieldset[disabled] .is-red.is-bare:active,
   fieldset[disabled] .is-red.is-bare:hover,
   fieldset[disabled] .is-red.is-bare:focus,
-  fieldset[disabled] .is-red.is-bare.focus {
+  fieldset[disabled] .is-red.is-bare.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
@@ -8076,21 +8092,21 @@ fieldset[disabled] a.btn {
   color: #62abde;
   background-color: transparent;
   border-color: transparent; }
-  .is-blue.is-bare:focus, .is-blue.is-bare.focus, .is-blue.is-bare:hover, .is-blue.is-bare.hover {
+  .is-blue.is-bare:focus, .is-blue.is-bare.is-focus, .is-blue.is-bare:hover, .is-blue.is-bare.is-hover {
     color: #4da0da;
     background-color: rgba(0, 0, 0, 0.06); }
-  .is-blue.is-bare:active, .is-blue.is-bare.active {
+  .is-blue.is-bare:active, .is-blue.is-bare.is-active {
     color: #4da0da;
     background-color: rgba(0, 0, 0, 0.16); }
-  .is-blue.is-bare.is-disabled, .is-blue.is-bare.is-disabled.active, .is-blue.is-bare.is-disabled.hover, .is-blue.is-bare.is-disabled.focus, .is-blue.is-bare.is-disabled:active, .is-blue.is-bare.is-disabled:hover, .is-blue.is-bare.is-disabled:focus, .is-blue.is-bare.is-disabled.focus, .is-blue.is-bare[disabled], .is-blue.is-bare[disabled].active, .is-blue.is-bare[disabled].hover, .is-blue.is-bare[disabled].focus, .is-blue.is-bare[disabled]:active, .is-blue.is-bare[disabled]:hover, .is-blue.is-bare[disabled]:focus, .is-blue.is-bare[disabled].focus,
+  .is-blue.is-bare.is-disabled, .is-blue.is-bare.is-disabled.is-active, .is-blue.is-bare.is-disabled.is-hover, .is-blue.is-bare.is-disabled.is-focus, .is-blue.is-bare.is-disabled:active, .is-blue.is-bare.is-disabled:hover, .is-blue.is-bare.is-disabled:focus, .is-blue.is-bare.is-disabled.is-focus, .is-blue.is-bare[disabled], .is-blue.is-bare[disabled].is-active, .is-blue.is-bare[disabled].is-hover, .is-blue.is-bare[disabled].is-focus, .is-blue.is-bare[disabled]:active, .is-blue.is-bare[disabled]:hover, .is-blue.is-bare[disabled]:focus, .is-blue.is-bare[disabled].is-focus,
   fieldset[disabled] .is-blue.is-bare,
-  fieldset[disabled] .is-blue.is-bare.active,
-  fieldset[disabled] .is-blue.is-bare.hover,
-  fieldset[disabled] .is-blue.is-bare.focus,
+  fieldset[disabled] .is-blue.is-bare.is-active,
+  fieldset[disabled] .is-blue.is-bare.is-hover,
+  fieldset[disabled] .is-blue.is-bare.is-focus,
   fieldset[disabled] .is-blue.is-bare:active,
   fieldset[disabled] .is-blue.is-bare:hover,
   fieldset[disabled] .is-blue.is-bare:focus,
-  fieldset[disabled] .is-blue.is-bare.focus {
+  fieldset[disabled] .is-blue.is-bare.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
@@ -8099,21 +8115,21 @@ fieldset[disabled] a.btn {
   color: #46AD00;
   background-color: transparent;
   border-color: transparent; }
-  .is-green.is-bare:focus, .is-green.is-bare.focus, .is-green.is-bare:hover, .is-green.is-bare.hover {
+  .is-green.is-bare:focus, .is-green.is-bare.is-focus, .is-green.is-bare:hover, .is-green.is-bare.is-hover {
     color: #3c9400;
     background-color: rgba(0, 0, 0, 0.06); }
-  .is-green.is-bare:active, .is-green.is-bare.active {
+  .is-green.is-bare:active, .is-green.is-bare.is-active {
     color: #3c9400;
     background-color: rgba(0, 0, 0, 0.16); }
-  .is-green.is-bare.is-disabled, .is-green.is-bare.is-disabled.active, .is-green.is-bare.is-disabled.hover, .is-green.is-bare.is-disabled.focus, .is-green.is-bare.is-disabled:active, .is-green.is-bare.is-disabled:hover, .is-green.is-bare.is-disabled:focus, .is-green.is-bare.is-disabled.focus, .is-green.is-bare[disabled], .is-green.is-bare[disabled].active, .is-green.is-bare[disabled].hover, .is-green.is-bare[disabled].focus, .is-green.is-bare[disabled]:active, .is-green.is-bare[disabled]:hover, .is-green.is-bare[disabled]:focus, .is-green.is-bare[disabled].focus,
+  .is-green.is-bare.is-disabled, .is-green.is-bare.is-disabled.is-active, .is-green.is-bare.is-disabled.is-hover, .is-green.is-bare.is-disabled.is-focus, .is-green.is-bare.is-disabled:active, .is-green.is-bare.is-disabled:hover, .is-green.is-bare.is-disabled:focus, .is-green.is-bare.is-disabled.is-focus, .is-green.is-bare[disabled], .is-green.is-bare[disabled].is-active, .is-green.is-bare[disabled].is-hover, .is-green.is-bare[disabled].is-focus, .is-green.is-bare[disabled]:active, .is-green.is-bare[disabled]:hover, .is-green.is-bare[disabled]:focus, .is-green.is-bare[disabled].is-focus,
   fieldset[disabled] .is-green.is-bare,
-  fieldset[disabled] .is-green.is-bare.active,
-  fieldset[disabled] .is-green.is-bare.hover,
-  fieldset[disabled] .is-green.is-bare.focus,
+  fieldset[disabled] .is-green.is-bare.is-active,
+  fieldset[disabled] .is-green.is-bare.is-hover,
+  fieldset[disabled] .is-green.is-bare.is-focus,
   fieldset[disabled] .is-green.is-bare:active,
   fieldset[disabled] .is-green.is-bare:hover,
   fieldset[disabled] .is-green.is-bare:focus,
-  fieldset[disabled] .is-green.is-bare.focus {
+  fieldset[disabled] .is-green.is-bare.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
@@ -8122,21 +8138,21 @@ fieldset[disabled] a.btn {
   color: #FF9821;
   background-color: transparent;
   border-color: transparent; }
-  .is-orange.is-bare:focus, .is-orange.is-bare.focus, .is-orange.is-bare:hover, .is-orange.is-bare.hover {
+  .is-orange.is-bare:focus, .is-orange.is-bare.is-focus, .is-orange.is-bare:hover, .is-orange.is-bare.is-hover {
     color: #ff8c08;
     background-color: rgba(0, 0, 0, 0.06); }
-  .is-orange.is-bare:active, .is-orange.is-bare.active {
+  .is-orange.is-bare:active, .is-orange.is-bare.is-active {
     color: #ff8c08;
     background-color: rgba(0, 0, 0, 0.16); }
-  .is-orange.is-bare.is-disabled, .is-orange.is-bare.is-disabled.active, .is-orange.is-bare.is-disabled.hover, .is-orange.is-bare.is-disabled.focus, .is-orange.is-bare.is-disabled:active, .is-orange.is-bare.is-disabled:hover, .is-orange.is-bare.is-disabled:focus, .is-orange.is-bare.is-disabled.focus, .is-orange.is-bare[disabled], .is-orange.is-bare[disabled].active, .is-orange.is-bare[disabled].hover, .is-orange.is-bare[disabled].focus, .is-orange.is-bare[disabled]:active, .is-orange.is-bare[disabled]:hover, .is-orange.is-bare[disabled]:focus, .is-orange.is-bare[disabled].focus,
+  .is-orange.is-bare.is-disabled, .is-orange.is-bare.is-disabled.is-active, .is-orange.is-bare.is-disabled.is-hover, .is-orange.is-bare.is-disabled.is-focus, .is-orange.is-bare.is-disabled:active, .is-orange.is-bare.is-disabled:hover, .is-orange.is-bare.is-disabled:focus, .is-orange.is-bare.is-disabled.is-focus, .is-orange.is-bare[disabled], .is-orange.is-bare[disabled].is-active, .is-orange.is-bare[disabled].is-hover, .is-orange.is-bare[disabled].is-focus, .is-orange.is-bare[disabled]:active, .is-orange.is-bare[disabled]:hover, .is-orange.is-bare[disabled]:focus, .is-orange.is-bare[disabled].is-focus,
   fieldset[disabled] .is-orange.is-bare,
-  fieldset[disabled] .is-orange.is-bare.active,
-  fieldset[disabled] .is-orange.is-bare.hover,
-  fieldset[disabled] .is-orange.is-bare.focus,
+  fieldset[disabled] .is-orange.is-bare.is-active,
+  fieldset[disabled] .is-orange.is-bare.is-hover,
+  fieldset[disabled] .is-orange.is-bare.is-focus,
   fieldset[disabled] .is-orange.is-bare:active,
   fieldset[disabled] .is-orange.is-bare:hover,
   fieldset[disabled] .is-orange.is-bare:focus,
-  fieldset[disabled] .is-orange.is-bare.focus {
+  fieldset[disabled] .is-orange.is-bare.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
@@ -8145,21 +8161,21 @@ fieldset[disabled] a.btn {
   color: #868686;
   background-color: transparent;
   border-color: transparent; }
-  .is-white.is-bare:focus, .is-white.is-bare.focus, .is-white.is-bare:hover, .is-white.is-bare.hover {
+  .is-white.is-bare:focus, .is-white.is-bare.is-focus, .is-white.is-bare:hover, .is-white.is-bare.is-hover {
     color: #797979;
     background-color: rgba(0, 0, 0, 0.06); }
-  .is-white.is-bare:active, .is-white.is-bare.active {
+  .is-white.is-bare:active, .is-white.is-bare.is-active {
     color: #797979;
     background-color: rgba(0, 0, 0, 0.16); }
-  .is-white.is-bare.is-disabled, .is-white.is-bare.is-disabled.active, .is-white.is-bare.is-disabled.hover, .is-white.is-bare.is-disabled.focus, .is-white.is-bare.is-disabled:active, .is-white.is-bare.is-disabled:hover, .is-white.is-bare.is-disabled:focus, .is-white.is-bare.is-disabled.focus, .is-white.is-bare[disabled], .is-white.is-bare[disabled].active, .is-white.is-bare[disabled].hover, .is-white.is-bare[disabled].focus, .is-white.is-bare[disabled]:active, .is-white.is-bare[disabled]:hover, .is-white.is-bare[disabled]:focus, .is-white.is-bare[disabled].focus,
+  .is-white.is-bare.is-disabled, .is-white.is-bare.is-disabled.is-active, .is-white.is-bare.is-disabled.is-hover, .is-white.is-bare.is-disabled.is-focus, .is-white.is-bare.is-disabled:active, .is-white.is-bare.is-disabled:hover, .is-white.is-bare.is-disabled:focus, .is-white.is-bare.is-disabled.is-focus, .is-white.is-bare[disabled], .is-white.is-bare[disabled].is-active, .is-white.is-bare[disabled].is-hover, .is-white.is-bare[disabled].is-focus, .is-white.is-bare[disabled]:active, .is-white.is-bare[disabled]:hover, .is-white.is-bare[disabled]:focus, .is-white.is-bare[disabled].is-focus,
   fieldset[disabled] .is-white.is-bare,
-  fieldset[disabled] .is-white.is-bare.active,
-  fieldset[disabled] .is-white.is-bare.hover,
-  fieldset[disabled] .is-white.is-bare.focus,
+  fieldset[disabled] .is-white.is-bare.is-active,
+  fieldset[disabled] .is-white.is-bare.is-hover,
+  fieldset[disabled] .is-white.is-bare.is-focus,
   fieldset[disabled] .is-white.is-bare:active,
   fieldset[disabled] .is-white.is-bare:hover,
   fieldset[disabled] .is-white.is-bare:focus,
-  fieldset[disabled] .is-white.is-bare.focus {
+  fieldset[disabled] .is-white.is-bare.is-focus {
     color: rgba(0, 0, 0, 0.2);
     background-color: transparent;
     cursor: not-allowed; }
@@ -8406,48 +8422,35 @@ fieldset[disabled] a.btn {
 
 
  */
-.dropup,
 .dropdown {
   position: relative;
   display: inline-block; }
-  .dropup.is-open > .dropdown-menu,
   .dropdown.is-open > .dropdown-menu {
     display: block; }
-  .dropup.is-open > a,
   .dropdown.is-open > a {
     outline: 0; }
-  .dropup.is-open > .is-blue,
   .dropdown.is-open > .is-blue {
     background-color: #2985c5; }
-    .dropup.is-open > .is-blue.is-bare,
     .dropdown.is-open > .is-blue.is-bare {
       color: #4da0da;
       background-color: rgba(0, 0, 0, 0.16); }
-  .dropup.is-open > .is-white,
   .dropdown.is-open > .is-white {
     background-color: #d6d6d6; }
-    .dropup.is-open > .is-white.is-bare,
     .dropdown.is-open > .is-white.is-bare {
       color: #797979;
       background-color: rgba(0, 0, 0, 0.16); }
-  .dropup.is-open > .is-green,
   .dropdown.is-open > .is-green {
     background-color: #255b00; }
-    .dropup.is-open > .is-green.is-bare,
     .dropdown.is-open > .is-green.is-bare {
       color: #3c9400;
       background-color: rgba(0, 0, 0, 0.16); }
-  .dropup.is-open > .is-orange,
   .dropdown.is-open > .is-orange {
     background-color: #ce6f00; }
-    .dropup.is-open > .is-orange.is-bare,
     .dropdown.is-open > .is-orange.is-bare {
       color: #ff8c08;
       background-color: rgba(0, 0, 0, 0.16); }
-  .dropup.is-open > .is-red,
   .dropdown.is-open > .is-red {
     background-color: #9a1721; }
-    .dropup.is-open > .is-red.is-bare,
     .dropdown.is-open > .is-red.is-bare {
       color: #cb1f2c;
       background-color: rgba(0, 0, 0, 0.16); }
@@ -8605,7 +8608,7 @@ fieldset[disabled] a.btn {
 
  Add the class `.has-caret` to the `.dropdown-menu` to add a graphical caret pointing to the source of the click.
  The caret moves from left to right depending on the alignment chosen for the menu.
- <div class="dropdown-demo"></div>
+ <div class="dropdown-demo-sm"></div>
  ```
  <div class="row">
     <div class="col-xs">
@@ -8619,9 +8622,6 @@ fieldset[disabled] a.btn {
             <ul class="dropdown-menu has-caret">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -8638,9 +8638,6 @@ fieldset[disabled] a.btn {
             <ul class="dropdown-menu is-right has-caret">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -8654,7 +8651,7 @@ fieldset[disabled] a.btn {
 
  To show the selected link add `.is-active` to the `li` of the selected option. To disable any links add the `.is-disabled`
  class to the appropriate `li`.
- <div class="dropdown-demo"></div>
+ <div class="dropdown-demo-sm"></div>
  ```
  <div class="row">
     <div class="col-xs">
@@ -8668,9 +8665,6 @@ fieldset[disabled] a.btn {
             <ul class="dropdown-menu">
                 <li class="is-active"><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -8687,9 +8681,6 @@ fieldset[disabled] a.btn {
             <ul class="dropdown-menu is-right">
                 <li class="is-disabled"><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -8702,7 +8693,7 @@ fieldset[disabled] a.btn {
 
  You can add an icon before or after you text and the spacing will be done automatically if you wrap both of
  them in a `<span>.
- <div class="dropdown-demo"></div>
+ <div class="dropdown-demo-sm"></div>
  ```
  <div class="dropdown is-open">
     <button class="btn is-white is-dropdown-toggle" type="button" >
@@ -8727,6 +8718,156 @@ fieldset[disabled] a.btn {
  ```
 
  */
+.btn-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex; }
+  .btn-group .btn + .btn,
+  .btn-group .btn + .btn-group,
+  .btn-group .btn + .dropdown,
+  .btn-group .btn-group + .btn,
+  .btn-group .btn-group + .btn-group,
+  .btn-group .btn-group + .dropdown,
+  .btn-group .dropdown + .btn,
+  .btn-group .dropdown + .btn-group,
+  .btn-group .dropdown + .dropdown {
+    margin-left: -1px; }
+  .btn-group > .btn {
+    position: relative; }
+    .btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.is-active {
+      z-index: 2; }
+    .btn-group > .btn:not(:first-child):not(:last-child) {
+      border-radius: 0; }
+    .btn-group > .btn:last-child:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0; }
+  .btn-group > .dropdown:not(:first-child):not(:last-child) > .is-dropdown-toggle {
+    border-radius: 0; }
+  .btn-group > .dropdown:first-child {
+    margin-left: 0; }
+    .btn-group > .dropdown:first-child:not(:last-child) > .is-dropdown-toggle {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
+  .btn-group > .dropdown:last-child:not(:first-child) > .is-dropdown-toggle {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  .btn-group.is-justified {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    .btn-group.is-justified > .btn {
+      -ms-flex: 1;
+          flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+    .btn-group.is-justified > .dropdown {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex: 1;
+          flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+      .btn-group.is-justified > .dropdown > .is-dropdown-toggle {
+        -ms-flex: 1;
+            flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+  .btn-group.is-centered {
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
+  .btn-group.is-right {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: end; }
+
+/*
+ ##Button Group
+
+ Group a series of buttons together on a single line with the button group.
+
+ <h3>Basic Button Group</h3>
+
+ Wrap a series of buttons with `.btn` in `.btn-group`.
+ ```
+ <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+ ```
+
+ <h3>Groups with Dropdowns</h3>
+
+ Add dropdowns to your group without a problem
+ ```
+ <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+    <div class="dropdown">
+        <button class="btn is-white is-dropdown-toggle" type="button">
+            <span>Dropdown</span>
+            <span><i class="fa fa-caret-down"></i></span>
+        </button>
+        <ul class="dropdown-menu has-caret is-right">
+            <li class="active"><a href="#">Action</a></li>
+        </ul>
+    </div>
+ </div>
+ ```
+
+
+ <h3>Button Group Alignment</h3>
+
+ Align button groups by using `.is-centered` and `.is-right`.
+ ```
+ <div class="btn-group is-centered">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+
+ <hr/>
+
+ <div class="btn-group is-right">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+ ```
+
+
+
+ <h3>Justified Groups</h3>
+
+ Make a group of buttons or anchors stretch at equal sizes to span the entire width of its parent.
+ ```
+ <div class="btn-group is-justified">
+    <button type="button" class="btn is-white">Left</button>
+    <button type="button" class="btn is-white">Middle</button>
+    <button type="button" class="btn is-white">Right</button>
+ </div>
+
+ <hr/>
+
+ <div class="btn-group is-justified">
+    <a href="#" class="btn is-white">Left</a>
+    <a href="#" class="btn is-white">Middle</a>
+    <a href="#" class="btn is-white">Right</a>
+ </div>
+ ```
+
+
+
+ */
 .tabs {
   display: -ms-flexbox;
   display: flex;
@@ -8744,7 +8885,9 @@ fieldset[disabled] a.btn {
     padding: 0 1.2rem;
     margin: 0; }
     .tabs ul > li {
-      list-style: none; }
+      list-style: none;
+      display: -ms-flexbox;
+      display: flex; }
       .tabs ul > li > a {
         display: block;
         padding: 0.8rem 1.2rem 0.6rem;
@@ -8753,7 +8896,14 @@ fieldset[disabled] a.btn {
         font-family: "Oswald", Helvetica, Arial, sans-serif;
         text-decoration: none;
         color: #868686;
-        cursor: pointer; }
+        cursor: pointer;
+        -webkit-box-align: end;
+        -ms-flex-pack: end;
+        -ms-flex-align: end;
+            -ms-grid-row-align: flex-end;
+            align-items: flex-end;
+        -ms-flex: 1;
+            flex: 1; }
         .tabs ul > li > a span + span {
           margin-left: 0.8rem; }
         .tabs ul > li > a:hover {
@@ -8766,11 +8916,11 @@ fieldset[disabled] a.btn {
     border-left: 0.1rem dashed #BCBCBC; }
   .tabs.is-bordered li:last-child {
     border-right: 0.1rem dashed #BCBCBC; }
-  .tabs.is-centered {
+  .tabs.is-centered ul {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center; }
-  .tabs.is-right {
+  .tabs.is-right ul {
     -ms-flex-pack: end;
     justify-content: flex-end;
     text-align: end; }

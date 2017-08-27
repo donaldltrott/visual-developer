@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 // The dropdown wrapper (div)
-.dropup,
 .dropdown
     position: relative
     display: inline-block
@@ -172,19 +171,7 @@
         @include reset-filter
         cursor: $cursor-disabled
 
-//
-//
-//// Dropdown section headers
-//.dropdown-header
-//    display: block
-//    padding: 3px 20px
-//    font-size: $font-size-small
-//    line-height: $line-height-base
-//    color: $dropdown-header-color
-//    white-space: nowrap
-//// as with > li > a
-//
-//
+
 //// Backdrop to catch body clicks on mobile, etc.
 //.dropdown-backdrop
 //    position: fixed
@@ -193,48 +180,6 @@
 //    bottom: 0
 //    top: 0
 //    z-index: ($zindex-dropdown - 10)
-//
-//// Right aligned dropdowns
-//.pull-right > .dropdown-menu
-//    right: 0
-//    left: auto
-//
-//// Allow for dropdowns to go bottom up (aka, dropup-menu)
-////
-//// Just add .dropup after the standard .dropdown class and you're set, bro.
-//// TODO: abstract this so that the navbar fixed styles are not placed here?
-//
-//.dropup,
-//.navbar-fixed-bottom .dropdown
-//    // Reverse the caret
-//    .caret
-//        border-top: 0
-//        border-bottom: $caret-width-base dashed
-//        border-bottom: $caret-width-base solid
-//        // IE8
-//        content: ""
-//
-//    // Different positioning for bottom up menu
-//    .dropdown-menu
-//        top: auto
-//        bottom: 100%
-//        margin-bottom: 2px
-//
-//// Component alignment
-////
-//// Reiterate per navbar.less and the modified component alignment there.
-//
-//@media (min-width: $grid-float-breakpoint)
-//    .navbar-right
-//        .dropdown-menu
-//            right: 0
-//                left: auto
-//
-//        // Necessary for overrides of the default right aligned menu.
-//        // Will remove come v4 in all likelihood.
-//        .dropdown-menu-left
-//            left: 0
-//            right: auto
 
 
 
@@ -300,7 +245,7 @@
 
  Add the class `.has-caret` to the `.dropdown-menu` to add a graphical caret pointing to the source of the click.
  The caret moves from left to right depending on the alignment chosen for the menu.
- <div class="dropdown-demo"></div>
+ <div class="dropdown-demo-sm"></div>
  ```
  <div class="row">
     <div class="col-xs">
@@ -314,9 +259,6 @@
             <ul class="dropdown-menu has-caret">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -333,9 +275,6 @@
             <ul class="dropdown-menu is-right has-caret">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -349,7 +288,7 @@
 
  To show the selected link add `.is-active` to the `li` of the selected option. To disable any links add the `.is-disabled`
  class to the appropriate `li`.
- <div class="dropdown-demo"></div>
+ <div class="dropdown-demo-sm"></div>
  ```
  <div class="row">
     <div class="col-xs">
@@ -363,9 +302,6 @@
             <ul class="dropdown-menu">
                 <li class="is-active"><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -382,9 +318,6 @@
             <ul class="dropdown-menu is-right">
                 <li class="is-disabled"><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
             </ul>
         </div>
 
@@ -397,7 +330,7 @@
 
  You can add an icon before or after you text and the spacing will be done automatically if you wrap both of
  them in a `<span>.
- <div class="dropdown-demo"></div>
+ <div class="dropdown-demo-sm"></div>
  ```
  <div class="dropdown is-open">
     <button class="btn is-white is-dropdown-toggle" type="button" >

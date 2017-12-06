@@ -1,0 +1,443 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Baton Set Up</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../css/visual-developer.css">
+
+</head>
+
+<body>
+
+
+<div class="nav-wrappper">
+
+    <section class="logo-container">
+        <a href="index.html">
+            <img src="img/baton_logo.png">
+            <p>The B2B Merchant Service</p>
+        </a>
+    </section>
+
+    <nav class="main-nav">
+        <ul>
+            <li class="menu-title">Main</li>
+            <li class="is-active"><a href="#"><i class="fa fa-vcard-o"></i>Customers</a></li>
+            <li><a href="#"><i class="fa fa-calculator"></i>Invoices</a></li>
+            <li><a href="#"><i class="fa fa-commenting-o"></i>Message Center</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<div class="header-wrapper">
+
+    <header class="title-bar">
+        <h3>Customers</h3>
+
+        <div class="dropdown user-profile">
+
+            <section class="user-info is-dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="true">
+                <div class="user-name">
+                    <h4 class="text-nowrap">Orleans Marketing Distillery</h4>
+                    <p class="header-support text-nowrap">Account: 4568 7852 3232 1452</p>
+                </div>
+                <div class="user-profile-img">
+                    <img src="http://via.placeholder.com/36x36">
+                </div>
+
+                <span><i class="fa fa-caret-down"></i></span>
+
+            </section>
+            <ul class="dropdown-menu is-right has-caret" aria-labelledby="dropdownMenu1">
+                <li>
+                    <a href="#">
+                        <span><i class="fa fa-user-circle-o"></i></span>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span><i class="fa fa-sign-out"></i></span>
+                        <span>Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="content-toolbar">
+
+    </section>
+
+</div>
+
+<div class="content-wrappper no-header">
+
+    <!--<div class="dash-banner">-->
+    <!--<div class="row has-gutters is-middle-xs">-->
+    <!--<div class="col-xs is-card">-->
+    <!--<section>-->
+    <!--<span class="fa-stack fa-2x">-->
+    <!--<i class="fa fa-square fa-stack-2x"></i>-->
+    <!--<i class="fa fa-hourglass-2 fa-stack-1x fa-inverse"></i>-->
+    <!--</span>-->
+    <!--</section>-->
+    <!--<section style="width: 100%;">-->
+    <!--<h4>Pending</h4>-->
+    <!--<p class="header-support">To Qualify</p>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<span class="yep">3</span>-->
+    <!--</section>-->
+    <!--</div>-->
+    <!--<div class="col-xs is-card">-->
+    <!--<section>-->
+    <!--<span class="fa-stack fa-2x">-->
+    <!--<i class="fa fa-square fa-stack-2x"></i>-->
+    <!--<i class="fa fa-check fa-stack-1x fa-inverse"></i>-->
+    <!--</span>-->
+    <!--</section>-->
+    <!--<section style="width: 100%;">-->
+    <!--<h4>Qualified</h4>-->
+    <!--<p class="header-support">In Network</p>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<span class="yep">3</span>-->
+    <!--</section>-->
+    <!--</div>-->
+    <!--<div class="col-xs is-card">-->
+    <!--<section>-->
+    <!--<span class="fa-stack fa-2x">-->
+    <!--<i class="fa fa-square fa-stack-2x"></i>-->
+    <!--<i class="fa fa-times fa-stack-1x fa-inverse"></i>-->
+    <!--</span>-->
+    <!--</section>-->
+    <!--<section style="width: 100%;">-->
+    <!--<h4>Not Qualified</h4>-->
+    <!--<p class="header-support">Could not be added</p>-->
+    <!--</section>-->
+    <!--<section>-->
+    <!--<div class="yep">3</div>-->
+    <!--</section>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="container-fluid">
+
+
+        <div class="some-container">
+            <section>
+
+                <div class="row is-end-xs">
+                    <div class="col-xs">
+                        <button class="btn is-blue" id="openModal">New Customer</button>
+                    </div>
+                </div>
+
+                <br/>
+
+
+                <table class="table is-striped">
+
+                    <thead>
+                    <tr>
+                        <th class="is-sortable">Customer</th>
+                        <th class="is-sortable">Customer ID</th>
+                        <th class="is-sortable">Credit Limit</th>
+                        <th class="is-sortable">Funded</th>
+                        <th class="is-sortable">Available Funds</th>
+                        <th class="is-sortable">Utilization</th>
+                        <th class="is-sortable">Max Term</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">Celebration Distillation: Old</a></td>
+                        <td>1000010</td>
+                        <td class="is-currency">25,000.00</td>
+                        <td class="is-currency">24,854.45</td>
+                        <td class="is-currency">145.55</td>
+                        <td class="is-percent">99</td>
+                        <td>Net 90</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Austin Budweiser</a></td>
+                        <td>1000011</td>
+                        <td class="is-currency">25,000.00</td>
+                        <td class="is-currency">22,293.00</td>
+                        <td class="is-currency">2,707.00</td>
+                        <td class="is-percent">89</td>
+                        <td>Net 90</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">The Premier Wine, Beer, and Spirits</a></td>
+                        <td>1000015</td>
+                        <td class="is-currency">20,000.00</td>
+                        <td class="is-currency">18,997.75</td>
+                        <td class="is-currency">1,002.25</td>
+                        <td class="is-percent">95</td>
+                        <td>Net 60</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Austin Beverage Company, Inc.</a></td>
+                        <td>1000007</td>
+                        <td class="is-currency">25,000.00</td>
+                        <td class="is-currency">18,536.75</td>
+                        <td class="is-currency">6,463.25</td>
+                        <td class="is-percent">74</td>
+                        <td>Net 90</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Hopper's Wines & Spirits</a></td>
+                        <td>1000009</td>
+                        <td class="is-currency">15,000.00</td>
+                        <td class="is-currency">11,307.18</td>
+                        <td class="is-currency">3,692.82</td>
+                        <td class="is-percent">74</td>
+                        <td>Net 30</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Republic National Distributing</a></td>
+                        <td>1000021</td>
+                        <td class="is-currency">45,000.00</td>
+                        <td class="is-currency">9,340.00</td>
+                        <td class="is-currency">35,660.00</td>
+                        <td class="is-percent">21</td>
+                        <td>Net 120</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Georgia Beer Wholesalers</a></td>
+                        <td>1000001</td>
+                        <td class="is-currency">15,000.00</td>
+                        <td class="is-currency">3,110.00</td>
+                        <td class="is-currency">11,890.00</td>
+                        <td class="is-percent">21</td>
+                        <td>Net 60</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Prime Wine and Spirits of Georgia</a></td>
+                        <td>1000012</td>
+                        <td class="is-currency">30,000.00</td>
+                        <td class="is-currency">3,000.00</td>
+                        <td class="is-currency">27,000.00</td>
+                        <td class="is-percent">10</td>
+                        <td>Net 90</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Crescent Crown</a></td>
+                        <td>1000022</td>
+                        <td class="is-currency">5,000.00</td>
+                        <td class="is-currency">2,470.40</td>
+                        <td class="is-currency">2,529.60</td>
+                        <td class="is-percent">49</td>
+                        <td>Net 30</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Georgia Crown Distributing Co.</a></td>
+                        <td>1000003</td>
+                        <td class="is-currency">35,000.00</td>
+                        <td class="is-currency">1,624.19</td>
+                        <td class="is-currency">33,375.81</td>
+                        <td class="is-percent">5</td>
+                        <td>Net 90</td>
+                    </tr>
+                    </tbody>
+
+
+                </table>
+
+            </section>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" style="margin-left:240px;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <section class="icon-section">
+                    <i class="fa fa-bank fa-2x"></i>
+                </section>
+                <section class="title-section">
+                    <h4 class="modal-title">BATON's Know Before You Sell™ Guarantee</h4>
+                    <p class="header-support">Eliminate risk by qualifying your business or government customer before
+                        you sell</p>
+                </section>
+                <section>
+                    <button type="button" class="btn close"><i class="fa fa-times"></i></button>
+                </section>
+
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <fieldset>
+
+                                <legend>Customer Information</legend>
+                                <div class="form-group">
+                                    <label for="doingBusinessAs">Customer Name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="doingBusinessAs">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="doingBusinessAs">Doing Business As (DBA)</label>
+                                    <input type="text" class="form-control" id="doingBusinessAs">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessAddress1">Business Address (Line 1) <span
+                                        class="required">*</span></label>
+                                    <input type="text" class="form-control" id="businessAddress1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="businessAddress2">Business Address (Line 2)</label>
+                                    <input type="text" class="form-control" id="businessAddress2">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessCity">City <span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="businessCity">
+                                </div>
+
+                                <div class="row is-tight">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label for="businessState">State <span class="required">*</span></label>
+                                            <select id="businessState" class="form-control">
+                                                <option>--Select--</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label for="businessZip">Zip <span class="required">*</span></label>
+                                            <input type="text" class="form-control" id="businessZip">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessZip">Customer Email <span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="businessZip">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Customer Phone Number <span class="required">*</span></label>
+                                    <div class="input-inline">
+                                                    <span
+                                                        class="input-decorator is-decorator-left is-decorator-first">(</span>
+                                        <input type="text" class="form-control" size="6" placeholder="xxx">
+                                        <span class="input-decorator is-decorator-right">)</span>
+                                        <input type="text" class="form-control" size="6" placeholder="xxx">
+                                        <span class="input-decorator">-</span>
+                                        <input type="text" class="form-control is-stretched"
+                                               placeholder="xxxx">
+                                    </div>
+                                </div>
+
+
+                            </fieldset>
+                        </div>
+                        <div class="col-md">
+
+                            <fieldset>
+
+                                <legend>Credit Calculator</legend>
+
+                                <div class="form-group">
+                                    <label for="businessZip">Annual Sales to Customer</label>
+                                    <input type="text" class="form-control" id="businessZip">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessZip">Maximum Payment Terms</label>
+                                    <Select class="form-control" id="businessZip">
+                                        <option>Select</option>
+                                    </Select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessZip">BATON's Suggested Credit Limit</label>
+                                    <input type="text" class="form-control" id="businessZip" disabled>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset>
+
+                                <legend>Credit Request</legend>
+
+                                <div class="form-group">
+                                    <label for="businessZip">Amout of Credit Requested for this Customer <span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="businessZip">
+                                </div>
+
+
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn is-blue is-bare is-block">
+                                    <span class="fa-stack fa-lg">
+                                      <i class="fa fa-circle fa-stack-2x"></i>
+                                      <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span>Learn more about BATON's Suggested Credit Limit</span>
+                                </button>
+
+                            </fieldset>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn is-white is-bare" id="cancel">Cancel</button>
+                <button type="button" class="btn is-blue is-min-width">Qualify Customer</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal-backdrop fade"></div>
+
+<script type="text/javascript" src="../js/libs/jquery/jquery-min.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $('.is-dropdown-toggle').on('click', function () {
+            $(this).parent().toggleClass('is-open');
+        });
+
+        $('#openModal').on('click', function(){
+            $('.modal-backdrop, .modal').addClass('in');
+            $('body').addClass('modal-open');
+            $('.modal').scrollTop(0);
+            console.log($('.modal').scrollTop(0));
+        });
+        $('#cancel').on('click', function(){
+            $('.modal-backdrop, .modal').removeClass('in');
+            $('body').removeClass('modal-open')
+        });
+
+    });
+</script>
+
+
+</body>
+</html>

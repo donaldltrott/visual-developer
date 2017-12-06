@@ -217,7 +217,7 @@ $input-bg:                       $white !default
 $input-color:                    $gray !default
 $input-border:                   $gray-light !default
 
-$input-bg-disabled:              $gray-lightest !default
+$input-bg-disabled:              lighten($gray-lightest, 4%) !default
 $input-border-disabled:          $gray-lighter !default
 
 
@@ -277,7 +277,7 @@ $state-warning-bg:               lighten($orange-light, 25%) !default
 $state-warning-border:           lighten(adjust-hue($state-warning-text, -10), 18%) !default
 
 $state-danger-text:              $red !default
-$state-danger-bg:                lighten($red-light, 28%) !default
+$state-danger-bg:                lighten($red-light, 30%) !default
 $state-danger-border:            lighten(adjust-hue($state-danger-text, -10), 18%) !default
 
 //$state-active-text:              $purple-dark !default
@@ -313,9 +313,9 @@ $zindex-navbar-fixed:      1030 !default
 $zindex-modal-background:  1040 !default
 $zindex-modal:             1050 !default
 
-//== Dropdowns
-//
-//## Dropdown menu container and contents.
+////////////////////////////////////////////////
+//              DROPDOWNS
+////////////////////////////////////////////////
 
 //** Background for the dropdown menu.
 $dropdown-bg:                    $white !default
@@ -343,3 +343,24 @@ $dropdown-link-disabled-color:   $gray-light !default
 $dropdown-header-color:          $gray-light !default
 
 $caret-width-base:               $spacing-md !default
+
+
+
+////////////////////////////////////////////////
+//              MODALS
+////////////////////////////////////////////////
+
+
+$modal-inner-spacing:         $spacing-md !default
+$modal-title-padding:         $spacing-lg !default
+$modal-header-height:         6rem !default
+$modal-title-line-height:     $line-height-base !default
+$modal-content-bg:            $white !default
+$modal-content-border-color:  rgba(0,0,0,.2) !default
+$modal-content-fallback-border-color: $gray-dark !default
+$modal-backdrop-bg:           $black !default
+$modal-backdrop-opacity:      .7 !default
+$modal-lg:                    90rem !default
+$modal-md:                    60rem !default
+$modal-sm:                    30rem !default
+

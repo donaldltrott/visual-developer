@@ -188,6 +188,11 @@ define([
                     });
                 });
 
+                $('.is-dropdown-toggle').click(function(){
+                    console.log('clicked ------------------', $(this));
+                    $(this).parent().toggleClass('is-open');
+                });
+
                 fixie.init();
 
                 firstRun = false;

@@ -6654,7 +6654,7 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.danger,
 .table > tfoot > tr.danger > td,
 .table > tfoot > tr.danger > th {
-  background-color: #ffebeb;
+  background-color: #fff5f5;
   color: #DE2533; }
 
 .table-hover > tbody > tr > td.danger:hover,
@@ -6662,7 +6662,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ffd1d1; }
+  background-color: #ffdcdc; }
 
 .table > thead > tr > th.is-currency,
 .table > thead > tr > td.is-currency,
@@ -6692,6 +6692,27 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.is-actions,
 .table > tfoot > tr > td.is-actions {
   padding: 0; }
+
+.table > thead > tr > th.is-percent,
+.table > thead > tr > td.is-percent,
+.table > tbody > tr > th.is-percent,
+.table > tbody > tr > td.is-percent,
+.table > tfoot > tr > th.is-percent,
+.table > tfoot > tr > td.is-percent {
+  text-align: right;
+  position: relative;
+  padding-right: 2.4rem; }
+  .table > thead > tr > th.is-percent:before,
+  .table > thead > tr > td.is-percent:before,
+  .table > tbody > tr > th.is-percent:before,
+  .table > tbody > tr > td.is-percent:before,
+  .table > tfoot > tr > th.is-percent:before,
+  .table > tfoot > tr > td.is-percent:before {
+    content: "";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0.8rem;
+    color: #BCBCBC; }
 
 .table > thead > tr > th.is-sortable,
 .table > thead > tr > td.is-sortable {
@@ -6888,6 +6909,40 @@ table th[class*="col-"] {
  </table>
  ```
 
+ <h4>Percentage</h4>
+
+ Use `.is-percent` on a `th` or `td` to indicate the cell is used for currency. This class will add a `%` to the
+ right of the cell and then align the text to the right.
+
+ ```
+ <table class="table is-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th class="text-center">Ratio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td class="is-percent">89</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td class="is-percent">89</td>
+        </tr>
+    </tfoot>
+ </table>
+ ```
+
 
 
  <h4>Sorting</h4>
@@ -7044,7 +7099,7 @@ output {
     background-color: transparent; }
   .form-control[disabled], .form-control[readonly],
   fieldset[disabled] .form-control {
-    background-color: #E9E9E9;
+    background-color: #f3f3f3;
     border-color: #D4D4D4;
     opacity: 1; }
   .form-control[disabled],
@@ -7323,7 +7378,7 @@ input[type="search"] {
 
 .has-error .form-control:not([disabled]) {
   border-color: #ea7591;
-  background-color: #ffebeb;
+  background-color: #fff5f5;
   color: #DE2533; }
   .has-error .form-control:not([disabled]):focus {
     border-color: #ea7591;
@@ -7342,7 +7397,7 @@ input[type="search"] {
   .has-error .checkbox input[type="checkbox"]:not([disabled]) + label:before,
   .has-error .radio input[type="radio"]:not([disabled]) + label:before {
     border-color: #DE2533;
-    background: #ffebeb; }
+    background: #fff5f5; }
 
 .has-error .checkbox input[type="checkbox"]:not([disabled]) + label:after {
   color: #DE2533; }
@@ -8310,12 +8365,49 @@ fieldset[disabled] a.btn {
   .hide-xl {
     display: none !important; } }
 
+@media only screen and (min-width: 480px) {
+  .show-sm-and-up {
+    display: block !important; }
+  .hide-sm-and-up {
+    display: none !important; } }
+
+@media only screen and (min-width: 768px) {
+  .show-md-and-up {
+    display: block !important; }
+  .hide-md-and-up {
+    display: none !important; } }
+
+@media only screen and (min-width: 992px) {
+  .show-lg-and-up {
+    display: block !important; }
+  .hide-lg-and-up {
+    display: none !important; } }
+
+@media only screen and (max-width: 767px) {
+  .show-sm-and-below {
+    display: block !important; }
+  .hide-sm-and-below {
+    display: none !important; } }
+
+@media only screen and (max-width: 991px) {
+  .show-md-and-below {
+    display: block !important; }
+  .hide-md-and-below {
+    display: none !important; } }
+
+@media only screen and (max-width: 1199px) {
+  .show-lg-and-below {
+    display: block !important; }
+  .hide-lg-and-below {
+    display: none !important; } }
+
 /*
  ## Responsive Utilities
 
  <h3>Available classes</h3>
 
- Use a single or combination of the available classes for toggling content across viewport breakpoints.
+ Use a single or combination of the available classes for toggling content across viewport breakpoints. You can set an
+ element to `display: none` and then use any of the `.show-` classes to display the element.
 
  <div class="table-container">
      <table class="table is-bordered is-striped">
@@ -8333,86 +8425,149 @@ fieldset[disabled] a.btn {
             <tr>
                 <td><code>.show-xs</code></td>
                 <td class="text-center success">Visible</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-sm</code></td>
                 <td class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-md</code></td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-lg</code></td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-xl</code></td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
             </tr>
         </tbody>
         <tbody>
             <tr>
+                <td><code>.show-sm-and-up</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td colspan="4" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.show-md-and-up</code></td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.show-lg-and-up</code></td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center success">Visible</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td><code>.show-sm-and-below</code></td>
+                <td colspan="2" class="text-center success">Visible</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-md-and-below</code></td>
+                <td colspan="3" class="text-center success">Visible</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-lg-and-below</code></td>
+                <td colspan="4" class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+
+ If you set an element to `display` property to show the element, you can use the `.hide-` classes to control when
+ to not show the element.
+
+ <div class="table-container">
+     <table class="table is-bordered is-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Extra Small<span class="table-meta">0 - 479px</span></th>
+                <th>Small<span class="table-meta">480px - 767px</span></th>
+                <th>Medium<span class="table-meta">768px - 991px</span></th>
+                <th>Large<span class="table-meta">992px - 1199px</span></th>
+                <th>Extra Large<span class="table-meta">>1200px</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td><code>.hide-xs</code></td>
                 <td class="text-center text-muted">Hidden</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="4" class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-sm</code></td>
                 <td class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="3" class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-md</code></td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="2" class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="2" class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-lg</code></td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="3" class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-xl</code></td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="4" class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
             </tr>
         </tbody>
+        <tbody>
+            <tr>
+                <td><code>.hide-sm-and-up</code></td>
+                <td class="text-center success">Visible</td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.hide-md-and-up</code></td>
+                <td colspan="2" class="text-center success">Visible</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.hide-lg-and-up</code></td>
+                <td colspan="3" class="text-center success">Visible</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td><code>.hide-sm-and-below</code></td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-md-and-below</code></td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-lg-and-below</code></td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+        <tbody>
      </table>
  </div>
 
@@ -8566,7 +8721,7 @@ fieldset[disabled] a.btn {
 
         <div class="dropdown is-open">
             <button class="btn is-white is-dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span>Dropdown</span>
+                <span>Standard Dropdown</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -8585,7 +8740,7 @@ fieldset[disabled] a.btn {
 
         <div class="dropdown is-open">
             <button class="btn is-blue is-dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span>Dropdown</span>
+                <span>Aligned Right</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right" aria-labelledby="dropdownMenu2">
@@ -8608,15 +8763,14 @@ fieldset[disabled] a.btn {
 
  Add the class `.has-caret` to the `.dropdown-menu` to add a graphical caret pointing to the source of the click.
  The caret moves from left to right depending on the alignment chosen for the menu.
- <div class="dropdown-demo-sm"></div>
  ```
  <div class="row">
     <div class="col-xs">
 
 
-        <div class="dropdown is-open">
+        <div class="dropdown">
             <button class="btn is-white is-dropdown-toggle" type="button" >
-                <span>Dropdown</span>
+                <span>Menu Caret on Left</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu has-caret">
@@ -8630,9 +8784,9 @@ fieldset[disabled] a.btn {
     <div class="col-xs text-right">
 
 
-        <div class="dropdown is-open">
+        <div class="dropdown">
             <button class="btn is-blue is-dropdown-toggle" type="button">
-                <span>Dropdown</span>
+                <span>Menu Caret on Right</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right has-caret">
@@ -8651,41 +8805,16 @@ fieldset[disabled] a.btn {
 
  To show the selected link add `.is-active` to the `li` of the selected option. To disable any links add the `.is-disabled`
  class to the appropriate `li`.
- <div class="dropdown-demo-sm"></div>
  ```
- <div class="row">
-    <div class="col-xs">
-
-
-        <div class="dropdown is-open">
-            <button class="btn is-white is-dropdown-toggle" type="button" >
-                <span>Dropdown</span>
-                <span><i class="fa fa-caret-down"></i></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li class="is-active"><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-            </ul>
-        </div>
-
-
-    </div>
-    <div class="col-xs text-right">
-
-
-        <div class="dropdown is-open">
-            <button class="btn is-blue is-dropdown-toggle" type="button">
-                <span>Dropdown</span>
-                <span><i class="fa fa-caret-down"></i></span>
-            </button>
-            <ul class="dropdown-menu is-right">
-                <li class="is-disabled"><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-            </ul>
-        </div>
-
-
-    </div>
+ <div class="dropdown">
+    <button class="btn is-white is-dropdown-toggle" type="button" >
+        <span>Active and Disabled Links</span>
+        <span><i class="fa fa-caret-down"></i></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li class="is-active"><a href="#">Action</a></li>
+        <li class="is-disabled"><a href="#">Another action</a></li>
+    </ul>
  </div>
  ```
 
@@ -8693,9 +8822,8 @@ fieldset[disabled] a.btn {
 
  You can add an icon before or after you text and the spacing will be done automatically if you wrap both of
  them in a `<span>.
- <div class="dropdown-demo-sm"></div>
  ```
- <div class="dropdown is-open">
+ <div class="dropdown">
     <button class="btn is-white is-dropdown-toggle" type="button" >
         <span>Dropdown</span>
         <span><i class="fa fa-caret-down"></i></span>
@@ -9053,3 +9181,331 @@ fieldset[disabled] a.btn {
  ```
 
  */
+.modal-open {
+  overflow: hidden; }
+
+.modal {
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+  .modal.fade .modal-dialog {
+    opacity: 0;
+    transform: translate(0, -25%);
+    transition: all 0.3s ease-out; }
+  .modal.in {
+    width: calc(100% - 24rem);
+    height: 100%; }
+    .modal.in .modal-dialog {
+      opacity: 1;
+      transform: translate(0, 0); }
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 1rem; }
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 0.1rem solid #575757;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #141414;
+  height: 0;
+  width: 0; }
+  .modal-backdrop.fade {
+    opacity: 0; }
+  .modal-backdrop.in {
+    opacity: 0.7;
+    height: 100%;
+    width: 100%; }
+
+.modal-header {
+  margin: 0.8rem;
+  background: #62abde;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 6rem; }
+  .modal-header .icon-section {
+    width: 6rem;
+    min-width: 6rem;
+    max-width: 6rem;
+    background: #afd7fa;
+    color: #ffffff;
+    text-align: center; }
+    .modal-header .icon-section i {
+      line-height: 6rem; }
+  .modal-header .title-section {
+    width: 100%;
+    padding: 0 1.2rem; }
+  .modal-header .btn.close {
+    background: transparent;
+    color: #afd7fa;
+    margin-right: 0.4rem;
+    height: 6rem; }
+    .modal-header .btn.close:hover {
+      color: #ffffff; }
+  .modal-header .modal-title {
+    color: #ffffff;
+    margin-top: 0; }
+  .modal-header .header-support {
+    color: #afd7fa;
+    margin-bottom: 0; }
+
+.modal-body {
+  position: relative;
+  padding: 1.2rem; }
+
+.modal-footer {
+  margin: 0.8rem;
+  padding-top: 0.8rem;
+  text-align: right;
+  border-top: 0.1rem dashed #BCBCBC; }
+  .modal-footer:before, .modal-footer:after {
+    content: " ";
+    display: table; }
+  .modal-footer:after {
+    clear: both; }
+  .modal-footer .btn + .btn {
+    margin-left: 0.4rem;
+    margin-bottom: 0; }
+  .modal-footer .btn-group .btn + .btn {
+    margin-left: -0.1rem; }
+  .modal-footer .btn-block + .btn-block {
+    margin-left: 0; }
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -999.9rem;
+  width: 5rem;
+  height: 5rem;
+  overflow: scroll; }
+
+@media (min-width: 480px) {
+  .modal-dialog {
+    width: 60rem;
+    margin: 2rem auto; }
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+  .modal-sm {
+    width: 30rem; } }
+
+@media (min-width: 768px) {
+  .modal-lg {
+    width: 90rem; } }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  border-top: 4px solid #296aa3; }
+
+.nav-wrappper {
+  width: 24rem;
+  min-width: 24rem;
+  max-width: 24rem;
+  background: #62abde;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-top: 4px solid #296aa3; }
+
+.header-wrapper {
+  margin-left: 24rem;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 24rem);
+  border-top: 4px solid #296aa3;
+  z-index: 1000; }
+
+.content-wrappper {
+  margin-left: 24rem;
+  padding-top: 9.6rem; }
+
+.content-wrappper.no-header {
+  margin-top: 1.2rem; }
+
+.row.has-gutters > .col-xs.is-card {
+  background: #fff;
+  padding: 1.2rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.yep {
+  font-size: 3.6rem;
+  text-align: right;
+  font-family: "Oswald", Helvetica, Arial, sans-serif; }
+
+.dash-banner {
+  padding: 3.6rem;
+  background: #296aa3;
+  margin-bottom: 1.2rem; }
+
+.logo-container {
+  background: #fff;
+  padding: 1.2rem;
+  border-right: 0.1rem solid #BCBCBC;
+  height: 60px;
+  border-bottom: 0.1rem solid #62abde; }
+
+.logo-container img {
+  height: 30px;
+  margin-top: -6px; }
+
+.logo-container p {
+  padding: 2px 0 0 4px;
+  margin: 0;
+  font-size: 11px;
+  color: #666; }
+
+.main-nav ul {
+  margin: 1.6rem 0 0;
+  padding: 1.2rem 0 0;
+  font-family: 'Oswald';
+  font-size: 14px; }
+
+.main-nav ul li {
+  list-style: none; }
+
+.main-nav ul li.menu-title {
+  color: #afd7fa;
+  font-size: 12px;
+  padding: 0.4rem 1.2rem;
+  font-weight: normal;
+  font-family: 'OpenSans'; }
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 1.2rem 1.6rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  border-left: 4px solid transparent; }
+
+.main-nav ul li a i {
+  margin-right: 1.2rem; }
+
+.main-nav ul li.is-active a {
+  color: #2B2B2B;
+  background: #F5F5F5;
+  border-left-color: #296aa3; }
+
+.main-nav ul li:not(.is-active) a:hover {
+  background: #afd7fa;
+  color: #2B2B2B; }
+
+.main-nav ul li a:hover i {
+  color: #296aa3; }
+
+.main-nav ul li.is-active a i {
+  color: #296aa3; }
+
+.title-bar {
+  height: 60px;
+  border-bottom: 1px solid #D4D4D4;
+  padding: 0 1.2rem;
+  background: #fff;
+  display: -ms-flexbox;
+  display: flex; }
+
+.title-bar h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  width: 100%; }
+
+.title-bar .user-profile {
+  border-left: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+  padding: 0 1.2rem;
+  cursor: pointer; }
+
+.title-bar .user-profile.is-open {
+  background: #e9e9e9; }
+
+.title-bar .user-profile-img {
+  padding: 0 1.2rem; }
+
+.title-bar .user-info {
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -ms-flex-align: center;
+      align-items: center; }
+
+img {
+  margin: 0;
+  padding: 0;
+  display: block; }
+
+.some-container {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  /*box-shadow: 0 0 3px rgba(0, 0, 0, .075);*/ }
+
+.some-container header {
+  background: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 3px 3px 0 0; }
+
+.some-container header h2,
+.some-container header h3 {
+  padding: 0;
+  margin: 0; }
+
+.some-container header .header-support {
+  margin-bottom: 0;
+  margin-top: -2px; }
+
+.some-container section {
+  padding: 12px; }
+
+.content-toolbar {
+  background: #fff;
+  border-bottom: 1px solid #d4d4d4;
+  height: 36px; }
+
+.required {
+  color: #DE2533; }
+
+.helper-text {
+  padding: 24px 12px 12px;
+  color: #fff; }
+
+.form-set .form-group + .form-group {
+  margin-top: -8px; }

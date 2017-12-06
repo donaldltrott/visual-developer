@@ -203,7 +203,7 @@
 
         <div class="dropdown is-open">
             <button class="btn is-white is-dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span>Dropdown</span>
+                <span>Standard Dropdown</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -222,7 +222,7 @@
 
         <div class="dropdown is-open">
             <button class="btn is-blue is-dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span>Dropdown</span>
+                <span>Aligned Right</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right" aria-labelledby="dropdownMenu2">
@@ -245,15 +245,14 @@
 
  Add the class `.has-caret` to the `.dropdown-menu` to add a graphical caret pointing to the source of the click.
  The caret moves from left to right depending on the alignment chosen for the menu.
- <div class="dropdown-demo-sm"></div>
  ```
  <div class="row">
     <div class="col-xs">
 
 
-        <div class="dropdown is-open">
+        <div class="dropdown">
             <button class="btn is-white is-dropdown-toggle" type="button" >
-                <span>Dropdown</span>
+                <span>Menu Caret on Left</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu has-caret">
@@ -267,9 +266,9 @@
     <div class="col-xs text-right">
 
 
-        <div class="dropdown is-open">
+        <div class="dropdown">
             <button class="btn is-blue is-dropdown-toggle" type="button">
-                <span>Dropdown</span>
+                <span>Menu Caret on Right</span>
                 <span><i class="fa fa-caret-down"></i></span>
             </button>
             <ul class="dropdown-menu is-right has-caret">
@@ -288,41 +287,16 @@
 
  To show the selected link add `.is-active` to the `li` of the selected option. To disable any links add the `.is-disabled`
  class to the appropriate `li`.
- <div class="dropdown-demo-sm"></div>
  ```
- <div class="row">
-    <div class="col-xs">
-
-
-        <div class="dropdown is-open">
-            <button class="btn is-white is-dropdown-toggle" type="button" >
-                <span>Dropdown</span>
-                <span><i class="fa fa-caret-down"></i></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li class="is-active"><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-            </ul>
-        </div>
-
-
-    </div>
-    <div class="col-xs text-right">
-
-
-        <div class="dropdown is-open">
-            <button class="btn is-blue is-dropdown-toggle" type="button">
-                <span>Dropdown</span>
-                <span><i class="fa fa-caret-down"></i></span>
-            </button>
-            <ul class="dropdown-menu is-right">
-                <li class="is-disabled"><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-            </ul>
-        </div>
-
-
-    </div>
+ <div class="dropdown">
+    <button class="btn is-white is-dropdown-toggle" type="button" >
+        <span>Active and Disabled Links</span>
+        <span><i class="fa fa-caret-down"></i></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li class="is-active"><a href="#">Action</a></li>
+        <li class="is-disabled"><a href="#">Another action</a></li>
+    </ul>
  </div>
  ```
 
@@ -330,9 +304,8 @@
 
  You can add an icon before or after you text and the spacing will be done automatically if you wrap both of
  them in a `<span>.
- <div class="dropdown-demo-sm"></div>
  ```
- <div class="dropdown is-open">
+ <div class="dropdown">
     <button class="btn is-white is-dropdown-toggle" type="button" >
         <span>Dropdown</span>
         <span><i class="fa fa-caret-down"></i></span>

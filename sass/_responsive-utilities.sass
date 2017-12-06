@@ -35,13 +35,49 @@
     .hide-xl
         display: none !important
 
+@media only screen and (min-width: $screen-sm-min)
+    .show-sm-and-up
+        display: block !important
+    .hide-sm-and-up
+        display: none !important
+
+@media only screen and (min-width: $screen-md-min)
+    .show-md-and-up
+        display: block !important
+    .hide-md-and-up
+        display: none !important
+
+@media only screen and (min-width: $screen-lg-min)
+    .show-lg-and-up
+        display: block !important
+    .hide-lg-and-up
+        display: none !important
+
+@media only screen and (max-width: $screen-sm-max)
+    .show-sm-and-below
+        display: block !important
+    .hide-sm-and-below
+        display: none !important
+
+@media only screen and (max-width: $screen-md-max)
+    .show-md-and-below
+        display: block !important
+    .hide-md-and-below
+        display: none !important
+
+@media only screen and (max-width: $screen-lg-max)
+    .show-lg-and-below
+        display: block !important
+    .hide-lg-and-below
+        display: none !important
 
 /*
  ## Responsive Utilities
 
  <h3>Available classes</h3>
 
- Use a single or combination of the available classes for toggling content across viewport breakpoints.
+ Use a single or combination of the available classes for toggling content across viewport breakpoints. You can set an
+ element to `display: none` and then use any of the `.show-` classes to display the element.
 
  <div class="table-container">
      <table class="table is-bordered is-striped">
@@ -59,86 +95,149 @@
             <tr>
                 <td><code>.show-xs</code></td>
                 <td class="text-center success">Visible</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-sm</code></td>
                 <td class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-md</code></td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-lg</code></td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
             </tr>
             <tr>
                 <td><code>.show-xl</code></td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
-                <td class="text-center text-muted">Hidden</td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
             </tr>
         </tbody>
         <tbody>
             <tr>
+                <td><code>.show-sm-and-up</code></td>
+                <td class="text-center text-muted">Hidden</td>
+                <td colspan="4" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.show-md-and-up</code></td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.show-lg-and-up</code></td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center success">Visible</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td><code>.show-sm-and-below</code></td>
+                <td colspan="2" class="text-center success">Visible</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-md-and-below</code></td>
+                <td colspan="3" class="text-center success">Visible</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.show-lg-and-below</code></td>
+                <td colspan="4" class="text-center success">Visible</td>
+                <td class="text-center text-muted">Hidden</td>
+            </tr>
+        </tbody>
+     </table>
+ </div>
+
+
+ If you set an element to `display` property to show the element, you can use the `.hide-` classes to control when
+ to not show the element.
+
+ <div class="table-container">
+     <table class="table is-bordered is-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Extra Small<span class="table-meta">0 - 479px</span></th>
+                <th>Small<span class="table-meta">480px - 767px</span></th>
+                <th>Medium<span class="table-meta">768px - 991px</span></th>
+                <th>Large<span class="table-meta">992px - 1199px</span></th>
+                <th>Extra Large<span class="table-meta">>1200px</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td><code>.hide-xs</code></td>
                 <td class="text-center text-muted">Hidden</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="4" class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-sm</code></td>
                 <td class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="3" class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-md</code></td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="2" class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="2" class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-lg</code></td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="3" class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
                 <td class="text-center success">Visible</td>
             </tr>
             <tr>
                 <td><code>.hide-xl</code></td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
-                <td class="text-center success">Visible</td>
+                <td colspan="4" class="text-center success">Visible</td>
                 <td class="text-center text-muted">Hidden</td>
             </tr>
         </tbody>
+        <tbody>
+            <tr>
+                <td><code>.hide-sm-and-up</code></td>
+                <td class="text-center success">Visible</td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.hide-md-and-up</code></td>
+                <td colspan="2" class="text-center success">Visible</td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+            </tr>
+            <tr>
+                <td><code>.hide-lg-and-up</code></td>
+                <td colspan="3" class="text-center success">Visible</td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td><code>.hide-sm-and-below</code></td>
+                <td colspan="2" class="text-center text-muted">Hidden</td>
+                <td colspan="3" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-md-and-below</code></td>
+                <td colspan="3" class="text-center text-muted">Hidden</td>
+                <td colspan="2" class="text-center success">Visible</td>
+            </tr>
+            <tr>
+                <td><code>.hide-lg-and-below</code></td>
+                <td colspan="4" class="text-center text-muted">Hidden</td>
+                <td class="text-center success">Visible</td>
+            </tr>
+        <tbody>
      </table>
  </div>
 

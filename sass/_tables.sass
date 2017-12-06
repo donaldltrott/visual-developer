@@ -177,6 +177,16 @@ table
                         color: $gray-light
                 &.is-actions
                     padding: 0
+                &.is-percent
+                    text-align: right
+                    position: relative
+                    padding-right: $spacing-xxl
+                    &:before
+                        content: $fa-var-percent
+                        font-family: FontAwesome
+                        position: absolute
+                        right: $spacing-md
+                        color: $gray-light
 
 
 // data tables
@@ -365,6 +375,40 @@ table
             <td></td>
             <td></td>
             <td class="is-currency">2,139.04</td>
+        </tr>
+    </tfoot>
+ </table>
+ ```
+
+ <h4>Percentage</h4>
+
+ Use `.is-percent` on a `th` or `td` to indicate the cell is used for currency. This class will add a `%` to the
+ right of the cell and then align the text to the right.
+
+ ```
+ <table class="table is-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th class="text-center">Ratio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td class="is-percent">89</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td class="is-percent">89</td>
         </tr>
     </tfoot>
  </table>
